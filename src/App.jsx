@@ -56,7 +56,7 @@ function Navbar() {
       {/* Logo */}
       <a href="#" className="flex items-center gap-2 shrink-0">
         <img
-          src="/assets/logo-full.png"
+          src="/assets/logo-full-transparent.png"
           alt="Amily AI"
           className="w-8 h-8 rounded-lg"
         />
@@ -133,9 +133,8 @@ function Navbar() {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   B. HERO SECTION -- v1 exact layout + floating badges around logo
-   Warm cream gradient background (v1), centered text, floating
-   animated UI badges orbit the amily.ai logo.
+   B. HERO SECTION -- split layout: copy on the left, big Amily on
+   the right with 4 orbiting bubble badges + decorative micro-shapes.
    ═══════════════════════════════════════════════════════════════ */
 
 function Hero() {
@@ -145,13 +144,14 @@ function Hero() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-      tl.from('.hero-logo', { y: 20, opacity: 0, scale: 0.95, duration: 0.7 })
-        .from('.hero-badge', { y: 20, opacity: 0, duration: 0.6 }, '-=0.3')
-        .from('.hero-heading', { y: 40, opacity: 0, duration: 0.8 }, '-=0.4')
+      tl.from('.hero-deco-blob', { opacity: 0, scale: 0.7, duration: 1.0 })
+        .from('.hero-character-wrap', { x: 60, opacity: 0, scale: 0.92, duration: 0.9 }, '-=0.7')
+        .from('.hero-heading', { y: 40, opacity: 0, duration: 0.8 }, '-=0.5')
         .from('.hero-desc', { y: 30, opacity: 0, duration: 0.7 }, '-=0.4')
         .from('.hero-cta', { y: 30, opacity: 0, duration: 0.7 }, '-=0.3')
         .from('.hero-trust', { y: 20, opacity: 0, duration: 0.6 }, '-=0.3')
-        .from('.hero-float-badge', { opacity: 0, scale: 0.8, duration: 0.6, stagger: 0.15 }, '-=0.4');
+        .from('.hero-float-badge', { opacity: 0, scale: 0.8, duration: 0.6, stagger: 0.15 }, '-=0.4')
+        .from('.hero-deco', { opacity: 0, scale: 0.5, duration: 0.5, stagger: 0.08 }, '-=0.5');
     }, heroRef);
 
     return () => ctx.revert();
@@ -170,96 +170,122 @@ function Hero() {
         `,
       }}
     >
+      {/* Soft pastel anchor blob (top-left) -- matches reference layout */}
+      <div
+        aria-hidden
+        className="hero-deco-blob absolute -top-16 -left-16 w-72 h-72 rounded-full bg-gradient-to-br from-terracotta/20 to-mustard/10 blur-2xl pointer-events-none"
+      />
 
-      {/* Content -- v1's exact centered layout */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 pt-24 pb-24 md:pt-28 md:pb-28 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-24 pb-24 md:pt-28 md:pb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[42fr_58fr] gap-10 lg:gap-16 items-center">
 
-        {/* Logo with floating badges orbiting it -- centered via flex */}
-        <div className="hero-logo flex justify-center mb-8">
-          <div className="relative">
-            <img
-              src="/assets/logo-full.png"
-              alt="Amily AI -- your friendly AI guide for Melbourne small business"
-              className="w-56 md:w-64 drop-shadow-[0_8px_24px_rgba(30,58,95,0.2)] animate-float"
-            />
+          {/* ── LEFT: copy + CTAs + trust ── */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
 
-            {/* Floating UI badges symmetrically around the logo */}
-            <div className="hero-float-badge absolute top-2 -left-24 hidden lg:flex bg-white/60 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-delayed shadow-md">
-              <div className="flex items-center gap-2">
-                <MessageSquare size={13} className="text-navy" />
-                <span className="text-charcoal text-xs font-semibold">Call answered in 0.3s</span>
-              </div>
+            <h1 className="hero-heading font-drama font-extrabold text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.02] text-charcoal">
+              Stop losing jobs to<br />
+              <span className="relative inline-block">
+                <span className="relative z-10">missed calls.</span>
+                <span className="absolute bottom-1 left-0 w-full h-[0.28em] bg-gradient-to-r from-mustard to-terracotta rounded-sm -z-0"></span>
+              </span>
+            </h1>
+
+            <p className="hero-desc mt-8 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-charcoal/75 leading-relaxed">
+              G'day, I'm <span className="font-bold text-terracotta">Amily</span> — your local AI guide for Melbourne small business. I help tradies, cafes, and professional services stop losing jobs to missed calls, get more Google reviews, and put AI to work. <span className="font-semibold text-charcoal">No tech headache. No lock-in.</span>
+            </p>
+
+            <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center lg:items-start">
+              <a
+                href="#pricing"
+                className="btn-magnetic inline-flex items-center gap-2 rounded-full bg-navy text-white px-7 py-4 text-base font-bold shadow-xl shadow-navy/25"
+              >
+                <span className="btn-bg bg-terracotta"></span>
+                <span className="btn-label flex items-center gap-2">
+                  Book a free 15-min chat <ArrowRight size={16} />
+                </span>
+              </a>
+              <a
+                href="#features"
+                className="btn-magnetic inline-flex items-center gap-2 rounded-full bg-white/55 backdrop-blur-md border border-white/60 px-7 py-4 text-base font-bold text-navy hover:bg-white transition"
+              >
+                <span className="btn-label">See how it works</span>
+              </a>
             </div>
 
-            <div className="hero-float-badge absolute top-2 -right-20 hidden lg:flex bg-white/60 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-slow shadow-md">
-              <div className="flex items-center gap-1.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} className="text-mustard fill-mustard" />
-                ))}
-                <span className="text-charcoal text-xs font-semibold ml-1">4.9</span>
-              </div>
+            <div className="hero-trust mt-12 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm font-semibold text-navy/70">
+              <span className="flex items-center gap-2">
+                <Check size={16} className="text-terracotta" /> No lock-in contracts
+              </span>
+              <span className="flex items-center gap-2">
+                <Check size={16} className="text-terracotta" /> Local Melbourne 03 number
+              </span>
+              <span className="flex items-center gap-2">
+                <Check size={16} className="text-terracotta" /> 30-day ROI promise
+              </span>
             </div>
+          </div>
 
-            <div className="hero-float-badge absolute bottom-2 -left-20 hidden lg:flex bg-white/60 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-reverse shadow-md">
-              <div className="flex items-center gap-2">
-                <Zap size={13} className="text-terracotta" />
-                <span className="text-charcoal text-xs font-semibold">12 jobs booked today</span>
+          {/* ── RIGHT: huge Amily + bubble badges + decorative micro-shapes ── */}
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="hero-character-wrap relative w-[300px] sm:w-[400px] lg:w-[480px] xl:w-[560px] aspect-square animate-float">
+
+              {/* Decorative micro-shapes (inline SVG, brand colors) */}
+              <svg aria-hidden className="hero-deco absolute top-[8%] -left-4 w-7 h-7 text-mustard animate-drift-slow" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4 A 10 10 0 1 0 16 20 A 8 8 0 1 1 16 4 Z" />
+              </svg>
+              <svg aria-hidden className="hero-deco absolute -top-2 right-[14%] w-8 h-8 text-terracotta animate-drift" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                <line x1="6" y1="18" x2="18" y2="6" />
+              </svg>
+              <svg aria-hidden className="hero-deco absolute top-[40%] -right-2 w-4 h-4 text-navy/60 animate-drift-slow" viewBox="0 0 8 8">
+                <circle cx="4" cy="4" r="3" fill="currentColor" />
+              </svg>
+              <svg aria-hidden className="hero-deco absolute bottom-[16%] left-[-1%] w-5 h-5 text-mustard animate-drift" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4 A 10 10 0 1 0 16 20 A 8 8 0 1 1 16 4 Z" />
+              </svg>
+              <svg aria-hidden className="hero-deco absolute bottom-[10%] right-[20%] w-3 h-3 text-terracotta animate-drift-slow" viewBox="0 0 8 8">
+                <circle cx="4" cy="4" r="3" fill="currentColor" />
+              </svg>
+
+              {/* The character -- gentle sway pivots from feet, parent does the bob */}
+              <img
+                src="/assets/amily-01-waving-transparent.png"
+                alt="Amily — your friendly AI guide for Melbourne small business"
+                className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)] animate-wave-tilt"
+              />
+
+              {/* 4 orbiting BUBBLE badges (hidden lg:flex per CLAUDE.md rule) */}
+              <div className="hero-float-badge absolute top-[10%] -left-8 lg:-left-12 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-delayed shadow-lg z-20">
+                <div className="flex items-center gap-2">
+                  <MessageSquare size={13} className="text-navy" />
+                  <span className="text-charcoal text-xs font-semibold whitespace-nowrap">Call answered in 0.3s</span>
+                </div>
               </div>
-            </div>
 
-            <div className="hero-float-badge absolute bottom-2 -right-24 hidden lg:flex bg-white/60 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-delayed shadow-md">
-              <div className="flex items-center gap-2">
-                <Shield size={13} className="text-green-600" />
-                <span className="text-charcoal text-xs font-semibold">$4,200 saved this month</span>
+              <div className="hero-float-badge absolute top-[2%] -right-4 lg:-right-8 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-slow shadow-lg z-20">
+                <div className="flex items-center gap-1.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={11} className="text-mustard fill-mustard" />
+                  ))}
+                  <span className="text-charcoal text-xs font-semibold ml-1">4.9</span>
+                </div>
+              </div>
+
+              <div className="hero-float-badge absolute top-[55%] -left-10 lg:-left-16 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-reverse shadow-lg z-20">
+                <div className="flex items-center gap-2">
+                  <Zap size={13} className="text-terracotta" />
+                  <span className="text-charcoal text-xs font-semibold whitespace-nowrap">12 jobs booked today</span>
+                </div>
+              </div>
+
+              <div className="hero-float-badge absolute bottom-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-delayed shadow-lg z-20">
+                <div className="flex items-center gap-2">
+                  <Shield size={13} className="text-green-600" />
+                  <span className="text-charcoal text-xs font-semibold whitespace-nowrap">$4,200 saved this month</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Heading -- v1 copy */}
-        <h1 className="hero-heading font-drama font-extrabold text-5xl md:text-7xl tracking-tight leading-[1.02] text-charcoal">
-          Stop losing jobs to<br />
-          <span className="relative inline-block">
-            <span className="relative z-10">missed calls.</span>
-            <span className="absolute bottom-1 left-0 w-full h-[0.28em] bg-gradient-to-r from-mustard to-terracotta rounded-sm -z-0"></span>
-          </span>
-        </h1>
-
-        {/* Description -- v1 copy */}
-        <p className="hero-desc mt-8 max-w-2xl mx-auto text-lg md:text-xl text-charcoal/75 leading-relaxed">
-          G'day, I'm <span className="font-bold text-terracotta">Amily</span> — your local AI guide for Melbourne small business. I help tradies, cafes, and professional services stop losing jobs to missed calls, get more Google reviews, and put AI to work. <span className="font-semibold text-charcoal">No tech headache. No lock-in.</span>
-        </p>
-
-        {/* CTA buttons -- v1 style */}
-        <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-3 justify-center items-center">
-          <a
-            href="#pricing"
-            className="btn-magnetic inline-flex items-center gap-2 rounded-full bg-navy text-white px-7 py-4 text-base font-bold shadow-xl shadow-navy/25"
-          >
-            <span className="btn-bg bg-terracotta"></span>
-            <span className="btn-label flex items-center gap-2">
-              Book a free 15-min chat <ArrowRight size={16} />
-            </span>
-          </a>
-          <a
-            href="#features"
-            className="btn-magnetic inline-flex items-center gap-2 rounded-full bg-white/55 backdrop-blur-md border border-white/60 px-7 py-4 text-base font-bold text-navy hover:bg-white transition"
-          >
-            <span className="btn-label">See how it works</span>
-          </a>
-        </div>
-
-        {/* Trust badges -- v1 copy */}
-        <div className="hero-trust mt-12 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold text-navy/70">
-          <span className="flex items-center gap-2">
-            <Check size={16} className="text-terracotta" /> No lock-in contracts
-          </span>
-          <span className="flex items-center gap-2">
-            <Check size={16} className="text-terracotta" /> Local Melbourne 03 number
-          </span>
-          <span className="flex items-center gap-2">
-            <Check size={16} className="text-terracotta" /> 30-day ROI promise
-          </span>
         </div>
       </div>
     </section>
@@ -1040,7 +1066,7 @@ function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/assets/logo-full.png"
+                src="/assets/logo-full-transparent.png"
                 alt="Amily AI"
                 className="w-10 h-10 rounded-xl"
               />

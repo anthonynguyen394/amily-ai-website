@@ -31,20 +31,37 @@ Logo text: `amily` in navy + `.ai` in terracotta.
 
 ```
 src/
-  App.jsx        -- All components (~1150 lines, single file)
-  index.css      -- Custom animations (float, marquee, cursor-blink, pulse-dot, shuffler, rotate, scan, pulse-wave)
+  App.jsx        -- All components (single file)
+  index.css      -- Custom animations (float/-delayed/-slow/-reverse, wave-tilt, drift, marquee, cursor-blink, pulse-dot, shuffler, rotate, scan, pulse-wave)
   main.jsx       -- React entry point
 public/
-  assets/        -- Logo files + 6 Amily character PNGs (transparent bg via rembg)
+  assets/        -- Logo + hero character + feature card PNGs (see "Assets" section below)
+scripts/         -- Python utilities for brand graphics generation (Nano Banana Pro / chroma-key). See parent repo skill `design-brand-graphics`.
 index.html       -- Entry HTML with Google Fonts CDN links
 tailwind.config.js
 vite.config.js
 ```
 
+## Assets
+
+All in `public/assets/`:
+
+| File | Purpose |
+|---|---|
+| `logo-full-transparent.png` | Navbar + footer logo (RGBA) |
+| `logo-full-cream.png` | Logo on cream bg (Higgsfield / cream contexts) |
+| `amily-01-waving-transparent.png` | Hero character (RGBA) |
+| `amily-01-waving-cream.png` | Hero character on cream bg (Higgsfield input) |
+| `amily-02-phone-cream.png` | Pose variant: phone + "Call answered in 0.3s" (Higgsfield) |
+| `amily-03-laptop-cream.png` | Pose variant: laptop + "12 jobs booked today" (Higgsfield) |
+| `amily-04-thumbsup-cream.png` | Pose variant: thumbs up + "4.9 stars" (Higgsfield) |
+| `amily-02-phone.png`, `amily-03-five-stars.png`, `amily-04-toolkit.png` | Feature card header icons (80px tinted container) |
+| `favicon-256.png` | Browser tab favicon; also the canonical face/style reference for graphics generation |
+
 ## Page Sections (top to bottom)
 
 1. **Navbar** -- Floating glass pill, fixed top-center, semi-transparent. Links: Services, How It Works, Pricing. CTA: "Book a Free Call"
-2. **Hero** -- Warm cream gradient bg. Centered amily.ai logo with 4 floating animated badges orbiting it (call answered, 4.9 stars, 12 jobs booked, $4,200 saved). Headline: "Stop losing jobs to missed calls." Two CTAs
+2. **Hero** -- Warm cream gradient bg. Split layout: left copy (headline "Stop losing jobs to missed calls.", subhead, 2 CTAs, trust row) + right character (huge `amily-01-waving-transparent.png` with 4 floating badges orbiting her: call answered, 4.9 stars, 12 jobs booked, $4,200 saved). Decorative micro-shapes (inline SVG: crescents, dashes, dots) drift around the character. `lg:grid-cols-[42fr_58fr]`; mobile stacks single-column.
 3. **Marquee Ticker** -- Navy bar with sliding industry facts between hero and features
 4. **Features** -- 3 animated interactive cards:
    - ShufflerCard: voice receptionist (shuffling text animation)
@@ -58,9 +75,10 @@ vite.config.js
 
 ## Design Decisions
 
-- No stock photos in hero -- pure gradient + floating badges (stock photos looked too generic/geographic)
-- Amily character PNGs used as feature card header icons only, NOT in hero (transparent PNG fringe issue on cream bg)
-- PNGs processed with rembg (U2Net ML model) for proper alpha transparency
+- Hero uses a large Amily character on the right half (logos generated / cleaned via Google Nano Banana Pro -- see `design-brand-graphics` skill in parent repo)
+- Character PNGs use magenta chroma-key workflow (not rembg) to get clean transparent backgrounds including enclosed pockets (letter loops, under-arm gaps)
+- Logo is built deterministically from the favicon via PIL composite -- no AI drift. See `scripts/` or parent repo skill for the workflow
+- Feature card icons still use the rembg'd `amily-02/03/04.png` (80px tinted container)
 - No sticky-stacking ScrollTrigger -- was buggy, cards stuck on screen. Use simple GSAP fade-up instead
 - Navbar always shows navy text (hero bg is light cream, white text would be invisible)
 - Style inspiration: ahm.com.au, a purple/green finance site Anthony referenced
