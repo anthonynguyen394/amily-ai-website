@@ -14,6 +14,10 @@ import {
   Shield,
   Zap,
   MessageSquare,
+  Search,
+  TrendingUp,
+  Plus,
+  Sparkles,
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -808,77 +812,393 @@ function HowItWorks() {
   const steps = [
     {
       number: '01',
-      title: 'Discovery',
-      description: 'We learn your business, your pain points, your goals. 30-minute call, no jargon.',
+      label: 'Discovery',
+      title: 'We learn your business',
+      description:
+        'A 30-minute call where we map your workflow, spot the time sinks, and show you exactly where AI fits. No jargon, no pressure.',
+      highlight: 'Free, no commitment',
+      icon: <Search size={18} />,
       visual: <RotatingMotif />,
     },
     {
       number: '02',
-      title: 'Build',
-      description: 'We set up your AI tools, test them, and train your team. Hands-on, not hands-off.',
+      label: 'Build',
+      title: 'We set up your AI',
+      description:
+        'Done-for-you setup: voice receptionist, review automation, custom workflows -- tested with your real data before going live.',
+      highlight: 'Live in 7 days',
+      icon: <Wrench size={18} />,
       visual: <ScanningLine />,
     },
     {
       number: '03',
-      title: 'Results',
-      description: 'You see fewer missed calls, more reviews, more time. Real ROI within 30 days.',
+      label: 'Results',
+      title: 'You see the ROI',
+      description:
+        'Fewer missed calls. More 5-star reviews. Hours back in your week. Real metrics in your dashboard, reviewed monthly.',
+      highlight: '30-day ROI guarantee',
+      icon: <TrendingUp size={18} />,
       visual: <PulsingWave />,
     },
   ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.how-step', {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-          once: true,
-        },
+      // Cards entrance -- y + fade stagger
+      gsap.fromTo(
+        '.how-step',
+        { y: 80, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+
+      // Giant watermark numbers: scale + rotate pop
+      gsap.fromTo(
+        '.how-step-number',
+        { scale: 0.5, autoAlpha: 0, rotation: -10 },
+        {
+          scale: 1,
+          autoAlpha: 1,
+          rotation: 0,
+          duration: 1.3,
+          stagger: 0.2,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+
+      // Accent edges draw down
+      gsap.fromTo(
+        '.how-step-accent',
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          duration: 0.9,
+          stagger: 0.2,
+          delay: 0.3,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            once: true,
+          },
+        }
+      );
+
+      // Progress bar scrub
+      gsap.fromTo(
+        '.how-progress-fill',
+        { scaleX: 0 },
+        {
+          scaleX: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 70%',
+            end: 'bottom 50%',
+            scrub: 1,
+          },
+        }
+      );
+
+      // 3D tilt on hover
+      const cards = gsap.utils.toArray('.how-step');
+      cards.forEach((card) => {
+        const handleMove = (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+          const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+          gsap.to(card, {
+            rotationY: x * 4,
+            rotationX: -y * 4,
+            transformPerspective: 1200,
+            duration: 0.4,
+            ease: 'power2.out',
+          });
+        };
+        const handleLeave = () => {
+          gsap.to(card, {
+            rotationY: 0,
+            rotationX: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+          });
+        };
+        card.addEventListener('mousemove', handleMove);
+        card.addEventListener('mouseleave', handleLeave);
       });
     }, sectionRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="how-it-works" ref={sectionRef} className="py-20 sm:py-28 px-6 sm:px-10 bg-cream">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">How It Works</p>
+    <section
+      id="how-it-works"
+      ref={sectionRef}
+      className="relative py-24 sm:py-32 px-6 sm:px-10 bg-cream overflow-hidden"
+    >
+      {/* Background grid pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.04]"
+        style={{
+          backgroundImage: `linear-gradient(#0c1b30 1px, transparent 1px),
+                            linear-gradient(90deg, #0c1b30 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14 sm:mb-16">
+          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">
+            How It Works
+          </p>
           <h2 className="font-heading font-extrabold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tighter">
             Three steps to{' '}
             <span className="font-drama italic text-navy">real results.</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {/* Progress bar */}
+        <div className="max-w-5xl mx-auto mb-12 sm:mb-14 px-2">
+          <div className="relative h-[2px] bg-charcoal/10 rounded-full overflow-hidden">
+            <div className="how-progress-fill absolute inset-y-0 left-0 w-full bg-gradient-to-r from-terracotta via-mustard to-terracotta origin-left"></div>
+          </div>
+          <div className="flex justify-between text-[10px] font-data uppercase tracking-widest text-charcoal/40 mt-3">
+            <span>Day 0 -- Call</span>
+            <span>Day 7 -- Live</span>
+            <span>Day 30 -- ROI</span>
+          </div>
+        </div>
+
+        {/* Step cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="how-step bg-navy rounded-3xl p-8 sm:p-10 relative overflow-hidden"
+              className="how-step relative group"
+              style={{ perspective: '1200px' }}
             >
-              {/* Decorative SVG visual */}
-              <div className="absolute top-6 right-6">
-                {step.visual}
+              <div className="relative bg-navy rounded-3xl p-8 sm:p-10 overflow-hidden min-h-[400px] sm:min-h-[440px] shadow-xl transition-shadow duration-500 group-hover:shadow-2xl">
+                {/* Accent edge (left) */}
+                <div className="how-step-accent absolute left-0 top-0 w-[3px] h-full bg-gradient-to-b from-terracotta via-mustard to-terracotta origin-top"></div>
+
+                {/* Giant watermark number */}
+                <span className="how-step-number absolute -top-4 sm:-top-6 -right-2 sm:-right-4 pointer-events-none font-drama italic text-[8rem] sm:text-[11rem] leading-none text-terracotta select-none">
+                  {step.number}
+                </span>
+
+                {/* Subtle grid inside card */}
+                <div
+                  className="absolute inset-0 pointer-events-none opacity-[0.04]"
+                  style={{
+                    backgroundImage: `linear-gradient(#faf5eb 1px, transparent 1px),
+                                      linear-gradient(90deg, #faf5eb 1px, transparent 1px)`,
+                    backgroundSize: '24px 24px',
+                  }}
+                />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Label row */}
+                  <div className="inline-flex items-center gap-2 mb-6">
+                    <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-mustard/15 text-mustard">
+                      {step.icon}
+                    </span>
+                    <span className="font-data text-[11px] text-mustard uppercase tracking-[0.2em]">
+                      {step.label}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-heading font-extrabold text-cream text-2xl sm:text-[1.7rem] leading-tight mb-4 tracking-tight">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-cream/70 text-sm sm:text-base leading-relaxed mb-6 max-w-xs">
+                    {step.description}
+                  </p>
+
+                  {/* Highlight pill */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-sm">
+                    <span className="w-1 h-1 rounded-full bg-terracotta pulse-dot"></span>
+                    <span className="font-data text-[10px] text-cream/80 uppercase tracking-wider">
+                      {step.highlight}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bottom visual */}
+                <div className="absolute bottom-5 right-5 z-0 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                  {step.visual}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Closer */}
+        <p className="text-center text-charcoal/50 text-xs sm:text-sm font-data uppercase tracking-widest mt-12">
+          No setup fees. No surprises.{' '}
+          <span className="text-terracotta font-semibold">Live in 7 days.</span>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   E2. PROOF -- "The Numbers" (animated counter stats)
+   ═══════════════════════════════════════════════════════════════ */
+
+function Proof() {
+  const sectionRef = useRef(null);
+
+  const stats = [
+    {
+      value: 0.3,
+      suffix: 's',
+      label: 'Call pickup',
+      caption: 'Faster than any human receptionist',
+    },
+    {
+      value: 24,
+      suffix: '/7',
+      label: 'Always on',
+      caption: 'After-hours, weekends, public holidays',
+    },
+    {
+      value: 30,
+      suffix: ' day',
+      label: 'ROI guarantee',
+      caption: 'Or we refund your setup. No fine print.',
+    },
+    {
+      value: 60,
+      suffix: '%',
+      label: 'Time saved',
+      caption: 'On reception and review admin busywork',
+    },
+  ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.proof-card',
+        { y: 60, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+
+      // Count-up numbers
+      gsap.utils.toArray('.proof-number').forEach((el) => {
+        const target = parseFloat(el.dataset.value);
+        const isDecimal = target % 1 !== 0;
+        const obj = { val: 0 };
+        gsap.to(obj, {
+          val: target,
+          duration: 2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+          },
+          onUpdate: () => {
+            el.innerText = isDecimal ? obj.val.toFixed(1) : Math.round(obj.val);
+          },
+        });
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative py-20 sm:py-28 px-6 sm:px-10 bg-[#f4ecd9] overflow-hidden"
+    >
+      {/* Dotted pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.08]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #0c1b30 1px, transparent 0)`,
+          backgroundSize: '20px 20px',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center mb-12 sm:mb-14">
+          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">
+            The Numbers
+          </p>
+          <h2 className="font-heading font-extrabold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tighter">
+            Results you can{' '}
+            <span className="font-drama italic text-navy">actually measure.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className="proof-card relative bg-cream rounded-3xl p-6 sm:p-8 border border-charcoal/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lift-hover"
+            >
+              {/* Mini header */}
+              <div className="flex items-center gap-2 mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-terracotta pulse-dot"></span>
+                <span className="font-data text-[10px] text-terracotta uppercase tracking-widest">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
               </div>
 
-              {/* Step number in large monospace */}
-              <span className="font-data text-6xl sm:text-7xl font-bold text-terracotta/20 leading-none block">
-                {step.number}
-              </span>
+              {/* Number */}
+              <div className="flex items-baseline gap-1 mb-3">
+                <span
+                  className="font-drama italic text-navy text-5xl sm:text-6xl font-bold leading-none proof-number"
+                  data-value={stat.value}
+                >
+                  0
+                </span>
+                <span className="font-drama italic text-terracotta text-2xl sm:text-3xl font-bold">
+                  {stat.suffix}
+                </span>
+              </div>
 
-              {/* Title */}
-              <h3 className="font-heading font-extrabold text-white text-2xl sm:text-3xl mt-3 tracking-tight">
-                {step.title}
-              </h3>
+              {/* Label */}
+              <p className="font-heading font-extrabold text-charcoal text-base sm:text-lg mt-2">
+                {stat.label}
+              </p>
 
-              {/* Description */}
-              <p className="text-white/60 text-sm sm:text-base mt-4 leading-relaxed">
-                {step.description}
+              {/* Caption */}
+              <p className="text-charcoal/60 text-xs sm:text-sm mt-1.5 leading-relaxed">
+                {stat.caption}
               </p>
             </div>
           ))}
@@ -961,83 +1281,146 @@ function Philosophy() {
 function Pricing() {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.pricing-card', {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-          once: true,
-        },
-      });
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
-
   const plans = [
     {
       name: 'Essential',
-      price: '$99',
+      badge: 'Best for review-focused SMBs',
+      price: 99,
       period: '/mo',
-      description: 'AI Review Management',
+      description: 'AI Review Management for local businesses ready to dominate Google.',
+      icon: <Star size={18} />,
       features: [
-        'Automated review monitoring',
-        'AI-drafted review responses',
-        'Google Business Profile integration',
-        'Monthly performance report',
-        'Email support',
+        { text: '24/7 review monitoring across Google + socials', highlight: false },
+        { text: 'AI-drafted responses in your brand tone', highlight: true },
+        { text: 'Google Business Profile sync', highlight: false },
+        { text: 'Monthly performance report', highlight: false },
+        { text: 'Email support (1 business day)', highlight: false },
       ],
-      cta: 'Get Started',
+      cta: 'Start with Essential',
       popular: false,
     },
     {
       name: 'Performance',
-      price: '$249',
+      badge: 'Best for growing trades + services',
+      price: 249,
       period: '/mo',
-      description: 'AI Voice Receptionist + Reviews Bundle',
+      description: 'AI voice receptionist + reviews -- for businesses losing jobs after-hours.',
+      icon: <Phone size={18} />,
       features: [
-        'Everything in Essential',
-        '24/7 AI voice receptionist',
-        'Job booking and scheduling',
-        'Call summaries to your phone',
-        'SMS follow-ups to customers',
-        'Priority support',
+        { text: 'Everything in Essential', highlight: false },
+        { text: '24/7 AI voice receptionist', highlight: true },
+        { text: 'Automatic job booking + calendar sync', highlight: true },
+        { text: 'Real-time call summaries to your phone', highlight: false },
+        { text: 'SMS follow-ups to customers', highlight: false },
+        { text: 'Priority support (same-day)', highlight: false },
       ],
       cta: 'Book a Free Discovery Call',
       popular: true,
     },
     {
       name: 'Enterprise',
-      price: '$3,500',
+      badge: 'Best for full transformation',
+      price: 3500,
       period: ' one-off',
-      description: 'Full AI Setup + Consulting + 3 Months Support',
+      description: 'White-glove AI setup, team training, and 3 months hands-on support.',
+      icon: <Shield size={18} />,
       features: [
-        'Everything in Performance',
-        'Custom AI workflow design',
-        'Team training and onboarding',
-        'Dedicated 1-on-1 support',
-        '3 months hands-on support',
-        'ROI guarantee within 30 days',
+        { text: 'Everything in Performance', highlight: false },
+        { text: 'Custom AI workflow design', highlight: true },
+        { text: 'Team training + onboarding (2 sessions)', highlight: false },
+        { text: 'Dedicated Slack / email channel', highlight: false },
+        { text: '3 months hands-on support', highlight: true },
+        { text: '30-day ROI guarantee or refund', highlight: true },
       ],
-      cta: 'Book a Free Discovery Call',
+      cta: 'Discuss Enterprise Setup',
       popular: false,
     },
   ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Cards enter -- start 'top 90%' + fromTo for reliability
+      gsap.fromTo(
+        '.pricing-card',
+        { y: 60, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.9,
+          stagger: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 90%',
+            once: true,
+          },
+        }
+      );
+
+      // Price count-up
+      gsap.utils.toArray('.pricing-price').forEach((el) => {
+        const target = parseInt(el.dataset.price, 10);
+        const obj = { val: 0 };
+        gsap.to(obj, {
+          val: target,
+          duration: 1.6,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 90%',
+            once: true,
+          },
+          onUpdate: () => {
+            el.innerText = Math.round(obj.val).toLocaleString();
+          },
+        });
+      });
+
+      // Features stagger
+      gsap.fromTo(
+        '.pricing-feature',
+        { x: -8, autoAlpha: 0 },
+        {
+          x: 0,
+          autoAlpha: 1,
+          duration: 0.5,
+          stagger: 0.04,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+
+      // Refresh on mount to catch any layout shifts
+      ScrollTrigger.refresh();
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section
       id="pricing"
       ref={sectionRef}
-      className="py-20 sm:py-28 px-6 sm:px-10"
+      className="relative py-24 sm:py-32 px-6 sm:px-10 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">Pricing</p>
+      {/* Background glow */}
+      <div
+        className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full blur-3xl pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(201,123,93,0.12), rgba(232,176,78,0.06) 40%, transparent 70%)',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">
+            Pricing
+          </p>
           <h2 className="font-heading font-extrabold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tighter">
             Simple pricing.{' '}
             <span className="font-drama italic text-navy">Real value.</span>
@@ -1045,74 +1428,330 @@ function Pricing() {
           <p className="text-charcoal/60 mt-4 max-w-lg mx-auto">
             No lock-in contracts. No hidden fees. Cancel anytime.
           </p>
+
+          {/* Guarantee pill */}
+          <div className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full bg-mustard/15 border border-mustard/40">
+            <Shield size={14} className="text-terracotta" />
+            <span className="font-data text-[11px] text-charcoal/70 uppercase tracking-widest">
+              30-day ROI guarantee on every plan
+            </span>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {/* Pricing cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`pricing-card rounded-3xl p-6 sm:p-8 flex flex-col transition-all duration-300
-                ${plan.popular
-                  ? 'bg-navy text-white ring-4 ring-terracotta/30 shadow-2xl scale-[1.02] md:scale-105'
-                  : 'bg-cream border border-cream-dark shadow-lg'
-                }`}
+              className={`pricing-card relative rounded-3xl p-6 sm:p-8 flex flex-col transition-all duration-300 ${
+                plan.popular
+                  ? 'bg-navy text-white shadow-2xl md:scale-105 z-10'
+                  : 'bg-cream border border-charcoal/10 shadow-lg hover:shadow-xl hover:-translate-y-1'
+              }`}
             >
+              {/* Popular glow + badge */}
               {plan.popular && (
-                <div className="inline-flex self-start bg-terracotta text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-                  Most Popular
-                </div>
+                <>
+                  <div
+                    className="absolute -inset-[2px] rounded-3xl -z-10 opacity-80 blur-[1px]"
+                    style={{
+                      background:
+                        'linear-gradient(135deg, #c97b5d 0%, #e8b04e 50%, #c97b5d 100%)',
+                    }}
+                  />
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                    <div
+                      className="text-charcoal text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest font-data shadow-lg"
+                      style={{
+                        background:
+                          'linear-gradient(90deg, #c97b5d 0%, #e8b04e 100%)',
+                      }}
+                    >
+                      Most Popular
+                    </div>
+                  </div>
+                </>
               )}
 
-              <h3
-                className={`font-heading font-bold text-xl ${plan.popular ? 'text-white' : 'text-charcoal'}`}
+              {/* Icon + name */}
+              <div className="flex items-center gap-3 mb-2">
+                <div
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                    plan.popular
+                      ? 'bg-terracotta/25 text-mustard'
+                      : 'bg-navy/10 text-navy'
+                  }`}
+                >
+                  {plan.icon}
+                </div>
+                <h3
+                  className={`font-heading font-extrabold text-xl ${
+                    plan.popular ? 'text-white' : 'text-charcoal'
+                  }`}
+                >
+                  {plan.name}
+                </h3>
+              </div>
+
+              {/* Badge line */}
+              <p
+                className={`text-[11px] font-data uppercase tracking-widest mb-4 ${
+                  plan.popular ? 'text-mustard' : 'text-terracotta'
+                }`}
               >
-                {plan.name}
-              </h3>
-              <p className={`text-sm mt-1 ${plan.popular ? 'text-white/60' : 'text-charcoal/60'}`}>
+                {plan.badge}
+              </p>
+
+              {/* Description */}
+              <p
+                className={`text-sm leading-relaxed mb-6 ${
+                  plan.popular ? 'text-white/70' : 'text-charcoal/70'
+                }`}
+              >
                 {plan.description}
               </p>
 
-              <div className="mt-6 mb-6">
+              {/* Price */}
+              <div className="mb-6 flex items-baseline">
                 <span
-                  className={`text-4xl sm:text-5xl font-extrabold font-heading tracking-tighter ${plan.popular ? 'text-white' : 'text-charcoal'}`}
+                  className={`text-5xl sm:text-6xl font-extrabold font-heading tracking-tighter ${
+                    plan.popular ? 'text-white' : 'text-charcoal'
+                  }`}
                 >
-                  {plan.price}
+                  $
+                  <span
+                    className="pricing-price"
+                    data-price={plan.price}
+                  >
+                    {plan.price.toLocaleString()}
+                  </span>
                 </span>
-                <span className={`text-sm ${plan.popular ? 'text-white/60' : 'text-charcoal/50'}`}>
+                <span
+                  className={`text-sm ml-1 ${
+                    plan.popular ? 'text-white/60' : 'text-charcoal/50'
+                  }`}
+                >
                   {plan.period}
                 </span>
               </div>
 
+              {/* Features */}
               <ul className="space-y-3 flex-1 mb-8">
                 {plan.features.map((feature) => (
                   <li
-                    key={feature}
-                    className={`flex items-start gap-2 text-sm ${plan.popular ? 'text-white/80' : 'text-charcoal/70'}`}
+                    key={feature.text}
+                    className={`pricing-feature flex items-start gap-3 text-sm ${
+                      plan.popular ? 'text-white/85' : 'text-charcoal/80'
+                    }`}
                   >
-                    <Check
-                      size={16}
-                      className={`shrink-0 mt-0.5 ${plan.popular ? 'text-terracotta' : 'text-green-600'}`}
-                    />
-                    {feature}
+                    <span
+                      className={`shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center ${
+                        feature.highlight
+                          ? plan.popular
+                            ? 'bg-mustard text-charcoal'
+                            : 'bg-terracotta text-white'
+                          : plan.popular
+                          ? 'bg-white/10 text-white/60'
+                          : 'bg-charcoal/5 text-charcoal/40'
+                      }`}
+                    >
+                      <Check size={12} strokeWidth={3} />
+                    </span>
+                    <span className={feature.highlight ? 'font-semibold' : ''}>
+                      {feature.text}
+                    </span>
                   </li>
                 ))}
               </ul>
 
+              {/* CTA */}
               <a
                 href="#"
-                className={`btn-magnetic block text-center px-6 py-3 rounded-full font-bold text-sm
-                  ${plan.popular
-                    ? 'bg-terracotta text-white'
-                    : 'bg-navy text-white'
-                  }`}
+                className={`btn-magnetic relative block text-center px-6 py-3.5 rounded-full font-bold text-sm overflow-hidden ${
+                  plan.popular ? 'text-charcoal' : 'bg-navy text-white'
+                }`}
+                style={
+                  plan.popular
+                    ? {
+                        background:
+                          'linear-gradient(90deg, #c97b5d 0%, #e8b04e 100%)',
+                      }
+                    : {}
+                }
               >
-                <span className={`btn-bg ${plan.popular ? 'bg-mustard' : 'bg-terracotta'}`}></span>
+                <span
+                  className={`btn-bg ${plan.popular ? 'bg-white' : 'bg-terracotta'}`}
+                ></span>
                 <span className="btn-label flex items-center justify-center gap-2">
                   {plan.cta} <ArrowRight size={14} />
                 </span>
               </a>
             </div>
           ))}
+        </div>
+
+        {/* Every plan includes banner */}
+        <div className="mt-12 sm:mt-14 max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-navy to-charcoal p-6 sm:p-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-5 sm:gap-6">
+            <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-terracotta/20 flex items-center justify-center">
+              <Sparkles className="text-mustard" size={24} />
+            </div>
+            <div className="flex-1">
+              <p className="font-data text-[11px] text-mustard uppercase tracking-widest mb-3">
+                Every Plan Includes
+              </p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-white/85 text-sm">
+                <span className="flex items-center gap-2">
+                  <Check size={14} className="text-mustard shrink-0" />
+                  Australian data hosting
+                </span>
+                <span className="flex items-center gap-2">
+                  <Check size={14} className="text-mustard shrink-0" />
+                  No lock-in contracts
+                </span>
+                <span className="flex items-center gap-2">
+                  <Check size={14} className="text-mustard shrink-0" />
+                  Cancel anytime
+                </span>
+                <span className="flex items-center gap-2">
+                  <Check size={14} className="text-mustard shrink-0" />
+                  Live in 7 days
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   F2. FAQ -- "Questions, answered" (accordion)
+   ═══════════════════════════════════════════════════════════════ */
+
+function FAQ() {
+  const [open, setOpen] = useState(0);
+  const sectionRef = useRef(null);
+
+  const faqs = [
+    {
+      q: 'Do I need tech skills to use this?',
+      a: "Nope. We handle setup, configuration, and team training end-to-end. You keep running your business; we handle the wiring.",
+    },
+    {
+      q: "What if the AI doesn't sound right for my brand?",
+      a: "We test every voice and review response with you before launch. You pick the tone -- warm, straight-to-the-point, cheeky -- and we tune the AI to match. If it's not right, we rework it before going live.",
+    },
+    {
+      q: 'Can I keep my existing phone number?',
+      a: 'Yes. Your AI receptionist picks up via standard call forwarding -- your number stays yours, customers never notice the change, and you can switch it off any time from your dashboard.',
+    },
+    {
+      q: "What happens when the AI can't answer a question?",
+      a: "It hands off gracefully. Customers can leave a message, book a callback, or ask for you directly -- and you get an SMS summary within seconds. No missed jobs, no bad experiences.",
+    },
+    {
+      q: 'Is my customer data safe?',
+      a: 'Your data is hosted in Australia, encrypted in transit and at rest. We comply with the Australian Privacy Principles, never sell or share data, and you can purge call recordings or transcripts any time.',
+    },
+    {
+      q: "What's the 30-day ROI guarantee?",
+      a: "If you don't see measurable ROI -- more bookings, more reviews, or hours saved -- within 30 days of going live, we refund your setup fee. No legal fine print, no retention calls.",
+    },
+  ];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.faq-item',
+        { y: 30, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 85%',
+            once: true,
+          },
+        }
+      );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative py-20 sm:py-28 px-6 sm:px-10 bg-cream"
+    >
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">
+            FAQ
+          </p>
+          <h2 className="font-heading font-extrabold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tighter">
+            Questions,{' '}
+            <span className="font-drama italic text-navy">answered.</span>
+          </h2>
+        </div>
+
+        <div className="space-y-3">
+          {faqs.map((faq, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={i}
+                className="faq-item rounded-2xl border border-charcoal/10 overflow-hidden bg-white/60 backdrop-blur-sm transition-colors hover:bg-white/80"
+              >
+                <button
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                >
+                  <span className="font-heading font-bold text-charcoal text-base sm:text-lg pr-4">
+                    {faq.q}
+                  </span>
+                  <span
+                    className={`shrink-0 w-8 h-8 rounded-full bg-cream-dark/70 flex items-center justify-center transition-transform duration-300 ${
+                      isOpen ? 'rotate-45 bg-terracotta text-white' : 'text-terracotta'
+                    }`}
+                  >
+                    <Plus size={16} strokeWidth={2.5} />
+                  </span>
+                </button>
+                <div
+                  className="grid transition-all duration-500 ease-out"
+                  style={{
+                    gridTemplateRows: isOpen ? '1fr' : '0fr',
+                  }}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-5 text-charcoal/70 text-sm sm:text-base leading-relaxed">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* CTA below FAQ */}
+        <div className="mt-12 text-center">
+          <p className="text-charcoal/60 text-sm mb-4">Still have questions?</p>
+          <a
+            href="#"
+            className="btn-magnetic relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-sm bg-navy text-white"
+          >
+            <span className="btn-bg bg-terracotta"></span>
+            <span className="btn-label flex items-center gap-2">
+              Book a Free Call <ArrowRight size={14} />
+            </span>
+          </a>
         </div>
       </div>
     </section>
@@ -1240,8 +1879,10 @@ function App() {
       <MarqueeTicker />
       <Features />
       <HowItWorks />
+      <Proof />
       <Philosophy />
       <Pricing />
+      <FAQ />
       <Footer />
     </div>
   );
