@@ -139,6 +139,45 @@ function Navbar() {
 
 function Hero() {
   const heroRef = useRef(null);
+  const videoRef = useRef(null);
+  const [activeBeat, setActiveBeat] = useState('');
+  const [reducedMotion, setReducedMotion] = useState(() =>
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const onChange = (e) => setReducedMotion(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || reducedMotion) return;
+    const onTime = () => {
+      const t = v.currentTime;
+      // v7 (10s) pose order: wave (0-1.2) -> laptop (2.6-4.0)
+      //   -> thumbs-up (4.3-6.3) -> phone (6.9-7.9) -> xfade-to-wave (8-9)
+      //   -> palindrome wave loop-back (9-10). No bubble on the closing wave by design.
+      const beat =
+        t >= 0.2 && t < 1.2 ? 'saved' :
+        t >= 2.6 && t < 4.0 ? 'laptop' :
+        t >= 4.3 && t < 6.3 ? 'stars' :
+        t >= 6.9 && t < 7.9 ? 'phone' : '';
+      setActiveBeat((prev) => (prev === beat ? prev : beat));
+    };
+    v.addEventListener('timeupdate', onTime);
+    v.addEventListener('seeked', onTime);
+    v.addEventListener('play', onTime);
+    return () => {
+      v.removeEventListener('timeupdate', onTime);
+      v.removeEventListener('seeked', onTime);
+      v.removeEventListener('play', onTime);
+    };
+  }, [reducedMotion]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -229,58 +268,86 @@ function Hero() {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="hero-character-wrap relative w-[300px] sm:w-[400px] lg:w-[480px] xl:w-[560px] aspect-square animate-float">
 
-              {/* Decorative micro-shapes (inline SVG, brand colors) */}
-              <svg aria-hidden className="hero-deco absolute top-[8%] -left-4 w-7 h-7 text-mustard animate-drift-slow" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 4 A 10 10 0 1 0 16 20 A 8 8 0 1 1 16 4 Z" />
-              </svg>
-              <svg aria-hidden className="hero-deco absolute -top-2 right-[14%] w-8 h-8 text-terracotta animate-drift" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-                <line x1="6" y1="18" x2="18" y2="6" />
-              </svg>
-              <svg aria-hidden className="hero-deco absolute top-[40%] -right-2 w-4 h-4 text-navy/60 animate-drift-slow" viewBox="0 0 8 8">
-                <circle cx="4" cy="4" r="3" fill="currentColor" />
-              </svg>
-              <svg aria-hidden className="hero-deco absolute bottom-[16%] left-[-1%] w-5 h-5 text-mustard animate-drift" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 4 A 10 10 0 1 0 16 20 A 8 8 0 1 1 16 4 Z" />
-              </svg>
-              <svg aria-hidden className="hero-deco absolute bottom-[10%] right-[20%] w-3 h-3 text-terracotta animate-drift-slow" viewBox="0 0 8 8">
-                <circle cx="4" cy="4" r="3" fill="currentColor" />
-              </svg>
-
-              {/* The character -- gentle sway pivots from feet, parent does the bob */}
-              <img
-                src="/assets/amily-01-waving-transparent.png"
-                alt="Amily — your friendly AI guide for Melbourne small business"
-                className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)] animate-wave-tilt"
-              />
+{/* The character -- 8s video loop; reduced-motion users get the still PNG */}
+              {reducedMotion ? (
+                <img
+                  src="/assets/amily-01-waving-transparent.png"
+                  alt="Amily — your friendly AI guide for Melbourne small business"
+                  className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)]"
+                />
+              ) : (
+                <video
+                  ref={videoRef}
+                  poster="/assets/amily-01-waving-transparent.png"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  aria-label="Amily — your friendly AI guide for Melbourne small business"
+                  className="relative z-10 w-full h-full object-cover"
+                >
+                  <source src="/video/amily-hero-loop-v7-alpha.webm" type="video/webm" />
+                  <source src="/video/amily-hero-loop-v7.mp4" type="video/mp4" />
+                </video>
+              )}
 
               {/* 4 orbiting BUBBLE badges (hidden lg:flex per CLAUDE.md rule) */}
-              <div className="hero-float-badge absolute top-[10%] -left-8 lg:-left-12 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-delayed shadow-lg z-20">
-                <div className="flex items-center gap-2">
-                  <MessageSquare size={13} className="text-navy" />
-                  <span className="text-charcoal text-xs font-semibold whitespace-nowrap">Call answered in 0.3s</span>
+              <div
+                className="hero-float-badge beat-phone absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                style={{
+                  opacity: activeBeat === 'phone' ? 1 : 0,
+                  transform: activeBeat === 'phone' ? 'scale(1)' : 'scale(0.7)',
+                  pointerEvents: activeBeat === 'phone' ? 'auto' : 'none',
+                }}
+              >
+                <div className="flex items-center gap-3">
+                  <MessageSquare size={18} className="text-navy" />
+                  <span className="text-charcoal text-base font-semibold whitespace-nowrap">Call answered in 0.3s</span>
                 </div>
               </div>
 
-              <div className="hero-float-badge absolute top-[2%] -right-4 lg:-right-8 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-slow shadow-lg z-20">
-                <div className="flex items-center gap-1.5">
+              <div
+                className="hero-float-badge beat-stars absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                style={{
+                  opacity: activeBeat === 'stars' ? 1 : 0,
+                  transform: activeBeat === 'stars' ? 'scale(1)' : 'scale(0.7)',
+                  pointerEvents: activeBeat === 'stars' ? 'auto' : 'none',
+                }}
+              >
+                <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={11} className="text-mustard fill-mustard" />
+                    <Star key={i} size={15} className="text-mustard fill-mustard" />
                   ))}
-                  <span className="text-charcoal text-xs font-semibold ml-1">4.9</span>
+                  <span className="text-charcoal text-base font-semibold ml-2 whitespace-nowrap">4.9 Google reviews</span>
                 </div>
               </div>
 
-              <div className="hero-float-badge absolute top-[55%] -left-10 lg:-left-16 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-reverse shadow-lg z-20">
-                <div className="flex items-center gap-2">
-                  <Zap size={13} className="text-terracotta" />
-                  <span className="text-charcoal text-xs font-semibold whitespace-nowrap">12 jobs booked today</span>
+              <div
+                className="hero-float-badge beat-laptop absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                style={{
+                  opacity: activeBeat === 'laptop' ? 1 : 0,
+                  transform: activeBeat === 'laptop' ? 'scale(1)' : 'scale(0.7)',
+                  pointerEvents: activeBeat === 'laptop' ? 'auto' : 'none',
+                }}
+              >
+                <div className="flex items-center gap-3">
+                  <Zap size={18} className="text-terracotta" />
+                  <span className="text-charcoal text-base font-semibold whitespace-nowrap">12 jobs booked today</span>
                 </div>
               </div>
 
-              <div className="hero-float-badge absolute bottom-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/75 backdrop-blur-md border border-white/80 rounded-2xl px-3 py-2 animate-float-delayed shadow-lg z-20">
-                <div className="flex items-center gap-2">
-                  <Shield size={13} className="text-green-600" />
-                  <span className="text-charcoal text-xs font-semibold whitespace-nowrap">$4,200 saved this month</span>
+              <div
+                className="hero-float-badge beat-saved absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                style={{
+                  opacity: activeBeat === 'saved' ? 1 : 0,
+                  transform: activeBeat === 'saved' ? 'scale(1)' : 'scale(0.7)',
+                  pointerEvents: activeBeat === 'saved' ? 'auto' : 'none',
+                }}
+              >
+                <div className="flex items-center gap-3">
+                  <Shield size={18} className="text-green-600" />
+                  <span className="text-charcoal text-base font-semibold whitespace-nowrap">$4,200 saved this month</span>
                 </div>
               </div>
             </div>

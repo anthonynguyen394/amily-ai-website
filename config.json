@@ -1,0 +1,11 @@
+{
+  "project_id": "amily-ai-business",
+  "location": "us-central1",
+  "model": "veo-3.0-generate-001",
+  "storage_uri": "gs://amily-ai-video-gen/loops/",
+  "aspect_ratio": "16:9",
+  "duration_seconds": 8,
+  "resolution": "1080p",
+  "brand_cream_hex": "#faf5eb",
+  "src_cream_hex_hint": "#fefbf4"
+}

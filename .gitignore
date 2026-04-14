@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Veo generation working files (per-run, contain base64 payloads)
+.veo_request.json
+.veo_result.json
+
+# Playwright CLI session cache
+.playwright-cli/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
