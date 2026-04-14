@@ -1278,17 +1278,166 @@ function Philosophy() {
    F. PRICING (from v2)
    ═══════════════════════════════════════════════════════════════ */
 
+/* Animated progress ring -- stroke-dashoffset tween on scroll */
+function ProgressRing({ value, size = 68, stroke = 4, color, trackColor, children }) {
+  const ringRef = useRef(null);
+  const radius = (size - stroke) / 2;
+  const circumference = 2 * Math.PI * radius;
+
+  useEffect(() => {
+    if (!ringRef.current) return;
+    const offset = circumference * (1 - value / 100);
+    const tween = gsap.fromTo(
+      ringRef.current,
+      { strokeDashoffset: circumference },
+      {
+        strokeDashoffset: offset,
+        duration: 1.6,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: ringRef.current,
+          start: 'top 90%',
+          once: true,
+        },
+      }
+    );
+    return () => tween.kill();
+  }, [value, circumference]);
+
+  return (
+    <div
+      className="relative shrink-0"
+      style={{ width: size, height: size }}
+    >
+      <svg
+        width={size}
+        height={size}
+        style={{ transform: 'rotate(-90deg)' }}
+      >
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          strokeWidth={stroke}
+          fill="none"
+          stroke={trackColor}
+        />
+        <circle
+          ref={ringRef}
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          strokeWidth={stroke}
+          fill="none"
+          stroke={color}
+          strokeDasharray={circumference}
+          strokeDashoffset={circumference}
+          strokeLinecap="round"
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/* Price that count-ups on first scroll-in AND smooth-tweens on value changes (billing toggle) */
+function AnimatedPrice({ value, className }) {
+  const ref = useRef(null);
+  const displayRef = useRef(0);
+  const enteredRef = useRef(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const obj = { val: displayRef.current };
+    const tween = gsap.to(obj, {
+      val: value,
+      duration: enteredRef.current ? 0.7 : 1.5,
+      ease: 'power3.out',
+      onUpdate: () => {
+        if (ref.current) {
+          ref.current.textContent = Math.round(obj.val).toLocaleString();
+          displayRef.current = obj.val;
+        }
+      },
+      scrollTrigger: enteredRef.current
+        ? undefined
+        : {
+            trigger: ref.current,
+            start: 'top 95%',
+            once: true,
+            onEnter: () => {
+              enteredRef.current = true;
+            },
+          },
+    });
+    return () => tween.kill();
+  }, [value]);
+
+  return <span ref={ref} className={className}>0</span>;
+}
+
+/* Monthly/Yearly segmented toggle */
+function BillingToggle({ value, onChange }) {
+  return (
+    <div className="relative inline-block">
+      <div className="inline-flex items-center bg-charcoal/[0.06] border border-charcoal/10 rounded-full p-1 relative">
+        <div
+          className="absolute top-1 bottom-1 rounded-full bg-navy shadow-md"
+          style={{
+            width: 'calc(50% - 4px)',
+            left: '4px',
+            transform: value === 'yearly' ? 'translateX(100%)' : 'translateX(0%)',
+            transition: 'transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          }}
+        />
+        <button
+          type="button"
+          onClick={() => onChange('monthly')}
+          className={`relative z-10 px-6 sm:px-7 py-2 font-data text-[11px] uppercase tracking-widest transition-colors duration-300 ${
+            value === 'monthly' ? 'text-white' : 'text-charcoal/60 hover:text-charcoal/80'
+          }`}
+        >
+          Monthly
+        </button>
+        <button
+          type="button"
+          onClick={() => onChange('yearly')}
+          className={`relative z-10 px-6 sm:px-7 py-2 font-data text-[11px] uppercase tracking-widest transition-colors duration-300 ${
+            value === 'yearly' ? 'text-white' : 'text-charcoal/60 hover:text-charcoal/80'
+          }`}
+        >
+          Yearly
+        </button>
+      </div>
+      <span
+        className="absolute -top-3 -right-5 text-charcoal text-[9px] font-bold px-2 py-0.5 rounded-full font-data uppercase tracking-wider shadow-sm rotate-6"
+        style={{
+          background: 'linear-gradient(90deg, #c97b5d, #e8b04e)',
+        }}
+      >
+        Save 20%
+      </span>
+    </div>
+  );
+}
+
 function Pricing() {
   const sectionRef = useRef(null);
+  const [billing, setBilling] = useState('monthly');
 
   const plans = [
     {
       name: 'Essential',
       badge: 'Best for review-focused SMBs',
-      price: 99,
-      period: '/mo',
+      priceMonthly: 99,
+      priceYearly: 79,
+      oneOff: false,
       description: 'AI Review Management for local businesses ready to dominate Google.',
-      icon: <Star size={18} />,
+      icon: <Star size={20} strokeWidth={2} />,
+      coverage: 40,
+      coverageLabel: 'Essential coverage',
       features: [
         { text: '24/7 review monitoring across Google + socials', highlight: false },
         { text: 'AI-drafted responses in your brand tone', highlight: true },
@@ -1302,10 +1451,13 @@ function Pricing() {
     {
       name: 'Performance',
       badge: 'Best for growing trades + services',
-      price: 249,
-      period: '/mo',
+      priceMonthly: 249,
+      priceYearly: 199,
+      oneOff: false,
       description: 'AI voice receptionist + reviews -- for businesses losing jobs after-hours.',
-      icon: <Phone size={18} />,
+      icon: <Phone size={20} strokeWidth={2} />,
+      coverage: 80,
+      coverageLabel: 'High coverage',
       features: [
         { text: 'Everything in Essential', highlight: false },
         { text: '24/7 AI voice receptionist', highlight: true },
@@ -1320,10 +1472,13 @@ function Pricing() {
     {
       name: 'Enterprise',
       badge: 'Best for full transformation',
-      price: 3500,
-      period: ' one-off',
+      priceMonthly: 3500,
+      priceYearly: 3500,
+      oneOff: true,
       description: 'White-glove AI setup, team training, and 3 months hands-on support.',
-      icon: <Shield size={18} />,
+      icon: <Shield size={20} strokeWidth={2} />,
+      coverage: 100,
+      coverageLabel: 'Full coverage',
       features: [
         { text: 'Everything in Performance', highlight: false },
         { text: 'Custom AI workflow design', highlight: true },
@@ -1339,15 +1494,16 @@ function Pricing() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Cards enter -- start 'top 90%' + fromTo for reliability
+      // Cards enter with slight scale + y
       gsap.fromTo(
         '.pricing-card',
-        { y: 60, autoAlpha: 0 },
+        { y: 70, scale: 0.96, autoAlpha: 0 },
         {
           y: 0,
+          scale: 1,
           autoAlpha: 1,
           duration: 0.9,
-          stagger: 0.15,
+          stagger: 0.12,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -1356,25 +1512,6 @@ function Pricing() {
           },
         }
       );
-
-      // Price count-up
-      gsap.utils.toArray('.pricing-price').forEach((el) => {
-        const target = parseInt(el.dataset.price, 10);
-        const obj = { val: 0 };
-        gsap.to(obj, {
-          val: target,
-          duration: 1.6,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 90%',
-            once: true,
-          },
-          onUpdate: () => {
-            el.innerText = Math.round(obj.val).toLocaleString();
-          },
-        });
-      });
 
       // Features stagger
       gsap.fromTo(
@@ -1394,7 +1531,6 @@ function Pricing() {
         }
       );
 
-      // Refresh on mount to catch any layout shifts
       ScrollTrigger.refresh();
     }, sectionRef);
     return () => ctx.revert();
@@ -1436,158 +1572,184 @@ function Pricing() {
               30-day ROI guarantee on every plan
             </span>
           </div>
+
+          {/* Billing toggle */}
+          <div className="mt-8 flex justify-center">
+            <BillingToggle value={billing} onChange={setBilling} />
+          </div>
         </div>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`pricing-card relative rounded-3xl p-6 sm:p-8 flex flex-col transition-all duration-300 ${
-                plan.popular
-                  ? 'bg-navy text-white shadow-2xl md:scale-105 z-10'
-                  : 'bg-cream border border-charcoal/10 shadow-lg hover:shadow-xl hover:-translate-y-1'
-              }`}
-            >
-              {/* Popular glow + badge */}
-              {plan.popular && (
-                <>
-                  <div
-                    className="absolute -inset-[2px] rounded-3xl -z-10 opacity-80 blur-[1px]"
-                    style={{
-                      background:
-                        'linear-gradient(135deg, #c97b5d 0%, #e8b04e 50%, #c97b5d 100%)',
-                    }}
-                  />
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch pt-6">
+          {plans.map((plan) => {
+            const currentPrice =
+              billing === 'yearly' ? plan.priceYearly : plan.priceMonthly;
+            const periodLabel = plan.oneOff
+              ? 'one-off'
+              : billing === 'yearly'
+              ? '/mo billed yearly'
+              : '/mo';
+            const ringColor = plan.popular ? '#e8b04e' : '#c97b5d';
+            const ringTrack = plan.popular
+              ? 'rgba(255,255,255,0.15)'
+              : 'rgba(12,27,48,0.08)';
+            const iconColor = plan.popular ? 'text-mustard' : 'text-navy';
+
+            return (
+              <div
+                key={plan.name}
+                className={`pricing-card group relative rounded-3xl p-6 sm:p-8 flex flex-col will-change-transform ${
+                  plan.popular
+                    ? 'bg-navy text-white shadow-2xl md:scale-105 z-10 hover:shadow-[0_30px_60px_-15px_rgba(201,123,93,0.45)]'
+                    : 'bg-cream border border-charcoal/10 shadow-lg hover:shadow-2xl hover:-translate-y-2'
+                }`}
+                style={{
+                  transition:
+                    'transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 500ms ease-out',
+                }}
+              >
+                {/* Popular glow + badge */}
+                {plan.popular && (
+                  <>
                     <div
-                      className="text-charcoal text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest font-data shadow-lg"
+                      className="absolute -inset-[2px] rounded-3xl -z-10 opacity-80 blur-[1px]"
                       style={{
                         background:
-                          'linear-gradient(90deg, #c97b5d 0%, #e8b04e 100%)',
+                          'linear-gradient(135deg, #c97b5d 0%, #e8b04e 50%, #c97b5d 100%)',
                       }}
-                    >
-                      Most Popular
+                    />
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                      <div
+                        className="text-charcoal text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest font-data shadow-lg"
+                        style={{
+                          background:
+                            'linear-gradient(90deg, #c97b5d 0%, #e8b04e 100%)',
+                        }}
+                      >
+                        Most Popular
+                      </div>
                     </div>
-                  </div>
-                </>
-              )}
+                  </>
+                )}
 
-              {/* Icon + name */}
-              <div className="flex items-center gap-3 mb-2">
-                <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                    plan.popular
-                      ? 'bg-terracotta/25 text-mustard'
-                      : 'bg-navy/10 text-navy'
-                  }`}
-                >
-                  {plan.icon}
-                </div>
-                <h3
-                  className={`font-heading font-extrabold text-xl ${
-                    plan.popular ? 'text-white' : 'text-charcoal'
-                  }`}
-                >
-                  {plan.name}
-                </h3>
-              </div>
-
-              {/* Badge line */}
-              <p
-                className={`text-[11px] font-data uppercase tracking-widest mb-4 ${
-                  plan.popular ? 'text-mustard' : 'text-terracotta'
-                }`}
-              >
-                {plan.badge}
-              </p>
-
-              {/* Description */}
-              <p
-                className={`text-sm leading-relaxed mb-6 ${
-                  plan.popular ? 'text-white/70' : 'text-charcoal/70'
-                }`}
-              >
-                {plan.description}
-              </p>
-
-              {/* Price */}
-              <div className="mb-6 flex items-baseline">
-                <span
-                  className={`text-5xl sm:text-6xl font-extrabold font-heading tracking-tighter ${
-                    plan.popular ? 'text-white' : 'text-charcoal'
-                  }`}
-                >
-                  $
-                  <span
-                    className="pricing-price"
-                    data-price={plan.price}
+                {/* Progress ring + name */}
+                <div className="flex items-center gap-4 mb-2">
+                  <ProgressRing
+                    value={plan.coverage}
+                    color={ringColor}
+                    trackColor={ringTrack}
                   >
-                    {plan.price.toLocaleString()}
-                  </span>
-                </span>
-                <span
-                  className={`text-sm ml-1 ${
-                    plan.popular ? 'text-white/60' : 'text-charcoal/50'
-                  }`}
-                >
-                  {plan.period}
-                </span>
-              </div>
-
-              {/* Features */}
-              <ul className="space-y-3 flex-1 mb-8">
-                {plan.features.map((feature) => (
-                  <li
-                    key={feature.text}
-                    className={`pricing-feature flex items-start gap-3 text-sm ${
-                      plan.popular ? 'text-white/85' : 'text-charcoal/80'
-                    }`}
-                  >
-                    <span
-                      className={`shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center ${
-                        feature.highlight
-                          ? plan.popular
-                            ? 'bg-mustard text-charcoal'
-                            : 'bg-terracotta text-white'
-                          : plan.popular
-                          ? 'bg-white/10 text-white/60'
-                          : 'bg-charcoal/5 text-charcoal/40'
+                    <span className={iconColor}>{plan.icon}</span>
+                  </ProgressRing>
+                  <div className="flex-1">
+                    <h3
+                      className={`font-heading font-extrabold text-xl leading-tight ${
+                        plan.popular ? 'text-white' : 'text-charcoal'
                       }`}
                     >
-                      <Check size={12} strokeWidth={3} />
-                    </span>
-                    <span className={feature.highlight ? 'font-semibold' : ''}>
-                      {feature.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+                      {plan.name}
+                    </h3>
+                    <p
+                      className={`font-data text-[10px] uppercase tracking-widest mt-1 ${
+                        plan.popular ? 'text-mustard' : 'text-terracotta'
+                      }`}
+                    >
+                      {plan.coverage}% {plan.coverageLabel}
+                    </p>
+                  </div>
+                </div>
 
-              {/* CTA */}
-              <a
-                href="#"
-                className={`btn-magnetic relative block text-center px-6 py-3.5 rounded-full font-bold text-sm overflow-hidden ${
-                  plan.popular ? 'text-charcoal' : 'bg-navy text-white'
-                }`}
-                style={
-                  plan.popular
-                    ? {
-                        background:
-                          'linear-gradient(90deg, #c97b5d 0%, #e8b04e 100%)',
-                      }
-                    : {}
-                }
-              >
-                <span
-                  className={`btn-bg ${plan.popular ? 'bg-white' : 'bg-terracotta'}`}
-                ></span>
-                <span className="btn-label flex items-center justify-center gap-2">
-                  {plan.cta} <ArrowRight size={14} />
-                </span>
-              </a>
-            </div>
-          ))}
+                {/* Badge line */}
+                <p
+                  className={`text-[11px] font-data uppercase tracking-widest mb-4 mt-2 ${
+                    plan.popular ? 'text-white/50' : 'text-charcoal/50'
+                  }`}
+                >
+                  {plan.badge}
+                </p>
+
+                {/* Description */}
+                <p
+                  className={`text-sm leading-relaxed mb-6 ${
+                    plan.popular ? 'text-white/70' : 'text-charcoal/70'
+                  }`}
+                >
+                  {plan.description}
+                </p>
+
+                {/* Price */}
+                <div className="mb-6 flex items-baseline flex-wrap gap-x-1">
+                  <span
+                    className={`text-5xl sm:text-6xl font-extrabold font-heading tracking-tighter ${
+                      plan.popular ? 'text-white' : 'text-charcoal'
+                    }`}
+                  >
+                    $
+                    <AnimatedPrice value={currentPrice} />
+                  </span>
+                  <span
+                    className={`text-sm ml-1 ${
+                      plan.popular ? 'text-white/60' : 'text-charcoal/50'
+                    }`}
+                  >
+                    {periodLabel}
+                  </span>
+                </div>
+
+                {/* Features */}
+                <ul className="space-y-3 flex-1 mb-8">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature.text}
+                      className={`pricing-feature flex items-start gap-3 text-sm ${
+                        plan.popular ? 'text-white/85' : 'text-charcoal/80'
+                      }`}
+                    >
+                      <span
+                        className={`shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center ${
+                          feature.highlight
+                            ? plan.popular
+                              ? 'bg-mustard text-charcoal'
+                              : 'bg-terracotta text-white'
+                            : plan.popular
+                            ? 'bg-white/10 text-white/60'
+                            : 'bg-charcoal/5 text-charcoal/40'
+                        }`}
+                      >
+                        <Check size={12} strokeWidth={3} />
+                      </span>
+                      <span className={feature.highlight ? 'font-semibold' : ''}>
+                        {feature.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <a
+                  href="#"
+                  className={`btn-magnetic relative block text-center px-6 py-3.5 rounded-full font-bold text-sm overflow-hidden ${
+                    plan.popular ? 'text-charcoal' : 'bg-navy text-white'
+                  }`}
+                  style={
+                    plan.popular
+                      ? {
+                          background:
+                            'linear-gradient(90deg, #c97b5d 0%, #e8b04e 100%)',
+                        }
+                      : {}
+                  }
+                >
+                  <span
+                    className={`btn-bg ${plan.popular ? 'bg-white' : 'bg-terracotta'}`}
+                  ></span>
+                  <span className="btn-label flex items-center justify-center gap-2">
+                    {plan.cta} <ArrowRight size={14} />
+                  </span>
+                </a>
+              </div>
+            );
+          })}
         </div>
 
         {/* Every plan includes banner */}
