@@ -18,6 +18,10 @@ import {
   TrendingUp,
   Plus,
   Sparkles,
+  Play,
+  Pause,
+  Volume2,
+  Calculator,
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -1172,7 +1176,7 @@ function Proof() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 sm:mb-20">
           {stats.map((stat, i) => (
             <div
               key={i}
@@ -1210,6 +1214,90 @@ function Proof() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Founding Customer Recruitment */}
+        <div className="text-center mb-10 sm:mb-12">
+          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">
+            Founding Customers
+          </p>
+          <h3 className="font-heading font-extrabold text-charcoal text-2xl sm:text-3xl md:text-4xl tracking-tighter">
+            We're looking for our first{' '}
+            <span className="font-drama italic text-navy">5 founding customers.</span>
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          {/* Card 1 -- The offer */}
+          <div className="proof-card relative bg-cream rounded-3xl p-6 sm:p-8 border border-charcoal/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="shrink-0 w-11 h-11 rounded-full bg-terracotta text-white flex items-center justify-center shadow-md">
+                <Sparkles size={20} strokeWidth={2} />
+              </div>
+              <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
+                What you get
+              </h4>
+            </div>
+            <ul className="space-y-3 flex-1">
+              {[
+                'Free setup + onboarding (worth $3,500)',
+                'First 3 months free, then locked-in founding-customer pricing',
+                'Direct line to the founder (me -- Anthony) for the first 90 days',
+                'Bring-your-own scope: voice receptionist, review automation, or both',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-terracotta text-white flex items-center justify-center">
+                    <Check size={12} strokeWidth={3} />
+                  </span>
+                  <span className="text-charcoal/80 text-sm sm:text-base leading-relaxed">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Card 2 -- What we ask */}
+          <div className="proof-card relative bg-cream rounded-3xl p-6 sm:p-8 border border-charcoal/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="shrink-0 w-11 h-11 rounded-full bg-navy text-white flex items-center justify-center shadow-md">
+                <MessageSquare size={20} strokeWidth={2} />
+              </div>
+              <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
+                What we ask
+              </h4>
+            </div>
+            <ul className="space-y-3 flex-1">
+              {[
+                "You're a Melbourne-based small business (tradie, cafe, services)",
+                "You'll actually use Amily for at least 30 days",
+                'Honest feedback -- what works, what doesn\u2019t',
+                'Permission to share your story (name + business) once you\u2019re seeing results',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-terracotta text-white flex items-center justify-center">
+                    <Check size={12} strokeWidth={3} />
+                  </span>
+                  <span className="text-charcoal/80 text-sm sm:text-base leading-relaxed">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-center mt-10 sm:mt-12">
+          <a
+            href="mailto:hello@amily.ai?subject=Founding%20customer%20application"
+            className="btn-magnetic inline-flex items-center gap-2 bg-terracotta text-white px-6 py-3 rounded-full text-sm sm:text-base font-bold shadow-md"
+          >
+            Apply to be a founding customer
+            <ArrowRight size={16} strokeWidth={2.5} />
+          </a>
+          <p className="text-charcoal/50 text-xs sm:text-sm mt-4">
+            First-come, first-served. We can only onboard 5 in the first cohort.
+          </p>
         </div>
       </div>
     </section>
@@ -2102,6 +2190,354 @@ function Footer() {
 
 
 /* ═══════════════════════════════════════════════════════════════
+   HEAR AMILY -- Audio sample player with animated waveform
+   ═══════════════════════════════════════════════════════════════ */
+
+function HearAmily() {
+  const sectionRef = useRef(null);
+  const audioRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [unavailable, setUnavailable] = useState(false);
+
+  // 28 bars with deterministic heights so SSR/CSR match
+  const bars = Array.from({ length: 28 }, (_, i) => {
+    const h = 0.4 + Math.abs(Math.sin(i * 1.7)) * 0.55 + Math.abs(Math.cos(i * 0.9)) * 0.2;
+    return Math.min(1, h);
+  });
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.hear-amily-card', {
+        y: 60,
+        autoAlpha: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', once: true },
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
+  const togglePlay = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    if (playing) {
+      a.pause();
+    } else {
+      a.play().catch(() => setUnavailable(true));
+    }
+  };
+
+  const fmt = (s) => {
+    if (!isFinite(s)) return '0:00';
+    const m = Math.floor(s / 60);
+    const sec = Math.floor(s % 60).toString().padStart(2, '0');
+    return `${m}:${sec}`;
+  };
+
+  const activeBars = Math.floor((progress / Math.max(duration, 0.01)) * bars.length);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative py-16 sm:py-20 px-6 sm:px-10 overflow-hidden"
+    >
+      <div className="max-w-5xl mx-auto">
+        <div className="hear-amily-card relative bg-navy text-white rounded-3xl p-6 sm:p-10 shadow-2xl overflow-hidden">
+          {/* Background blobs */}
+          <div
+            className="absolute -top-20 -right-20 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #c97b5d, transparent 70%)' }}
+          />
+          <div
+            className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #e8b04e, transparent 70%)' }}
+          />
+
+          <div className="relative grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
+            {/* Left: label + title */}
+            <div className="md:max-w-xs">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <Volume2 size={14} className="text-mustard" />
+                <span className="font-data text-[11px] text-mustard uppercase tracking-[0.2em]">
+                  Hear Amily
+                </span>
+              </div>
+              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl leading-tight mb-2">
+                Listen to a real{' '}
+                <span className="font-drama italic text-mustard">sample call.</span>
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                20 seconds. After-hours plumbing call. Booked, summarised, sent.
+              </p>
+            </div>
+
+            {/* Right: player */}
+            <div className="bg-white/[0.06] border border-white/10 rounded-2xl p-5 sm:p-6 backdrop-blur-sm">
+              <div className="flex items-center gap-4">
+                <button
+                  type="button"
+                  onClick={togglePlay}
+                  aria-label={playing ? 'Pause sample call' : 'Play sample call'}
+                  className="shrink-0 w-14 h-14 rounded-full bg-mustard text-charcoal flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-transform duration-200"
+                >
+                  {playing ? <Pause size={22} fill="currentColor" /> : <Play size={22} fill="currentColor" className="ml-0.5" />}
+                </button>
+
+                {/* Waveform */}
+                <div className="flex-1 flex items-center gap-[3px] h-12">
+                  {bars.map((h, i) => {
+                    const isActive = i < activeBars;
+                    return (
+                      <span
+                        key={i}
+                        className={`flex-1 rounded-full ${isActive ? 'bg-mustard' : 'bg-white/25'} ${playing && !isActive ? 'wave-bar' : ''}`}
+                        style={{
+                          height: `${Math.max(15, h * 100)}%`,
+                          transition: 'background-color 200ms ease-out',
+                          animationDelay: `${i * 60}ms`,
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+
+                <span className="font-data text-xs text-white/60 tabular-nums shrink-0 min-w-[64px] text-right">
+                  {fmt(progress)} / {fmt(duration || 20)}
+                </span>
+              </div>
+
+              {unavailable && (
+                <p className="mt-3 text-[11px] text-white/50 font-data uppercase tracking-wider">
+                  Demo audio coming soon -- book a call to hear Amily live.
+                </p>
+              )}
+
+              <audio
+                ref={audioRef}
+                src="/assets/amily-demo-call.mp3"
+                preload="metadata"
+                onPlay={() => setPlaying(true)}
+                onPause={() => setPlaying(false)}
+                onEnded={() => { setPlaying(false); setProgress(0); }}
+                onTimeUpdate={(e) => setProgress(e.currentTarget.currentTime)}
+                onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+                onError={() => setUnavailable(true)}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   ROI CALCULATOR -- Slider -> live $ figure of recovered revenue
+   ═══════════════════════════════════════════════════════════════ */
+
+function ROICalculator() {
+  const sectionRef = useRef(null);
+  const [missedCalls, setMissedCalls] = useState(15);
+  const [avgJobValue, setAvgJobValue] = useState(280);
+  const [conversionRate, setConversionRate] = useState(35); // % of answered calls that book
+
+  // Math: 4.33 weeks/mo * missed calls * conversion% * avg job value
+  const weeklyRecovered = missedCalls * (conversionRate / 100) * avgJobValue;
+  const monthlyRecovered = Math.round(weeklyRecovered * 4.33);
+  const yearlyRecovered = monthlyRecovered * 12;
+
+  // Animated count
+  const monthlyRef = useRef(null);
+  const yearlyRef = useRef(null);
+  const prevMonthly = useRef(0);
+  const prevYearly = useRef(0);
+
+  useEffect(() => {
+    const obj = { m: prevMonthly.current, y: prevYearly.current };
+    gsap.to(obj, {
+      m: monthlyRecovered,
+      y: yearlyRecovered,
+      duration: 0.6,
+      ease: 'power2.out',
+      onUpdate: () => {
+        if (monthlyRef.current) monthlyRef.current.innerText = Math.round(obj.m).toLocaleString();
+        if (yearlyRef.current) yearlyRef.current.innerText = Math.round(obj.y).toLocaleString();
+      },
+      onComplete: () => {
+        prevMonthly.current = monthlyRecovered;
+        prevYearly.current = yearlyRecovered;
+      },
+    });
+  }, [monthlyRecovered, yearlyRecovered]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.roi-card', {
+        y: 60,
+        autoAlpha: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%', once: true },
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
+  const sliders = [
+    {
+      label: 'Missed calls per week',
+      value: missedCalls,
+      set: setMissedCalls,
+      min: 1, max: 60, step: 1, suffix: ' calls',
+      help: 'After-hours, on jobs, in meetings',
+    },
+    {
+      label: 'Average job value',
+      value: avgJobValue,
+      set: setAvgJobValue,
+      min: 50, max: 2000, step: 10, prefix: '$',
+      help: 'Typical invoice for a booked job',
+    },
+    {
+      label: 'Booking rate when answered',
+      value: conversionRate,
+      set: setConversionRate,
+      min: 10, max: 80, step: 5, suffix: '%',
+      help: 'Calls that convert to a paid job',
+    },
+  ];
+
+  return (
+    <section
+      ref={sectionRef}
+      id="roi"
+      className="relative py-20 sm:py-28 px-6 sm:px-10 overflow-hidden bg-cream"
+    >
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.04]"
+        style={{
+          backgroundImage: `linear-gradient(#0c1b30 1px, transparent 1px), linear-gradient(90deg, #0c1b30 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto">
+        <div className="text-center mb-10 sm:mb-12">
+          <p className="font-data text-xs text-terracotta uppercase tracking-widest mb-3">
+            ROI Calculator
+          </p>
+          <h2 className="font-heading font-extrabold text-charcoal text-3xl sm:text-4xl md:text-5xl tracking-tighter">
+            What are missed calls{' '}
+            <span className="font-drama italic text-navy">costing you?</span>
+          </h2>
+          <p className="text-charcoal/60 mt-4 max-w-lg mx-auto text-sm sm:text-base">
+            Slide the dials to your numbers. Watch the recovered revenue tick up.
+          </p>
+        </div>
+
+        <div className="roi-card grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-6 lg:gap-8">
+          {/* Sliders */}
+          <div className="bg-white border border-charcoal/10 rounded-3xl p-6 sm:p-8 shadow-lg">
+            <div className="inline-flex items-center gap-2 mb-6">
+              <Calculator size={16} className="text-terracotta" />
+              <span className="font-data text-[11px] text-terracotta uppercase tracking-[0.2em]">
+                Your business
+              </span>
+            </div>
+            <div className="space-y-7">
+              {sliders.map((s) => (
+                <div key={s.label}>
+                  <div className="flex items-baseline justify-between mb-2">
+                    <label className="font-heading font-bold text-charcoal text-sm sm:text-base">
+                      {s.label}
+                    </label>
+                    <span className="font-drama italic text-terracotta text-2xl font-bold">
+                      {s.prefix || ''}{s.value.toLocaleString()}{s.suffix || ''}
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min={s.min}
+                    max={s.max}
+                    step={s.step}
+                    value={s.value}
+                    onChange={(e) => s.set(Number(e.target.value))}
+                    className="roi-slider w-full"
+                    aria-label={s.label}
+                  />
+                  <p className="text-charcoal/50 text-xs mt-1.5">{s.help}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Result card */}
+          <div className="relative bg-navy text-white rounded-3xl p-8 sm:p-10 shadow-2xl overflow-hidden">
+            <div
+              className="absolute -top-20 -right-20 w-72 h-72 rounded-full blur-3xl opacity-50 pointer-events-none"
+              style={{ background: 'radial-gradient(circle, #c97b5d, transparent 70%)' }}
+            />
+            <div className="relative">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-mustard pulse-dot"></span>
+                <span className="font-data text-[11px] text-mustard uppercase tracking-[0.2em]">
+                  Recovered with Amily
+                </span>
+              </div>
+
+              <p className="text-white/60 font-data text-[11px] uppercase tracking-widest mb-1">
+                Per month
+              </p>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="font-drama italic text-mustard text-2xl font-bold">$</span>
+                <span
+                  ref={monthlyRef}
+                  className="font-drama italic text-white text-5xl sm:text-6xl font-bold leading-none tabular-nums"
+                >
+                  0
+                </span>
+              </div>
+
+              <div className="h-px bg-white/15 mb-6"></div>
+
+              <p className="text-white/60 font-data text-[11px] uppercase tracking-widest mb-1">
+                Per year
+              </p>
+              <div className="flex items-baseline gap-1 mb-8">
+                <span className="font-drama italic text-mustard text-xl font-bold">$</span>
+                <span
+                  ref={yearlyRef}
+                  className="font-drama italic text-white text-3xl sm:text-4xl font-bold leading-none tabular-nums"
+                >
+                  0
+                </span>
+              </div>
+
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-2 bg-mustard text-charcoal font-bold px-5 py-3 rounded-full text-sm hover:scale-105 active:scale-95 transition-transform duration-200 shadow-lg"
+              >
+                See plans that pay for themselves
+                <ArrowRight size={16} />
+              </a>
+
+              <p className="text-white/40 text-[11px] mt-4 leading-relaxed">
+                Estimate based on your inputs. Most customers see ROI within 30 days or we refund.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
    APP
    ═══════════════════════════════════════════════════════════════ */
 
@@ -2116,9 +2552,11 @@ function App() {
       <Hero />
       <MarqueeTicker />
       <Features />
+      <HearAmily />
       <HowItWorks />
       <Proof />
       <Philosophy />
+      <ROICalculator />
       <Pricing />
       <FAQ />
       <Footer />
