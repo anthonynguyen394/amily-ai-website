@@ -16,6 +16,9 @@ dist-ssr
 .veo_request.json
 .veo_result.json
 
+# Veo working directory -- frames, intermediate mp4s, experimental scripts
+.veo-work/
+
 # Playwright CLI session cache
 .playwright-cli/
 

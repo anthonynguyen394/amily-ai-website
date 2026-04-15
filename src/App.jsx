@@ -318,8 +318,14 @@ function Hero() {
                 }}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">Call answered in 0.3s</span>
-                  <MessageSquare size={18} className="text-navy" />
+                  <span aria-hidden className="relative flex h-2.5 w-2.5 shrink-0">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 motion-safe:animate-ping" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+                  </span>
+                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">
+                    Call answered in <span className="text-terracotta font-bold">0.3s</span>
+                  </span>
+                  <Phone size={18} className="text-navy" />
                 </div>
                 {/* Speech-bubble tail pointing right toward Amily. Outer triangle first for border; inner over top for fill. */}
                 <span aria-hidden className="absolute top-1/2 right-[-11px] -translate-y-1/2 w-0 h-0 border-y-[10px] border-y-transparent border-l-[11px] border-l-white/85" />
@@ -336,9 +342,16 @@ function Hero() {
               >
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={15} className="text-mustard fill-mustard" />
+                    <Star
+                      key={i}
+                      size={15}
+                      className="text-mustard fill-mustard motion-safe:animate-pulse"
+                      style={{ animationDelay: `${i * 120}ms`, animationDuration: '1.8s' }}
+                    />
                   ))}
-                  <span className="text-charcoal text-base font-semibold ml-2 whitespace-nowrap">4.9 Google reviews</span>
+                  <span className="text-charcoal text-base font-semibold ml-2 whitespace-nowrap">
+                    <span className="text-mustard font-bold">4.9</span> Google reviews
+                  </span>
                 </div>
               </div>
 
@@ -351,8 +364,10 @@ function Hero() {
                 }}
               >
                 <div className="flex items-center gap-3">
-                  <Zap size={18} className="text-terracotta" />
-                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">12 jobs booked today</span>
+                  <Zap size={18} className="text-terracotta motion-safe:animate-pulse" style={{ animationDuration: '1.2s' }} />
+                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">
+                    <span className="text-terracotta font-bold">12</span> jobs booked today
+                  </span>
                 </div>
               </div>
 
@@ -366,7 +381,10 @@ function Hero() {
               >
                 <div className="flex items-center gap-3">
                   <Shield size={18} className="text-green-600" />
-                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">$4,200 saved this month</span>
+                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">
+                    <span className="text-green-600 font-bold">$4,200</span> saved this month
+                  </span>
+                  <TrendingUp size={14} className="text-green-600" />
                 </div>
               </div>
             </div>
