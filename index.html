@@ -32,6 +32,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700..800,0..100,0..1;1,9..144,700..800,0..100,0..1&family=IBM+Plex+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- LocalBusiness structured data for Melbourne local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Amily AI",
+      "description": "Your local AI guide for Melbourne small business. Helping tradies, cafes, and professional services stop losing jobs to missed calls, get more Google reviews, and put AI to work.",
+      "url": "https://amily.ai/",
+      "image": "https://amily.ai/assets/og-image.png",
+      "logo": "https://amily.ai/assets/logo-full-transparent.png",
+      "areaServed": {
+        "@type": "City",
+        "name": "Melbourne",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Victoria, Australia"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      },
+      "priceRange": "$$",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Services for Small Business",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Voice Receptionist",
+              "description": "Never miss a call — AI answers, books jobs, and captures leads 24/7."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart Review Management",
+              "description": "Automated Google review requests and reputation management."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Setup Consulting",
+              "description": "Hands-on AI implementation for small businesses without the tech headache."
+            }
+          }
+        ]
+      }
+    }
+    </script>
   </head>
   <body class="bg-cream text-charcoal">
     <div id="root"></div>
