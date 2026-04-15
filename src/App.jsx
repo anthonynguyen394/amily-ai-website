@@ -430,11 +430,11 @@ function ShufflerCard() {
   }, []);
 
   return (
-    <div className="card-base p-6 sm:p-8 h-full flex flex-col">
+    <div className="card-feature card-voice p-6 sm:p-8 h-full flex flex-col">
       {/* Card header with integrated Amily illustration */}
       <div className="flex items-start gap-4 mb-4">
         <div className="shrink-0 w-20 h-20 relative">
-          <div className="absolute inset-0 bg-terracotta/10 rounded-2xl" />
+          <div className="absolute inset-0 bg-terracotta/15 rounded-2xl" />
           <img src="/assets/amily-02-phone.png" alt="Amily answering calls" className="relative w-full h-full object-contain p-1" />
         </div>
         <div>
@@ -518,11 +518,11 @@ function TypewriterCard() {
       : '';
 
   return (
-    <div className="card-base p-6 sm:p-8 h-full flex flex-col">
+    <div className="card-feature card-reviews p-6 sm:p-8 h-full flex flex-col">
       {/* Card header with integrated Amily illustration */}
       <div className="flex items-start gap-4 mb-3">
         <div className="shrink-0 w-20 h-20 relative">
-          <div className="absolute inset-0 bg-mustard/10 rounded-2xl" />
+          <div className="absolute inset-0 bg-mustard/20 rounded-2xl" />
           <img src="/assets/amily-03-five-stars.png" alt="Amily managing reviews" className="relative w-full h-full object-contain p-1" />
         </div>
         <div>
@@ -623,11 +623,11 @@ function SchedulerCard() {
   }, []);
 
   return (
-    <div className="card-base p-6 sm:p-8 h-full flex flex-col">
+    <div className="card-feature card-scheduler p-6 sm:p-8 h-full flex flex-col">
       {/* Card header with integrated Amily illustration */}
       <div className="flex items-start gap-4 mb-3">
         <div className="shrink-0 w-20 h-20 relative">
-          <div className="absolute inset-0 bg-navy/10 rounded-2xl" />
+          <div className="absolute inset-0 bg-navy/15 rounded-2xl" />
           <img src="/assets/amily-04-toolkit.png" alt="Amily with tools" className="relative w-full h-full object-contain p-1" />
         </div>
         <div>
@@ -1390,14 +1390,13 @@ function AnimatedPrice({ value, className }) {
 function BillingToggle({ value, onChange }) {
   return (
     <div className="relative inline-block">
-      <div className="inline-flex items-center bg-charcoal/[0.06] border border-charcoal/10 rounded-full p-1 relative">
+      <div className="toggle-wiggle inline-flex items-center bg-charcoal/[0.06] border border-charcoal/10 rounded-full p-1 relative">
         <div
-          className="absolute top-1 bottom-1 rounded-full bg-navy shadow-md"
+          className="toggle-thumb-jelly absolute top-1 bottom-1 rounded-full bg-navy shadow-md"
           style={{
             width: 'calc(50% - 4px)',
             left: '4px',
             transform: value === 'yearly' ? 'translateX(100%)' : 'translateX(0%)',
-            transition: 'transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
           }}
         />
         <button
@@ -1420,7 +1419,7 @@ function BillingToggle({ value, onChange }) {
         </button>
       </div>
       <span
-        className="absolute -top-3 -right-5 text-charcoal text-[9px] font-bold px-2 py-0.5 rounded-full font-data uppercase tracking-wider shadow-sm rotate-6"
+        className="badge-bob absolute -top-3 -right-5 text-charcoal text-[9px] font-bold px-2 py-0.5 rounded-full font-data uppercase tracking-wider shadow-sm"
         style={{
           background: 'linear-gradient(90deg, #c97b5d, #e8b04e)',
         }}
@@ -1550,14 +1549,72 @@ function Pricing() {
       ref={sectionRef}
       className="relative py-24 sm:py-32 px-6 sm:px-10 overflow-hidden"
     >
-      {/* Background glow */}
-      <div
-        className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full blur-3xl pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse at center, rgba(201,123,93,0.12), rgba(232,176,78,0.06) 40%, transparent 70%)',
-        }}
-      />
+      {/* Floating dot field (30 small bubbles) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {Array.from({ length: 30 }).map((_, i) => {
+          const colors = ['#c97b5d', '#e8b04e', '#1e3a5f'];
+          const color = colors[i % 3];
+          return (
+            <span
+              key={i}
+              className="pricing-dot"
+              style={{
+                left: `${(i * 37) % 100}%`,
+                top: `${(i * 53) % 100}%`,
+                background: color,
+                opacity: 0.3,
+                '--dx': `${(i % 5) * 4 - 8}px`,
+                '--dur': `${3 + (i % 4)}s`,
+                '--delay': `${(i % 7) * 0.4}s`,
+              }}
+            />
+          );
+        })}
+      </div>
+
+      {/* Floating background blobs (ambient color) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="pricing-blob pricing-blob-1"
+          style={{
+            top: '-120px',
+            left: '8%',
+            width: '420px',
+            height: '420px',
+            background: 'radial-gradient(circle, rgba(201,123,93,0.35), transparent 70%)',
+          }}
+        />
+        <div
+          className="pricing-blob pricing-blob-2"
+          style={{
+            top: '20%',
+            right: '-80px',
+            width: '380px',
+            height: '380px',
+            background: 'radial-gradient(circle, rgba(232,176,78,0.32), transparent 70%)',
+          }}
+        />
+        <div
+          className="pricing-blob pricing-blob-3"
+          style={{
+            bottom: '10%',
+            left: '-60px',
+            width: '340px',
+            height: '340px',
+            background: 'radial-gradient(circle, rgba(30,58,95,0.22), transparent 70%)',
+          }}
+        />
+        <div
+          className="pricing-blob pricing-blob-4"
+          style={{
+            bottom: '-100px',
+            right: '15%',
+            width: '300px',
+            height: '300px',
+            background: 'radial-gradient(circle, rgba(201,123,93,0.28), transparent 70%)',
+          }}
+        />
+      </div>
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
@@ -1589,7 +1646,7 @@ function Pricing() {
 
         {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch pt-6">
-          {plans.map((plan) => {
+          {plans.map((plan, tierIdx) => {
             const currentPrice =
               billing === 'yearly' ? plan.priceYearly : plan.priceMonthly;
             const periodLabel = plan.oneOff
@@ -1609,13 +1666,29 @@ function Pricing() {
                 className={`pricing-card group relative rounded-3xl p-6 sm:p-8 flex flex-col will-change-transform ${
                   plan.popular
                     ? 'bg-navy text-white shadow-2xl md:scale-105 z-10 hover:shadow-[0_30px_60px_-15px_rgba(201,123,93,0.45)]'
-                    : 'bg-cream border border-charcoal/10 shadow-lg hover:shadow-2xl hover:-translate-y-2'
+                    : `bg-cream border border-charcoal/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 overflow-hidden ${
+                        plan.name === 'Essential'
+                          ? 'pricing-tier-essential'
+                          : plan.name === 'Enterprise'
+                          ? 'pricing-tier-enterprise'
+                          : ''
+                      }`
                 }`}
                 style={{
                   transition:
                     'transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 500ms ease-out',
                 }}
               >
+                {/* Tier watermark digit (non-popular only) */}
+                {!plan.popular && (
+                  <span
+                    className="pricing-watermark"
+                    style={{ color: plan.name === 'Enterprise' ? '#1e3a5f' : '#c97b5d' }}
+                  >
+                    {tierIdx + 1}
+                  </span>
+                )}
+
                 {/* Popular glow + badge */}
                 {plan.popular && (
                   <>
@@ -1642,13 +1715,18 @@ function Pricing() {
 
                 {/* Progress ring + name */}
                 <div className="flex items-center gap-4 mb-2">
-                  <ProgressRing
-                    value={plan.coverage}
-                    color={ringColor}
-                    trackColor={ringTrack}
+                  <div
+                    className="tier-icon-wiggle"
+                    style={{ animationDelay: `${tierIdx * 0.6}s` }}
                   >
-                    <span className={iconColor}>{plan.icon}</span>
-                  </ProgressRing>
+                    <ProgressRing
+                      value={plan.coverage}
+                      color={ringColor}
+                      trackColor={ringTrack}
+                    >
+                      <span className={iconColor}>{plan.icon}</span>
+                    </ProgressRing>
+                  </div>
                   <div className="flex-1">
                     <h3
                       className={`font-heading font-extrabold text-xl leading-tight ${
@@ -1659,7 +1737,7 @@ function Pricing() {
                     </h3>
                     <p
                       className={`font-data text-[10px] uppercase tracking-widest mt-1 ${
-                        plan.popular ? 'text-mustard' : 'text-terracotta'
+                        plan.popular ? 'text-white font-bold' : 'text-terracotta'
                       }`}
                     >
                       {plan.coverage}% {plan.coverageLabel}
@@ -1670,7 +1748,7 @@ function Pricing() {
                 {/* Badge line */}
                 <p
                   className={`text-[11px] font-data uppercase tracking-widest mb-4 mt-2 ${
-                    plan.popular ? 'text-white/50' : 'text-charcoal/50'
+                    plan.popular ? 'text-white/85' : 'text-charcoal/50'
                   }`}
                 >
                   {plan.badge}
@@ -1679,7 +1757,7 @@ function Pricing() {
                 {/* Description */}
                 <p
                   className={`text-sm leading-relaxed mb-6 ${
-                    plan.popular ? 'text-white/70' : 'text-charcoal/70'
+                    plan.popular ? 'text-white/95' : 'text-charcoal/70'
                   }`}
                 >
                   {plan.description}
@@ -1709,21 +1787,11 @@ function Pricing() {
                   {plan.features.map((feature) => (
                     <li
                       key={feature.text}
-                      className={`pricing-feature flex items-start gap-3 text-sm ${
-                        plan.popular ? 'text-white/85' : 'text-charcoal/80'
-                      }`}
+                      className={`pricing-feature ${
+                        plan.popular ? 'pricing-feature-popular text-white/85' : 'pricing-feature-light text-charcoal/80'
+                      } flex items-start gap-3 text-sm`}
                     >
-                      <span
-                        className={`shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center ${
-                          feature.highlight
-                            ? plan.popular
-                              ? 'bg-mustard text-charcoal'
-                              : 'bg-terracotta text-white'
-                            : plan.popular
-                            ? 'bg-white/10 text-white/60'
-                            : 'bg-charcoal/5 text-charcoal/40'
-                        }`}
-                      >
+                      <span className="feature-check shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center">
                         <Check size={12} strokeWidth={3} />
                       </span>
                       <span className={feature.highlight ? 'font-semibold' : ''}>
