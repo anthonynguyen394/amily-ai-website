@@ -167,14 +167,14 @@ function Hero() {
     if (!v || reducedMotion) return;
     const onTime = () => {
       const t = v.currentTime;
-      // v7 (10s) pose order: wave (0-1.2) -> laptop (2.6-4.0)
-      //   -> thumbs-up (4.3-6.3) -> phone (6.9-7.9) -> xfade-to-wave (8-9)
-      //   -> palindrome wave loop-back (9-10). No bubble on the closing wave by design.
+      // v8 (10s, mirrored: body on right). Pose order:
+      //   wave (0-1.5) -> laptop (2.7-4.3) -> thumbs+laptop (4.5-6.5)
+      //   -> phone+laptop (7.0-9.9). No clean palindrome return -- ending on phone.
       const beat =
-        t >= 0.2 && t < 1.2 ? 'saved' :
-        t >= 2.6 && t < 4.0 ? 'laptop' :
-        t >= 4.3 && t < 6.3 ? 'stars' :
-        t >= 6.9 && t < 7.9 ? 'phone' : '';
+        t >= 0.3 && t < 1.4 ? 'saved' :
+        t >= 2.7 && t < 4.3 ? 'laptop' :
+        t >= 4.7 && t < 6.4 ? 'stars' :
+        t >= 7.3 && t < 9.5 ? 'phone' : '';
       setActiveBeat((prev) => (prev === beat ? prev : beat));
     };
     v.addEventListener('timeupdate', onTime);
@@ -295,8 +295,8 @@ function Hero() {
                   aria-label="Amily — your friendly AI guide for Melbourne small business"
                   className="relative z-10 w-full h-full object-cover"
                 >
-                  <source src="/video/amily-hero-loop-v7-alpha.webm" type="video/webm" />
-                  <source src="/video/amily-hero-loop-v7.mp4" type="video/mp4" />
+                  <source src="/video/amily-hero-loop-v8-alpha.webm" type="video/webm" />
+                  <source src="/video/amily-hero-loop-v8.mp4" type="video/mp4" />
                 </video>
               )}
 
@@ -310,7 +310,7 @@ function Hero() {
 
               {/* 4 orbiting BUBBLE badges (hidden lg:flex per CLAUDE.md rule) */}
               <div
-                className="hero-float-badge beat-phone absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                className="hero-float-badge beat-phone absolute top-[8%] -left-6 lg:-left-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
                 style={{
                   opacity: activeBeat === 'phone' ? 1 : 0,
                   transform: activeBeat === 'phone' ? 'scale(1)' : 'scale(0.7)',
@@ -318,13 +318,16 @@ function Hero() {
                 }}
               >
                 <div className="flex items-center gap-3">
-                  <MessageSquare size={18} className="text-navy" />
                   <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">Call answered in 0.3s</span>
+                  <MessageSquare size={18} className="text-navy" />
                 </div>
+                {/* Speech-bubble tail pointing right toward Amily. Outer triangle first for border; inner over top for fill. */}
+                <span aria-hidden className="absolute top-1/2 right-[-11px] -translate-y-1/2 w-0 h-0 border-y-[10px] border-y-transparent border-l-[11px] border-l-white/85" />
+                <span aria-hidden className="absolute top-1/2 right-[-9px] -translate-y-1/2 w-0 h-0 border-y-[9px] border-y-transparent border-l-[10px] border-l-white/90" />
               </div>
 
               <div
-                className="hero-float-badge beat-stars absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                className="hero-float-badge beat-stars absolute top-[8%] -left-6 lg:-left-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
                 style={{
                   opacity: activeBeat === 'stars' ? 1 : 0,
                   transform: activeBeat === 'stars' ? 'scale(1)' : 'scale(0.7)',
@@ -340,7 +343,7 @@ function Hero() {
               </div>
 
               <div
-                className="hero-float-badge beat-laptop absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                className="hero-float-badge beat-laptop absolute top-[8%] -left-6 lg:-left-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
                 style={{
                   opacity: activeBeat === 'laptop' ? 1 : 0,
                   transform: activeBeat === 'laptop' ? 'scale(1)' : 'scale(0.7)',
@@ -354,7 +357,7 @@ function Hero() {
               </div>
 
               <div
-                className="hero-float-badge beat-saved absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
+                className="hero-float-badge beat-saved absolute top-[8%] -left-6 lg:-left-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
                 style={{
                   opacity: activeBeat === 'saved' ? 1 : 0,
                   transform: activeBeat === 'saved' ? 'scale(1)' : 'scale(0.7)',
@@ -2270,7 +2273,7 @@ function HearAmily() {
                 <span className="font-drama italic text-mustard">sample call.</span>
               </h3>
               <p className="text-white/70 text-sm leading-relaxed">
-                20 seconds. After-hours plumbing call. Booked, summarised, sent.
+                After-hours plumbing call. Booked, summarised, sent.
               </p>
             </div>
 
