@@ -1,0 +1,18 @@
+[Unit]
+Description=Amily.ai website (Docker Compose stack: nginx + cloudflared)
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/home/amily/amily-ai-website/deploy
+EnvironmentFile=/home/amily/amily-ai-website/deploy/.env
+ExecStartPre=/usr/bin/git -C /home/amily/amily-ai-website pull --ff-only
+ExecStart=/usr/bin/docker compose up -d --build
+ExecStop=/usr/bin/docker compose down
+TimeoutStartSec=600
+
+[Install]
+WantedBy=multi-user.target
