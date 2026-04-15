@@ -32,3 +32,4 @@ dist-ssr
 
 # Deploy secrets
 deploy/.env
+screenshots/

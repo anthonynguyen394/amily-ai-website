@@ -270,7 +270,7 @@ function Hero() {
 
           {/* ── RIGHT: huge Amily + bubble badges + decorative micro-shapes ── */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="hero-character-wrap relative w-[300px] sm:w-[400px] lg:w-[480px] xl:w-[560px] aspect-square animate-float">
+            <div className="hero-character-wrap relative w-[180px] sm:w-[400px] lg:w-[480px] xl:w-[560px] aspect-square animate-float">
 
 {/* The character -- 8s video loop; reduced-motion users get the still PNG */}
               {reducedMotion ? (
@@ -296,6 +296,14 @@ function Hero() {
                 </video>
               )}
 
+              {/* Mobile-only static pill: compact social proof visible on small screens */}
+              <div className="lg:hidden absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-white/95 backdrop-blur-md border border-white/85 rounded-full px-3 py-1.5 shadow-lg z-20 whitespace-nowrap">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={12} className="text-mustard fill-mustard" />
+                ))}
+                <span className="text-charcoal text-xs font-bold ml-1">4.9 Google</span>
+              </div>
+
               {/* 4 orbiting BUBBLE badges (hidden lg:flex per CLAUDE.md rule) */}
               <div
                 className="hero-float-badge beat-phone absolute top-[8%] -right-6 lg:-right-12 hidden lg:flex bg-white/90 backdrop-blur-md border border-white/85 rounded-2xl px-5 py-3.5 shadow-xl z-20"
@@ -307,7 +315,7 @@ function Hero() {
               >
                 <div className="flex items-center gap-3">
                   <MessageSquare size={18} className="text-navy" />
-                  <span className="text-charcoal text-base font-semibold whitespace-nowrap">Call answered in 0.3s</span>
+                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">Call answered in 0.3s</span>
                 </div>
               </div>
 
@@ -337,7 +345,7 @@ function Hero() {
               >
                 <div className="flex items-center gap-3">
                   <Zap size={18} className="text-terracotta" />
-                  <span className="text-charcoal text-base font-semibold whitespace-nowrap">12 jobs booked today</span>
+                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">12 jobs booked today</span>
                 </div>
               </div>
 
@@ -351,7 +359,7 @@ function Hero() {
               >
                 <div className="flex items-center gap-3">
                   <Shield size={18} className="text-green-600" />
-                  <span className="text-charcoal text-base font-semibold whitespace-nowrap">$4,200 saved this month</span>
+                  <span className="text-charcoal text-sm lg:text-base font-semibold whitespace-nowrap">$4,200 saved this month</span>
                 </div>
               </div>
             </div>
