@@ -26,6 +26,13 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* ── External links (centralised for easy updates) ─────────── */
+const LINKS = {
+  calDiscovery: 'https://cal.com/amily-ai/discovery',
+  stripeEssential: '#',
+  mailEnterprise: 'mailto:hello@amily.ai?subject=Enterprise%20AI%20setup%20enquiry',
+  tallyFounding: 'mailto:hello@amily.ai?subject=Founding%20customer%20application',
+};
 
 /* ═══════════════════════════════════════════════════════════════
    A. NAVBAR -- "The Floating Island"
@@ -95,7 +102,9 @@ function Navbar() {
 
       {/* CTA */}
       <a
-        href="#pricing"
+        href={LINKS.calDiscovery}
+        target="_blank"
+        rel="noopener noreferrer"
         className="hidden md:inline-flex btn-magnetic bg-terracotta text-white px-5 py-2 rounded-full text-sm font-bold items-center gap-2"
       >
         <span className="btn-bg bg-navy"></span>
@@ -128,7 +137,9 @@ function Navbar() {
               </a>
             ))}
             <a
-              href="#pricing"
+              href={LINKS.calDiscovery}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="btn-magnetic bg-terracotta text-white px-5 py-3 rounded-full text-sm font-bold text-center"
             >
@@ -246,7 +257,9 @@ function Hero() {
 
             <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center lg:items-start">
               <a
-                href="#pricing"
+                href={LINKS.calDiscovery}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-magnetic inline-flex items-center gap-2 rounded-full bg-navy text-white px-7 py-4 text-base font-bold shadow-xl shadow-navy/25"
               >
                 <span className="btn-bg bg-terracotta"></span>
@@ -1288,7 +1301,7 @@ function Proof() {
           {/* Card 2 -- What we ask */}
           <div className="proof-card relative bg-cream rounded-3xl p-6 sm:p-8 border border-charcoal/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
             <div className="flex items-center gap-3 mb-5">
-              <div className="shrink-0 w-11 h-11 rounded-full bg-navy text-white flex items-center justify-center shadow-md">
+              <div className="shrink-0 w-11 h-11 rounded-full bg-mustard text-white flex items-center justify-center shadow-md">
                 <MessageSquare size={20} strokeWidth={2} />
               </div>
               <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
@@ -1317,7 +1330,7 @@ function Proof() {
 
         <div className="text-center mt-10 sm:mt-12">
           <a
-            href="mailto:hello@amily.ai?subject=Founding%20customer%20application"
+            href={LINKS.tallyFounding}
             className="btn-magnetic inline-flex items-center gap-2 bg-terracotta text-white px-6 py-3 rounded-full text-sm sm:text-base font-bold shadow-md"
           >
             Apply to be a founding customer
@@ -1569,6 +1582,8 @@ function Pricing() {
         { text: 'Email support (1 business day)', highlight: false },
       ],
       cta: 'Start with Essential',
+      href: LINKS.stripeEssential,
+      linkTarget: '_blank',
       popular: false,
     },
     {
@@ -1590,6 +1605,8 @@ function Pricing() {
         { text: 'Priority support (same-day)', highlight: false },
       ],
       cta: 'Book a Free Discovery Call',
+      href: LINKS.calDiscovery,
+      linkTarget: '_blank',
       popular: true,
     },
     {
@@ -1611,6 +1628,8 @@ function Pricing() {
         { text: '30-day ROI guarantee or refund', highlight: true },
       ],
       cta: 'Discuss Enterprise Setup',
+      href: LINKS.mailEnterprise,
+      linkTarget: '_self',
       popular: false,
     },
   ];
@@ -1919,7 +1938,9 @@ function Pricing() {
 
                 {/* CTA */}
                 <a
-                  href="#"
+                  href={plan.href}
+                  target={plan.linkTarget || '_self'}
+                  rel={plan.linkTarget === '_blank' ? 'noopener noreferrer' : undefined}
                   className={`btn-magnetic relative block text-center px-6 py-3.5 rounded-full font-bold text-sm overflow-hidden ${
                     plan.popular ? 'text-charcoal' : 'bg-navy text-white'
                   }`}
@@ -2098,7 +2119,9 @@ function FAQ() {
         <div className="mt-12 text-center">
           <p className="text-charcoal/60 text-sm mb-4">Still have questions?</p>
           <a
-            href="#"
+            href={LINKS.calDiscovery}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-magnetic relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-sm bg-navy text-white"
           >
             <span className="btn-bg bg-terracotta"></span>
@@ -2169,13 +2192,18 @@ function Footer() {
               Company
             </h4>
             <ul className="space-y-2">
-              {['How It Works', 'Pricing', 'Privacy Policy', 'Terms of Service'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'How It Works', href: '#how-it-works' },
+                { label: 'Pricing', href: '#pricing' },
+                { label: 'Privacy Policy', href: '#' },
+                { label: 'Terms of Service', href: '#' },
+              ].map((item) => (
+                <li key={item.label}>
                   <a
-                    href="#"
+                    href={item.href}
                     className="text-white/50 text-sm hover:text-terracotta transition-colors lift-hover inline-block"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
