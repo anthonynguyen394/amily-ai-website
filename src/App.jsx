@@ -29,7 +29,6 @@ gsap.registerPlugin(ScrollTrigger);
 /* ── External links (centralised for easy updates) ─────────── */
 const LINKS = {
   calDiscovery: 'https://cal.com/amily-ai-anthony/discovery',
-  stripeEssential: '#',
   mailEnterprise: 'mailto:hello@amily.ai?subject=Enterprise%20AI%20setup%20enquiry',
   tallyFounding: 'mailto:hello@amily.ai?subject=Founding%20customer%20application',
 };
@@ -1581,8 +1580,8 @@ function Pricing() {
         { text: 'Monthly performance report', highlight: false },
         { text: 'Email support (1 business day)', highlight: false },
       ],
-      cta: 'Start with Essential',
-      href: LINKS.stripeEssential,
+      cta: 'Book a Free Discovery Call',
+      href: LINKS.calDiscovery,
       linkTarget: '_blank',
       popular: false,
     },
