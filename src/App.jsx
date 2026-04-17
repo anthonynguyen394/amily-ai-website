@@ -2194,7 +2194,7 @@ function Footer() {
               {[
                 { label: 'How It Works', href: '#how-it-works' },
                 { label: 'Pricing', href: '#pricing' },
-                { label: 'Privacy Policy', href: '#' },
+                { label: 'Privacy Policy', href: '/privacy.html' },
                 { label: 'Terms of Service', href: '#' },
               ].map((item) => (
                 <li key={item.label}>

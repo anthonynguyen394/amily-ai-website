@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/favicon-256.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy -- Amily AI</title>
+    <meta name="description" content="Privacy policy for Amily AI. How we collect, use, and protect your personal information in accordance with the Australian Privacy Act 1988." />
+
+    <!-- Google Fonts: Nunito, Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700..800,0..100,0..1;1,9..144,700..800,0..100,0..1&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ── Base Reset ── */
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #faf5eb;
+        color: #1e3a5f;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background-color: rgba(201, 123, 93, 0.3);
+        color: #0c1b30;
+      }
+
+      /* ── Layout ── */
+      .container {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ── Header ── */
+      .site-header {
+        padding: 32px 0;
+        border-bottom: 1px solid rgba(30, 58, 95, 0.1);
+        margin-bottom: 48px;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #c97b5d;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+      }
+
+      .back-link:hover {
+        color: #1e3a5f;
+      }
+
+      .back-link svg {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.2s ease;
+      }
+
+      .back-link:hover svg {
+        transform: translateX(-3px);
+      }
+
+      .logo-text {
+        font-family: 'Fraunces', serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: #1e3a5f;
+        text-decoration: none;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+      }
+
+      /* ── Page Title ── */
+      .page-title {
+        font-family: 'Fraunces', serif;
+        font-weight: 800;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        color: #1e3a5f;
+        margin-bottom: 8px;
+        line-height: 1.2;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+      }
+
+      .page-subtitle {
+        font-size: 0.95rem;
+        color: rgba(30, 58, 95, 0.6);
+        margin-bottom: 40px;
+      }
+
+      /* ── Contact Card ── */
+      .contact-card {
+        background: rgba(30, 58, 95, 0.04);
+        border: 1px solid rgba(30, 58, 95, 0.1);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 48px;
+      }
+
+      .contact-card p {
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+      }
+
+      .contact-card a {
+        color: #c97b5d;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-card a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── Content Sections ── */
+      .section {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.35rem;
+        color: #1e3a5f;
+        margin-bottom: 16px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(30, 58, 95, 0.08);
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+      }
+
+      .section:first-of-type h2 {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      h3 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: #1e3a5f;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 14px;
+        font-size: 0.95rem;
+        color: rgba(30, 58, 95, 0.85);
+      }
+
+      strong {
+        color: #1e3a5f;
+        font-weight: 700;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 16px;
+      }
+
+      ul li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: rgba(30, 58, 95, 0.85);
+      }
+
+      ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #c97b5d;
+      }
+
+      a {
+        color: #c97b5d;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: #1e3a5f;
+        text-decoration: underline;
+      }
+
+      /* ── Highlight boxes ── */
+      .highlight-box {
+        background: rgba(201, 123, 93, 0.06);
+        border-left: 3px solid #c97b5d;
+        border-radius: 0 12px 12px 0;
+        padding: 20px 24px;
+        margin: 20px 0;
+      }
+
+      .highlight-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── Tables ── */
+      .table-wrapper {
+        overflow-x: auto;
+        margin: 16px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(30, 58, 95, 0.1);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+
+      thead {
+        background: rgba(30, 58, 95, 0.06);
+      }
+
+      th {
+        text-align: left;
+        padding: 12px 16px;
+        font-weight: 700;
+        color: #1e3a5f;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        border-bottom: 1px solid rgba(30, 58, 95, 0.1);
+      }
+
+      td {
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(30, 58, 95, 0.06);
+        color: rgba(30, 58, 95, 0.85);
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* ── Footer ── */
+      .site-footer {
+        margin-top: 64px;
+        padding: 32px 0;
+        border-top: 1px solid rgba(30, 58, 95, 0.1);
+        text-align: center;
+      }
+
+      .footer-business {
+        font-size: 0.85rem;
+        color: rgba(30, 58, 95, 0.5);
+        line-height: 1.8;
+      }
+
+      .footer-business strong {
+        color: rgba(30, 58, 95, 0.7);
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 640px) {
+        .container {
+          padding: 0 16px;
+        }
+
+        .site-header {
+          padding: 24px 0;
+          margin-bottom: 32px;
+        }
+
+        .header-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        .contact-card {
+          padding: 20px;
+        }
+
+        table {
+          font-size: 0.82rem;
+        }
+
+        th, td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="/" class="logo-text">amily.ai</a>
+          <a href="/" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to home
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-subtitle">Last updated: April 2026</p>
+
+      <!-- Contact Card -->
+      <div class="contact-card">
+        <p><strong>Amily AI</strong> (ABN: 86 758 863 858)</p>
+        <p>Owned and operated by Anh Tuan Nguyen, trading as Amily AI.</p>
+        <p>Email: <a href="mailto:anthony@amily.ai">anthony@amily.ai</a></p>
+        <p>Website: <a href="https://amily.ai">https://amily.ai</a></p>
+        <p>Postal: 137/416A Saint Kilda Road, Melbourne VIC 3004, Australia</p>
+      </div>
+
+      <p>Amily AI is committed to protecting your personal information. This privacy policy explains how we collect, use, disclose, and store your personal information in accordance with the Australian Privacy Act 1988 (Cth), the Australian Privacy Principles (APPs), and the Privacy and Other Legislation Amendment Act 2024.</p>
+
+      <!-- Section 1 -->
+      <div class="section">
+        <h2>1. What Personal Information We Collect (APP 1, APP 3)</h2>
+
+        <p>We collect the following types of personal information depending on how you interact with us:</p>
+
+        <h3>When you contact us or submit a form</h3>
+        <ul>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Business name and type</li>
+          <li>Details about your inquiry or the service you are interested in</li>
+        </ul>
+
+        <h3>When you call a business that uses our AI receptionist service</h3>
+        <ul>
+          <li>Voice recordings of the call</li>
+          <li>Transcripts of the call generated by our AI system</li>
+          <li>Phone number you called from</li>
+          <li>Date, time, and duration of the call</li>
+          <li>Information you provide during the call (such as your name, contact details, and reason for calling)</li>
+        </ul>
+
+        <h3>When you use a business that uses our review management service</h3>
+        <ul>
+          <li>Your Google Business Profile review content</li>
+          <li>Your publicly visible name associated with the review</li>
+          <li>Sentiment and keywords extracted from your review by our AI system</li>
+        </ul>
+
+        <h3>When you visit our website</h3>
+        <ul>
+          <li>Standard web analytics data (pages visited, time on site, referral source)</li>
+          <li>Information you submit through forms on our website</li>
+        </ul>
+
+        <h3>When you become a client</h3>
+        <ul>
+          <li>Business registration details (ABN, business name)</li>
+          <li>Billing information processed through Stripe (we do not store your full card details)</li>
+          <li>Google Business Profile account data (for review management clients)</li>
+          <li>Service configuration preferences</li>
+        </ul>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section">
+        <h2>2. How We Collect Your Information (APP 3, APP 5)</h2>
+
+        <p>We collect personal information:</p>
+        <ul>
+          <li><strong>Directly from you</strong> -- when you fill out a form on our website, call us, email us, or sign up for a service</li>
+          <li><strong>From callers to our clients' AI receptionist</strong> -- when you call a business that uses our AI phone answering service, we collect call recordings and transcripts through our AI platform</li>
+          <li><strong>From publicly available sources</strong> -- we access Google Business Profile reviews that are publicly visible, on behalf of our clients</li>
+          <li><strong>From third-party service providers</strong> -- Stripe (payment processing), Tally.so (form submissions), and Google (Business Profile data)</li>
+        </ul>
+
+        <p>We notify you at or before the time of collection. For phone calls handled by our AI receptionist, callers are informed at the start of each call that the call may be recorded and processed by an AI system.</p>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section">
+        <h2>3. Why We Collect Your Information (APP 6)</h2>
+
+        <p>We collect and use your personal information for the following purposes:</p>
+        <ul>
+          <li>To provide our AI receptionist, review management, and consulting services</li>
+          <li>To respond to your inquiries and communicate with you</li>
+          <li>To process payments and manage billing</li>
+          <li>To route and handle phone calls on behalf of our clients</li>
+          <li>To generate AI-drafted responses to Google reviews on behalf of our clients</li>
+          <li>To schedule appointments and manage bookings</li>
+          <li>To improve our services and develop new features</li>
+          <li>To comply with legal obligations</li>
+        </ul>
+
+        <p>We do not sell your personal information to third parties. We do not use your personal information for direct marketing to unrelated third parties.</p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section">
+        <h2>4. Anonymity and Pseudonymity (APP 2)</h2>
+
+        <p>Where it is lawful and practical, you may interact with us without identifying yourself or by using a pseudonym. However, if you choose not to provide certain personal information, we may not be able to provide you with the services you have requested.</p>
+
+        <p>For callers to our AI receptionist service, we collect the phone number automatically through the telephone network. You are not required to provide your name during the call, although doing so may be necessary for booking or callback purposes.</p>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section">
+        <h2>5. Voice Recordings and Transcripts</h2>
+
+        <div class="highlight-box">
+          <p><strong>This section is important -- please read it carefully.</strong></p>
+          <p>When you call a business that uses our AI receptionist service, your call is handled by an artificial intelligence system, not a human receptionist. The AI system is powered by Retell AI's voice platform.</p>
+        </div>
+
+        <h3>What happens during a call</h3>
+        <ul>
+          <li>You are informed at the start of the call that the call may be recorded and processed by AI</li>
+          <li>The call is recorded and transcribed in real time</li>
+          <li>The AI system makes decisions about how to handle your call (such as booking an appointment, providing information, or escalating to a human)</li>
+          <li>A summary of the call is sent to the business owner</li>
+        </ul>
+
+        <h3>How recordings are stored</h3>
+        <ul>
+          <li>Call recordings and transcripts are stored securely on Retell AI's platform (located in the United States -- see Section 8 on cross-border transfers)</li>
+          <li>Recordings are accessible to the business owner who subscribes to our service</li>
+          <li>Recordings are retained for the period described in Section 11 (Data Retention)</li>
+        </ul>
+
+        <h3>Your rights regarding recordings</h3>
+        <ul>
+          <li>You may request access to your call recording or transcript</li>
+          <li>You may request deletion of your recording</li>
+          <li>You may request that future calls not be recorded (the business may then need to handle your call manually)</li>
+        </ul>
+
+        <p>To make any of these requests, contact us at the details listed at the top of this policy.</p>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="section">
+        <h2>6. Automated Decision-Making Disclosure</h2>
+
+        <div class="highlight-box">
+          <p><strong>This section is provided in accordance with the Privacy and Other Legislation Amendment Act 2024.</strong></p>
+          <p>Australian privacy law requires us to disclose when we use automated systems that make or assist in making decisions that may affect you. This disclosure requirement takes full effect by December 2026.</p>
+        </div>
+
+        <p>We use AI systems that make, or substantially assist in making, decisions that may affect the services you receive. These automated processes include:</p>
+
+        <ul>
+          <li><strong>Call routing and response decisions</strong> -- Our AI receptionist determines how to handle your call based on what you say. This includes deciding whether to book an appointment, provide information, take a message, or escalate to a human operator.</li>
+          <li><strong>Review response drafting</strong> -- Our AI system analyses Google Business Profile reviews and generates draft responses based on the content and sentiment of each review. These drafts are reviewed and approved by the business owner before being posted.</li>
+          <li><strong>Appointment scheduling and availability decisions</strong> -- Our AI system checks calendar availability and books appointments based on the business owner's configured preferences and schedules.</li>
+          <li><strong>Call classification and prioritisation</strong> -- Our AI system classifies calls by intent (standard booking, emergency, general inquiry, lead capture) and prioritises them accordingly.</li>
+        </ul>
+
+        <p><strong>Your right to human review:</strong> You have the right to request human review of any decision made by, or with the assistance of, our automated systems. To request human review, contact us using the details at the top of this policy. We will respond to your request within 14 days.</p>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="section">
+        <h2>7. Disclosure of Your Information (APP 6)</h2>
+
+        <p>We may disclose your personal information to:</p>
+        <ul>
+          <li><strong>Our clients</strong> (the businesses that subscribe to our services) -- call summaries, transcripts, booking details, and review management data are shared with the business that engaged our service on their behalf</li>
+          <li><strong>Retell AI</strong> (USA) -- processes voice calls, stores recordings and transcripts</li>
+          <li><strong>OpenAI</strong> (USA) -- processes text for AI-generated responses, call handling logic, and review drafting</li>
+          <li><strong>Twilio</strong> (USA) -- provides telephone infrastructure and SMS services for Australian phone numbers</li>
+          <li><strong>Stripe</strong> (USA/Australia) -- processes payments and manages subscriptions</li>
+          <li><strong>Google</strong> (USA) -- provides Google Business Profile data and review posting capabilities</li>
+          <li><strong>Tally.so</strong> -- processes form submissions from our website</li>
+          <li><strong>Cal.com</strong> -- manages appointment scheduling and calendar integration</li>
+        </ul>
+
+        <p>We do not disclose your personal information to any party for the purpose of direct marketing by that party.</p>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="section">
+        <h2>8. Cross-Border Data Transfer (APP 8)</h2>
+
+        <div class="highlight-box">
+          <p><strong>Some of your personal information is processed and stored outside Australia.</strong></p>
+        </div>
+
+        <p>We use AI and technology services operated by companies based in the United States. By using our services (or calling a business that uses our services), you consent to your personal information being transferred to, and processed in, the United States by the following providers:</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Country</th>
+                <th>What They Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Retell AI</td>
+                <td>United States</td>
+                <td>Voice recordings, call transcripts, call routing</td>
+              </tr>
+              <tr>
+                <td>OpenAI</td>
+                <td>United States</td>
+                <td>Text processing for AI responses, call handling, review drafting</td>
+              </tr>
+              <tr>
+                <td>Twilio</td>
+                <td>United States</td>
+                <td>Telephone call routing, SMS delivery</td>
+              </tr>
+              <tr>
+                <td>Stripe</td>
+                <td>United States / Australia</td>
+                <td>Payment processing, subscription management</td>
+              </tr>
+              <tr>
+                <td>Google</td>
+                <td>United States</td>
+                <td>Google Business Profile data, review content</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>We have taken reasonable steps to ensure that these overseas recipients handle your personal information in accordance with the Australian Privacy Principles, as required by APP 8. These steps include:</p>
+        <ul>
+          <li>Using services that maintain industry-standard security certifications (SOC 2, ISO 27001, or equivalent)</li>
+          <li>Ensuring data is transmitted using encryption (TLS/SSL)</li>
+          <li>Reviewing the privacy policies and data handling practices of each provider</li>
+          <li>Using API-based integrations only (we do not input personal information into publicly available AI chat interfaces, in accordance with OAIC guidance dated October 2024)</li>
+        </ul>
+
+        <p>If you do not consent to your personal information being transferred overseas, please contact us before using our services. Note that if you do not consent, we may not be able to provide certain services to you.</p>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="section">
+        <h2>9. Google Business Profile Data</h2>
+
+        <p>If you are a client using our review management service, we access your Google Business Profile data through the Google Business Profile API. This includes:</p>
+        <ul>
+          <li>Reviews posted on your Google Business Profile (reviewer name, rating, review text, date)</li>
+          <li>Your business listing information (name, address, phone, category, hours)</li>
+        </ul>
+
+        <h3>How we use this data</h3>
+        <ul>
+          <li>To monitor new reviews and alert you</li>
+          <li>To generate AI-drafted review responses for your approval</li>
+          <li>To send review request SMS messages to your customers (with your authorisation)</li>
+        </ul>
+
+        <h3>What we do not do</h3>
+        <ul>
+          <li>We do not post review responses without the business owner's explicit approval</li>
+          <li>We do not share your Google Business Profile data with other clients or third parties</li>
+          <li>We do not use review data to train AI models</li>
+        </ul>
+
+        <p>Google Business Profile reviews are publicly visible. Our service processes this public data on your behalf to save you time. Your customers' review content remains publicly visible on Google regardless of our service.</p>
+      </div>
+
+      <!-- Section 10 -->
+      <div class="section">
+        <h2>10. Data Security (APP 11)</h2>
+
+        <p>We take reasonable steps to protect your personal information from misuse, interference, loss, unauthorised access, modification, and disclosure.</p>
+
+        <p>Our security measures include:</p>
+        <ul>
+          <li>All data transmitted between our systems uses encryption (TLS/SSL)</li>
+          <li>Access to client data is restricted to authorised personnel only (currently the business owner, Anh Tuan Nguyen)</li>
+          <li>Third-party services we use (Retell AI, OpenAI, Stripe, Twilio) maintain their own security certifications and practices</li>
+          <li>Call recordings are stored in Retell AI's secure platform, not on local devices or personal computers</li>
+          <li>Payment information is handled entirely by Stripe and is never stored on our systems</li>
+          <li>We use API-based integrations exclusively, in accordance with OAIC guidance on commercial AI products</li>
+        </ul>
+
+        <p>We regularly review our security practices and update them as needed. However, no method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.</p>
+      </div>
+
+      <!-- Section 11 -->
+      <div class="section">
+        <h2>11. Data Retention</h2>
+
+        <p>We retain personal information only for as long as it is needed for the purposes described in this policy, or as required by law.</p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Retention Period</th>
+                <th>Stored Where</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Contact form submissions</td>
+                <td>24 months from submission</td>
+                <td>Tally.so</td>
+              </tr>
+              <tr>
+                <td>Call recordings</td>
+                <td>90 days from the date of the call</td>
+                <td>Retell AI (US)</td>
+              </tr>
+              <tr>
+                <td>Call transcripts and summaries</td>
+                <td>12 months from the date of the call</td>
+                <td>Retell AI (US)</td>
+              </tr>
+              <tr>
+                <td>Google review data</td>
+                <td>Duration of the client's subscription plus 30 days</td>
+                <td>Our review management system</td>
+              </tr>
+              <tr>
+                <td>Payment and billing records</td>
+                <td>7 years (as required by Australian tax law)</td>
+                <td>Stripe</td>
+              </tr>
+              <tr>
+                <td>Client account information</td>
+                <td>Duration of the service agreement plus 12 months</td>
+                <td>Our internal records</td>
+              </tr>
+              <tr>
+                <td>Website analytics</td>
+                <td>26 months</td>
+                <td>Framer analytics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>When personal information is no longer needed, we take reasonable steps to destroy or de-identify it. For data held by third-party providers, destruction is subject to the provider's own data retention and deletion policies.</p>
+
+        <p>You may request earlier deletion of your personal information at any time by contacting us. We will action deletion requests within 30 days, except where retention is required by law.</p>
+      </div>
+
+      <!-- Section 12 -->
+      <div class="section">
+        <h2>12. Access and Correction (APP 12, APP 13)</h2>
+
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> your personal information that we hold</li>
+          <li><strong>Request correction</strong> of any personal information that is inaccurate, out of date, incomplete, irrelevant, or misleading</li>
+        </ul>
+
+        <p>To make an access or correction request, contact us using the details at the top of this policy. We will respond to your request within 30 days.</p>
+
+        <p>We will not charge you for making an access request. If your request requires significant effort to fulfil (for example, retrieving archived call recordings), we will let you know before proceeding and provide an estimate of any reasonable costs.</p>
+
+        <p>If we refuse your request for access or correction, we will provide you with written reasons and information about how to complain.</p>
+      </div>
+
+      <!-- Section 13 -->
+      <div class="section">
+        <h2>13. Complaints</h2>
+
+        <p>If you believe we have breached the Australian Privacy Principles or mishandled your personal information, you may lodge a complaint with us by:</p>
+        <ul>
+          <li>Emailing us at <a href="mailto:anthony@amily.ai">anthony@amily.ai</a></li>
+          <li>Writing to us at our postal address listed at the top of this policy</li>
+        </ul>
+
+        <p>We will acknowledge your complaint within 7 days and aim to resolve it within 30 days. We will keep you informed of the progress of your complaint.</p>
+
+        <p><strong>If you are not satisfied with our response</strong>, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC):</p>
+        <ul>
+          <li>Website: <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">www.oaic.gov.au</a></li>
+          <li>Phone: 1300 363 992</li>
+          <li>Email: <a href="mailto:enquiries@oaic.gov.au">enquiries@oaic.gov.au</a></li>
+          <li>Post: Office of the Australian Information Commissioner, GPO Box 5218, Sydney NSW 2001</li>
+        </ul>
+
+        <p>The OAIC can investigate your complaint and make determinations about whether a breach of the Australian Privacy Principles has occurred.</p>
+      </div>
+
+      <!-- Section 14 -->
+      <div class="section">
+        <h2>14. Changes to This Policy</h2>
+
+        <p>We may update this privacy policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will update the "Last updated" date at the top of this policy.</p>
+
+        <p>For significant changes (such as new categories of data collection or new cross-border transfers), we will take reasonable steps to notify you, such as posting a notice on our website.</p>
+
+        <p>We encourage you to review this policy periodically.</p>
+      </div>
+
+      <!-- Section 15 -->
+      <div class="section">
+        <h2>15. Definitions</h2>
+
+        <ul>
+          <li><strong>AI receptionist</strong> -- Our automated phone answering service that uses artificial intelligence to handle incoming calls on behalf of a business</li>
+          <li><strong>Automated decision-making</strong> -- A decision made by a computer system without human involvement, or where a computer system substantially assists a human in making a decision</li>
+          <li><strong>Client</strong> -- A business that subscribes to one or more of our services</li>
+          <li><strong>Caller</strong> -- A person who calls a business that uses our AI receptionist service</li>
+          <li><strong>Personal information</strong> -- Information or an opinion about an identified individual, or an individual who is reasonably identifiable, as defined in the Privacy Act 1988 (Cth)</li>
+          <li><strong>APP</strong> -- Australian Privacy Principle, as set out in Schedule 1 of the Privacy Act 1988 (Cth)</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-business">
+          <strong>Amily AI</strong><br />
+          ABN: 86 758 863 858<br />
+          Owned and operated by Anh Tuan Nguyen (sole trader)<br />
+          137/416A Saint Kilda Road, Melbourne VIC 3004, Australia<br />
+          <a href="https://amily.ai">amily.ai</a> | <a href="mailto:anthony@amily.ai">anthony@amily.ai</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
