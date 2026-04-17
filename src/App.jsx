@@ -28,7 +28,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* ── External links (centralised for easy updates) ─────────── */
 const LINKS = {
-  calDiscovery: 'https://cal.com/amily-ai/discovery',
+  calDiscovery: 'https://cal.com/amily-ai-anthony/discovery',
   stripeEssential: '#',
   mailEnterprise: 'mailto:hello@amily.ai?subject=Enterprise%20AI%20setup%20enquiry',
   tallyFounding: 'mailto:hello@amily.ai?subject=Founding%20customer%20application',
