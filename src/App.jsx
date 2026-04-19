@@ -33,6 +33,102 @@ const LINKS = {
   tallyFounding: 'mailto:hello@amily.ai?subject=Founding%20customer%20application',
 };
 
+/* ── Cal.com URL with UTM passthrough from current page URL.
+   Ad clicks land on amily.ai with utm_source/medium/campaign/content/term
+   + gclid; we forward those to Cal.com so every booking row is attributable
+   to its ad group / keyword. Cal.com captures query params as booking metadata.
+   See projects/ai-agent-business/marketing/google-ads/conversion-tracking.md. */
+function calUrl() {
+  if (typeof window === 'undefined') return LINKS.calDiscovery;
+  const src = new URLSearchParams(window.location.search);
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid'];
+  const forwarded = keys
+    .filter((k) => src.has(k))
+    .map((k) => `${k}=${encodeURIComponent(src.get(k))}`)
+    .join('&');
+  return forwarded ? `${LINKS.calDiscovery}?${forwarded}` : LINKS.calDiscovery;
+}
+
+/* ── Thanks-page detection: Cal.com redirects successful bookings to
+   amily.ai/?booked=1#thanks. Both signals are checked because some browsers
+   strip the hash during redirects; ?booked=1 is the belt-and-braces fallback. */
+function isThanksPage() {
+  if (typeof window === 'undefined') return false;
+  const params = new URLSearchParams(window.location.search);
+  return window.location.hash === '#thanks' || params.get('booked') === '1';
+}
+
+/* ── ConversionFire: fires the Google Ads conversion event exactly once per
+   page load when the user lands on the thanks page. Replace AW-XXX/YYY with
+   the real Conversion ID and Label after creating the Conversion Action. */
+function ConversionFire() {
+  const fired = useRef(false);
+  useEffect(() => {
+    if (fired.current) return;
+    if (!isThanksPage()) return;
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-XXXXXXXXX/YYYYYYYYYY',
+      value: 1.0,
+      currency: 'AUD',
+      transaction_id: (typeof crypto !== 'undefined' && crypto.randomUUID)
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+    });
+    fired.current = true;
+  }, []);
+  return null;
+}
+
+/* ── ThanksBanner: minimal visible acknowledgement when the Cal.com
+   post-booking redirect lands here. Styled to match the navy/cream palette. */
+function ThanksBanner() {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    setShow(isThanksPage());
+  }, []);
+  if (!show) return null;
+  return (
+    <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 max-w-md w-[92%] px-6 py-4 rounded-2xl bg-navy text-cream shadow-2xl border border-mustard/40">
+      <div className="flex items-start gap-3">
+        <div className="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-mustard/20 flex items-center justify-center text-mustard">
+          <Check size={18} />
+        </div>
+        <div className="flex-1 text-sm leading-relaxed">
+          <div className="font-bold text-cream">Booking confirmed</div>
+          <div className="text-cream/80 mt-1">
+            Anthony will reach out within 1 business day. Check your email for the Cal.com confirmation.
+          </div>
+        </div>
+        <button
+          onClick={() => setShow(false)}
+          className="text-cream/60 hover:text-cream transition-colors shrink-0"
+          aria-label="Dismiss"
+        >
+          <X size={16} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ── useCampaignHeadline: returns the hero H1 copy based on the current
+   utm_campaign. Swapping the H1 to match ad-copy lifts Google Ads Quality
+   Score through landing-page relevance. Add new campaigns here as they launch. */
+function useCampaignHeadline() {
+  const [line1, setLine1] = useState('Stop losing jobs to');
+  const [line2, setLine2] = useState('missed calls.');
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const campaign = new URLSearchParams(window.location.search).get('utm_campaign');
+    if (campaign === 'trades-voice-mel') {
+      setLine1('Melbourne tradies: stop losing jobs to');
+      setLine2('missed calls.');
+    }
+  }, []);
+  return { line1, line2 };
+}
+
 /* ═══════════════════════════════════════════════════════════════
    A. NAVBAR -- "The Floating Island"
    ═══════════════════════════════════════════════════════════════ */
@@ -101,7 +197,7 @@ function Navbar() {
 
       {/* CTA */}
       <a
-        href={LINKS.calDiscovery}
+        href={calUrl()}
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:inline-flex btn-magnetic bg-terracotta text-white px-5 py-2 rounded-full text-sm font-bold items-center gap-2"
@@ -136,7 +232,7 @@ function Navbar() {
               </a>
             ))}
             <a
-              href={LINKS.calDiscovery}
+              href={calUrl()}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
@@ -162,6 +258,7 @@ function Hero() {
   const heroRef = useRef(null);
   const videoRef = useRef(null);
   const [activeBeat, setActiveBeat] = useState('');
+  const { line1, line2 } = useCampaignHeadline();
   const [reducedMotion, setReducedMotion] = useState(() =>
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -243,9 +340,9 @@ function Hero() {
           <div className="text-center lg:text-left order-2 lg:order-1">
 
             <h1 className="hero-heading font-drama font-extrabold text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.02] text-charcoal">
-              Stop losing jobs to<br />
+              {line1}<br />
               <span className="relative inline-block">
-                <span className="relative z-10">missed calls.</span>
+                <span className="relative z-10">{line2}</span>
                 <span className="absolute bottom-1 left-0 w-full h-[0.28em] bg-gradient-to-r from-mustard to-terracotta rounded-sm -z-0"></span>
               </span>
             </h1>
@@ -256,7 +353,7 @@ function Hero() {
 
             <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center lg:items-start">
               <a
-                href={LINKS.calDiscovery}
+                href={calUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-magnetic inline-flex items-center gap-2 rounded-full bg-navy text-white px-7 py-4 text-base font-bold shadow-xl shadow-navy/25"
@@ -1581,7 +1678,7 @@ function Pricing() {
         { text: 'Email support (1 business day)', highlight: false },
       ],
       cta: 'Book a Free Discovery Call',
-      href: LINKS.calDiscovery,
+      href: calUrl(),
       linkTarget: '_blank',
       popular: false,
     },
@@ -1604,7 +1701,7 @@ function Pricing() {
         { text: 'Priority support (same-day)', highlight: false },
       ],
       cta: 'Book a Free Discovery Call',
-      href: LINKS.calDiscovery,
+      href: calUrl(),
       linkTarget: '_blank',
       popular: true,
     },
@@ -2118,7 +2215,7 @@ function FAQ() {
         <div className="mt-12 text-center">
           <p className="text-charcoal/60 text-sm mb-4">Still have questions?</p>
           <a
-            href={LINKS.calDiscovery}
+            href={calUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-magnetic relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-sm bg-navy text-white"
@@ -2607,6 +2704,8 @@ function App() {
 
   return (
     <div className="bg-cream min-h-screen">
+      <ConversionFire />
+      <ThanksBanner />
       <Navbar />
       <Hero />
       <MarqueeTicker />

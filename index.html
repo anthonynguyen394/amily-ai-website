@@ -33,6 +33,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700..800,0..100,0..1;1,9..144,700..800,0..100,0..1&family=IBM+Plex+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
+    <!-- Google tag (gtag.js) -- GA4 + Google Ads, async so no render block.
+         Replace G-XXXXXXXX with the real GA4 Measurement ID after creating the property.
+         Replace AW-XXXXXXXXX with the real Google Ads Conversion ID after creating the
+         "Cal.com Discovery Booking" Conversion Action. See
+         projects/ai-agent-business/marketing/google-ads/conversion-tracking.md. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXX');
+      gtag('config', 'AW-XXXXXXXXX');
+    </script>
+
     <!-- LocalBusiness structured data for Melbourne local SEO -->
     <script type="application/ld+json">
     {
