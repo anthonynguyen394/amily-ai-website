@@ -22,6 +22,10 @@ dist-ssr
 # Playwright CLI session cache
 .playwright-cli/
 
+# Playwright e2e artifacts
+test-results/
+playwright-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

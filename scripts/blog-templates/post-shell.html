@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/favicon-256.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{TITLE}} | Amily AI</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <link rel="canonical" href="https://amily.ai{{URL_PATH}}" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://amily.ai{{URL_PATH}}" />
+    <meta property="og:site_name" content="amily.ai" />
+    <meta property="og:title" content="{{TITLE}}" />
+    <meta property="og:description" content="{{DESCRIPTION}}" />
+    <meta property="og:image" content="https://amily.ai/assets/og-image.png" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="article:published_time" content="{{DATE_ISO}}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{TITLE}}" />
+    <meta name="twitter:description" content="{{DESCRIPTION}}" />
+    <meta name="twitter:image" content="https://amily.ai/assets/og-image.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700..800,0..100,0..1;1,9..144,700..800,0..100,0..1&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y45JQYP847"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Y45JQYP847');
+      gtag('config', 'AW-XXXXXXXXX');
+    </script>
+
+    <!-- Article schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{TITLE_JSON}}",
+      "description": "{{DESCRIPTION_JSON}}",
+      "image": "https://amily.ai/assets/og-image.png",
+      "author": { "@type": "Organization", "name": "Amily AI", "url": "https://amily.ai" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Amily AI",
+        "logo": { "@type": "ImageObject", "url": "https://amily.ai/assets/logo-full-transparent.png" }
+      },
+      "datePublished": "{{DATE_ISO}}",
+      "dateModified": "{{UPDATED_ISO}}",
+      "mainEntityOfPage": "https://amily.ai{{URL_PATH}}"
+    }
+    </script>
+{{FAQ_SCHEMA}}
+    <link rel="stylesheet" href="/assets/blog.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="/" class="logo-text">amily.ai</a>
+          <a href="{{BACK_HREF}}" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            {{BACK_LABEL}}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <article>
+{{META_STRIP}}
+        <h1 class="page-title">{{TITLE}}</h1>
+        <p class="page-subtitle">{{DESCRIPTION}}</p>
+
+        <div class="post-body">
+{{CONTENT}}
+        </div>
+{{FINAL_CTA}}
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-business">
+          <strong>Amily AI</strong> (ABN: 86 758 863 858) &middot; Melbourne, Victoria, Australia<br/>
+          <a href="/">Home</a> &middot; <a href="/blog">Blog</a> &middot; <a href="/privacy.html">Privacy policy</a> &middot; <a href="mailto:hello@amily.ai">hello@amily.ai</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var isThanks = window.location.hash === '#thanks' || params.get('booked') === '1';
+        if (!isThanks) return;
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-XXXXXXXXX/YYYYYYYYYY',
+          value: 1.0,
+          currency: 'AUD',
+          transaction_id: (crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now())
+        });
+      })();
+    </script>
+
+  </body>
+</html>
