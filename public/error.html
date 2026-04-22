@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/favicon-256.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>We're untangling something — Amily AI</title>
+    <meta name="description" content="Amily's untangling a few cables. The site will be back in a moment." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="We're untangling something — Amily AI" />
+    <meta property="og:description" content="Amily's untangling a few cables. The site will be back in a moment." />
+    <meta property="og:image" content="https://amily.ai/assets/error-amily-tangled-cream.png" />
+    <meta property="og:locale" content="en_AU" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700..800,0..100,0..1&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+
+      body {
+        min-height: 100vh;
+        background: #faf5eb;
+        color: #0c1b30;
+        font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2.5rem 1.25rem;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wrap {
+        max-width: 560px;
+        width: 100%;
+      }
+
+      .hero {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto 1.5rem;
+        display: block;
+      }
+
+      h1 {
+        font-family: 'Fraunces', Georgia, serif;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+        font-weight: 900;
+        font-size: clamp(2rem, 6.5vw, 3.25rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        color: #0c1b30;
+        margin: 0 0 0.75rem;
+      }
+
+      h1 .accent {
+        background-image: linear-gradient(180deg, transparent 62%, #e8b04e 62%, #c97b5d 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 0 0.1em;
+      }
+
+      p.lede {
+        font-size: 1.125rem;
+        color: #1e3a5f;
+        margin: 0 0 2rem;
+        opacity: 0.9;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #1e3a5f;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 1rem 1.75rem;
+        border-radius: 9999px;
+        box-shadow: 0 20px 25px -5px rgba(30, 58, 95, 0.25);
+        transition: background-color 180ms ease, transform 180ms ease;
+      }
+
+      .cta:hover, .cta:focus-visible {
+        background: #c97b5d;
+        transform: scale(1.03);
+        outline: none;
+      }
+
+      .cta:focus-visible {
+        box-shadow: 0 0 0 3px rgba(201, 123, 93, 0.35), 0 20px 25px -5px rgba(30, 58, 95, 0.25);
+      }
+
+      .cta svg { flex-shrink: 0; }
+
+      footer {
+        margin-top: 2.5rem;
+        font-size: 0.875rem;
+        color: #1e3a5f;
+        opacity: 0.65;
+      }
+
+      footer a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cta { transition: none; }
+        .cta:hover, .cta:focus-visible { transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <img
+        class="hero"
+        src="/assets/error-amily-tangled-transparent.png"
+        alt="Amily holding a tangled bundle of colourful cables with a sheepish smile"
+        width="560"
+        height="560"
+      />
+      <h1>We're <span class="accent">untangling</span> something.</h1>
+      <p class="lede">Amily's rummaging through a few cables. The site will be back in a moment — give it another go in a bit.</p>
+      <a class="cta" href="/" aria-label="Try loading the homepage again">
+        Try again
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </a>
+      <footer>
+        Still broken? Drop a line at <a href="mailto:hello@amily.ai">hello@amily.ai</a>.
+      </footer>
+    </main>
+  </body>
+</html>
