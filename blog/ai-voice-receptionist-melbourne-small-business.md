@@ -112,7 +112,7 @@ We built Amily in Melbourne specifically because the generic US AI receptionists
 - **Victoria Surveillance Devices Act 1999**: a business is a party to calls to its own number, so recording is lawful with disclosure under section 6. Section 11 [restricts downstream sharing of recordings](http://classic.austlii.edu.au/au/legis/vic/consol_act/sda1999210/s11.html) — our architecture prevents that by default.
 - **OAIC 2024 AI guidance**: public-facing AI tools must be clearly identified to users. Amily's in-call disclosure plus "powered by AI" branding on caller SMS confirmations implements this by default.
 
-The full details are in our [privacy policy](/privacy.html), and we provide every customer with aligned privacy policy copy for their own site.
+The full details are in our [privacy policy](/privacy), and we provide every customer with aligned privacy policy copy for their own site.
 
 ## AI vs human virtual receptionist: an honest comparison
 
