@@ -195,7 +195,7 @@ function updateSitemap(posts) {
   // Static entries we always want in the sitemap.
   const staticEntries = [
     { loc: `${SITE_URL}/`, changefreq: 'weekly', priority: '1.0', lastmod: todayIso() },
-    { loc: `${SITE_URL}/privacy.html`, changefreq: 'yearly', priority: '0.3', lastmod: '2026-04-22' },
+    { loc: `${SITE_URL}/privacy`, changefreq: 'yearly', priority: '0.3', lastmod: '2026-04-22' },
     { loc: `${SITE_URL}/blog`, changefreq: 'weekly', priority: '0.7', lastmod: todayIso() },
   ];
 
