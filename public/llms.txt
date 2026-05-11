@@ -1,0 +1,42 @@
+# Amily AI
+
+> Australian-built AI voice receptionist for Melbourne small businesses. Answers calls 24/7, books jobs, and routes emergencies, with full Privacy Act 1988 and Victoria Surveillance Devices Act 1999 compliance. Built for tradies, cafes, allied health clinics, and professional services that lose 22-62% of inbound calls.
+
+Amily AI is operated by Anthony Nguyen (ABN 86 758 863 858) and based in Melbourne, Victoria, Australia. The service combines AI voice agents (ElevenLabs) with workflow automation (n8n) and integrates directly with the tools Australian small businesses already run: Google Calendar, Cal.com, ServiceM8, Simpro, Tradify, Cliniko, and Halaxy.
+
+Pricing starts at A$149/month — typically less than the revenue from a single missed job. We offer a 30-day ROI guarantee: measurable bookings, reviews, or time saved within 30 days, or we refund the setup fee.
+
+Compliance posture:
+- Privacy Act 1988 (Australian Privacy Principles APP 1-13) — opt-in disclosure, encrypted Australian-hosted storage, per-tenant data isolation, no general-model training on customer calls.
+- Privacy and Other Legislation Amendment Act 2024 — ready-to-use privacy policy copy covering automated decision-making transparency, in advance of the 10 December 2026 compliance deadline.
+- Victoria Surveillance Devices Act 1999 — in-call disclosure satisfies s.6 lawful recording requirements; s.11 downstream-sharing restrictions enforced by architecture.
+- OAIC 2024 AI guidance — public AI identification at start of every call.
+
+## Pages
+
+- [Home](https://amily.ai/): Your local AI guide for Melbourne small business — overview, services, and 30-day ROI guarantee.
+- [AI voice receptionist for Melbourne small business](https://amily.ai/ai-voice-receptionist-melbourne-small-business): Detailed product page, pricing, integrations, and Australian compliance breakdown.
+- [Blog](https://amily.ai/blog): Writing on AI voice receptionists, Australian privacy law, and Melbourne small business growth.
+- [Why Melbourne tradies miss 22% of calls](https://amily.ai/blog/melbourne-tradies-missed-calls-cost): The maths, the reasons, and what tradies are doing about the A$35,000/year missed-call problem.
+- [Privacy policy](https://amily.ai/privacy): How we handle customer data under Australian privacy law.
+
+## Services
+
+- AI Voice Receptionist — 24/7 call answering, job booking, emergency routing, SMS summary to owner.
+- Smart Review Management — automated Google Business Profile review requests.
+- AI Setup Consulting — hands-on implementation for small businesses without the tech headache.
+
+## Contact
+
+- Email: hello@amily.ai
+- Discovery call: https://cal.com/amily-ai-anthony/discovery
+- ABN: 86 758 863 858
+- Location: Melbourne, Victoria, Australia
+
+## Differentiators vs US-built AI receptionists
+
+- Australian voice and accent, not American.
+- AU data residency by default, not opt-in.
+- AU compliance — Privacy Act 1988, Privacy and Other Legislation Amendment Act 2024, Victoria SDA 1999, OAIC 2024 AI guidance — built in, not retrofitted.
+- Local AU integrations: ServiceM8, Tradify, Simpro, Cliniko, Halaxy.
+- Solo-founder, hands-on setup. Not a self-serve SaaS dashboard.
