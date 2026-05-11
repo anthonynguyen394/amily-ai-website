@@ -47,6 +47,66 @@
       gtag('config', 'AW-XXXXXXXXX');
     </script>
 
+    <!-- FAQPage structured data — mirrors the FAQ section rendered by App.jsx
+         (FAQ component). Static so AI/Google crawlers see it without JS.
+         Keep in sync with the `faqs` array in src/App.jsx. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need tech skills to use this?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nope. We handle setup, configuration, and team training end-to-end. You keep running your business; we handle the wiring."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the AI doesn't sound right for my brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We test every voice and review response with you before launch. You pick the tone — warm, straight-to-the-point, cheeky — and we tune the AI to match. If it's not right, we rework it before going live."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep my existing phone number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your AI receptionist picks up via standard call forwarding — your number stays yours, customers never notice the change, and you can switch it off any time from your dashboard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when the AI can't answer a question?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It hands off gracefully. Customers can leave a message, book a callback, or ask for you directly — and you get an SMS summary within seconds. No missed jobs, no bad experiences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my customer data safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data is hosted in Australia, encrypted in transit and at rest. We comply with the Australian Privacy Principles, never sell or share data, and you can purge call recordings or transcripts any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the 30-day ROI guarantee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you don't see measurable ROI — more bookings, more reviews, or hours saved — within 30 days of going live, we refund your setup fee. No legal fine print, no retention calls."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- LocalBusiness structured data for Melbourne local SEO -->
     <script type="application/ld+json">
     {
