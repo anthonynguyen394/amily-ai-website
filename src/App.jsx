@@ -2315,6 +2315,14 @@ function Footer() {
               <li className="text-white/50 text-sm">Melbourne, Australia</li>
               <li>
                 <a
+                  href="tel:+61347140264"
+                  className="text-white/50 text-sm hover:text-terracotta transition-colors lift-hover inline-block"
+                >
+                  (03) 4714 0264
+                </a>
+              </li>
+              <li>
+                <a
                   href="mailto:hello@amily.ai"
                   className="text-white/50 text-sm hover:text-terracotta transition-colors lift-hover inline-block"
                 >

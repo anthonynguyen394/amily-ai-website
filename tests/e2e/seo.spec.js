@@ -124,6 +124,33 @@ test.describe('homepage SEO signals', () => {
     const ogLocale = await page.locator('meta[property="og:locale"]').getAttribute('content');
     expect(ogLocale).toBe('en_AU');
   });
+
+  test('LocalBusiness JSON-LD includes E.164 telephone matching GBP', async ({ page }) => {
+    // NAP consistency: telephone must match the number listed on Google
+    // Business Profile (+61 3 4714 0264). Mismatches dilute local SEO trust.
+    const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+    const local = blocks.find((s) => s.includes('"LocalBusiness"'));
+    const json = JSON.parse(local);
+    expect(json.telephone).toBe('+61 3 4714 0264');
+  });
+
+  test('LocalBusiness JSON-LD declares opening hours', async ({ page }) => {
+    const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+    const local = blocks.find((s) => s.includes('"LocalBusiness"'));
+    const json = JSON.parse(local);
+    expect(json.openingHoursSpecification).toBeTruthy();
+    const weekday = json.openingHoursSpecification[0];
+    expect(weekday.opens).toBe('09:00');
+    expect(weekday.closes).toBe('17:00');
+    expect(weekday.dayOfWeek).toContain('Monday');
+  });
+});
+
+test.describe('NAP — Name/Address/Phone alignment with GBP', () => {
+  test('llms.txt includes the GBP phone number', async ({ request }) => {
+    const body = await (await request.get('/llms.txt')).text();
+    expect(body).toContain('+61 3 4714 0264');
+  });
 });
 
 test.describe('privacy page canonicalisation', () => {
