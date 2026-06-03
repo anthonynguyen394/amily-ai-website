@@ -76,11 +76,16 @@ test.describe('blog post (layout=post)', () => {
     await expect(page.locator('article .final-cta')).toBeVisible();
   });
 
-  test('schema.org Article + FAQ JSON-LD are embedded', async ({ page }) => {
+  test('schema.org BlogPosting + FAQ JSON-LD are embedded', async ({ page }) => {
+    // PR #6 changed blog posts from Article to BlogPosting (Articles are
+    // reserved for the landing page). This test must follow the new
+    // schema type; the regression suite in regression.spec.js also asserts
+    // BlogPosting for posts and Article for /ai-voice-receptionist-*.
     const jsonLd = await page.locator('script[type="application/ld+json"]').allTextContents();
     expect(jsonLd.length).toBeGreaterThanOrEqual(2);
-    expect(jsonLd.some((s) => s.includes('"@type": "Article"'))).toBe(true);
+    expect(jsonLd.some((s) => s.includes('"@type": "BlogPosting"'))).toBe(true);
     expect(jsonLd.some((s) => s.includes('"@type": "FAQPage"'))).toBe(true);
+    expect(jsonLd.some((s) => s.includes('"@type": "Article"'))).toBe(false);
   });
 
   test('back link goes to /blog (All posts), not /', async ({ page }) => {

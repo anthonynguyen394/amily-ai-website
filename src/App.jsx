@@ -1371,9 +1371,9 @@ function Proof() {
               <div className="shrink-0 w-11 h-11 rounded-full bg-terracotta text-white flex items-center justify-center shadow-md">
                 <Sparkles size={20} strokeWidth={2} />
               </div>
-              <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
+              <h3 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
                 What you get
-              </h4>
+              </h3>
             </div>
             <ul className="space-y-3 flex-1">
               {[
@@ -1400,9 +1400,9 @@ function Proof() {
               <div className="shrink-0 w-11 h-11 rounded-full bg-mustard text-white flex items-center justify-center shadow-md">
                 <MessageSquare size={20} strokeWidth={2} />
               </div>
-              <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
+              <h3 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
                 What we ask
-              </h4>
+              </h3>
             </div>
             <ul className="space-y-3 flex-1">
               {[
@@ -2263,9 +2263,9 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
               Services
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {['AI Voice Receptionist', 'Smart Review Management', 'AI Setup Consulting'].map(
                 (item) => (
@@ -2284,9 +2284,9 @@ function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
               Company
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {[
                 { label: 'How It Works', href: '#how-it-works' },
@@ -2308,9 +2308,9 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
               Get In Touch
-            </h4>
+            </h3>
             <ul className="space-y-2">
               <li className="text-white/50 text-sm">Melbourne, Australia</li>
               <li>
@@ -2318,7 +2318,7 @@ function Footer() {
                   href="tel:+61347140264"
                   className="text-white/50 text-sm hover:text-terracotta transition-colors lift-hover inline-block"
                 >
-                  (03) 4714 0264
+                  +61 3 4714 0264
                 </a>
               </li>
               <li>

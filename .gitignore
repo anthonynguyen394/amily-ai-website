@@ -40,3 +40,5 @@ playwright-report/
 # Deploy secrets
 deploy/.env
 screenshots/
+audit-output/
+audit.mjs
