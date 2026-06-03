@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/favicon-256.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amily AI -- Your Local AI Guide for Melbourne Small Business</title>
     <meta name="description" content="Helping tradies, cafes, and small businesses stop losing jobs to missed calls, build better Google reviews, and put AI to work without the tech headache." />
+    <link rel="canonical" href="https://amily.ai/" />
 
     <!-- Open Graph / Facebook / Messenger -->
     <meta property="og:type" content="website" />
@@ -170,6 +171,52 @@
             }
           }
         ]
+      }
+    }
+    </script>
+
+    <!-- Organization structured data — establishes the Amily AI entity for
+         Google Knowledge Graph + AI search. Keep NAP/ABN in sync with
+         /llms.txt and the LocalBusiness block above. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Amily AI",
+      "legalName": "Amily AI",
+      "url": "https://amily.ai/",
+      "logo": "https://amily.ai/assets/logo-full-transparent.png",
+      "image": "https://amily.ai/assets/og-image.png",
+      "description": "Your local AI guide for Melbourne small business. Helping tradies, cafes, and professional services stop losing jobs to missed calls, get more Google reviews, and put AI to work.",
+      "email": "hello@amily.ai",
+      "telephone": "+61 3 4714 0264",
+      "foundingDate": "2026",
+      "areaServed": {
+        "@type": "City",
+        "name": "Melbourne",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Victoria, Australia"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ABN",
+        "value": "86 758 863 858"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61 3 4714 0264",
+        "email": "hello@amily.ai",
+        "contactType": "sales",
+        "areaServed": "AU",
+        "availableLanguage": "en"
       }
     }
     </script>

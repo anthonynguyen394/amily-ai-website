@@ -150,6 +150,7 @@ function renderPost(post, shell) {
   return shell
     .replaceAll('{{TITLE}}', escapeHtml(post.title))
     .replaceAll('{{TITLE_JSON}}', escapeJson(post.title))
+    .replaceAll('{{SCHEMA_TYPE}}', post.layout === 'landing' ? 'Article' : 'BlogPosting')
     .replaceAll('{{DESCRIPTION}}', escapeHtml(post.description))
     .replaceAll('{{DESCRIPTION_JSON}}', escapeJson(post.description))
     .replaceAll('{{SLUG}}', post.slug)
