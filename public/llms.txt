@@ -18,6 +18,7 @@ Compliance posture:
 - [AI voice receptionist for Melbourne small business](https://amily.ai/ai-voice-receptionist-melbourne-small-business): Detailed product page, pricing, integrations, and Australian compliance breakdown.
 - [Blog](https://amily.ai/blog): Writing on AI voice receptionists, Australian privacy law, and Melbourne small business growth.
 - [Why Melbourne tradies miss 22% of calls](https://amily.ai/blog/melbourne-tradies-missed-calls-cost): The maths, the reasons, and what tradies are doing about the A$35,000/year missed-call problem.
+- [Amily AI vs US virtual receptionists: 2026 Australian Privacy Act compliance](https://amily.ai/blog/amily-ai-vs-us-virtual-receptionists-privacy-act-compliance): Why US-based virtual receptionists can leave Aussie small businesses exposed under Privacy Act 2024, and what APP-native looks like.
 - [Privacy policy](https://amily.ai/privacy): How we handle customer data under Australian privacy law.
 
 ## Services
