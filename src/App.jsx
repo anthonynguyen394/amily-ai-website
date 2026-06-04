@@ -1410,7 +1410,7 @@ function Proof() {
           {/* Card 2 -- What we ask */}
           <div className="proof-card relative bg-cream rounded-3xl p-6 sm:p-8 border border-charcoal/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
             <div className="flex items-center gap-3 mb-5">
-              <div className="shrink-0 w-11 h-11 rounded-full bg-mustard text-white flex items-center justify-center shadow-md">
+              <div className="shrink-0 w-11 h-11 rounded-full bg-terracotta text-white flex items-center justify-center shadow-md">
                 <MessageSquare size={20} strokeWidth={2} />
               </div>
               <h3 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
