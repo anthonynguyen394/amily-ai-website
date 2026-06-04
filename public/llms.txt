@@ -19,6 +19,7 @@ Compliance posture:
 - [Blog](https://amily.ai/blog): Writing on AI voice receptionists, Australian privacy law, and Melbourne small business growth.
 - [Why Melbourne tradies miss 22% of calls](https://amily.ai/blog/melbourne-tradies-missed-calls-cost): The maths, the reasons, and what tradies are doing about the A$35,000/year missed-call problem.
 - [How much does a virtual receptionist cost in Melbourne? (2026 pricing guide)](https://amily.ai/blog/virtual-receptionist-cost-melbourne-2026): Real AUD pricing compared — human ($90k+), offshore call centre, and AI ($149-249/mo).
+- [Why Victorian allied health clinics are switching to AI phone booking](https://amily.ai/blog/victorian-allied-health-clinics-ai-phone-booking): APP 11 + My Health Records + PMS-compatible workflows (Cliniko, ClinicM8, Halaxy), plus the triage line AI must not cross.
 - [Privacy policy](https://amily.ai/privacy): How we handle customer data under Australian privacy law.
 
 ## Services
