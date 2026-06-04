@@ -150,6 +150,7 @@ function Navbar() {
     { label: 'Services', href: '#features' },
     { label: 'How It Works', href: '#how-it-works' },
     { label: 'Pricing', href: '#pricing' },
+    { label: 'Blog', href: '/blog' },
   ];
 
   return (
@@ -2307,6 +2308,7 @@ function Footer() {
               {[
                 { label: 'How It Works', href: '#how-it-works' },
                 { label: 'Pricing', href: '#pricing' },
+                { label: 'Blog', href: '/blog' },
                 { label: 'Privacy Policy', href: '/privacy' },
                 { label: 'Terms of Service', href: '#' },
               ].map((item) => (
