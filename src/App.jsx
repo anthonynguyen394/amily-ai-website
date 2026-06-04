@@ -165,14 +165,18 @@ function Navbar() {
     >
       {/* Logo */}
       <a href="#" className="flex items-center gap-2 shrink-0">
-        <img
-          src="/assets/logo-full-transparent.png"
-          alt="Amily AI"
-          width="32"
-          height="32"
-          decoding="async"
-          className="w-8 h-8 rounded-lg"
-        />
+        <picture>
+          <source srcSet="/assets/logo-full-transparent.webp" type="image/webp" />
+          <img
+            src="/assets/logo-full-transparent.png"
+            alt="Amily AI"
+            width="32"
+            height="32"
+            decoding="async"
+            fetchPriority="high"
+            className="w-8 h-8 rounded-lg"
+          />
+        </picture>
         <span
           className={`font-heading font-bold text-lg tracking-tight transition-colors duration-500
             ${scrolled ? 'text-navy' : 'text-navy'}`}
@@ -390,19 +394,22 @@ function Hero() {
 
 {/* The character -- 8s video loop; reduced-motion users get the still PNG */}
               {reducedMotion ? (
-                <img
-                  src="/assets/amily-01-waving-transparent.png"
-                  alt="Amily — your friendly AI guide for Melbourne small business"
-                  width="560"
-                  height="560"
-                  fetchpriority="high"
-                  decoding="async"
-                  className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)]"
-                />
+                <picture>
+                  <source srcSet="/assets/amily-01-waving-transparent.webp" type="image/webp" />
+                  <img
+                    src="/assets/amily-01-waving-transparent.png"
+                    alt="Amily — your friendly AI guide for Melbourne small business"
+                    width="560"
+                    height="560"
+                    fetchpriority="high"
+                    decoding="async"
+                    className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)]"
+                  />
+                </picture>
               ) : (
                 <video
                   ref={videoRef}
-                  poster="/assets/amily-01-waving-transparent.png"
+                  poster="/assets/amily-01-waving-transparent.webp"
                   autoPlay
                   muted
                   loop
@@ -664,7 +671,10 @@ function TypewriterCard() {
       <div className="flex items-start gap-4 mb-3">
         <div className="shrink-0 w-20 h-20 relative">
           <div className="absolute inset-0 bg-mustard/20 rounded-2xl" />
-          <img src="/assets/amily-03-five-stars.png" alt="Amily managing reviews" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          <picture>
+            <source srcSet="/assets/amily-03-five-stars.webp" type="image/webp" />
+            <img src="/assets/amily-03-five-stars.png" alt="Amily managing reviews" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          </picture>
         </div>
         <div>
           <h3 className="font-heading font-bold text-charcoal text-xl leading-tight">Smart Review Management</h3>
@@ -769,7 +779,10 @@ function SchedulerCard() {
       <div className="flex items-start gap-4 mb-3">
         <div className="shrink-0 w-20 h-20 relative">
           <div className="absolute inset-0 bg-navy/15 rounded-2xl" />
-          <img src="/assets/amily-04-toolkit.png" alt="Amily with tools" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          <picture>
+            <source srcSet="/assets/amily-04-toolkit.webp" type="image/webp" />
+            <img src="/assets/amily-04-toolkit.png" alt="Amily with tools" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          </picture>
         </div>
         <div>
           <h3 className="font-heading font-bold text-charcoal text-xl leading-tight">AI Setup Consulting</h3>
@@ -2244,15 +2257,18 @@ function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img
-                src="/assets/logo-full-transparent.png"
-                alt="Amily AI"
-                width="40"
-                height="40"
-                loading="lazy"
-                decoding="async"
-                className="w-10 h-10 rounded-xl"
-              />
+              <picture>
+                <source srcSet="/assets/logo-full-transparent.webp" type="image/webp" />
+                <img
+                  src="/assets/logo-full-transparent.png"
+                  alt="Amily AI"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-10 h-10 rounded-xl"
+                />
+              </picture>
               <span className="font-heading font-bold text-white text-xl">Amily AI</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
