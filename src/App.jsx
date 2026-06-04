@@ -165,14 +165,18 @@ function Navbar() {
     >
       {/* Logo */}
       <a href="#" className="flex items-center gap-2 shrink-0">
-        <img
-          src="/assets/logo-full-transparent.png"
-          alt="Amily AI"
-          width="32"
-          height="32"
-          decoding="async"
-          className="w-8 h-8 rounded-lg"
-        />
+        <picture>
+          <source srcSet="/assets/logo-full-transparent.webp" type="image/webp" />
+          <img
+            src="/assets/logo-full-transparent.png"
+            alt="Amily AI"
+            width="32"
+            height="32"
+            decoding="async"
+            fetchPriority="high"
+            className="w-8 h-8 rounded-lg"
+          />
+        </picture>
         <span
           className={`font-heading font-bold text-lg tracking-tight transition-colors duration-500
             ${scrolled ? 'text-navy' : 'text-navy'}`}
@@ -390,19 +394,22 @@ function Hero() {
 
 {/* The character -- 8s video loop; reduced-motion users get the still PNG */}
               {reducedMotion ? (
-                <img
-                  src="/assets/amily-01-waving-transparent.png"
-                  alt="Amily — your friendly AI guide for Melbourne small business"
-                  width="560"
-                  height="560"
-                  fetchpriority="high"
-                  decoding="async"
-                  className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)]"
-                />
+                <picture>
+                  <source srcSet="/assets/amily-01-waving-transparent.webp" type="image/webp" />
+                  <img
+                    src="/assets/amily-01-waving-transparent.png"
+                    alt="Amily — your friendly AI guide for Melbourne small business"
+                    width="560"
+                    height="560"
+                    fetchpriority="high"
+                    decoding="async"
+                    className="relative z-10 w-full h-full object-contain drop-shadow-[0_18px_50px_rgba(30,58,95,0.20)]"
+                  />
+                </picture>
               ) : (
                 <video
                   ref={videoRef}
-                  poster="/assets/amily-01-waving-transparent.png"
+                  poster="/assets/amily-01-waving-transparent.webp"
                   autoPlay
                   muted
                   loop
@@ -664,7 +671,10 @@ function TypewriterCard() {
       <div className="flex items-start gap-4 mb-3">
         <div className="shrink-0 w-20 h-20 relative">
           <div className="absolute inset-0 bg-mustard/20 rounded-2xl" />
-          <img src="/assets/amily-03-five-stars.png" alt="Amily managing reviews" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          <picture>
+            <source srcSet="/assets/amily-03-five-stars.webp" type="image/webp" />
+            <img src="/assets/amily-03-five-stars.png" alt="Amily managing reviews" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          </picture>
         </div>
         <div>
           <h3 className="font-heading font-bold text-charcoal text-xl leading-tight">Smart Review Management</h3>
@@ -769,7 +779,10 @@ function SchedulerCard() {
       <div className="flex items-start gap-4 mb-3">
         <div className="shrink-0 w-20 h-20 relative">
           <div className="absolute inset-0 bg-navy/15 rounded-2xl" />
-          <img src="/assets/amily-04-toolkit.png" alt="Amily with tools" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          <picture>
+            <source srcSet="/assets/amily-04-toolkit.webp" type="image/webp" />
+            <img src="/assets/amily-04-toolkit.png" alt="Amily with tools" width="400" height="400" loading="lazy" decoding="async" className="relative w-full h-full object-contain p-1" />
+          </picture>
         </div>
         <div>
           <h3 className="font-heading font-bold text-charcoal text-xl leading-tight">AI Setup Consulting</h3>
@@ -1371,9 +1384,9 @@ function Proof() {
               <div className="shrink-0 w-11 h-11 rounded-full bg-terracotta text-white flex items-center justify-center shadow-md">
                 <Sparkles size={20} strokeWidth={2} />
               </div>
-              <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
+              <h3 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
                 What you get
-              </h4>
+              </h3>
             </div>
             <ul className="space-y-3 flex-1">
               {[
@@ -1397,12 +1410,12 @@ function Proof() {
           {/* Card 2 -- What we ask */}
           <div className="proof-card relative bg-cream rounded-3xl p-6 sm:p-8 border border-charcoal/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
             <div className="flex items-center gap-3 mb-5">
-              <div className="shrink-0 w-11 h-11 rounded-full bg-mustard text-white flex items-center justify-center shadow-md">
+              <div className="shrink-0 w-11 h-11 rounded-full bg-terracotta text-white flex items-center justify-center shadow-md">
                 <MessageSquare size={20} strokeWidth={2} />
               </div>
-              <h4 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
+              <h3 className="font-heading font-extrabold text-charcoal text-xl sm:text-2xl tracking-tight">
                 What we ask
-              </h4>
+              </h3>
             </div>
             <ul className="space-y-3 flex-1">
               {[
@@ -2244,15 +2257,18 @@ function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img
-                src="/assets/logo-full-transparent.png"
-                alt="Amily AI"
-                width="40"
-                height="40"
-                loading="lazy"
-                decoding="async"
-                className="w-10 h-10 rounded-xl"
-              />
+              <picture>
+                <source srcSet="/assets/logo-full-transparent.webp" type="image/webp" />
+                <img
+                  src="/assets/logo-full-transparent.png"
+                  alt="Amily AI"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-10 h-10 rounded-xl"
+                />
+              </picture>
               <span className="font-heading font-bold text-white text-xl">Amily AI</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
@@ -2263,9 +2279,9 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
               Services
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {['AI Voice Receptionist', 'Smart Review Management', 'AI Setup Consulting'].map(
                 (item) => (
@@ -2284,9 +2300,9 @@ function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
               Company
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {[
                 { label: 'How It Works', href: '#how-it-works' },
@@ -2308,9 +2324,9 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">
               Get In Touch
-            </h4>
+            </h3>
             <ul className="space-y-2">
               <li className="text-white/50 text-sm">Melbourne, Australia</li>
               <li>
@@ -2318,7 +2334,7 @@ function Footer() {
                   href="tel:+61347140264"
                   className="text-white/50 text-sm hover:text-terracotta transition-colors lift-hover inline-block"
                 >
-                  (03) 4714 0264
+                  +61 3 4714 0264
                 </a>
               </li>
               <li>

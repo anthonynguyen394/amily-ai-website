@@ -27,6 +27,14 @@ jobs:
 
       - run: npm ci
 
+      - name: Install Playwright Chromium
+        # scripts/prerender-home.mjs launches headless Chromium to render the
+        # SPA shell into static HTML. The npm package @playwright/test ships
+        # the API client, not the browser binary — this step fetches the
+        # chromium-headless-shell that prerender-home.mjs depends on.
+        # `--with-deps` installs the system libs chromium needs on Ubuntu.
+        run: npx playwright install --with-deps chromium
+
       - run: npm run build
 
       - name: Ensure Pages project exists
