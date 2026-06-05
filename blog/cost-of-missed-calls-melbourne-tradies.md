@@ -87,7 +87,7 @@ The other reason tradies delay is that the cost of the problem is invisible. The
 
 **Want the calculator with your own numbers plugged in?** Book a free 15-min chat and we'll run your call volume, miss rate, and average job value through the same table — and tell you what an AI receptionist would save your business in year one. [amily.ai/#discovery](https://amily.ai/#discovery) or email [anthony@amily.ai](mailto:anthony@amily.ai).
 
-## Sources cited
+## Which sources back up this tradie missed-call analysis?
 
 - [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search-2026) — 93% of Google AI Mode queries end without a click; AI-referred visitors convert at 14.2% vs 2.8% for traditional organic.
 - [DiscoveredLabs — AI citation correlation study](https://www.discoveredlabs.com/) — FCP < 0.4s correlates with 6.7 AI citations vs 2.1 for slower pages (informs why fast, citable pages rank in AI search).
