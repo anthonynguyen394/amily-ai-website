@@ -148,7 +148,7 @@ The honest answer is that the build is well within reach for a competent technic
 
 **Not sure yet?** Book a free 15-min chat and we'll talk through your call volume, your current setup, and whether DIY or done-for-you makes more sense for your business. [amily.ai/#discovery](https://amily.ai/#discovery).
 
-## Sources cited
+## Which sources were used for this AI voice setup guide?
 
 - [Twilio Australia — regulatory guidelines](https://www.twilio.com/en-us/guidelines/au/regulatory) — ACMA-compliant identity verification and provisioning for AU local numbers.
 - [Twilio Australia — voice pricing](https://www.twilio.com/en-us/voice/pricing/au) — $3/month for 03 number, $0.010/min inbound, $0.0252/min outbound to local, $0.0796/SMS.
