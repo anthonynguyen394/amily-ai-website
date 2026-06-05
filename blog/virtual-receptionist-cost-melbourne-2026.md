@@ -100,6 +100,8 @@ The catch: an AI receptionist doesn't do every job a human does. It can't handle
 
 ## How does Amily AI compare on price?
 
+Amily AI Core at AUD $199/month undercuts every alternative on the table below: cheaper than part-time human cover, cheaper than offshore shared or dedicated plans, and the only option that gives you a local Melbourne 03 number, 24/7 answering, and live Cal.com booking with no setup fee, no minimum spend, and no lock-in. The full comparison follows.
+
 Here's the side-by-side. This is the table most "AI vs human receptionist" articles skip.
 
 | Solution | Setup cost | Monthly cost | Hours covered | 24/7? | APP compliant? | Melbourne 03 number? | Lock-in? |
@@ -165,7 +167,7 @@ The middle ground — a proper AI receptionist that books live and covers 24/7 �
 
 If you're ready to see what $199/month buys you in real terms, [see live pricing and book a demo](https://amily.ai/#voice). You can also read how the [AI setup process works](https://amily.ai/#setup) and what [review management](https://amily.ai/#reviews) adds on top.
 
-## Sources cited
+## Which sources were used for this Melbourne pricing guide?
 
 - [Fair Work Australia — Pay guides and minimum wages, 2026](https://www.fairwork.gov.au/pay-and-wages/minimum-wages) — Base rate for Level 2 admin/reception staff
 - [ElevenLabs Conversational AI pricing, 2026](https://elevenlabs.io/pricing) — Voice AI per-minute cost underpinning Amily's $0.10/min stack
