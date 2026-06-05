@@ -150,7 +150,7 @@ For a multi-practitioner clinic doing 200+ calls/week, the ROI case is even stro
 
 If you'd rather read first, see the [Amily AI voice plans](https://amily.ai/#voice), the [setup process for professional services](https://amily.ai/#setup), and how [review management](https://amily.ai/#reviews) works alongside it. All plans include a local 03 number, 24/7 answering, Cal.com booking, no lock-in, and a 30-day money-back guarantee.
 
-## Sources cited
+## Which sources back up this allied health privacy guide?
 
 - [OAIC — Australian Privacy Principle 11 (security of personal information), 2024](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agency-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) — APP 11 security obligations
 - [OAIC — Privacy and the use of commercially available AI products, 2024](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) — AI-specific privacy guidance
