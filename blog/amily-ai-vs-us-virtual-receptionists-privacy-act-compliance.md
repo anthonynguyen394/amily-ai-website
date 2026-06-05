@@ -97,7 +97,7 @@ A typical onboarding with Amily takes about an afternoon:
 
 Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone +61 3 4714 0264.
 
-## Sources cited
+## Which sources back up this Privacy Act compliance guide?
 
 - [OAIC — Privacy Act reforms 2024 overview](https://www.oaic.gov.au/privacy/privacy-guardians/privacy-act-reform) — backs the 10 Dec 2026 ADM deadline and APP entity status of small businesses
 - [OAIC — Automated decision-making guidance, 2024](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) — backs the scope of "automated decision-making" applied to AI call triage
