@@ -98,7 +98,7 @@ The whole thing is no-lock-in. If the tradie wants to take the script and run it
 
 Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone +61 3 4714 0264.
 
-## Sources cited
+## Which sources back up this tradie integration guide?
 
 - [ElevenLabs Conversational AI overview](https://elevenlabs.io/docs/conversational-ai/overview) — backs the voice model, latency and Australian voice profile
 - [Twilio Australia voice pricing and regulatory guidance](https://www.twilio.com/en-us/voice/pricing/au) — backs the local 03 number provisioning and ACMA identity verification process
@@ -109,5 +109,3 @@ Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone 
 - [DiscoveredLabs — FCP and AI citation correlation study](https://www.discoveredlabs.com/blog/fcp-ai-citations) — supports the 6.7 vs 2.1 citation figure tied to fast first-contentful-paint
 - [Amily AI — Voice Receptionist pricing](https://amily.ai/#voice) — backs the AUD $149 / $199 / $249 plan tiers quoted in this post
 - [Amily AI — AI Setup Consulting](https://amily.ai/#setup) — backs the AUD $2,500 trade setup fee quoted in this post
-
-> **Note on integrations:** ServiceM8, Tradify, and similar job management platforms are integrated via their public REST APIs through the n8n workflow layer. The integration is configured per business as part of the AI Setup Consulting engagement, not a self-serve plugin.
