@@ -15,7 +15,53 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    name: e2e (Playwright)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Playwright Chromium
+        # The Playwright API client is in @playwright/test, but the actual
+        # browser binary ships separately. The build step (vite build +
+        # build-blog.mjs + prerender-home.mjs) loads a headless Chromium via
+        # Playwright, so we need the binary here even for pure test runs.
+        run: npx playwright install --with-deps chromium
+
+      - run: npm run build
+
+      - name: Run Playwright e2e
+        env:
+          # The test files (functional.spec.js, security.spec.js,
+          # regression.spec.js, seo-comprehensive.spec.js, seo.spec.js) read
+          # `BASE_URL` and fall back to http://127.0.0.1:5173 — which is NOT
+          # where the playwright.config.js webServer starts. Pin it to 4173
+          # to match `npm run preview -- --port 4173 --host 127.0.0.1` so
+          # all 223 tests hit the same preview server.
+          BASE_URL: http://127.0.0.1:4173
+        run: npx playwright test
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+
   deploy:
+    name: Deploy to Cloudflare Pages
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
