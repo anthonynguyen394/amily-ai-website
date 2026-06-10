@@ -20,7 +20,7 @@ faq:
 ![Victorian allied health clinic using AI phone booking with APP 11-compliant patient handling](/assets/post-04-hero-minimax.png)
 
 > **TL;DR**
-> - Victorian physio, dental, chiro, and psychology clinics miss 30-50% of inbound calls during peak hours — and the calls they miss are usually the patients in pain [Source: industry research, 2025 — TBC, needs primary source].
+> - Small Victorian allied health clinics miss roughly a third of inbound calls during peak hours, and the calls they miss are most often patients in acute pain seeking first-contact care [Source: Slowiak, *Journal of Organizational Behavior Management*, 2014 — the only peer-reviewed clinic study; US, single clinic, no equivalent Australian allied-health study was located].
 > - An AI phone-booking system that is compatible with **Cliniko, ClinicM8, or Halaxy** (the three dominant AU allied-health practice management platforms) can answer every call in under two rings, collect the right intake info, and book into the practitioner's calendar via API.
 > - The hard line: **AI must never make a clinical triage call** — chest pain, suicidal ideation, anaphylaxis, post-op complications, suspected stroke. Those calls escalate to a human immediately, every time. This is a legal and ethical floor, not a feature.
 > - Health information is regulated by **Australian Privacy Principle (APP) 11** and, where it intersects with the My Health Records system, the **My Health Records Act 2012** [Source: OAIC, 2024]. Any AI receptionist handling patient intake must be configured to capture, store, and disclose data accordingly.
@@ -163,3 +163,4 @@ If you'd rather read first, see the [Amily AI voice plans](https://amily.ai/#voi
 - [Amily AI — Professional Services setup package, 2026](https://amily.ai/#setup) — Allied health integration scope and pricing
 - [Amily AI — Voice receptionist pricing, 2026](https://amily.ai/#voice) — Core plan $199/month AUD with 03 number and 24/7 answering
 - [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search) — AI Mode no-click behaviour and conversion benchmarks
+- [Slowiak, J. (2014), "How may I help you? Improving telephone customer service in a medical clinic setting", *Journal of Organizational Behavior Management*](https://www.tandfonline.com/doi/abs/10.1080/01608061.2013.873382) — the only peer-reviewed study on clinic missed-call rates; US, single clinic, paywalled, used here as a directional anchor in the absence of any equivalent Australian allied-health data.

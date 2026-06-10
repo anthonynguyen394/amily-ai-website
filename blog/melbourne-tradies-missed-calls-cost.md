@@ -1,14 +1,14 @@
 ---
 title: "Why Melbourne tradies miss 22% of calls (and what it costs them)"
-description: "The average Australian small business loses $35,000 a year to unanswered calls. Here is the maths, the reasons, and what Melbourne tradies are doing about it."
+description: "Small Australian tradies lose meaningful revenue to unanswered calls every year. Here is the maths, the reasons, and what Melbourne tradies are doing about it."
 date: 2026-04-22
 updated: 2026-04-22
 tags: [trades, missed-calls]
 faq:
   - q: How many calls does the average Melbourne tradie miss?
-    a: Australian small businesses miss between 22% and 62% of inbound calls. A single-operator tradie on the tools all day typically misses 30 to 40 percent, with the rate rising during peak jobs.
+    a: A single-operator tradie on the tools all day misses a substantial share of inbound calls, with the rate rising during peak jobs and peak seasons. The only peer-reviewed clinic study (Slowiak, 2014, US, single clinic) put abandon rates well above the 10% internal target; no equivalent Australian tradie-specific study was located at the time of writing.
   - q: How much does a single missed call cost a Melbourne tradie?
-    a: Home-service operators lose an average of A$300 to A$1,200 per missed call when you factor in job value, lifetime value and referral loss. Across a year, that is around A$35,000 for a sole operator.
+    a: The cost per missed call depends on your average job value and conversion rate, but for a sole-operator tradie with a $400-$600 average job, even one to two lost jobs a week compounds to tens of thousands of dollars across a year. The specific "A$35,000" and "A$300-A$1,200 per call" figures circulating in vendor blogs are not anchored to a primary Australian tradie survey at the time of writing.
   - q: Does voicemail fix the problem?
     a: No. 80% of callers sent to voicemail hang up without leaving a message, and 60% of Australian callers move straight to the next search result when their call is not answered.
   - q: What is the cheapest fix for missed calls?
@@ -23,11 +23,11 @@ That is the missed-call economy, and it is costing Melbourne tradies more than t
 
 ## The numbers are worse than you think
 
-Australian small businesses miss between 22% and 62% of inbound calls. The lower end is office-based operators with a receptionist. The higher end is sole traders on the tools.
+A single-operator tradie on the tools all day misses a substantial share of inbound calls — commonly a third or more during peak windows. The only peer-reviewed study on clinic missed-call rates (Slowiak, 2014, *Journal of Organizational Behavior Management*) found abandon rates well above the clinic's own 10% internal target in a single US clinic; no equivalent Australian tradie-specific study was located at the time of writing [Source: Slowiak, 2014].
 
-On average, home-service operators lose **A$300 to A$1,200 per missed call** when you factor in the job value, the lifetime value of that customer, and the knock-on referrals they will never send you.
+The per-call cost depends on your average job value. For a sole-operator tradie with a $400-$600 average job, the conservative weekly damage from missing a handful of calls is the job value itself, plus the lifetime value of that customer, plus the knock-on referrals they will never send you.
 
-Across a year, that is **A$35,000 in lost revenue** for a single-operator tradie. If you are running a small crew and missing even 30% of calls, you are leaking six figures.
+Across a year, that compounds to **tens of thousands of dollars in lost revenue** for a single-operator tradie. If you are running a small crew and missing even 30% of calls, you are leaking six figures.
 
 > The most painful part: you are already spending money to make these phones ring. Google Ads, Hipages leads, vehicle signage, word of mouth — all of that marketing spend is generating calls you are not picking up.
 
