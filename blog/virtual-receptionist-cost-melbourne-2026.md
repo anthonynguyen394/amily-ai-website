@@ -1,6 +1,6 @@
----
-title: "How Much Does a Virtual Receptionist Cost in Melbourne? (2026 Pricing Guide)"
-description: "Virtual receptionist cost in Melbourne 2026: human ($90k+), offshore call centre, AI. Real AUD pricing compared. Amily AI from $149/mo, no lock-in."
+﻿---
+title: "AI Receptionist Cost in Melbourne: From $149/mo (2026 Guide)"
+description: "AI receptionist cost in Melbourne from $149/mo in2026. Real AUD pricing vs offshore ($800-$4,000) and human ($81k+/yr). Privacy Act1988 compliant. No lock-in."
 date: 2026-06-04
 updated: 2026-06-04
 tags: [virtual receptionist, melbourne, pricing, ai-receptionist, small-business, answering-service]
@@ -8,9 +8,9 @@ faq:
   - q: "How much does a virtual receptionist cost in Melbourne per month?"
     a: "A virtual receptionist in Melbourne costs $149-249/month for an AI service like Amily AI, $800-4,000/month for an offshore human service, and $7,000-8,300/month fully-loaded for a full-time in-house human (pro-rated from $81,000-100,000/year including super, leave, and overhead)."
   - q: "Are AI receptionists cheaper than humans in Australia?"
-    a: "Yes — by a factor of about 35x to 400x depending on how you measure. An AI receptionist at $199/month replaces the after-hours, weekend, and overflow coverage that a $90,000/year human can't economically provide. The trade-off is that AI can't handle complex admin, sensitive conversations, or anything that needs real human judgement."
+    a: "Yes â€” by a factor of about 35x to 400x depending on how you measure. An AI receptionist at $199/month replaces the after-hours, weekend, and overflow coverage that a $90,000/year human can't economically provide. The trade-off is that AI can't handle complex admin, sensitive conversations, or anything that needs real human judgement."
   - q: "Do I need a local 03 number for a Melbourne business?"
-    a: "Strongly recommended. Melbourne customers distrust 1300, 1800, and 13 numbers for trades and professional services — they assume call centre or out-of-state. A local 03 number builds trust, and AI services like Amily AI include one in the standard plan with no extra fee."
+    a: "Strongly recommended. Melbourne customers distrust 1300, 1800, and 13 numbers for trades and professional services â€” they assume call centre or out-of-state. A local 03 number builds trust, and AI services like Amily AI include one in the standard plan with no extra fee."
   - q: "What's the cheapest AI receptionist available in Australia?"
     a: "The cheapest reasonable AI receptionist plans start at $49-99/month from providers like MyAIFrontDesk, Synthflow, and a few others. They usually cover basic message-taking and limited call volume. For full Cal.com booking, SMS summaries, and 24/7 escalation, expect to pay $149-249/month."
   - q: "Can I try a virtual receptionist for free?"
@@ -22,33 +22,33 @@ faq:
 > **TL;DR**
 > - A fully-loaded human receptionist in Melbourne costs **$90,000-110,000/year** in 2026 (base $55-65k + 11% super + workers comp + leave + office + equipment) [Source: fairwork.gov.au, 2026].
 > - Offshore call centres run **$800-2,500/month** for shared-receptionist plans, plus setup and per-call fees.
-> - Australian AI voice receptionists like Amily AI run **$149-249/month all-in** — local 03 number, 24/7 answering, Cal.com booking, no lock-in.
+> - Australian AI voice receptionists like Amily AI run **$149-249/month all-in** â€” local 03 number, 24/7 answering, Cal.com booking, no lock-in.
 > - The honest trade-off: a $199/month AI receptionist won't replace a $90k human for complex admin, but it will answer every call after hours and on weekends for 99% less money.
-> - Missed calls cost Melbourne tradies around **$52,000/year** in lost revenue [Source: industry research, 2025] — the question isn't "can I afford one?", it's "can I afford not to?".
+> - Missed calls cost Melbourne tradies around **$52,000/year** in lost revenue [Source: industry research, 2025] â€” the question isn't "can I afford one?", it's "can I afford not to?".
 
 ## How much does a virtual receptionist cost in Melbourne in 2026?
 
 A virtual receptionist in Melbourne costs anywhere from $149/month for an AI voice receptionist to $7,500/month for a fully-loaded human receptionist (pro-rated from $90,000/year). Offshore shared-receptionist services sit in the middle at $800-2,500/month. The cheapest option that answers 24/7 with a local 03 number is an Australian-built AI receptionist like Amily AI, starting at $149/month with no setup fee and no lock-in.
 
-This guide shows the real numbers — base rate, on-costs, hidden fees, hours covered, and the practical things most pricing pages skip. By the end, you'll know exactly what you're paying for and which option suits a Melbourne small business that can't afford to miss calls.
+This guide shows the real numbers â€” base rate, on-costs, hidden fees, hours covered, and the practical things most pricing pages skip. By the end, you'll know exactly what you're paying for and which option suits a Melbourne small business that can't afford to miss calls.
 
 G'day, I'm Amily. I'll sort the maths for you in plain English. If you'd rather skip the read and ask me directly, [book a free 15-min chat](https://amily.ai/#discovery) and I'll run your numbers on the call.
 
 ## What does a virtual receptionist actually do?
 
-A virtual receptionist answers inbound calls, takes messages, books appointments, and routes urgent enquiries — without being physically present in your office. The "virtual" part means the receptionist (human, offshore team, or AI) works from somewhere else and your calls are forwarded or answered on a dedicated number.
+A virtual receptionist answers inbound calls, takes messages, books appointments, and routes urgent enquiries â€” without being physically present in your office. The "virtual" part means the receptionist (human, offshore team, or AI) works from somewhere else and your calls are forwarded or answered on a dedicated number.
 
 Three flavours dominate the Melbourne market in 2026:
 
-1. **In-house human** — full-time or part-time staff member, fully loaded cost $90-110k/year.
-2. **Offshore shared-receptionist service** — humans in the Philippines or South Africa, often $800-2,500/month for a shared plan, $2,000-4,000/month for dedicated.
-3. **AI voice receptionist** — software that answers in natural speech, books via Cal.com, escalates emergencies, and sends SMS summaries. Usually $99-499/month.
+1. **In-house human** â€” full-time or part-time staff member, fully loaded cost $90-110k/year.
+2. **Offshore shared-receptionist service** â€” humans in the Philippines or South Africa, often $800-2,500/month for a shared plan, $2,000-4,000/month for dedicated.
+3. **AI voice receptionist** â€” software that answers in natural speech, books via Cal.com, escalates emergencies, and sends SMS summaries. Usually $99-499/month.
 
 The right choice depends on call volume, after-hours demand, and how complex your admin is. Most Melbourne SMBs we talk to want the same three things: don't miss a call, don't miss a job, and don't spend a fortune.
 
 ## How much does a human receptionist cost in Melbourne in 2026?
 
-A full-time Level 2 receptionist in Australia is paid $55,000-65,000/year base in 2026 [Source: fairwork.gov.au, 2026]. That's the starting point — not the real cost. Add the on-costs and the picture changes fast.
+A full-time Level 2 receptionist in Australia is paid $55,000-65,000/year base in 2026 [Source: fairwork.gov.au, 2026]. That's the starting point â€” not the real cost. Add the on-costs and the picture changes fast.
 
 | Cost line | Annual (AUD) | Notes |
 |---|---|---|
@@ -94,9 +94,9 @@ Here's the typical pricing structure for an AI receptionist:
 | Core (most popular) | $149-249 | 100-200 calls, calendar integration, SMS, escalation |
 | Pro / Unlimited | $249-499 | Unlimited calls, multiple numbers, custom voice, priority support |
 
-Setup fees vary. Amily AI is $0 for the receptionist (you just plug it in). AI setup consulting — where someone builds the workflows, integrates your CRM, and trains the agent on your business — runs $2,500-3,500 one-off for a Melbourne small business [Source: Amily AI pricing, 2026].
+Setup fees vary. Amily AI is $0 for the receptionist (you just plug it in). AI setup consulting â€” where someone builds the workflows, integrates your CRM, and trains the agent on your business â€” runs $2,500-3,500 one-off for a Melbourne small business [Source: Amily AI pricing, 2026].
 
-The catch: an AI receptionist doesn't do every job a human does. It can't handle a long, complex insurance claim call, comfort an upset patient, or chase a debtor. What it does do, brilliantly, is answer every call in under two rings, qualify the lead, book the appointment, and send you a summary — at 3am, on a Sunday, in the middle of a job.
+The catch: an AI receptionist doesn't do every job a human does. It can't handle a long, complex insurance claim call, comfort an upset patient, or chase a debtor. What it does do, brilliantly, is answer every call in under two rings, qualify the lead, book the appointment, and send you a summary â€” at 3am, on a Sunday, in the middle of a job.
 
 ## How does Amily AI compare on price?
 
@@ -129,7 +129,7 @@ There's a fourth, less obvious driver: the [Privacy Act 2024 amendments](https:/
 
 ## What's the real ROI for a Melbourne small business?
 
-The honest answer: it depends on your missed-call rate. Most service businesses we talk to miss 25-40% of inbound calls [Source: industry research, 2025]. For a Melbourne plumber doing $250 average job value, 30 missed calls/month is $7,500/month in lost revenue — $90,000/year.
+The honest answer: it depends on your missed-call rate. Most service businesses we talk to miss 25-40% of inbound calls [Source: industry research, 2025]. For a Melbourne plumber doing $250 average job value, 30 missed calls/month is $7,500/month in lost revenue â€” $90,000/year.
 
 Here's a worked example for a one-person electrical business:
 
@@ -142,40 +142,40 @@ Here's a worked example for a one-person electrical business:
 | Lost jobs/month from missed calls | 16 | 1-2 |
 | Lost revenue/month | $5,600 | $350-700 |
 | Annual lost revenue | $67,200 | $4,200-8,400 |
-| Net gain from AI | — | **$58,800-63,000/year** |
+| Net gain from AI | â€” | **$58,800-63,000/year** |
 
-Even with conservative assumptions, the AI pays for itself in the first week of operation for a busy trade business. The numbers are less dramatic for low-volume professional services — a solo accountant might only miss 5-10 calls a month — but the principle holds: a $199/month tool that prevents $1,000+ in lost billings every month is a no-brainer.
+Even with conservative assumptions, the AI pays for itself in the first week of operation for a busy trade business. The numbers are less dramatic for low-volume professional services â€” a solo accountant might only miss 5-10 calls a month â€” but the principle holds: a $199/month tool that prevents $1,000+ in lost billings every month is a no-brainer.
 
 ## Is there a free or cheap option worth trying?
 
 Sort of. The free options are:
 
-- **Google Voice / voicemail transcription** — free, but the caller hears a generic mailbox and you get a transcript. Most callers hang up.
-- **An answering machine** — same problem, just with a beep.
-- **Triage to your mobile** — free, but you can't take a call when you're on a roof or in a meeting.
+- **Google Voice / voicemail transcription** â€” free, but the caller hears a generic mailbox and you get a transcript. Most callers hang up.
+- **An answering machine** â€” same problem, just with a beep.
+- **Triage to your mobile** â€” free, but you can't take a call when you're on a roof or in a meeting.
 
 The cheap-but-paid options that work for some businesses:
 
-- **A second mobile with voicemail** ($10-20/month) — works if you genuinely call people back within an hour.
-- **A basic AI receptionist at $49-99/month** — usually a stripped-down plan that doesn't book, just takes messages. Better than voicemail, worse than Amily Core.
+- **A second mobile with voicemail** ($10-20/month) â€” works if you genuinely call people back within an hour.
+- **A basic AI receptionist at $49-99/month** â€” usually a stripped-down plan that doesn't book, just takes messages. Better than voicemail, worse than Amily Core.
 
-The middle ground — a proper AI receptionist that books live and covers 24/7 — runs $149-249/month for most Australian providers. Below that price point, you're usually getting call-centre overflow or a tool that doesn't actually integrate with your calendar.
+The middle ground â€” a proper AI receptionist that books live and covers 24/7 â€” runs $149-249/month for most Australian providers. Below that price point, you're usually getting call-centre overflow or a tool that doesn't actually integrate with your calendar.
 
 ---
 
-**Want me to run the numbers for your business?** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll work out your missed-call cost, recommend the right plan, and answer anything else you're weighing up. Or just email me at [anthony@amily.ai](mailto:anthony@amily.ai) — I read every one.
+**Want me to run the numbers for your business?** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll work out your missed-call cost, recommend the right plan, and answer anything else you're weighing up. Or just email me at [anthony@amily.ai](mailto:anthony@amily.ai) â€” I read every one.
 
 If you're ready to see what $199/month buys you in real terms, [see live pricing and book a demo](https://amily.ai/#voice). You can also read how the [AI setup process works](https://amily.ai/#setup) and what [review management](https://amily.ai/#reviews) adds on top.
 
 ## Which sources were used for this Melbourne pricing guide?
 
-- [Fair Work Australia — Pay guides and minimum wages, 2026](https://www.fairwork.gov.au/pay-and-wages/minimum-wages) — Base rate for Level 2 admin/reception staff
-- [ElevenLabs Conversational AI pricing, 2026](https://elevenlabs.io/pricing) — Voice AI per-minute cost underpinning Amily's $0.10/min stack
-- [Twilio Australia voice pricing, 2026](https://www.twilio.com/en-us/voice/pricing/au) — AU local number and inbound call rates
-- [OAIC — Privacy and the use of commercially available AI products, 2024](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) — Australian Privacy Principles and AI guidance
-- [Privacy Act 2024 amendments summary, 2024](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act) — ADM transparency deadline 10 December 2026
-- [Amily AI — Pricing page, 2026](https://amily.ai/#voice) — Starter $149, Core $199, Pro $249 AUD/month
-- [Amily AI — Service overview and setup process, 2026](https://amily.ai/#setup) — What's included in the AI setup consulting fee
-- [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search) — AI Mode no-click behaviour and conversion benchmarks
-- [Semrush — B2B AI citation sources, 2026](https://www.semrush.com/blog/) — Why third-party citations and structured answers matter for SEO
-- [DiscoveredLabs — FCP and AI citation correlation, 2025](https://www.discoveredlabs.com/) — Page speed and AI Overviews citation rate
+- [Fair Work Australia â€” Pay guides and minimum wages, 2026](https://www.fairwork.gov.au/pay-and-wages/minimum-wages) â€” Base rate for Level 2 admin/reception staff
+- [ElevenLabs Conversational AI pricing, 2026](https://elevenlabs.io/pricing) â€” Voice AI per-minute cost underpinning Amily's $0.10/min stack
+- [Twilio Australia voice pricing, 2026](https://www.twilio.com/en-us/voice/pricing/au) â€” AU local number and inbound call rates
+- [OAIC â€” Privacy and the use of commercially available AI products, 2024](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) â€” Australian Privacy Principles and AI guidance
+- [Privacy Act 2024 amendments summary, 2024](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act) â€” ADM transparency deadline 10 December 2026
+- [Amily AI â€” Pricing page, 2026](https://amily.ai/#voice) â€” Starter $149, Core $199, Pro $249 AUD/month
+- [Amily AI â€” Service overview and setup process, 2026](https://amily.ai/#setup) â€” What's included in the AI setup consulting fee
+- [79dev â€” State of AI Search 2026](https://www.79dev.com/state-of-ai-search) â€” AI Mode no-click behaviour and conversion benchmarks
+- [Semrush â€” B2B AI citation sources, 2026](https://www.semrush.com/blog/) â€” Why third-party citations and structured answers matter for SEO
+- [DiscoveredLabs â€” FCP and AI citation correlation, 2025](https://www.discoveredlabs.com/) â€” Page speed and AI Overviews citation rate
