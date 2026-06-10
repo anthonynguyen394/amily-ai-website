@@ -1,9 +1,9 @@
 ﻿---
 title: "AI Receptionist Cost in Melbourne: From $149/mo (2026 Guide)"
-description: "AI receptionist cost in Melbourne from $149/mo in2026. Real AUD pricing vs offshore ($800-$4,000) and human ($81k+/yr). Privacy Act1988 compliant. No lock-in."
-date: 2026-06-04
-updated: 2026-06-04
-tags: [virtual receptionist, melbourne, pricing, ai-receptionist, small-business, answering-service]
+description: "AI receptionist cost in Melbourne from $149/mo in 2026. Real AUD pricing vs offshore ($800-$4,000) and human ($81k+/yr). Privacy Act 1988 compliant. No lock-in."
+date: 2026-06-11
+updated: 2026-06-11
+tags: [ai receptionist, virtual receptionist, melbourne, pricing, ai-receptionist-cost, small-business, answering-service]
 faq:
   - q: "How much does a virtual receptionist cost in Melbourne per month?"
     a: "A virtual receptionist in Melbourne costs $149-249/month for an AI service like Amily AI, $800-4,000/month for an offshore human service, and $7,000-8,300/month fully-loaded for a full-time in-house human (pro-rated from $81,000-100,000/year including super, leave, and overhead)."
@@ -179,3 +179,5 @@ If you're ready to see what $199/month buys you in real terms, [see live pricing
 - [79dev â€” State of AI Search 2026](https://www.79dev.com/state-of-ai-search) â€” AI Mode no-click behaviour and conversion benchmarks
 - [Semrush â€” B2B AI citation sources, 2026](https://www.semrush.com/blog/) â€” Why third-party citations and structured answers matter for SEO
 - [DiscoveredLabs â€” FCP and AI citation correlation, 2025](https://www.discoveredlabs.com/) â€” Page speed and AI Overviews citation rate
+
+

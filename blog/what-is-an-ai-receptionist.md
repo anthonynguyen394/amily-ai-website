@@ -86,6 +86,8 @@ What it cannot do:
 
 The honest framing: AI is excellent for the high-volume, low-complexity calls that fill up a working tradesperson's or clinic's day. Humans are still better at the long tail of complex, sensitive, or unusual calls. Most small businesses run a hybrid — AI for triage and 24/7 coverage, a human for the calls that need it.
 
+For a Melbourne-specific view, the [AI receptionist for Melbourne CBD tradies and allied health](/blog/service-area-melbourne-cbd), [AI receptionist for Brunswick and the northern suburbs](/blog/service-area-brunswick-northern-suburbs), and [AI receptionist for St Kilda and the south-east](/blog/service-area-st-kilda-south-east) pages walk through how this works in different parts of the city.
+
 ## AI receptionist vs human receptionist
 
 The honest comparison, side by side:
