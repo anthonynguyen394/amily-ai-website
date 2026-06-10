@@ -29,6 +29,9 @@ faq:
     a: Human virtual receptionists in Melbourne cost $200 to $400 per month for part-time coverage and are only available during business hours. An AI receptionist costs roughly a third, answers 24/7, never takes a sick day, and handles unlimited concurrent calls. Humans still win on empathy in nuanced cases.
 ---
 
+<!-- BLUF: definitional opener for AIO/Perplexity citation (40-60 words) -->
+An AI voice receptionist is a natural-sounding software agent that answers your business phone, books jobs, and sends SMS confirmations around the clock. Amily AI's Melbourne receptionist plugs into ServiceM8, Tradify, Cliniko, and Halaxy, runs on a local 03 number, and meets the Australian Privacy Principles (APP 5, 8, 11) for call recording and data handling.
+
 ## Melbourne small businesses miss 22-62% of calls. Here is what that costs you.
 
 A Melbourne plumber who misses five calls a week is not losing "five calls". They are losing **the five highest-intent enquiries** of their week, because a customer who picks up the phone has already decided they want the problem fixed now.
