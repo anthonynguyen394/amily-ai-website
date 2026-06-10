@@ -20,7 +20,7 @@ faq:
 ![Victorian allied health clinic using AI phone booking with APP 11-compliant patient handling](/assets/post-04-hero-minimax.png)
 
 > **TL;DR**
-> - Victorian physio, dental, chiro, and psychology clinics miss 30-50% of inbound calls during peak hours — and the calls they miss are usually the patients in pain [Source: industry research, 2025].
+> - Victorian physio, dental, chiro, and psychology clinics miss 30-50% of inbound calls during peak hours — and the calls they miss are usually the patients in pain [Source: industry research, 2025 — TBC, needs primary source].
 > - An AI phone-booking system that is compatible with **Cliniko, ClinicM8, or Halaxy** (the three dominant AU allied-health practice management platforms) can answer every call in under two rings, collect the right intake info, and book into the practitioner's calendar via API.
 > - The hard line: **AI must never make a clinical triage call** — chest pain, suicidal ideation, anaphylaxis, post-op complications, suspected stroke. Those calls escalate to a human immediately, every time. This is a legal and ethical floor, not a feature.
 > - Health information is regulated by **Australian Privacy Principle (APP) 11** and, where it intersects with the My Health Records system, the **My Health Records Act 2012** [Source: OAIC, 2024]. Any AI receptionist handling patient intake must be configured to capture, store, and disclose data accordingly.
