@@ -352,7 +352,12 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="hero-desc mt-8 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-charcoal/75 leading-relaxed">
+            {/* BLUF: definitional opener for AIO/Perplexity citation (40-60 words) */}
+            <p className="hero-bluf mt-6 max-w-2xl mx-auto lg:mx-0 text-base md:text-lg text-charcoal/80 leading-relaxed">
+              An AI voice receptionist is a 24/7 phone-answering agent that picks up calls, books jobs, and sends SMS confirmations for Australian service businesses. Amily AI is a Melbourne-built AI receptionist for tradies, allied health clinics, and professional services firms. Calls route to a local 03 number, integrate with ServiceM8, Cliniko, and Halaxy, and comply with the Privacy Act 1988.
+            </p>
+
+            <p className="hero-desc mt-6 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-charcoal/75 leading-relaxed">
               G'day, I'm <span className="font-bold text-terracotta">Amily</span> — your local AI guide for Melbourne small business. I help tradies, cafes, and professional services stop losing jobs to missed calls, get more Google reviews, and put AI to work. <span className="font-semibold text-charcoal">No tech headache. No lock-in.</span>
             </p>
 
@@ -1871,6 +1876,10 @@ function Pricing() {
             Simple pricing.{' '}
             <span className="font-drama italic text-navy">Real value.</span>
           </h2>
+          {/* BLUF: definitional opener for AIO/Perplexity citation (40-60 words) */}
+          <p className="pricing-bluf text-charcoal/80 mt-5 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            AI receptionist pricing in Australia typically ranges from AUD $99 to $499 per month, depending on call volume, integrations, and after-hours coverage. Amily AI plans start at $99 per month for review management and $249 per month for the full voice-receptionist package, with no lock-in, no setup fee, and a 30-day ROI guarantee.
+          </p>
           <p className="text-charcoal/60 mt-4 max-w-lg mx-auto">
             No lock-in contracts. No hidden fees. Cancel anytime.
           </p>
