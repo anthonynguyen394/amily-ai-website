@@ -26,6 +26,14 @@ faq:
     a: "The cheapest reasonable AI receptionist plans start at $49-99/month from providers like MyAIFrontDesk, Synthflow, and a few others. They usually cover basic message-taking and limited call volume. For full Cal.com booking, SMS summaries, and 24/7 escalation, expect to pay $149-249/month."
   - q: "Can I try a virtual receptionist for free?"
     a: "Most AI receptionist providers offer a live demo call so you can hear the voice quality before paying. Amily AI also has a 30-day money-back guarantee on all plans, so the effective risk is zero if it doesn't suit your business. You can book a free discovery call to see it in action."
+  - q: "What's the ROI of an AI receptionist for a small business?"
+    a: "For a typical Melbourne trade missing 30 calls a month at $300 average job value, an AI at $199/month prevents roughly $90,000/year in lost revenue against a $2,388 annual cost. Most businesses see payback in the first week. The real question is rarely 'is the AI worth $199?' — it is 'can I keep losing 30 calls a month?'"
+  - q: "What happens if the AI receptionist doesn't understand a caller?"
+    a: "A well-configured AI receptionist does not guess. If it is below its confidence threshold, it tells the caller it will transfer to a human, escalates the call to your mobile within two seconds, and sends an SMS transcript. Australian providers like Amily AI configure this fallback explicitly during setup so no caller is left in a loop."
+  - q: "Does an AI receptionist integrate with ServiceM8 or Tradify?"
+    a: "Yes. Australian AI receptionists like Amily AI connect to ServiceM8, Tradify, Cal.com, Google Calendar, Cliniko, and Halaxy through webhooks. The AI books the job, writes it back to your existing CRM, and you see it in the same app you already use. Setup is part of the standard plan; custom workflow work is a one-off consulting fee of $2,500-3,500."
+  - q: "Can an AI receptionist handle emergency calls?"
+    a: "Yes, if it is configured to. Australian AI receptionists detect keywords like 'burst pipe', 'gas leak', or 'flooding' and escalate to your on-call mobile within two seconds, with a full SMS transcript. The system is not a substitute for a 24/7 on-call tradie, but it makes sure every emergency reaches you, even at 2am on a Sunday."
 ---
 
 ![Amily AI virtual receptionist cost comparison for Melbourne small businesses in 2026](/assets/post-03-hero-minimax.png)
@@ -177,6 +185,24 @@ The middle ground â€” a proper AI receptionist that books live and covers 2
 **Want me to run the numbers for your business?** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll work out your missed-call cost, recommend the right plan, and answer anything else you're weighing up. Or just email me at [anthony@amily.ai](mailto:anthony@amily.ai) â€” I read every one.
 
 If you're ready to see what $199/month buys you in real terms, [see live pricing and book a demo](https://amily.ai/#voice). You can also read how the [AI setup process works](https://amily.ai/#setup) and what [review management](https://amily.ai/#reviews) adds on top.
+
+## Frequently asked questions
+
+### What's the ROI of an AI receptionist for a small business?
+
+For a typical Melbourne trade missing 30 calls a month at $300 average job value, an AI at $199/month prevents roughly $90,000/year in lost revenue against a $2,388 annual cost. Most businesses see payback in the first week. The real question is rarely 'is the AI worth $199?' — it is 'can I keep losing 30 calls a month?'
+
+### What happens if the AI receptionist doesn't understand a caller?
+
+A well-configured AI receptionist does not guess. If it is below its confidence threshold, it tells the caller it will transfer to a human, escalates the call to your mobile within two seconds, and sends an SMS transcript. Australian providers like Amily AI configure this fallback explicitly during setup so no caller is left in a loop.
+
+### Can an AI receptionist handle emergency calls?
+
+Yes, if it is configured to. Australian AI receptionists detect keywords like 'burst pipe', 'gas leak', or 'flooding' and escalate to your on-call mobile within two seconds, with a full SMS transcript. The system is not a substitute for a 24/7 on-call tradie, but it makes sure every emergency reaches you, even at 2am on a Sunday.
+
+### Does an AI receptionist integrate with ServiceM8 or Tradify?
+
+Yes. Australian AI receptionists like Amily AI connect to ServiceM8, Tradify, Cal.com, Google Calendar, Cliniko, and Halaxy through webhooks. The AI books the job, writes it back to your existing CRM, and you see it in the same app you already use. Setup is part of the standard plan; custom workflow work is a one-off consulting fee of $2,500-3,500.
 
 ## Which sources were used for this Melbourne pricing guide?
 

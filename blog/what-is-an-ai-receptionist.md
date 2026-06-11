@@ -19,6 +19,12 @@ faq:
     a: "Yes. An AI receptionist is legal in Australia, provided the call is disclosed as AI-assisted at the start, the call recording is disclosed (APP 5), and recordings are stored securely (APP 11). From 10 December 2026, the Privacy and Other Legislation Amendment Act 2024 requires businesses to disclose automated decision-making in their privacy policy."
   - q: "What's the difference between an AI receptionist and a chatbot?"
     a: "An AI receptionist handles live phone calls using natural speech in real time. A chatbot handles typed messages on a website, in WhatsApp, or in Messenger. Both use large language models, but the phone channel is synchronous and voice-based, while the chat channel is asynchronous and text-based. The phone channel is higher-intent and higher-conversion."
+  - q: "How does an AI receptionist sound on the phone?"
+    a: "Modern AI receptionists use voice models like ElevenLabs Conversational AI and speak in natural Australian English with a warm, conversational tone. Most callers cannot tell they are speaking to an AI for the first 30-60 seconds. The voice profile is configurable — calm, friendly, or professional — and consistent on every call, which is part of the brand experience."
+  - q: "Can an AI receptionist transfer a call to a human?"
+    a: "Yes. A well-configured AI receptionist transfers to a human whenever the caller asks, the request is outside the AI's scope, or the AI is below its confidence threshold. The transfer happens within two seconds, with an SMS summary of the call. The system is designed to escalate, not to keep a caller in a loop."
+  - q: "What is the difference between an AI receptionist and Siri?"
+    a: "Siri is a personal voice assistant on your phone for individual tasks — alarms, reminders, web searches. An AI receptionist is a business phone agent that answers your business line, qualifies leads, books appointments, and escalates to a human. The two share underlying speech and language technology, but the use case, training data, and integrations are completely different."
 ---
 
 ![What is an AI receptionist - definition and how it works in Australia](/assets/post-01-hero-minimax.png)
@@ -216,6 +222,18 @@ Yes. An AI receptionist is legal in Australia, provided the call is disclosed as
 ### What's the difference between an AI receptionist and a chatbot?
 
 An AI receptionist handles live phone calls using natural speech in real time. A chatbot handles typed messages on a website, in WhatsApp, or in Messenger. Both use large language models, but the phone channel is synchronous and voice-based, while the chat channel is asynchronous and text-based. The phone channel is higher-intent and higher-conversion.
+
+### How does an AI receptionist sound on the phone?
+
+Modern AI receptionists use voice models like ElevenLabs Conversational AI and speak in natural Australian English with a warm, conversational tone. Most callers cannot tell they are speaking to an AI for the first 30-60 seconds. The voice profile is configurable — calm, friendly, or professional — and consistent on every call, which is part of the brand experience.
+
+### Can an AI receptionist transfer a call to a human?
+
+Yes. A well-configured AI receptionist transfers to a human whenever the caller asks, the request is outside the AI's scope, or the AI is below its confidence threshold. The transfer happens within two seconds, with an SMS summary of the call. The system is designed to escalate, not to keep a caller in a loop.
+
+### What is the difference between an AI receptionist and Siri?
+
+Siri is a personal voice assistant on your phone for individual tasks — alarms, reminders, web searches. An AI receptionist is a business phone agent that answers your business line, qualifies leads, books appointments, and escalates to a human. The two share underlying speech and language technology, but the use case, training data, and integrations are completely different.
 
 ---
 

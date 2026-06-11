@@ -19,6 +19,12 @@ faq:
     a: "For the 70-80% of calls that are routine — new enquiries, booking requests, after-hours overflow, and emergency triage — an AI receptionist matches or beats a human on speed, consistency, and cost. For the 20-30% of calls that are complex, sensitive, or unusual, a human is still better. The honest answer for most small businesses is that AI is as good for the bulk of calls, but you still want a human for the exceptions."
   - q: "What about Privacy Act 1988 compliance for AI receptionists?"
     a: "An AI receptionist is Privacy Act 1988 compliant provided the AI is disclosed at the start of the call (APP 5), the recording is disclosed, and recordings are stored securely (APP 11). From 10 December 2026, the Privacy and Other Legislation Amendment Act 2024 also requires businesses to disclose automated decision-making in their privacy policy. Amily AI and other Australian-built services ship compliant by default. Offshore AI services often do not."
+  - q: "Which is better for a small business, an AI or a human receptionist?"
+    a: "AI is better for the 70-80% of calls that are routine — new enquiries, booking, after-hours overflow, and FAQs. A human is better for the 20-30% that are complex, sensitive, or unusual. For most Melbourne trades and clinics, the answer is hybrid: AI for 24/7 coverage and triage, a human for the calls that need real judgement."
+  - q: "Can an AI receptionist fully replace a human one?"
+    a: "For after-hours, weekend, and overflow coverage, yes — most Melbourne trades run that pattern. For complex admin, sensitive conversations, and physical tasks like greeting walk-ins, no. An AI is a complement, not a replacement. If your receptionist mostly handles routine booking and FAQs, the AI can do it; if the role is broader, keep the human and add AI for coverage."
+  - q: "How much does a human receptionist cost per year in Australia?"
+    a: "A full-time human receptionist in Australia costs $90,000-110,000 per year fully-loaded in 2026, including base salary ($55,000-65,000), 11.5% superannuation, workers comp, leave, and overhead. That works out to roughly $7,000-8,300 per month, before any casual cover for sick days or holidays. Sources: Fair Work Australia 2026 pay guide and standard on-costs."
 ---
 
 ![AI receptionist vs human receptionist - 2026 cost and capability comparison for Melbourne small business](/assets/post-02-hero-minimax.png)
@@ -237,6 +243,18 @@ For the 70-80% of calls that are routine — new enquiries, booking requests, af
 ### What about Privacy Act 1988 compliance for AI receptionists?
 
 An AI receptionist is Privacy Act 1988 compliant provided the AI is disclosed at the start of the call (APP 5), the recording is disclosed, and recordings are stored securely (APP 11). From 10 December 2026, the Privacy and Other Legislation Amendment Act 2024 also requires businesses to disclose automated decision-making in their privacy policy. Amily AI and other Australian-built services ship compliant by default. Offshore AI services often do not.
+
+### Which is better for a small business, an AI or a human receptionist?
+
+AI is better for the 70-80% of calls that are routine — new enquiries, booking, after-hours overflow, and FAQs. A human is better for the 20-30% that are complex, sensitive, or unusual. For most Melbourne trades and clinics, the answer is hybrid: AI for 24/7 coverage and triage, a human for the calls that need real judgement.
+
+### Can an AI receptionist fully replace a human one?
+
+For after-hours, weekend, and overflow coverage, yes — most Melbourne trades run that pattern. For complex admin, sensitive conversations, and physical tasks like greeting walk-ins, no. An AI is a complement, not a replacement. If your receptionist mostly handles routine booking and FAQs, the AI can do it; if the role is broader, keep the human and add AI for coverage.
+
+### How much does a human receptionist cost per year in Australia?
+
+A full-time human receptionist in Australia costs $90,000-110,000 per year fully-loaded in 2026, including base salary ($55,000-65,000), 11.5% superannuation, workers comp, leave, and overhead. That works out to roughly $7,000-8,300 per month, before any casual cover for sick days or holidays. Sources: Fair Work Australia 2026 pay guide and standard on-costs.
 
 ---
 
