@@ -113,6 +113,87 @@ function buildHowtoSchema(howto) {
   return `    <script type="application/ld+json">\n${json}\n    </script>\n`;
 }
 
+// Build a BreadcrumbList JSON-LD block reflecting the page's site hierarchy.
+//  - Homepage:               just itself
+//  - Landing page (e.g. /ai-voice-receptionist-melbourne-small-business): Home > Page
+//  - Blog post (layout: 'post'):           Home > Blog > Post Title
+//  - Service-area / other blog posts:      Home > Blog > Post Title (treated as blog)
+// Returns a complete <script type="application/ld+json"> tag, or '' when the
+// page is a root-level page that does not need a breadcrumb.
+function buildBreadcrumbSchema(post) {
+  // Skip the homepage itself (the React SPA does not use this generator).
+  if (!post) return '';
+  const home = { name: 'Home', item: `${SITE_URL}/` };
+  let crumbs;
+  if (post.layout === 'landing') {
+    // Landing pages sit at the site root -- Home > Page only.
+    crumbs = [
+      home,
+      { name: post.title, item: `${SITE_URL}${post.urlPath}` },
+    ];
+  } else {
+    // Blog posts (including service-area pages, which live under /blog/).
+    crumbs = [
+      home,
+      { name: 'Blog', item: `${SITE_URL}/blog` },
+      { name: post.title, item: `${SITE_URL}${post.urlPath}` },
+    ];
+  }
+  const json = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: c.item,
+    })),
+  }, null, 2);
+  return `    <script type="application/ld+json">\n${json}\n    </script>\n`;
+}
+
+// Build the visible breadcrumb navigation shown above the H1. Returns the
+// HTML string for a schema-friendly <nav aria-label="Breadcrumb"> with an
+// ordered list, matching the existing blog.css visual style.
+function buildBreadcrumbSchemaForBlogIndex() {
+  // The /blog listing is itself a 2-item breadcrumb: Home > Blog.
+  const crumbs = [
+    { name: 'Home', item: `${SITE_URL}/` },
+    { name: 'Blog', item: `${SITE_URL}/blog` },
+  ];
+  const json = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: c.item,
+    })),
+  }, null, 2);
+  return `    <script type="application/ld+json">\n${json}\n    </script>\n`;
+}
+
+function buildBreadcrumbNav(post) {
+  if (!post) return '';
+  const home = `<a href="/">Home</a>`;
+  let parts;
+  if (post.layout === 'landing') {
+    // Landing pages: just the page title, prefixed by Home (so visitors can
+    // see they're not on the homepage without a "Blog" segment that's wrong
+    // for non-blog root pages).
+    parts = [home, `<span aria-current="page">${escapeHtml(post.title)}</span>`];
+  } else {
+    parts = [home, `<a href="/blog">Blog</a>`, `<span aria-current="page">${escapeHtml(post.title)}</span>`];
+  }
+  return `<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li>${parts[0]}</li>
+    <li>${parts[1]}</li>${parts[2] ? `\n    <li>${parts[2]}</li>` : ''}
+  </ol>
+</nav>`;
+}
+
 // Build a Person JSON-LD block from the canonical author profile. This is the
 // E-E-A-T signal Google looks for on YMYL/business topics. Author is the
 // Amily AI founder -- details are intentionally minimal and verifiable on the
@@ -251,20 +332,24 @@ function renderPost(post, shell) {
     .replaceAll('{{FAQ_SCHEMA}}', buildFaqSchema(post.faq))
     .replaceAll('{{HOWTO_SCHEMA}}', buildHowtoSchema(post.howto))
     .replaceAll('{{PERSON_SCHEMA}}', buildPersonSchema())
+    .replaceAll('{{BREADCRUMB_SCHEMA}}', buildBreadcrumbSchema(post))
+    .replaceAll('{{BREADCRUMB_NAV}}', buildBreadcrumbNav(post))
     .replaceAll('{{FINAL_CTA}}', finalCta)
     .replaceAll('{{CONTENT}}', htmlBody);
 }
 
 function renderIndex(posts, shell) {
+  const schema = buildBreadcrumbSchemaForBlogIndex();
+  const filled = shell.replaceAll('{{BLOG_INDEX_BREADCRUMB_SCHEMA}}', schema);
   if (posts.length === 0) {
-    return shell.replaceAll('{{POST_LIST}}', `<div class="post-list-empty">No posts yet. Check back soon.</div>`);
+    return filled.replaceAll('{{POST_LIST}}', `<div class="post-list-empty">No posts yet. Check back soon.</div>`);
   }
   // Every page (post + landing) appears in the listing unless its frontmatter
   // sets `listed: false`. This makes /blog the single catalogue of written
   // content on the site. Landing pages link to their root URL, not /blog/.
   const listable = posts.filter((p) => p.listed !== false);
   if (listable.length === 0) {
-    return shell.replaceAll('{{POST_LIST}}', `<div class="post-list-empty">No posts yet. Check back soon.</div>`);
+    return filled.replaceAll('{{POST_LIST}}', `<div class="post-list-empty">No posts yet. Check back soon.</div>`);
   }
   const items = listable
     .map((post) => {
@@ -279,7 +364,7 @@ function renderIndex(posts, shell) {
 </a>`;
     })
     .join('\n');
-  return shell.replaceAll('{{POST_LIST}}', items);
+  return filled.replaceAll('{{POST_LIST}}', items);
 }
 
 function updateSitemap(posts) {

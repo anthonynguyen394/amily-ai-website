@@ -29,6 +29,16 @@ body {
   color: #1e3a5f; text-decoration: none; font-variation-settings: 'SOFT' 30, 'WONK' 1;
 }
 
+/* ── Breadcrumbs (visible nav above H1, plus the SERP BreadcrumbList
+     pairing -- the schema lives in <head>, this is the user-visible strip) ── */
+.breadcrumbs { font-size: 0.82rem; margin-bottom: 14px; color: rgba(30, 58, 95, 0.6); }
+.breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 0; margin: 0; }
+.breadcrumbs li { display: inline-flex; align-items: center; }
+.breadcrumbs li + li::before { content: '/'; margin-right: 6px; color: rgba(30, 58, 95, 0.35); font-weight: 400; }
+.breadcrumbs a { color: #c97b5d; text-decoration: none; font-weight: 600; }
+.breadcrumbs a:hover { color: #1e3a5f; text-decoration: underline; }
+.breadcrumbs [aria-current="page"] { color: rgba(30, 58, 95, 0.7); font-weight: 600; }
+
 /* ── Titles ── */
 .page-title {
   font-family: 'Fraunces', serif; font-weight: 800;

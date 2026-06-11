@@ -29,6 +29,10 @@
       gtag('config', 'AW-XXXXXXXXX');
     </script>
 
+    <!-- BreadcrumbList for the /blog listing (Home > Blog). Written by
+         scripts/build-blog.mjs via the {{BLOG_INDEX_BREADCRUMB_SCHEMA}}
+         placeholder. -->
+    {{BLOG_INDEX_BREADCRUMB_SCHEMA}}
     <link rel="stylesheet" href="/assets/blog.css" />
   </head>
   <body>
@@ -46,6 +50,12 @@
     </header>
 
     <main class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><span aria-current="page">Blog</span></li>
+        </ol>
+      </nav>
       <h1 class="page-title">Blog</h1>
       <p class="page-subtitle">Thoughts on AI voice receptionists, Australian privacy law, and how Melbourne small businesses stop losing jobs to missed calls.</p>
 
