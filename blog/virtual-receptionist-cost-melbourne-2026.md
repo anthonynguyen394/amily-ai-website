@@ -4,6 +4,17 @@ description: "AI receptionist cost in Melbourne from $149/mo in 2026. Real AUD p
 date: 2026-06-11
 updated: 2026-06-11
 tags: [ai receptionist, virtual receptionist, melbourne, pricing, ai-receptionist-cost, small-business, answering-service]
+howto:
+  title: "How to choose an AI receptionist for your Melbourne small business in 4 steps"
+  steps:
+    - name: "Map your call patterns"
+      text: "List the times of day and week you miss the most calls, and the average job value of each. Most Melbourne tradies lose the majority of after-hours and weekend calls, where each missed call is worth $200-500 in lost revenue. Knowing this baseline tells you the maximum monthly spend that still leaves you ahead."
+    - name: "Compare three options head-to-head"
+      text: "Get a quote from (1) an AI receptionist like Amily AI at $149-249/month, (2) an offshore call centre at $800-2,500/month plus per-call fees, and (3) a fully-loaded in-house human receptionist at $7,000-8,300/month. Compare coverage hours, after-hours support, and how booking is handled."
+    - name: "Check Privacy Act 1988 compliance"
+      text: "Confirm the provider stores call recordings and transcripts in Australia, discloses AI assistance at the start of the call (APP 5), and lets you export or delete customer data on request (APP 12). From 10 December 2026, automated decision-making disclosure in your privacy policy becomes mandatory -- pick a provider that already documents this."
+    - name: "Pilot for 30 days with a refund promise"
+      text: "Start with a single number, route only overflow or after-hours calls to the AI, and measure booked jobs and call summaries for 30 days. If ROI is negative, the provider should refund setup. Amily AI's 30-day ROI guarantee means the effective risk of trying it is zero."
 faq:
   - q: "How much does a virtual receptionist cost in Melbourne per month?"
     a: "A virtual receptionist in Melbourne costs $149-249/month for an AI service like Amily AI, $800-4,000/month for an offshore human service, and $7,000-8,300/month fully-loaded for a full-time in-house human (pro-rated from $81,000-100,000/year including super, leave, and overhead)."

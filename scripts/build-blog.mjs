@@ -67,6 +67,85 @@ function buildFaqSchema(faq) {
   return `    <script type="application/ld+json">\n${json}\n    </script>\n`;
 }
 
+// Build a HowTo JSON-LD block from a frontmatter howto: array of {name, text}
+// step objects. Emits a complete <script type="application/ld+json"> tag.
+// Returns empty string when no howto frontmatter is set so post-shell can
+// include the placeholder unconditionally.
+function buildHowtoSchema(howto) {
+  if (!howto) return '';
+  // Accept three forms:
+  // 1. Bare array: [{name, text}, ...]
+  // 2. Wrapped object: {title, steps: [{name, text}, ...]}
+  // 3. Wrapped object with `name` instead of `steps` for compatibility
+  let steps = [];
+  let title = 'How-to guide';
+  if (Array.isArray(howto)) {
+    steps = howto;
+  } else if (typeof howto === 'object') {
+    if (Array.isArray(howto.steps)) {
+      steps = howto.steps;
+    } else if (Array.isArray(howto.step)) {
+      steps = howto.step;
+    } else if (Array.isArray(howto.name)) {
+      steps = howto.name;
+    }
+    if (typeof howto.title === 'string' && howto.title.trim()) {
+      title = howto.title.trim();
+    } else if (steps[0] && steps[0].name) {
+      title = String(steps[0].name);
+    }
+  }
+  const stepList = steps
+    .filter((s) => s && s.name && s.text)
+    .map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: String(s.name),
+      text: String(s.text),
+    }));
+  if (stepList.length === 0) return '';
+  const json = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: title,
+    step: stepList,
+  }, null, 2);
+  return `    <script type="application/ld+json">\n${json}\n    </script>\n`;
+}
+
+// Build a Person JSON-LD block from the canonical author profile. This is the
+// E-E-A-T signal Google looks for on YMYL/business topics. Author is the
+// Amily AI founder -- details are intentionally minimal and verifiable on the
+// public website.
+function buildPersonSchema() {
+  const person = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Anthony Nguyen',
+    jobTitle: 'Founder & AI Engineer',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Amily AI',
+      url: 'https://amily.ai',
+    },
+    url: 'https://amily.ai',
+    sameAs: [
+      'https://www.linkedin.com/in/anthonynguyen394',
+    ],
+    description:
+      'Founder of Amily AI (Melbourne, ABN86758863858). Cloud Engineering Manager at Cube by day, builds AI voice receptionists and automation for Australian small businesses by night.',
+    knowsAbout: [
+      'AI voice receptionists',
+      'Cal.com booking integrations',
+      'Australian Privacy Act 1988',
+      'ServiceM8 / Tradify / Cliniko / Halaxy',
+      'Twilio + ElevenLabs voice agents',
+    ],
+  };
+  const json = JSON.stringify(person, null, 2);
+  return `    <script type="application/ld+json">\n${json}\n    </script>\n`;
+}
+
 function loadPosts() {
   if (!fs.existsSync(BLOG_DIR)) return [];
   const files = fs.readdirSync(BLOG_DIR).filter((f) => {
@@ -104,6 +183,8 @@ function loadPosts() {
       updated: parsed.data.updated || parsed.data.date,
       tags: parsed.data.tags || [],
       faq: parsed.data.faq || null,
+      // Optional: HowTo JSON-LD steps. Each step is {name, text}.
+      howto: parsed.data.howto || null,
       draft: Boolean(parsed.data.draft),
       markdown: parsed.content,
       // Optional: hide the final "Book a discovery call" CTA if the page has its own
@@ -161,6 +242,8 @@ function renderPost(post, shell) {
     .replaceAll('{{BACK_LABEL}}', backLabel)
     .replaceAll('{{META_STRIP}}', metaStrip)
     .replaceAll('{{FAQ_SCHEMA}}', buildFaqSchema(post.faq))
+    .replaceAll('{{HOWTO_SCHEMA}}', buildHowtoSchema(post.howto))
+    .replaceAll('{{PERSON_SCHEMA}}', buildPersonSchema())
     .replaceAll('{{FINAL_CTA}}', finalCta)
     .replaceAll('{{CONTENT}}', htmlBody);
 }
