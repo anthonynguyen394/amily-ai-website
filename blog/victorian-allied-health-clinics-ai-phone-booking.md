@@ -2,7 +2,7 @@
 title: "Why Victorian Allied Health Clinics Are Switching to AI Phone Booking"
 description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + PMS-compatible workflows (Cliniko, ClinicM8, Halaxy), plus the triage line AI must not cross."
 date: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-11
 tags: [allied-health, physio, ai-receptionist, melbourne, app-11, cliniko]
 faq:
   - q: "Is AI phone booking legal for allied health clinics in Victoria?"
@@ -50,7 +50,7 @@ The two patterns that matter:
 1. **Pain calls are time-critical.** A patient with acute low back pain who can't get through books somewhere else within 15 minutes. The first clinic to call back usually wins the patient.
 2. **After-hours is where new patients live.** Most allied health clinics operate 8-6 weekdays. The 6pm-9am window — and weekends — is full of prospective patients who don't get an answer and don't leave a message.
 
-A human receptionist covers maybe 35-40 hours of this. An AI covers all 168.
+A human receptionist covers maybe 35-40 hours of this. An AI covers all 168. The hard numbers behind that 168-hour coverage — call volume, miss rate, average patient value, and what each missed call costs in recovered patient lifetime value — are worked through in [The True Cost of Missed Calls for Melbourne Tradies](/blog/cost-of-missed-calls-melbourne-tradies), using tradie figures that translate closely to allied health once you swap job value for LTV.
 
 ## What does APP 11 require for health information?
 
@@ -67,7 +67,7 @@ If your AI receptionist takes a patient intake call, the call recording, transcr
 - Retention must have a defined period (most practices use 7 years to align with adult health record retention requirements, then destroy)
 - Backups must be encrypted and access-logged
 
-Most overseas AI receptionist platforms (US-based, multi-tenant LLMs) do not meet this bar by default. Australian-built platforms like Amily AI do, because we configure them for APP 11 from the first workflow.
+Most overseas AI receptionist platforms (US-based, multi-tenant LLMs) do not meet this bar by default. Australian-built platforms like Amily AI do, because we configure them for APP 11 from the first workflow. The same APP-native argument — resident infrastructure, explicit AI disclosure, caller access and correction — is laid out in full for the broader Privacy Act 1988 context in [Amily AI vs US Virtual Receptionists: 2026 Australian Privacy Act Compliance](/blog/amily-ai-vs-us-virtual-receptionists-privacy-act-compliance).
 
 ### 2. Cross-border disclosure
 

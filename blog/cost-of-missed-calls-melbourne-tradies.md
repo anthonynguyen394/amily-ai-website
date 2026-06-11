@@ -2,7 +2,7 @@
 title: "The True Cost of Missed Calls for Melbourne Plumbers and Electricians"
 description: "Missed calls cost Melbourne plumbers and electricians an average of $52,000 a year. Here is the real math, the assumptions, and how an AI receptionist pays for itself fast."
 date: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-11
 tags: [missed calls, Melbourne tradies, AI receptionist, plumber missed call cost, electrician lost revenue, after hours answering service tradies]
 faq:
   - q: "What is the average job value for a Melbourne plumber?"
@@ -26,7 +26,7 @@ faq:
 > - A human receptionist costs $3,500-$5,000/month in Melbourne. An AI receptionist with a local 03 number starts at **AUD $149/month** and pays for itself if it saves just two $250 jobs a month.
 > - 93% of Google AI Mode queries end without a click to a website, which means showing up in AI answers matters as much as ranking on page one [Source: 79dev, State of AI Search 2026].
 
-A missed call to a solo Melbourne plumber or electrician costs between $200 and $800 in lost revenue, depending on the job. Industry research puts the average tradie's annual loss from missed calls at roughly $52,000 — about 25% of a typical small trade business's revenue. The math is brutal and simple: most tradies field 15-30 calls a week, miss 20-30% of them during work hours, and miss 100% of after-hours calls when an emergency is brewing. Each missed call is a customer who has already decided to book, then called the next name on Google.
+A missed call to a solo Melbourne plumber or electrician costs between $200 and $800 in lost revenue, depending on the job. Industry research puts the average tradie's annual loss from missed calls at roughly $52,000 — about 25% of a typical small trade business's revenue. The math is brutal and simple: most tradies field 15-30 calls a week, miss 20-30% of them during work hours, and miss 100% of after-hours calls when an emergency is brewing. Each missed call is a customer who has already decided to book, then called the next name on Google. The full cost stack — against a $7,000/month fully-loaded human, an offshore call centre, and a DIY voicemail — is laid out in [AI Receptionist Cost in Melbourne: From $149/mo](/blog/virtual-receptionist-cost-melbourne-2026).
 
 This post breaks down the real numbers — call volume, miss rate, average job value, conversion rate — into a calculator you can use for your own business. It also walks through what it costs to stop missing those calls: a human receptionist ($3,500-$5,000/month in Melbourne), a call centre ($2/minute plus setup), or an AI receptionist with a local 03 number (Amily's plans start at $149/month). The headline: an AI receptionist pays for itself the moment it saves two $250 jobs a month that would otherwise have rung out.
 
@@ -82,6 +82,8 @@ Most tradies know the cost and keep answering the phone themselves because the a
 An AI receptionist with a local 03 number is the middle path — always on, never sick, never on holiday, never training the next new hire. It sounds warm and conversational (try [Amily's demo](https://amily.ai/#voice) to hear for yourself), it knows your business hours and your services, and it hands a real job to your calendar or your phone when the call is one you need to take personally. There is no lock-in, no setup fee, and no long contract.
 
 The other reason tradies delay is that the cost of the problem is invisible. There is no line item on the P&L for "calls we missed". The $52,000 shows up as a quiet year — slightly fewer jobs, slightly tighter cashflow, slightly more "we're not as busy as we used to be". Once you see the number in the table above, the decision is no longer about cost. It is about how much longer you want to keep paying it.
+
+If the question is now "how do I actually turn this on?", the full build sequence — Twilio AU regulatory, ElevenLabs conversational agent, n8n webhook glue, Cal.com booking, and the SMS confirmation flow — is documented step-by-step in [How to Set Up an AI Voice Assistant for an Australian 03 Number](/blog/setup-ai-voice-assistant-03-number-australia).
 
 ---
 

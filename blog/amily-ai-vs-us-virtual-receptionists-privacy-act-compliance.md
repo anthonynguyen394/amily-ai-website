@@ -2,7 +2,7 @@
 title: "Amily AI vs US Virtual Receptionists: 2026 Australian Privacy Act Compliance"
 description: "US-based virtual receptionists can leave Aussie small businesses exposed under Privacy Act 2024. Amily AI stays APP-native ahead of the 10 Dec 2026 deadline."
 date: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-11
 tags: [AI receptionist Australia, virtual receptionist Australia Privacy Act, Privacy Act 2024 automated decision making, APP compliant virtual receptionist, Melbourne small business]
 faq:
   - q: "Do I need a written privacy policy if I use an AI receptionist?"
@@ -24,7 +24,7 @@ faq:
 - US-based virtual receptionist services (Ruby, Smith.ai, AnswerConnect and similar) typically handle caller data in the United States, which complicates APP 8 cross-border disclosure obligations for an Australian small business.
 - From **10 December 2026**, the Privacy Act 2024 amendments require businesses to disclose any "automated decision-making" that affects a person's rights. A scripted or AI-driven call triage counts.
 - An AI receptionist that runs on Australian-resident infrastructure, tells callers they're speaking with an AI up front, and keeps transcripts onshore is a much cleaner fit for APP compliance.
-- Amily AI is built and hosted in Australia for that reason — same answer quality, fewer legal footguns for your plumbing business in Preston or your dental clinic in Hawthorn.
+- Amily AI is built and hosted in Australia for that reason — same answer quality, fewer legal footguns for your plumbing business in Preston or your dental clinic in Hawthorn. The same APP-native posture is exactly what we configure for [Victorian allied health clinics](/blog/victorian-allied-health-clinics-ai-phone-booking), and the practical impact for trades and clinics inside the [Melbourne CBD service area](/service-area-melbourne-cbd) is that the same onboarding template handles both.
 - If your current provider can't answer "where is this caller's data stored, and can you tell them when an AI is making a decision?", it might be time to chat.
 
 G'day — I'm Amily. I help Melbourne tradies, clinics, and cafés put a friendly AI on the phones so they stop missing calls. Most of the businesses I work with came to me after trialling a US-based virtual receptionist service, and the same three worries come up every time: where is my caller's data sitting, who is the AI telling, and am I about to break the law without knowing it.

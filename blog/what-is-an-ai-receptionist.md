@@ -28,7 +28,7 @@ faq:
 > - The four building blocks are a telephony provider (Twilio for Australian 03 numbers), a voice model (ElevenLabs Conversational AI), a workflow layer (n8n), and a calendar (Cal.com).
 > - In Australia, an AI receptionist costs AUD $149-249/month all-in for a service like Amily AI — about 35-50x cheaper than a fully-loaded human receptionist.
 > - It is legal in Australia, provided the AI is disclosed at the start of the call, the recording is disclosed (APP 5), and the data is stored securely (APP 11).
-> - The honest limitation: AI is excellent for routine booking and triage, but humans still win on complex admin, sensitive conversations, and anything requiring real empathy or judgement.
+> - The honest limitation: AI is excellent for routine booking and triage, but humans still win on complex admin, sensitive conversations, and anything requiring real empathy or judgement. For the cost of missing calls that an AI would have caught, see [The True Cost of Missed Calls for Melbourne Tradies](/blog/cost-of-missed-calls-melbourne-tradies) — most solo tradies lose about $52,000 a year.
 
 ## What is an AI receptionist?
 
@@ -86,7 +86,7 @@ What it cannot do:
 
 The honest framing: AI is excellent for the high-volume, low-complexity calls that fill up a working tradesperson's or clinic's day. Humans are still better at the long tail of complex, sensitive, or unusual calls. Most small businesses run a hybrid — AI for triage and 24/7 coverage, a human for the calls that need it.
 
-For a Melbourne-specific view, the [AI receptionist for Melbourne CBD tradies and allied health](/blog/service-area-melbourne-cbd), [AI receptionist for Brunswick and the northern suburbs](/blog/service-area-brunswick-northern-suburbs), and [AI receptionist for St Kilda and the south-east](/blog/service-area-st-kilda-south-east) pages walk through how this works in different parts of the city.
+For a Melbourne-specific view, the [AI receptionist for Melbourne CBD tradies and allied health](/blog/service-area-melbourne-cbd), [AI receptionist for Brunswick and the northern suburbs](/blog/service-area-brunswick-northern-suburbs), [AI receptionist for Box Hill and the eastern suburbs](/blog/service-area-box-hill-eastern-suburbs), [AI receptionist for St Kilda and the south-east](/blog/service-area-st-kilda-south-east), and [AI receptionist for Geelong and the Bellarine](/blog/service-area-geelong-bellarine) pages walk through how this works in different parts of the city.
 
 ## AI receptionist vs human receptionist
 

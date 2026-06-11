@@ -2,7 +2,7 @@
 title: "Best AI Phone Assistant for Tradies Using ServiceM8 or Tradify (2026)"
 description: "If you run a tradie business on ServiceM8 or Tradify, here's how Amily AI handles the call, captures the job, and connects to your existing job management software via API."
 date: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-11
 tags: [AI phone assistant ServiceM8, AI receptionist Tradify, AI booking for tradies Australia, voice AI job management software, Melbourne tradies]
 faq:
   - q: "Can Amily AI work with ServiceM8 or Tradify?"
@@ -35,7 +35,7 @@ This guide is for the tradie (or the tradie's office person) who has heard of AI
 
 Because a phone booking is only useful if it ends up where the rest of the work lives. Most AI receptionists on the market will email you a transcript or drop the call into a generic CRM. That sounds fine in a demo, but in the real life of a tradie it creates a double-handling step: the office person copies the call details into the job book, the field worker opens their job management system to see the job, and a few minutes per call are lost.
 
-Industry research puts the cost of a missed or mishandled call to a Melbourne trades business at roughly **$52,000 a year** in lost work [Source: industry benchmark, amily.ai 2026]. A booking system that requires manual re-entry is the second-place version of the same problem — you capture the call but bleed time and accuracy on the way to dispatch.
+Industry research puts the cost of a missed or mishandled call to a Melbourne trades business at roughly **$52,000 a year** in lost work [Source: industry benchmark, amily.ai 2026]. For the full breakdown — call volume, miss rate, the per-call revenue number and the calculator table — see [The True Cost of Missed Calls for Melbourne Tradies](/blog/cost-of-missed-calls-melbourne-tradies). A booking system that requires manual re-entry is the second-place version of the same problem — you capture the call but bleed time and accuracy on the way to dispatch. For tradies operating inside the CBD and inner-city grid, the same ServiceM8 workflow is also what we deploy for the [Melbourne CBD service area](/service-area-melbourne-cbd).
 
 The right AI phone assistant for a tradie should:
 

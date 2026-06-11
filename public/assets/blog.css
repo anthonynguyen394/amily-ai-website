@@ -47,6 +47,11 @@ body {
 .post-meta .tag { color: #c97b5d; }
 .post-meta .divider { margin: 0 8px; opacity: 0.4; }
 
+.post-updated {
+  font-size: 0.78rem; color: rgba(30, 58, 95, 0.45);
+  margin-bottom: 12px; font-weight: 600;
+}
+
 /* ── Buttons ── */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;

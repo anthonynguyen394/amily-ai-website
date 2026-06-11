@@ -171,7 +171,7 @@ The economics work like this:
 
 The other hybrid pattern: **AI for after-hours, human for business hours.** A sole trader who works 7am-5pm uses the AI to cover 5pm-7am and weekends, then takes calls personally during the day. The AI captures the after-hours emergencies that would otherwise go to voicemail; the human handles the calls they want to handle personally. Cost: $149-249/month, no human overhead.
 
-The full pricing comparison, including how this stacks up against offshore and call-centre alternatives, is in our [Melbourne virtual receptionist pricing guide](/blog/virtual-receptionist-cost-melbourne-2026).
+The full pricing comparison, including how this stacks up against offshore and call-centre alternatives, is in our [Melbourne virtual receptionist pricing guide](/blog/virtual-receptionist-cost-melbourne-2026). Local pricing and onboarding are broken out by area — [Melbourne CBD](/blog/service-area-melbourne-cbd), [St Kilda and the south-east](/blog/service-area-st-kilda-south-east), [Brunswick and the northern suburbs](/blog/service-area-brunswick-northern-suburbs), [Box Hill and the eastern suburbs](/blog/service-area-box-hill-eastern-suburbs), [Geelong and the Bellarine](/blog/service-area-geelong-bellarine) — for tradies and clinics that need the suburb-specific view.
 
 ## Do customers know when they're talking to an AI?
 

@@ -213,6 +213,13 @@ function renderPost(post, shell) {
       : '';
     const readTimeHtml = ` <span class="divider">&middot;</span> ${readTime(post.markdown)}`;
     metaStrip = `        <p class="post-meta">${formatDatePretty(post.date)}${readTimeHtml}${tagList}</p>`;
+    // If the post has been updated since first publication, surface an
+    // explicit "Updated <date>" line so readers (and Google) can see the
+    // refresh without inspecting the page metadata. Only when dates differ.
+    const isUpdated = post.updated && post.date && new Date(post.updated).getTime() > new Date(post.date).getTime();
+    if (isUpdated) {
+      metaStrip += `\n        <p class="post-updated">Published ${formatDatePretty(post.date)} &middot; Updated ${formatDatePretty(post.updated)}</p>`;
+    }
   }
 
   // Back-link destination: blog posts go back to /blog; landing pages to /.

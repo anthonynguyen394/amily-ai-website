@@ -105,7 +105,7 @@ Here's the typical pricing structure for an AI receptionist:
 | Core (most popular) | $149-249 | 100-200 calls, calendar integration, SMS, escalation |
 | Pro / Unlimited | $249-499 | Unlimited calls, multiple numbers, custom voice, priority support |
 
-Setup fees vary. Amily AI is $0 for the receptionist (you just plug it in). AI setup consulting â€” where someone builds the workflows, integrates your CRM, and trains the agent on your business â€” runs $2,500-3,500 one-off for a Melbourne small business [Source: Amily AI pricing, 2026].
+Setup fees vary. Amily AI is $0 for the receptionist (you just plug it in). AI setup consulting â€” where someone builds the workflows, integrates your CRM, and trains the agent on your business â€” runs $2,500-3,500 one-off for a Melbourne small business [Source: Amily AI pricing, 2026]. The full build sequence — Twilio AU, ElevenLabs, n8n, Cal.com, and the emergency escalation tree — is documented step-by-step in [How to Set Up an AI Voice Assistant for an Australian 03 Number](/blog/setup-ai-voice-assistant-03-number-australia).
 
 The catch: an AI receptionist doesn't do every job a human does. It can't handle a long, complex insurance claim call, comfort an upset patient, or chase a debtor. What it does do, brilliantly, is answer every call in under two rings, qualify the lead, book the appointment, and send you a summary â€” at 3am, on a Sunday, in the middle of a job.
 
@@ -126,7 +126,7 @@ Here's the side-by-side. This is the table most "AI vs human receptionist" artic
 | Amily AI Pro | $0 | $249 | 24/7 | Yes | Yes | Yes (multi-number) | No |
 | DIY voicemail | $0 | $0 | When you check it | No | N/A | N/A | No |
 
-The line that matters: **Amily AI Core at $199/month replaces the after-hours and overflow coverage that a $90k/year human can't economically provide, and adds booking that an offshore shared service usually doesn't.** Most Melbourne trades customers run AI + an in-person admin person during the day, or AI solo if they're a sole trader.
+The line that matters: **Amily AI Core at $199/month replaces the after-hours and overflow coverage that a $90k/year human can't economically provide, and adds booking that an offshore shared service usually doesn't.** Most Melbourne trades customers run AI + an in-person admin person during the day, or AI solo if they're a sole trader. The pricing above is the same across our local service areas — [Melbourne CBD](/service-area-melbourne-cbd), [St Kilda and the south-east](/service-area-st-kilda-south-east), [Brunswick and the northern suburbs](/service-area-brunswick-northern-suburbs), [Box Hill and the east](/service-area-box-hill-eastern-suburbs), and [Geelong and the Bellarine](/service-area-geelong-bellarine) — so you can compare the local-onboarding details against the same $199/month headline.
 
 ## What drives the cost difference?
 

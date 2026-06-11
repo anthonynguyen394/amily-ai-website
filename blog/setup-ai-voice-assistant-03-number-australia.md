@@ -2,7 +2,7 @@
 title: "How to Set Up an AI Voice Assistant for an Australian 03 Number"
 description: "ElevenLabs, Vapi, and Retell cannot provision Australian 03 numbers directly. This step-by-step walks you through Twilio to ElevenLabs to n8n to Cal.com, with cost breakdown and the gotchas."
 date: 2026-06-04
-updated: 2026-06-04
+updated: 2026-06-11
 tags: [AI voice agent, Twilio Australia, ElevenLabs conversational AI Australia, AI receptionist with 03 number, Cal.com booking, n8n voice workflow]
 faq:
   - q: "How long does Twilio identity verification take in Australia?"
@@ -26,9 +26,9 @@ faq:
 > - The fiddly bits are the Twilio regulatory setup, the ElevenLabs system prompt, the n8n webhook wiring for Cal.com, and the SMS confirmation flow.
 > - If you would rather not spend a weekend on it, Amily's **AI Setup Consulting** is a one-off AUD $2,500 for trades (AUD $3,500 for professional services) and we hand you a working system. See [amily.ai/#setup](https://amily.ai/#setup).
 
-Setting up an AI voice assistant with an Australian 03 number requires four pieces: a Twilio AU account (mandatory, because ElevenLabs and Vapi do not provision AU numbers), an ElevenLabs Conversational AI agent, an n8n workflow for the backend, and a Cal.com booking calendar. Total build time is 4-8 hours for a competent developer, 1-2 days for a non-technical founder. Total monthly cost is roughly $50-$80 in raw infrastructure: $3 for the 03 number, $0.10/min for voice, $0 for self-hosted n8n, $0 for Cal.com free tier.
+Setting up an AI voice assistant with an Australian 03 number requires four pieces: a Twilio AU account (mandatory, because ElevenLabs and Vapi do not provision AU numbers), an ElevenLabs Conversational AI agent, an n8n workflow for the backend, and a Cal.com booking calendar. Total build time is 4-8 hours for a competent developer, 1-2 days for a non-technical founder. Total monthly cost is roughly $50-$80 in raw infrastructure: $3 for the 03 number, $0.10/min for voice, $0 for self-hosted n8n, $0 for Cal.com free tier — the full per-component pricing is benchmarked against a human receptionist and an offshore call centre in [AI Receptionist Cost in Melbourne: From $149/mo](/blog/virtual-receptionist-cost-melbourne-2026).
 
-The catch: you will spend the bulk of that time on Twilio identity verification (1-3 business days), number porting, system prompt engineering, and n8n webhook wiring. None of it is hard — it is all quite well-documented — but it is fiddly, and a single misconfiguration will leave the agent silent on a Saturday afternoon when a customer is trying to book.
+The catch: you will spend the bulk of that time on Twilio identity verification (1-3 business days), number porting, system prompt engineering, and n8n webhook wiring. None of it is hard — it is all quite well-documented — but it is fiddly, and a single misconfiguration will leave the agent silent on a Saturday afternoon when a customer is trying to book. The cost of that Saturday afternoon, in lost job value, is the focus of [The True Cost of Missed Calls for Melbourne Tradies](/blog/cost-of-missed-calls-melbourne-tradies) — most solo tradies lose about **$52,000 a year** to the same problem this guide solves.
 
 This post walks through every step, with the gotchas, the cost breakdown, and a clear answer to the question: should you DIY or hire someone to do it for you?
 
