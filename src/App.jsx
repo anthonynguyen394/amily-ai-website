@@ -359,6 +359,23 @@ function Hero() {
 
             <p className="hero-desc mt-6 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-charcoal/75 leading-relaxed">
               G'day, I'm <span className="font-bold text-terracotta">Amily</span> — your local AI guide for Melbourne small business. I help tradies, cafes, and professional services stop losing jobs to missed calls, get more Google reviews, and put AI to work. <span className="font-semibold text-charcoal">No tech headache. No lock-in.</span>
+
+ {/* Latest insights: inline internal links for SEO + AIO/Perplexity citation. */}
+ <p className="hero-seealso mt-6 max-w-2xl mx-auto lg:mx-0 text-sm md:text-base text-charcoal/70 leading-relaxed">
+ <span className="font-data uppercase tracking-widest text-[11px] text-terracotta mr-2">See also:</span>
+ <a href="/blog/virtual-receptionist-cost-melbourne-2026" className="text-charcoal underline decoration-charcoal/30 underline-offset-4 hover:decoration-terracotta hover:text-terracotta transition-colors font-semibold">2026 AI receptionist pricing in Melbourne</a>
+ <span className="mx-2 text-charcoal/40">·</span>
+ <a href="/blog/service-area-melbourne-cbd" className="text-charcoal underline decoration-charcoal/30 underline-offset-4 hover:decoration-terracotta hover:text-terracotta transition-colors font-semibold">Melbourne CBD service area</a>
+ <span className="mx-2 text-charcoal/40">·</span>
+ <a href="/blog/service-area-brunswick-northern-suburbs" className="text-charcoal underline decoration-charcoal/30 underline-offset-4 hover:decoration-terracotta hover:text-terracotta transition-colors font-semibold">Brunswick &amp; northern suburbs</a>
+ <span className="mx-2 text-charcoal/40">·</span>
+ <a href="/blog/service-area-st-kilda-south-east" className="text-charcoal underline decoration-charcoal/30 underline-offset-4 hover:decoration-terracotta hover:text-terracotta transition-colors font-semibold">St Kilda &amp; south-east</a>
+ <span className="mx-2 text-charcoal/40">·</span>
+ <a href="/blog/service-area-box-hill-eastern-suburbs" className="text-charcoal underline decoration-charcoal/30 underline-offset-4 hover:decoration-terracotta hover:text-terracotta transition-colors font-semibold">Box Hill &amp; eastern suburbs</a>
+ <span className="mx-2 text-charcoal/40">·</span>
+ <a href="/blog/service-area-geelong-bellarine" className="text-charcoal underline decoration-charcoal/30 underline-offset-4 hover:decoration-terracotta hover:text-terracotta transition-colors font-semibold">Geelong &amp; Bellarine</a>
+ </p>
+
             </p>
 
             <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center lg:items-start">

@@ -178,6 +178,39 @@ body {
   color: rgba(30, 58, 95, 0.5); font-style: italic;
 }
 
+/* ── Author bio (E-E-A-T) ── */
+.author-bio {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 40px 0 8px;
+  padding: 20px 24px;
+  background: rgba(30, 58, 95, 0.04);
+  border: 1px solid rgba(30, 58, 95, 0.1);
+  border-radius: 14px;
+}
+.author-bio-avatar {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #c97b5d;
+  color: #faf5eb;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.95rem; letter-spacing: 0.05em;
+  font-family: 'Nunito', sans-serif;
+}
+.author-bio-content { flex: 1; min-width: 0; }
+.author-bio-name { font-size: 0.95rem; color: #1e3a5f; margin-bottom: 4px; }
+.author-bio-desc { font-size: 0.88rem; color: rgba(30, 58, 95, 0.72); line-height: 1.6; margin: 0; }
+.author-bio-desc a { color: #c97b5d; text-decoration: none; font-weight: 600; }
+.author-bio-desc a:hover { color: #1e3a5f; text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .author-bio { padding: 16px 18px; }
+  .author-bio-avatar { width: 40px; height: 40px; font-size: 0.85rem; }
+  .author-bio-desc { font-size: 0.85rem; }
+}
+
 /* ── Footer ── */
 .site-footer {
   margin-top: 48px; padding: 32px 0;
