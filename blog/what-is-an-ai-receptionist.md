@@ -21,7 +21,7 @@ faq:
     a: "An AI receptionist handles live phone calls using natural speech in real time. A chatbot handles typed messages on a website, in WhatsApp, or in Messenger. Both use large language models, but the phone channel is synchronous and voice-based, while the chat channel is asynchronous and text-based. The phone channel is higher-intent and higher-conversion."
 ---
 
-![What is an AI receptionist - definition and how it works in Australia](/assets/post-01-hero.png)
+![What is an AI receptionist - definition and how it works in Australia](/assets/post-01-hero-minimax.png)
 
 > **TL;DR**
 > - An AI receptionist is a software agent that answers your business phone using natural speech, qualifies callers, books appointments, and sends SMS confirmations — 24/7, unlimited concurrent calls.

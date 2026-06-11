@@ -21,7 +21,7 @@ faq:
     a: "An AI receptionist is Privacy Act 1988 compliant provided the AI is disclosed at the start of the call (APP 5), the recording is disclosed, and recordings are stored securely (APP 11). From 10 December 2026, the Privacy and Other Legislation Amendment Act 2024 also requires businesses to disclose automated decision-making in their privacy policy. Amily AI and other Australian-built services ship compliant by default. Offshore AI services often do not."
 ---
 
-![AI receptionist vs human receptionist - 2026 cost and capability comparison for Melbourne small business](/assets/post-02-hero.png)
+![AI receptionist vs human receptionist - 2026 cost and capability comparison for Melbourne small business](/assets/post-02-hero-minimax.png)
 
 > **TL;DR**
 > - An AI receptionist in Australia costs **AUD $149-249/month** in 2026 — a local 03 number, 24/7 answering, Cal.com booking, SMS summaries.
