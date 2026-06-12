@@ -273,6 +273,10 @@ function loadPosts() {
       howto: parsed.data.howto || null,
       draft: Boolean(parsed.data.draft),
       markdown: parsed.content,
+      // Optional: sitemap priority override (0.0-1.0). Defaults to 0.7 for posts
+      // and 0.9 for landing pages. Used to flag the most commercially-valuable
+      // pages for Google's recrawl queue.
+      priority: typeof parsed.data.priority === 'number' ? parsed.data.priority : null,
       // Optional: hide the final "Book a discovery call" CTA if the page has its own
       hideFinalCta: Boolean(parsed.data.hideFinalCta),
       // Optional: hide from /blog listing (default: listed)
@@ -398,12 +402,22 @@ function updateSitemap(posts) {
 
   // All markdown pages (blog posts + landing pages) contribute sitemap rows.
   // Landing pages get higher priority since they're revenue-driving.
-  const postEntries = posts.map((p) => ({
-    loc: `${SITE_URL}${p.urlPath}`,
-    changefreq: p.layout === 'landing' ? 'monthly' : 'monthly',
-    priority: p.layout === 'landing' ? '0.9' : '0.7',
-    lastmod: isoDate(p.updated),
-  }));
+  // Posts that opt into a higher sitemap priority via frontmatter
+  // `priority: 0.X` get a corresponding boost. Used to flag the most
+  // commercially-valuable posts (e.g. /blog/virtual-receptionist-cost-...)
+  // for Google's recrawl queue without making them landing pages.
+  const postEntries = posts.map((p) => {
+    let priority = p.layout === 'landing' ? '0.9' : '0.7';
+    if (typeof p.priority === 'number' && p.priority >= 0.0 && p.priority <= 1.0) {
+      priority = String(Math.min(0.95, Math.max(0.1, p.priority)));
+    }
+    return {
+      loc: `${SITE_URL}${p.urlPath}`,
+      changefreq: p.layout === 'landing' ? 'monthly' : 'monthly',
+      priority,
+      lastmod: isoDate(p.updated),
+    };
+  });
 
   const entries = [...staticEntries, ...postEntries];
   const xml =
