@@ -116,8 +116,8 @@ function ThanksBanner() {
    utm_campaign. Swapping the H1 to match ad-copy lifts Google Ads Quality
    Score through landing-page relevance. Add new campaigns here as they launch. */
 function useCampaignHeadline() {
-  const [line1, setLine1] = useState('Stop losing jobs to');
-  const [line2, setLine2] = useState('missed calls.');
+  const [line1, setLine1] = useState('Amily AI — your local');
+  const [line2, setLine2] = useState('AI receptionist.');
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const campaign = new URLSearchParams(window.location.search).get('utm_campaign');
