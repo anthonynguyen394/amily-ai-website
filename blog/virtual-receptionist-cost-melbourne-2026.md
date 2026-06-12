@@ -1,8 +1,8 @@
 ﻿---
-title: "AI Receptionist Cost in Melbourne: From $149/mo (2026 Guide)"
-description: "AI receptionist cost in Melbourne from $149/mo in 2026. Real AUD pricing vs offshore ($800-$4,000) and human ($81k+/yr). Privacy Act 1988 compliant. No lock-in."
-date: 2026-06-11
-updated: 2026-06-11
+title: "AI Receptionist Cost Melbourne 2026: $149-$499/mo vs $8,300 Human | Privacy Act"
+description: "AI receptionist cost in Melbourne from $149/mo in 2026. Side-by-side AUD pricing: $149-$499/mo AI vs $800-$4,000/mo offshore vs $7,000-$8,300/mo human. Privacy Act 1988 compliant. 30-day refund. No lock-in."
+date: 2026-06-12
+updated: 2026-06-12
 image: /assets/post-03-hero.png
 tags: [ai receptionist, virtual receptionist, melbourne, pricing, ai-receptionist-cost, small-business, answering-service]
 howto:

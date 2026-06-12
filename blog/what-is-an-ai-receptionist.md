@@ -1,6 +1,6 @@
 ---
-title: "What Is an AI Receptionist? Definition, How It Works, and Costs (2026)"
-description: "An AI receptionist is a 24/7 voice agent that answers business calls, books appointments, and sends SMS confirmations using natural speech. How it works, what it costs, and when to use one."
+title: "What Is an AI Receptionist? $0.10/min, 24/7, Books Jobs (2026 Definition)"
+description: "An AI receptionist is a 24/7 voice agent that answers business calls, books appointments, and sends SMS confirmations using natural speech. $0.10/min. How it works, what it costs, when to use one."
 date: 2026-06-11
 updated: 2026-06-11
 tags: [ai receptionist, definition, how it works, voice ai, small business, melbourne]

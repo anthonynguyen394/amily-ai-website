@@ -1,6 +1,6 @@
 ---
-title: "How to Set Up an AI Voice Assistant for an Australian 03 Number"
-description: "ElevenLabs, Vapi, and Retell cannot provision Australian 03 numbers directly. This step-by-step walks you through Twilio to ElevenLabs to n8n to Cal.com, with cost breakdown and the gotchas."
+title: "Set Up an AI Voice Assistant on an AU 03 Number: 4 Steps + $0.10/min Cost"
+description: "ElevenLabs, Vapi, Retell cannot provision AU 03 numbers. Step-by-step Twilio to ElevenLabs to n8n to Cal.com in 2026. Real cost breakdown + ACMA verification gotchas."
 date: 2026-06-04
 updated: 2026-06-11
 image: /assets/post-06-hero.png

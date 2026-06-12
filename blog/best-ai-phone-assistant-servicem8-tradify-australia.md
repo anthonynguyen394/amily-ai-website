@@ -1,6 +1,6 @@
 ---
-title: "Best AI Phone Assistant for Tradies Using ServiceM8 or Tradify (2026)"
-description: "If you run a tradie business on ServiceM8 or Tradify, here's how Amily AI handles the call, captures the job, and connects to your existing job management software via API."
+title: "AI Phone Assistant for ServiceM8 + Tradify: Book Jobs 24/7 from $199/mo"
+description: "Best AI phone assistant for tradies on ServiceM8 or Tradify in 2026. Amily AI answers the call, books the job, and writes it back to your CRM via API. $199/mo. Local 03 number. 30-day refund."
 date: 2026-06-04
 updated: 2026-06-11
 image: /assets/post-02-hero.png

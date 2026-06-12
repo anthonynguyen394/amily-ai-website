@@ -1,6 +1,6 @@
 ---
-title: "AI Receptionist for St Kilda, Prahran & South-East Melbourne | Amily AI"
-description: "24/7 AI phone answering for St Kilda, Prahran, Caulfield, Elsternwick tradies, dentists, physios. APP-8 compliant. Booked into ServiceM8, Cliniko, Halaxy."
+title: "AI Receptionist St Kilda, Prahran & South-East Melbourne: $199/mo, Local 03"
+description: "24/7 AI phone answering for St Kilda, Prahran, Caulfield, Elsternwick tradies, dentists, physios. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. $199/mo flat. 30-day refund."
 date: 2026-06-10
 updated: 2026-06-10
 tags: [service-area, local-seo, st-kilda, south-east-melbourne]

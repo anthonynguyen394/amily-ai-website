@@ -1,6 +1,6 @@
 ---
-title: "Why Victorian Allied Health Clinics Are Switching to AI Phone Booking"
-description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + PMS-compatible workflows (Cliniko, ClinicM8, Halaxy), plus the triage line AI must not cross."
+title: "Victorian Allied Health: Why AI Phone Booking Wins in 2026 (APP 11 + $199/mo)"
+description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + Cliniko + Halaxy workflows. The 3 calls AI must never triage. From $199/mo."
 date: 2026-06-04
 updated: 2026-06-11
 image: /assets/post-04-hero.png

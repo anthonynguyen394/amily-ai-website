@@ -1,6 +1,6 @@
 ---
-title: "AI Receptionist for Brunswick, Preston & Northern Suburbs | Amily AI"
-description: "24/7 AI phone answering for Brunswick, Preston, Northcote, Thornbury tradies and clinics. APP-8 compliant. Booked into ServiceM8, Cliniko, Halaxy. From $199/mo."
+title: "AI Receptionist Brunswick, Preston & Northern Suburbs: $199/mo, Local 03"
+description: "24/7 AI phone answering for Brunswick, Preston, Northcote, Thornbury tradies and clinics. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. $199/mo flat. 30-day refund."
 date: 2026-06-10
 updated: 2026-06-10
 tags: [service-area, local-seo, brunswick, northern-suburbs]
