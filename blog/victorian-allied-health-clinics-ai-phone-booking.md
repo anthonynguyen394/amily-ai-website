@@ -18,7 +18,7 @@ faq:
     a: "Most patients, once told it's an AI, are fine with it for booking, rescheduling, fees, and general info. Two groups may push back: older patients who prefer a human voice, and patients in acute distress who need reassurance. Both groups get routed to a human by the AI's escalation tree — that's the system working as designed, not failing."
 ---
 
-![Victorian allied health clinic using AI phone booking with APP 11-compliant patient handling](/assets/post-04-hero-minimax.png)
+![Victorian allied health clinic using AI phone booking with APP 11-compliant patient handling](/assets/post-04-hero.png)
 
 > **TL;DR**
 > - Small Victorian allied health clinics miss roughly a third of inbound calls during peak hours, and the calls they miss are most often patients in acute pain seeking first-contact care [Source: Slowiak, *Journal of Organizational Behavior Management*, 2014 — the only peer-reviewed clinic study; US, single clinic, no equivalent Australian allied-health study was located].

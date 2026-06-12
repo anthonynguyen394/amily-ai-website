@@ -18,7 +18,7 @@ faq:
     a: "API access uses OAuth 2.0 (where supported) or scoped API keys, tokens are stored in the n8n credential vault, and the workflow runs on infrastructure controlled by Amily. No third party gets read access to the tradie's full job book. Onboarding includes a short security checklist so the tradie knows exactly what the AI can and cannot touch."
 ---
 
-![AI phone assistant for tradies using ServiceM8 or Tradify in Australia](/assets/post-02-hero-minimax.png)
+![AI phone assistant for tradies using ServiceM8 or Tradify in Australia](/assets/post-02-hero.png)
 
 **TL;DR**
 

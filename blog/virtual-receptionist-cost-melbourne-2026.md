@@ -37,7 +37,7 @@ faq:
     a: "Yes, if it is configured to. Australian AI receptionists detect keywords like 'burst pipe', 'gas leak', or 'flooding' and escalate to your on-call mobile within two seconds, with a full SMS transcript. The system is not a substitute for a 24/7 on-call tradie, but it makes sure every emergency reaches you, even at 2am on a Sunday."
 ---
 
-![Amily AI virtual receptionist cost comparison for Melbourne small businesses in 2026](/assets/post-03-hero-minimax.png)
+![Amily AI virtual receptionist cost comparison for Melbourne small businesses in 2026](/assets/post-03-hero.png)
 
 > **TL;DR**
 > - A fully-loaded human receptionist in Melbourne costs **$90,000-110,000/year** in 2026 (base $55-65k + 11% super + workers comp + leave + office + equipment) [Source: fairwork.gov.au, 2026].

@@ -28,7 +28,7 @@ faq:
     a: "A full-time human receptionist in Australia costs $90,000-110,000 per year fully-loaded in 2026, including base salary ($55,000-65,000), 11.5% superannuation, workers comp, leave, and overhead. That works out to roughly $7,000-8,300 per month, before any casual cover for sick days or holidays. Sources: Fair Work Australia 2026 pay guide and standard on-costs."
 ---
 
-![AI receptionist vs human receptionist - 2026 cost and capability comparison for Melbourne small business](/assets/post-02-hero-minimax.png)
+![AI receptionist vs human receptionist - 2026 cost and capability comparison for Melbourne small business](/assets/post-02-hero.png)
 
 > **TL;DR**
 > - An AI receptionist in Australia costs **AUD $149-249/month** in 2026 — a local 03 number, 24/7 answering, Cal.com booking, SMS summaries.

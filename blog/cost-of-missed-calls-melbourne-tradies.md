@@ -18,7 +18,7 @@ faq:
     a: "No. Modern conversational AI (ElevenLabs is the model we use) is indistinguishable from a real human receptionist in blind tests for the first 30-60 seconds of a call. The voice has natural pacing, breathing, and a Melbourne-friendly warmth — you can hear a sample at amily.ai/#voice. The reason it works for tradies is that tradie customers do not need a long philosophical chat; they need a fast, clear answer and a confirmed booking. The AI is genuinely better at that than most humans."
 ---
 
-![Melbourne tradie missing a call while on the tools](/assets/post-05-hero-minimax.png)
+![Melbourne tradie missing a call while on the tools](/assets/post-05-hero.png)
 
 > **TL;DR**
 > - A single missed call to a Melbourne tradie is worth $200-$800 in lost job value — usually because the caller books the next name on Google.

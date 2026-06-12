@@ -17,7 +17,7 @@ faq:
     a: "The OAIC's enforcement focus for ADM has been signalled as education-first for small businesses, but the underlying legal obligation starts on that date. The realistic exposure is reputational and contractual, not a same-day fine. The cost of getting ahead of it is a few hours and a privacy policy update, not a six-figure project."
 ---
 
-![Amily AI vs US virtual receptionists on Australian Privacy Act 2026 compliance](/assets/post-01-hero-minimax.png)
+![Amily AI vs US virtual receptionists on Australian Privacy Act 2026 compliance](/assets/post-01-hero.png)
 
 **TL;DR**
 

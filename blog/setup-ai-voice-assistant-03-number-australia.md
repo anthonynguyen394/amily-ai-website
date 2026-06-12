@@ -18,7 +18,7 @@ faq:
     a: "AI call recording is legal in Australia, but it is regulated. You must disclose the recording at the start of the call ('This call may be recorded for quality and training purposes') and you must include the recording practice in your privacy policy. From 10 December 2026, businesses must also disclose the use of automated decision-making in their privacy policy under the Privacy Act 2024 amendments. Amily's standard build includes the disclosure line in the agent's greeting and a privacy policy template for clients."
 ---
 
-![Diagram of the AI voice assistant setup for an Australian 03 number](/assets/post-06-hero-minimax.png)
+![Diagram of the AI voice assistant setup for an Australian 03 number](/assets/post-06-hero.png)
 
 > **TL;DR**
 > - ElevenLabs, Vapi, Retell, and Bland **cannot** provision Australian 03 numbers directly. You must import the number from Twilio, which is the only mainstream provider selling AU local numbers to AI platforms.

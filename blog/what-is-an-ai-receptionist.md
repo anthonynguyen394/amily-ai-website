@@ -27,7 +27,7 @@ faq:
     a: "Siri is a personal voice assistant on your phone for individual tasks — alarms, reminders, web searches. An AI receptionist is a business phone agent that answers your business line, qualifies leads, books appointments, and escalates to a human. The two share underlying speech and language technology, but the use case, training data, and integrations are completely different."
 ---
 
-![What is an AI receptionist - definition and how it works in Australia](/assets/post-01-hero-minimax.png)
+![What is an AI receptionist - definition and how it works in Australia](/assets/post-01-hero.png)
 
 > **TL;DR**
 > - An AI receptionist is a software agent that answers your business phone using natural speech, qualifies callers, books appointments, and sends SMS confirmations — 24/7, unlimited concurrent calls.
