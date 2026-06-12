@@ -263,6 +263,11 @@ function loadPosts() {
       date: parsed.data.date,
       updated: parsed.data.updated || parsed.data.date,
       tags: parsed.data.tags || [],
+      // Optional: per-page hero/OG image (path under public/, e.g. /assets/post-03-hero.png).
+      // When set, build per-page og:image, twitter:image, BlogPosting.image, and
+      // include in /image-sitemap.xml. Falls back to the default og-image.png.
+      image: typeof parsed.data.image === 'string' && parsed.data.image.trim() ? parsed.data.image.trim() : null,
+      imageAlt: typeof parsed.data.imageAlt === 'string' && parsed.data.imageAlt.trim() ? parsed.data.imageAlt.trim() : null,
       faq: parsed.data.faq || null,
       // Optional: HowTo JSON-LD steps. Each step is {name, text}.
       howto: parsed.data.howto || null,
@@ -316,6 +321,18 @@ function renderPost(post, shell) {
           <a href="https://cal.com/amily-ai-anthony/discovery" class="btn-primary">Book a discovery call</a>
         </div>`;
 
+  // Per-page image resolution. Falls back to the default /assets/og-image.png
+  // when the post has no `image:` frontmatter. The JSON-LD `image` always
+  // points to the absolute https URL (schema.org requirement).
+  const defaultImagePath = '/assets/og-image.png';
+  const imagePath = post.image || defaultImagePath;
+  const imageUrl = imagePath.startsWith('http')
+    ? imagePath
+    : `${SITE_URL}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
+  const imageAlt = post.imageAlt
+    ? escapeHtml(post.imageAlt)
+    : escapeHtml(post.title);
+
   return shell
     .replaceAll('{{TITLE}}', escapeHtml(post.title))
     .replaceAll('{{TITLE_JSON}}', escapeJson(post.title))
@@ -329,6 +346,10 @@ function renderPost(post, shell) {
     .replaceAll('{{BACK_HREF}}', backHref)
     .replaceAll('{{BACK_LABEL}}', backLabel)
     .replaceAll('{{META_STRIP}}', metaStrip)
+    .replaceAll('{{OG_IMAGE}}', imageUrl)
+    .replaceAll('{{OG_IMAGE_ALT}}', imageAlt)
+    .replaceAll('{{TWITTER_IMAGE}}', imageUrl)
+    .replaceAll('{{JSON_LD_IMAGE}}', imageUrl)
     .replaceAll('{{FAQ_SCHEMA}}', buildFaqSchema(post.faq))
     .replaceAll('{{HOWTO_SCHEMA}}', buildHowtoSchema(post.howto))
     .replaceAll('{{PERSON_SCHEMA}}', buildPersonSchema())
@@ -406,6 +427,63 @@ function todayIso() {
   return new Date().toISOString().slice(0, 10);
 }
 
+// Build /image-sitemap.xml following Google's image sitemap extension spec.
+// Lists every page that has a per-page `image:` frontmatter set, with the
+// accompanying <image:title> and <image:caption> for richer indexing.
+//
+// Reference: https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
+//
+// We deliberately keep this small: only posts that have a dedicated hero
+// image go in. The default /assets/og-image.png is shared by every page
+// (used as a fallback og:image), so it has no editorial value to expose
+// in an image sitemap -- the only images worth indexing are the unique
+// per-post hero PNGs.
+function updateImageSitemap(posts) {
+  const IMAGE_NS = 'http://www.google.com/schemas/sitemap-image/1.1';
+  const entries = posts
+    .filter((p) => p.image) // only posts with a per-page image
+    .map((p) => {
+      const imagePath = p.image.startsWith('http')
+        ? p.image
+        : `${SITE_URL}${p.image.startsWith('/') ? '' : '/'}${p.image}`;
+      // Per Google's docs, the page URL is the enclosing <loc>, and the
+      // images live as <image:image> children. We emit one <image> block
+      // per image (one per page, but the schema supports more).
+      const imageTitle = escapeXml(p.title);
+      const imageCaption = p.imageAlt
+        ? escapeXml(p.imageAlt)
+        : escapeXml(p.description.slice(0, 200));
+      return `  <url>
+    <loc>${SITE_URL}${p.urlPath}</loc>
+    <image:image>
+      <image:loc>${imagePath}</image:loc>
+      <image:title>${imageTitle}</image:title>
+      <image:caption>${imageCaption}</image:caption>
+    </image:image>
+  </url>`;
+    });
+
+  const xml =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n` +
+    `        xmlns:image="${IMAGE_NS}">\n` +
+    entries.join('\n') +
+    `\n</urlset>\n`;
+
+  const imageSitemapPath = path.join(DIST, 'image-sitemap.xml');
+  fs.writeFileSync(imageSitemapPath, xml);
+  return entries.length;
+}
+
+function escapeXml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function main() {
   if (!fs.existsSync(DIST)) {
     console.error('dist/ not found. Run `vite build` first (npm run build does this automatically).');
@@ -448,6 +526,11 @@ function main() {
   // Rewrite the sitemap with all pages + blog posts.
   updateSitemap(posts);
   console.log(`  blog: sitemap.xml updated`);
+
+  // Rewrite the image sitemap (Google image sitemap extension) with the
+  // subset of posts that have a per-page hero image.
+  const imageCount = updateImageSitemap(posts);
+  console.log(`  blog: image-sitemap.xml updated (${imageCount} image${imageCount === 1 ? '' : 's'})`);
 }
 
 main();

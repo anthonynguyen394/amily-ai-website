@@ -3,6 +3,7 @@ title: "The True Cost of Missed Calls for Melbourne Plumbers and Electricians"
 description: "Missed calls cost Melbourne plumbers and electricians an average of $52,000 a year. Here is the real math, the assumptions, and how an AI receptionist pays for itself fast."
 date: 2026-06-04
 updated: 2026-06-11
+image: /assets/post-05-hero.png
 tags: [missed calls, Melbourne tradies, AI receptionist, plumber missed call cost, electrician lost revenue, after hours answering service tradies]
 faq:
   - q: "What is the average job value for a Melbourne plumber?"

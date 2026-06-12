@@ -3,6 +3,7 @@ title: "Why Victorian Allied Health Clinics Are Switching to AI Phone Booking"
 description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + PMS-compatible workflows (Cliniko, ClinicM8, Halaxy), plus the triage line AI must not cross."
 date: 2026-06-04
 updated: 2026-06-11
+image: /assets/post-04-hero.png
 tags: [allied-health, physio, ai-receptionist, melbourne, app-11, cliniko]
 faq:
   - q: "Is AI phone booking legal for allied health clinics in Victoria?"

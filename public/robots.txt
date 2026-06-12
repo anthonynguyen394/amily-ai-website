@@ -84,3 +84,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://amily.ai/sitemap.xml
+Sitemap: https://amily.ai/image-sitemap.xml

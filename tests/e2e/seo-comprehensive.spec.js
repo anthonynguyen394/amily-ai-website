@@ -240,6 +240,36 @@ test.describe('sitemap.xml', () => {
   });
 });
 
+test.describe('image-sitemap.xml (Google image sitemap extension)', () => {
+  test('serves 200 valid XML with image namespace + at least one post-XX-hero URL', async ({ request }) => {
+    const res = await request.get('/image-sitemap.xml');
+    expect(res.status()).toBe(200);
+    const body = await res.text();
+    expect(body).toMatch(/<urlset[^>]*xmlns:image="http:\/\/www\.google\.com\/schemas\/sitemap-image\/1\.1"/);
+    // Day 6 ships 6 per-post hero images. Future PRs that drop an image break
+    // this assertion.
+    expect(body).toContain('https://amily.ai/assets/post-03-hero.png');
+    expect(body).toMatch(/<image:title>/);
+  });
+});
+
+test.describe('per-page og:image variants (Day 6 social CTR lift)', () => {
+  // Posts with image: frontmatter should expose that image as og:image;
+  // posts without should fall back to the default /assets/og-image.png.
+  const PER_PAGE_OG = [
+    { path: '/blog/virtual-receptionist-cost-melbourne-2026', expect: '/assets/post-03-hero.png' },
+    { path: '/blog/best-ai-phone-assistant-servicem8-tradify-australia', expect: '/assets/post-02-hero.png' },
+    { path: '/blog/what-is-an-ai-receptionist', expect: '/assets/og-image.png' }, // fallback
+  ];
+  for (const c of PER_PAGE_OG) {
+    test(`${c.path} og:image contains ${c.expect}`, async ({ page }) => {
+      await page.goto(BASE + c.path);
+      const og = await page.locator('meta[property="og:image"]').getAttribute('content');
+      expect(og).toContain(c.expect);
+    });
+  }
+});
+
 test.describe('/llms.txt (GEO file for AI search crawlers)', () => {
   test('serves 200, mentions Amily AI and ABN 86 758 863 858', async ({ request }) => {
     const res = await request.get('/llms.txt');

@@ -3,6 +3,7 @@ title: "Best AI Phone Assistant for Tradies Using ServiceM8 or Tradify (2026)"
 description: "If you run a tradie business on ServiceM8 or Tradify, here's how Amily AI handles the call, captures the job, and connects to your existing job management software via API."
 date: 2026-06-04
 updated: 2026-06-11
+image: /assets/post-02-hero.png
 tags: [AI phone assistant ServiceM8, AI receptionist Tradify, AI booking for tradies Australia, voice AI job management software, Melbourne tradies]
 faq:
   - q: "Can Amily AI work with ServiceM8 or Tradify?"

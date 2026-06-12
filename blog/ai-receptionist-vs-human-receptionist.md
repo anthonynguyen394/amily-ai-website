@@ -3,6 +3,7 @@ title: "AI Receptionist vs Human Receptionist: 2026 Cost & Capability Comparison
 description: "AI receptionist vs human receptionist: real 2026 cost ($149/mo vs $7,000/mo fully-loaded), capability matrix, when to use each. Privacy Act 1988, APP 5, 24/7 coverage."
 date: 2026-06-11
 updated: 2026-06-11
+image: /assets/post-01-hero.png
 tags: [ai receptionist, human receptionist, comparison, melbourne, small business, virtual receptionist]
 faq:
   - q: "AI receptionist vs human receptionist: which is cheaper?"
