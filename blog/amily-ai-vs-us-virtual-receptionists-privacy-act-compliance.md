@@ -1,6 +1,6 @@
 ---
-title: "Amily AI vs US Virtual Receptionists: 2026 Australian Privacy Act Compliance"
-description: "US-based virtual receptionists can leave Aussie small businesses exposed under Privacy Act 2024. Amily AI stays APP-native ahead of the 10 Dec 2026 deadline."
+title: "Amily AI vs US Virtual Receptionists: Privacy Act 2024 Compliance (10 Dec Deadline)"
+description: "US virtual receptionists leave Aussie small businesses exposed under Privacy Act 2024. Amily AI stays APP-native ahead of the 10 Dec 2026 ADM disclosure deadline. Side-by-side comparison."
 date: 2026-06-04
 updated: 2026-06-11
 tags: [AI receptionist Australia, virtual receptionist Australia Privacy Act, Privacy Act 2024 automated decision making, APP compliant virtual receptionist, Melbourne small business]

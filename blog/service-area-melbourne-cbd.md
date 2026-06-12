@@ -1,6 +1,6 @@
 ---
-title: "AI Receptionist for Melbourne CBD Tradies & Allied Health | Amily AI"
-description: "24/7 AI phone answering for Melbourne CBD plumbers, electricians, physios, dentists. APP-8 compliant. Booked into ServiceM8, Cliniko, Halaxy. From $199/mo."
+title: "AI Receptionist Melbourne CBD Tradies & Allied Health: $199/mo, Local 03"
+description: "24/7 AI phone answering for Melbourne CBD plumbers, electricians, physios, dentists. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. $199/mo flat. 30-day refund."
 date: 2026-06-10
 updated: 2026-06-10
 tags: [service-area, local-seo, melbourne-cbd]
