@@ -139,7 +139,7 @@ async function main() {
 
   const { server, port } = await startServer();
   const url = `http://127.0.0.1:${port}/`;
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ channel: process.env.PW_CHANNEL || undefined });
   try {
     const context = await browser.newContext({
       // Reduced motion -> hero renders the still PNG (with alt text) instead of

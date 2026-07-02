@@ -46,3 +46,4 @@ audit.mjs
 # GSC operations tooling (lives in amily-ai repo, not website)
 .seo-tooling/
 data/
+.venv/
