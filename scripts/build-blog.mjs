@@ -214,7 +214,7 @@ function buildPersonSchema() {
       'https://www.linkedin.com/in/anthonynguyen394',
     ],
     description:
-      'Founder of Amily AI (Melbourne, ABN86758863858). Cloud Engineering Manager at Cube by day, builds AI voice receptionists and automation for Australian small businesses by night.',
+      'Founder of Amily AI (Melbourne, ABN86758863858). Cloud and platform engineering leader who builds AI voice receptionists and automation for Australian small businesses.',
     knowsAbout: [
       'AI voice receptionists',
       'Cal.com booking integrations',

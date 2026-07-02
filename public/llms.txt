@@ -24,6 +24,13 @@ Compliance posture:
 - [Amily AI vs US virtual receptionists: 2026 Australian Privacy Act compliance](https://amily.ai/blog/amily-ai-vs-us-virtual-receptionists-privacy-act-compliance): Why US-based virtual receptionists can leave Aussie small businesses exposed under Privacy Act 2024, and what APP-native looks like.
 - [How much does a virtual receptionist cost in Melbourne? (2026 pricing guide)](https://amily.ai/blog/virtual-receptionist-cost-melbourne-2026): Real AUD pricing compared — human ($90k+), offshore call centre, and AI ($149-249/mo).
 - [Why Victorian allied health clinics are switching to AI phone booking](https://amily.ai/blog/victorian-allied-health-clinics-ai-phone-booking): APP 11 + My Health Records + PMS-compatible workflows (Cliniko, ClinicM8, Halaxy), plus the triage line AI must not cross.
+- [What is an AI receptionist?](https://amily.ai/blog/what-is-an-ai-receptionist): 2026 definition — a 24/7 voice agent that answers business calls, books appointments, and sends SMS confirmations using natural speech; how it works, what it costs, when to use one.
+- [AI vs human receptionist (2026)](https://amily.ai/blog/ai-receptionist-vs-human-receptionist): Side-by-side capability matrix — cost, 24/7 coverage, Privacy Act 1988 and APP 5 disclosure, and when each makes sense for a Melbourne small business.
+- [AI receptionist for Melbourne CBD](https://amily.ai/blog/service-area-melbourne-cbd): 24/7 phone answering for CBD tradies and allied health — plumbers, electricians, physios, dentists; books into ServiceM8, Cliniko, Halaxy.
+- [AI receptionist for St Kilda, Prahran and South-East Melbourne](https://amily.ai/blog/service-area-st-kilda-south-east): Local coverage for St Kilda, Prahran, Caulfield, and Elsternwick trades and clinics.
+- [AI receptionist for Box Hill, Ringwood and the Eastern Suburbs](https://amily.ai/blog/service-area-box-hill-eastern-suburbs): Local coverage for Box Hill, Ringwood, Camberwell, and Doncaster trades and clinics.
+- [AI receptionist for Brunswick, Preston and the Northern Suburbs](https://amily.ai/blog/service-area-brunswick-northern-suburbs): Local coverage for Brunswick, Preston, Northcote, and Thornbury trades and clinics.
+- [AI receptionist for Geelong, Bellarine and the Surf Coast](https://amily.ai/blog/service-area-geelong-bellarine): Local coverage for Geelong, Torquay, Drysdale, and Ocean Grove trades and clinics.
 - [Privacy policy](https://amily.ai/privacy): How we handle customer data under Australian privacy law.
 
 ## Services
