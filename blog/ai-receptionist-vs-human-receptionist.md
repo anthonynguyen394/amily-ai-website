@@ -1,8 +1,8 @@
 ---
-title: "AI vs Human Receptionist 2026: $199/mo vs $7,000/mo + 5x Coverage | Melbourne"
-description: "AI vs human receptionist in 2026: $199/mo AI vs $7,000-$8,300/mo human fully-loaded. Side-by-side capability matrix, 24/7 coverage, Privacy Act 1988, APP 5 disclosure, when to use each."
+title: "AI vs Human Receptionist 2026: from $149/mo vs $7,000/mo + 5x Coverage | Melbourne"
+description: "AI vs human receptionist in 2026: from $149/mo AI vs $7,000-$8,300/mo human fully-loaded. Side-by-side capability matrix, 24/7 coverage, Privacy Act 1988, APP 5 disclosure, when to use each."
 date: 2026-06-11
-updated: 2026-06-11
+updated: 2026-07-03
 image: /assets/post-01-hero.png
 tags: [ai receptionist, human receptionist, comparison, melbourne, small business, virtual receptionist]
 faq:
@@ -51,8 +51,8 @@ This is the table most "AI vs human" articles skip. The numbers are 2026 Melbour
 
 |  | AI receptionist | Human receptionist |
 |---|---|---|
-| **Monthly cost (Melbourne)** | AUD $149-499 | AUD $7,000-8,300 fully-loaded |
-| **Annual cost** | AUD $1,788-5,988 | AUD $84,000-100,000+ |
+| **Monthly cost (Melbourne)** | AUD $149-249 | AUD $7,000-8,300 fully-loaded |
+| **Annual cost** | AUD $1,788-2,988 | AUD $84,000-100,000+ |
 | **Hours covered** | 24/7, every day, public holidays | ~38 hours/week, sick days, annual leave |
 | **Concurrent calls** | Unlimited | One at a time (or two with effort) |
 | **Average answer time** | Under 2 seconds | 15-45 seconds, longer if on another call |
@@ -172,7 +172,7 @@ The pattern most successful Melbourne small businesses run in 2026 is hybrid. AI
 
 The economics work like this:
 
-- **AI at $199/month** covers 24/7, all routine calls, lead qualification, booking, and SMS summaries.
+- **AI at $199/month (Core plan)** covers 24/7, all routine calls, lead qualification, booking, and SMS summaries.
 - **Human at part-time 2 days/week (~$2,800-3,500/month)** covers complex calls during business hours, in-person support, and the exceptions.
 - **Total: $3,000-3,700/month** — less than half the cost of a full-time human alone, with better coverage.
 
@@ -211,7 +211,7 @@ Three Melbourne small businesses and the choices they made:
 
 - **Solo plumber in Dandenong.** 25 calls a week, missed 8 of them on average. After-hours emergencies were the biggest revenue leak. Chose Amily AI Core at $199/month. Now answers every call, books into ServiceM8, escalates burst pipes to the on-call mobile. Net gain: ~$58,000/year in saved jobs.
 - **Four-crew plumbing outfit in Brunswick.** 80 calls a week, two office staff struggling to keep up. Kept one human (now handling quoting, supplier calls, complex admin) and added Amily AI for the routine booking calls. Office productivity up 30%, missed calls down to under 5%. Total reception cost dropped from $14,000/month (two humans) to $8,500/month (one human + AI).
-- **Allied health clinic in St Kilda.** 60 patient calls a week, complex intake for new patients, sensitive conversations for existing ones. Kept one human receptionist (full-time, the right call for the patient mix) and added Amily AI for after-hours booking. Patients can book a 7am Pilates class at 11pm the night before. Reception cost up by $199/month; bookings up 22% in the first quarter.
+- **Allied health clinic in St Kilda.** 60 patient calls a week, complex intake for new patients, sensitive conversations for existing ones. Kept one human receptionist (full-time, the right call for the patient mix) and added Amily AI for after-hours booking. Patients can book a 7am Pilates class at 11pm the night before. Reception cost up by $199/month (Core plan); bookings up 22% in the first quarter.
 
 The pattern: **AI for the high-volume, low-complexity, time-sensitive calls. Human for everything else.** The hybrid model wins.
 

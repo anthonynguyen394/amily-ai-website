@@ -1,8 +1,8 @@
 ---
-title: "AI Receptionist Brunswick, Preston & Northern Suburbs: $199/mo, Local 03"
-description: "24/7 AI phone answering for Brunswick, Preston, Northcote, Thornbury tradies and clinics. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. $199/mo flat. 30-day refund."
+title: "AI Receptionist Brunswick, Preston & Northern Suburbs: from $149/mo, Local 03"
+description: "24/7 AI phone answering for Brunswick, Preston, Northcote, Thornbury tradies and clinics. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. From $149/mo. 30-day refund."
 date: 2026-06-10
-updated: 2026-06-10
+updated: 2026-07-03
 tags: [service-area, local-seo, brunswick, northern-suburbs]
 serviceArea:
   suburb: "Northern Suburbs"
@@ -16,7 +16,7 @@ faq:
   - q: Is AI call recording legal in Victoria?
     a: "Yes, with caller disclosure at the start of each call. Amily always identifies itself as an AI and notifies the caller of recording, satisfying APP 5 and the Surveillance Devices Act 1999 (Vic)."
   - q: How much does an AI receptionist cost for a northern-suburbs business?
-    a: "From $199/month all-in for the Performance plan. No setup fee for the first 5 founding customers. No lock-in, no minimum spend, cancel any time."
+    a: "From $149/month all-in (Starter), with Core at $199/month and Pro at $249/month. Founding rate: first 3 months half price. No lock-in, no minimum spend, cancel any time."
   - q: Can I keep my existing northern-suburbs phone number?
     a: "Yes. We port Australian 03 and 04 numbers via Twilio in 1-3 business days, or you can simply forward your existing number to the new Amily 03 number in 5 minutes."
 ---
@@ -70,7 +70,7 @@ faq:
 }
 </script>
 
-Amily AI is a Melbourne-built AI voice receptionist serving Brunswick, Preston, Northcote, Coburg and the broader inner-northern corridor. The system picks up in under two seconds, 24/7, qualifies calls in the business's own language, books jobs into ServiceM8, Cliniko or Halaxy via API, and escalates emergencies with a full SMS transcript. Local 03 number, $199/month all-in, APP-5 compliant.
+Amily AI is a Melbourne-built AI voice receptionist serving Brunswick, Preston, Northcote, Coburg and the broader inner-northern corridor. The system picks up in under two seconds, 24/7, qualifies calls in the business's own language, books jobs into ServiceM8, Cliniko or Halaxy via API, and escalates emergencies with a full SMS transcript. Local 03 number, from $149/month all-in, APP-5 compliant.
 
 ## What suburbs does Amily cover in northern Melbourne?
 
@@ -100,13 +100,13 @@ Hospitality, retail and creative agencies (cafes, restaurants, boutique retail, 
 
 Three patterns dominate the maths for northern businesses:
 
-**Pattern 1: Family trade (plumber, electrician, HVAC) in Reservoir, Coburg or Preston** — 70-120 calls/month, average job value $350-600, missed-call rate 30-40% (principal on the tools). Amily Performance at $199/month converts 25-40 extra jobs/year. At $475 average, that's **$11,875-19,000/year net gain** after AI cost.
+**Pattern 1: Family trade (plumber, electrician, HVAC) in Reservoir, Coburg or Preston** — 70-120 calls/month, average job value $350-600, missed-call rate 30-40% (principal on the tools). Amily Performance at $199/month (Core plan) converts 25-40 extra jobs/year. At $475 average, that's **$11,875-19,000/year net gain** after AI cost.
 
 **Pattern 2: Allied health clinic in Brunswick, Northcote or Coburg** — 200-400 calls/month, patient LTV $1,200-2,500, missed-call rate 25-35%. Amily Performance recovers 50-100 missed patient enquiries/year. At $1,500 LTV, that's **$75,000-150,000/year in recovered patient lifetime value** — overwhelmingly the highest-ROI Amily use case in the inner north.
 
 **Pattern 3: Multilingual professional service (accounting, immigration, real estate)** — 60-150 calls/month, average matter value $1,500-5,000, missed-call rate 30-50% (principal in client meetings). Amily recovers 20-50 matters/year. At $2,500 average, that's **$50,000-125,000/year in recovered billings**.
 
-Across all three patterns, payback on a $199/month plan is typically **under two weeks** for a busy northern-suburbs business.
+Across all three patterns, payback on a $199/month plan (Core) is typically **under two weeks** for a busy northern-suburbs business.
 
 ## How does setup work for northern-suburbs businesses?
 

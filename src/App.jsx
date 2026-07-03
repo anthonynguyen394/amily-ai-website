@@ -1413,8 +1413,8 @@ function Proof() {
             </div>
             <ul className="space-y-3 flex-1">
               {[
-                'Free setup + onboarding (worth $3,500)',
-                'First 3 months free, then locked-in founding-customer pricing',
+                'Founding rate: first 3 months of your plan at half price',
+                'Locked-in founding-customer pricing from month four',
                 'Direct line to the founder (me -- Anthony) for the first 90 days',
                 'Bring-your-own scope: voice receptionist, review automation, or both',
               ].map((item) => (
@@ -1895,7 +1895,7 @@ function Pricing() {
           </h2>
           {/* BLUF: definitional opener for AIO/Perplexity citation (40-60 words) */}
           <p className="pricing-bluf text-charcoal/80 mt-5 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            AI receptionist pricing in Australia typically ranges from AUD $99 to $499 per month, depending on call volume, integrations, and after-hours coverage. Amily AI plans start at $99 per month for review management and $249 per month for the full voice-receptionist package, with no lock-in, no setup fee, and a 30-day ROI guarantee.
+            AI receptionist pricing in Australia typically ranges from AUD $99 to $499 per month, depending on call volume, integrations, and after-hours coverage. Amily AI voice plans run $149 to $249 per month (Starter, Core, Pro), review management starts at $99 per month, and one-off setup starts at $2,500 — no lock-in, with a 30-day ROI guarantee.
           </p>
           <p className="text-charcoal/60 mt-4 max-w-lg mx-auto">
             No lock-in contracts. No hidden fees. Cancel anytime.

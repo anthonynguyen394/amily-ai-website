@@ -1,8 +1,8 @@
 ---
-title: "AI Phone Assistant for ServiceM8 + Tradify: Book Jobs 24/7 from $199/mo"
-description: "Best AI phone assistant for tradies on ServiceM8 or Tradify in 2026. Amily AI answers the call, books the job, and writes it back to your CRM via API. $199/mo. Local 03 number. 30-day refund."
+title: "AI Phone Assistant for ServiceM8 + Tradify: Book Jobs 24/7 from $149/mo"
+description: "Best AI phone assistant for tradies on ServiceM8 or Tradify in 2026. Amily AI answers the call, books the job, and writes it back to your CRM via API. From $149/mo. Local 03 number. 30-day refund."
 date: 2026-06-04
-updated: 2026-06-11
+updated: 2026-07-03
 image: /assets/post-02-hero.png
 tags: [AI phone assistant ServiceM8, AI receptionist Tradify, AI booking for tradies Australia, voice AI job management software, Melbourne tradies]
 faq:
@@ -26,7 +26,7 @@ faq:
 - ServiceM8 and Tradify are the two dominant job management platforms in Australia, and they each have APIs that an AI receptionist can connect to. The integration is configured per business — not a one-size-fits-all plugin.
 - Amily AI is built on a flexible n8n workflow layer. If your business runs on ServiceM8 or Tradify, we configure the workflow to push the call summary, customer record and job into your system, typically inside a minute of the caller hanging up.
 - Plumbers, electricians, builders, HVAC, landscapers and cleaners can all run on the same setup with their own service catalogue and emergency rules.
-- The cost: from AUD $199 per month for the [Voice Receptionist Core](https://amily.ai/#voice) plan, plus the [AI Setup Consulting](https://amily.ai/#setup) package (AUD $2,500 one-off for trades) which covers the integration configuration. The return: industry research puts the average cost of a missed call to a Melbourne tradie at about $52,000 per year.
+- The cost: from AUD $149/month (Starter), with the [Voice Receptionist Core](https://amily.ai/#voice) plan at $199/month and Pro at $249/month, plus the [AI Setup Consulting](https://amily.ai/#setup) package (AUD $2,500 one-off for trades) which covers the integration configuration. The return: industry research puts the average cost of a missed call to a Melbourne tradie at about $52,000 per year.
 
 G'day — I'm Amily. I work with tradies across Melbourne, from one-van sparkies in Sunshine to four-crew plumbing outfits in Dandenong. The single biggest problem they all share is the phone. Someone's on a roof, the call goes to voicemail, and the customer books the next bloke who picks up.
 

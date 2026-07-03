@@ -1,8 +1,8 @@
 ---
-title: "Victorian Allied Health: Why AI Phone Booking Wins in 2026 (APP 11 + $199/mo)"
-description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + Cliniko + Halaxy workflows. The 3 calls AI must never triage. From $199/mo."
+title: "Victorian Allied Health: Why AI Phone Booking Wins in 2026 (APP 11, from $149/mo)"
+description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + Cliniko + Halaxy workflows. The 3 calls AI must never triage. From $149/mo."
 date: 2026-06-04
-updated: 2026-06-11
+updated: 2026-07-03
 image: /assets/post-04-hero.png
 tags: [allied-health, physio, ai-receptionist, melbourne, app-11, cliniko]
 faq:

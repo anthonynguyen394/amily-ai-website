@@ -1,8 +1,8 @@
 ---
-title: "AI Receptionist Geelong, Bellarine & Surf Coast: $199/mo, Local 03 Number"
-description: "24/7 AI phone answering for Geelong, Torquay, Drysdale, Ocean Grove tradies and clinics. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. $199/mo flat. 30-day refund."
+title: "AI Receptionist Geelong, Bellarine & Surf Coast: from $149/mo, Local 03 Number"
+description: "24/7 AI phone answering for Geelong, Torquay, Drysdale, Ocean Grove tradies and clinics. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. From $149/mo. 30-day refund."
 date: 2026-06-10
-updated: 2026-06-10
+updated: 2026-07-03
 tags: [service-area, local-seo, geelong, bellarine, surf-coast, regional-victoria]
 serviceArea:
   suburb: "Geelong"
@@ -16,7 +16,7 @@ faq:
   - q: Is AI call recording legal in Victoria?
     a: "Yes, with caller disclosure at the start of each call. Amily always identifies itself as an AI and notifies the caller of recording, satisfying APP 5 and the Surveillance Devices Act 1999 (Vic)."
   - q: How much does an AI receptionist cost for a Geelong business?
-    a: "From $199/month all-in for the Performance plan. No setup fee for the first 5 founding customers. No lock-in, no minimum spend, cancel any time."
+    a: "From $149/month all-in (Starter), with Core at $199/month and Pro at $249/month. Founding rate: first 3 months half price. No lock-in, no minimum spend, cancel any time."
   - q: Can I keep my existing Geelong phone number?
     a: "Yes. We port Australian 03 and 04 numbers via Twilio in 1-3 business days, or you can simply forward your existing number to the new Amily 03 number in 5 minutes."
 ---
@@ -76,7 +76,7 @@ faq:
 }
 </script>
 
-Amily AI is a Melbourne-built AI voice receptionist serving Geelong, the Bellarine Peninsula, the Surf Coast and the regional corridor. The system picks up in under two seconds, 24/7, qualifies calls in the business's own language, books jobs into ServiceM8, Cliniko or Halaxy via API, and escalates emergencies with a full SMS transcript. Local 03 number, $199/month all-in, APP-5 compliant.
+Amily AI is a Melbourne-built AI voice receptionist serving Geelong, the Bellarine Peninsula, the Surf Coast and the regional corridor. The system picks up in under two seconds, 24/7, qualifies calls in the business's own language, books jobs into ServiceM8, Cliniko or Halaxy via API, and escalates emergencies with a full SMS transcript. Local 03 number, from $149/month all-in, APP-5 compliant.
 
 ## What suburbs does Amily cover in Geelong and the Bellarine?
 
@@ -108,13 +108,13 @@ Hospitality and tourism (restaurants, cafes, wineries, accommodation providers a
 
 Three patterns dominate the maths for regional businesses:
 
-**Pattern 1: Geelong trade (plumber, electrician, HVAC) in Geelong West, Highton or Lara** — 80-140 calls/month, average job value $400-650, missed-call rate 30-45% (principal on the tools, large geographic service area). Amily Performance at $199/month converts 30-50 extra jobs/year. At $500 average, that's **$15,000-25,000/year net gain** after AI cost. Higher than inner-Melbourne because the geographic service area is wider and the missed-call rate tends to be higher.
+**Pattern 1: Geelong trade (plumber, electrician, HVAC) in Geelong West, Highton or Lara** — 80-140 calls/month, average job value $400-650, missed-call rate 30-45% (principal on the tools, large geographic service area). Amily Performance at $199/month (Core plan) converts 30-50 extra jobs/year. At $500 average, that's **$15,000-25,000/year net gain** after AI cost. Higher than inner-Melbourne because the geographic service area is wider and the missed-call rate tends to be higher.
 
 **Pattern 2: Allied health clinic in Geelong, Highton or Waurn Ponds** — 200-400 calls/month, patient LTV $1,200-2,500, missed-call rate 25-35%. Amily Performance recovers 50-100 missed patient enquiries/year. At $1,500 LTV, that's **$75,000-150,000/year in recovered patient lifetime value** — overwhelmingly the highest-ROI Amily use case in Geelong.
 
 **Pattern 3: Surf Coast trade (Torquay, Ocean Grove, Barwon Heads)** — 60-100 calls/month in shoulder season, 120-180/month in summer, average job value $450-700, missed-call rate 35-50% (small team, high seasonal demand, weekend work). Amily recovers 30-60 jobs/year. At $550 average, that's **$16,500-33,000/year in recovered billings** — and Amily's 24/7 answering is the differentiator that captures the after-hours emergency calls that would otherwise go to a Melbourne operator 90 minutes away.
 
-Across all three patterns, payback on a $199/month plan is typically **under two weeks** for a busy Geelong business, with the regional and Surf Coast cases often seeing the strongest returns.
+Across all three patterns, payback on a $199/month plan (Core) is typically **under two weeks** for a busy Geelong business, with the regional and Surf Coast cases often seeing the strongest returns.
 
 ## How does setup work for Geelong businesses?
 
