@@ -4,7 +4,7 @@
 
 Amily AI is operated by Anthony Nguyen (ABN 86 758 863 858) and based in Melbourne, Victoria, Australia. The service combines AI voice agents (ElevenLabs) with workflow automation (n8n) and integrates directly with the tools Australian small businesses already run: Google Calendar, Cal.com, ServiceM8, Simpro, Tradify, Cliniko, and Halaxy.
 
-Pricing starts at A$149/month — typically less than the revenue from a single missed job. We offer a 30-day ROI guarantee: measurable bookings, reviews, or time saved within 30 days, or we refund the setup fee.
+Pricing (AUD): voice receptionist plans A$149/month (Starter), A$199/month (Core), A$249/month (Pro); review management from A$99/month standalone or A$149/month bundled; one-off setup A$2,500 (trades, hospitality) or A$3,500 (professional services); ongoing support add-on A$299/month. Typically less than the revenue from a single missed job. We offer a 30-day ROI guarantee: measurable bookings, reviews, or time saved within 30 days, or we refund the setup fee.
 
 Compliance posture:
 - Privacy Act 1988 (Australian Privacy Principles APP 1-13) — opt-in disclosure, encrypted Australian-hosted storage, per-tenant data isolation, no general-model training on customer calls.

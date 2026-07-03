@@ -1,8 +1,8 @@
 ---
-title: "AI Receptionist Melbourne CBD Tradies & Allied Health: $199/mo, Local 03"
-description: "24/7 AI phone answering for Melbourne CBD plumbers, electricians, physios, dentists. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. $199/mo flat. 30-day refund."
+title: "AI Receptionist Melbourne CBD Tradies & Allied Health: from $149/mo, Local 03"
+description: "24/7 AI phone answering for Melbourne CBD plumbers, electricians, physios, dentists. APP-8 compliant. Books into ServiceM8, Cliniko, Halaxy. From $149/mo. 30-day refund."
 date: 2026-06-10
-updated: 2026-06-10
+updated: 2026-07-03
 tags: [service-area, local-seo, melbourne-cbd]
 serviceArea:
   suburb: "Melbourne CBD"
@@ -16,7 +16,7 @@ faq:
   - q: Is AI call recording legal in Victoria?
     a: "Yes, with caller disclosure at the start of each call. Amily always identifies itself as an AI and notifies the caller of recording, satisfying APP 5 and the Surveillance Devices Act 1999 (Vic)."
   - q: How much does an AI receptionist cost for a CBD business?
-    a: "From $199/month all-in for the Performance plan. No setup fee for the first 5 founding customers. No lock-in, no minimum spend, cancel any time."
+    a: "From $149/month all-in (Starter), with Core at $199/month and Pro at $249/month. Founding rate: first 3 months half price. No lock-in, no minimum spend, cancel any time."
   - q: Can I keep my existing Melbourne CBD phone number?
     a: "Yes. We port Australian 03 and 04 numbers via Twilio in 1-3 business days, or you can simply forward your existing number to the new Amily 03 number in 5 minutes."
 ---
@@ -64,7 +64,7 @@ faq:
 }
 </script>
 
-Amily AI is a Melbourne-built AI voice receptionist that answers every call to your CBD business number in under two seconds, 24/7. The system books jobs into ServiceM8, Cliniko, Halaxy or Google Calendar, escalates emergencies to your mobile, and quotes APP-5-compliant disclosure on every call. Local 03 number, no lock-in, $199/month all-in for plumbers, electricians, physios, dentists and accountants.
+Amily AI is a Melbourne-built AI voice receptionist that answers every call to your CBD business number in under two seconds, 24/7. The system books jobs into ServiceM8, Cliniko, Halaxy or Google Calendar, escalates emergencies to your mobile, and quotes APP-5-compliant disclosure on every call. Local 03 number, no lock-in, from $149/month all-in for plumbers, electricians, physios, dentists and accountants.
 
 ## What suburbs does Amily cover in Melbourne CBD?
 
@@ -97,13 +97,13 @@ A typical Amily call for a CBD business picks up in under two seconds, states th
 
 The honest answer depends on your missed-call rate and average job value. For CBD-based businesses, three ROI patterns dominate:
 
-**Pattern 1: Inner-city trades (plumber, electrician, HVAC)** — Inbound call volume 80-150/month, average job value $350-650, missed-call rate 30-40% without a receptionist. With Amily Performance at $199/month, you convert 30-40 extra jobs/year. At $500 average, that's **$15,000-20,000/year net gain** after the AI cost.
+**Pattern 1: Inner-city trades (plumber, electrician, HVAC)** — Inbound call volume 80-150/month, average job value $350-650, missed-call rate 30-40% without a receptionist. With Amily Performance at $199/month (Core plan), you convert 30-40 extra jobs/year. At $500 average, that's **$15,000-20,000/year net gain** after the AI cost.
 
 **Pattern 2: CBD allied health clinic (physio, dental, psychology)** — Inbound calls 200-400/month, average patient lifetime value $1,200-2,500, missed-call rate 25-35% during peak hours. With Amily Performance, you recover 50-100 missed patient enquiries/year. At $1,500 LTV, that's **$75,000-150,000/year in recovered patient lifetime value** — overwhelmingly the highest-ROI Amily use case in the CBD.
 
 **Pattern 3: CBD professional services (accountant, lawyer, mortgage broker)** — Inbound calls 40-100/month, average matter value $1,500-5,000, missed-call rate 30-50% (because the principal is in client meetings). With Amily, you recover 15-30 matters/year. At $2,500 average, that's **$37,500-75,000/year in recovered billings**.
 
-Across all three patterns, the payback period on a $199/month Amily plan is typically **under two weeks** for a busy CBD business, with the AI cost recovered in the first or second saved engagement.
+Across all three patterns, the payback period on a $199/month Amily plan (Core) is typically **under two weeks** for a busy CBD business, with the AI cost recovered in the first or second saved engagement.
 
 ## How does setup work for Melbourne CBD businesses?
 
