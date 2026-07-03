@@ -35,7 +35,7 @@ CLIENT_SECRET = Path.home() / "Downloads" / (
     "client_secret_2_990278002759-l19stsgre9uken5icernlekheclnife7"
     ".apps.googleusercontent.com.json"
 )
-TOKEN_PATH = Path.home() / ".secrets" / "gsc-token.json"
+TOKEN_PATH = Path.home() / ".secrets" / ".gsc-token.json"
 
 
 def get_credentials():
