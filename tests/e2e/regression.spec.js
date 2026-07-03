@@ -56,16 +56,28 @@ test.describe('regression: PR #2 (robots.txt partition + sitemap)', () => {
     expect(body, '/privacy should be in sitemap (clean URL, no .html)').toContain('https://amily.ai/privacy');
   });
 
-  test('sitemap.xml contains exactly the canonical 5 URLs', async ({ request }) => {
+  test('sitemap.xml contains the canonical URLs with no duplicates', async ({ request }) => {
+    // Written in the 5-URL era as an exact-set match; the sitemap now grows
+    // with every post (18 URLs as of 2026-07). The regression this guards:
+    // canonical pages never drop out, entries stay deduped, and every loc
+    // is an https://amily.ai URL.
     const body = await (await request.get('/sitemap.xml')).text();
-    const got = [...new Set([...body.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]))].sort();
-    expect(got).toEqual([
+    const locs = [...body.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);
+    const unique = new Set(locs);
+    expect(locs.length).toBe(unique.size);
+    expect(locs.length).toBeGreaterThanOrEqual(18);
+    for (const canonical of [
       'https://amily.ai/',
       'https://amily.ai/ai-voice-receptionist-melbourne-small-business',
       'https://amily.ai/blog',
       'https://amily.ai/blog/melbourne-tradies-missed-calls-cost',
       'https://amily.ai/privacy',
-    ]);
+    ]) {
+      expect(unique.has(canonical), `missing canonical URL: ${canonical}`).toBe(true);
+    }
+    for (const loc of unique) {
+      expect(loc.startsWith('https://amily.ai/'), `non-canonical loc: ${loc}`).toBe(true);
+    }
   });
 });
 

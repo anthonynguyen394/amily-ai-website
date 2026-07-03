@@ -33,12 +33,13 @@ test.describe('blog index', () => {
 
   test('lists both the blog post and the landing page', async ({ page }) => {
     await page.goto('/blog');
+    // The index grows as posts publish (15 cards as of 2026-07); the
+    // regression this guards is that BOTH layouts stay listed: landing
+    // pages link to their root URL, posts link under /blog/.
     const cards = page.locator('.post-card');
-    await expect(cards).toHaveCount(2);
-    // Landing page links to its root URL, not /blog/<slug>
+    expect(await cards.count()).toBeGreaterThanOrEqual(15);
     const landingCard = page.locator(`.post-card[href="/${LANDING_SLUG}"]`);
     await expect(landingCard).toBeVisible();
-    // Blog post links under /blog/
     const postCard = page.locator(`.post-card[href="/blog/${POST_SLUG}"]`);
     await expect(postCard).toBeVisible();
   });
