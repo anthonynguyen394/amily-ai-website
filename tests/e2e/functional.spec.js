@@ -236,8 +236,14 @@ test.describe('performance — Largest Contentful Paint < 4s', () => {
 test.describe('scroll behaviour', () => {
   test('html element has scroll-behavior: smooth', async ({ page }) => {
     await page.goto(BASE + '/');
-    const style = await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior);
-    expect(style, 'expected scroll-behavior: smooth for in-page anchor navigation').toBe('smooth');
+    // Poll: on slow CI runners a one-shot read raced stylesheet
+    // application and flaked (blocked a main deploy 2026-07-03)
+    await expect
+      .poll(
+        () => page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior),
+        { message: 'expected scroll-behavior: smooth for in-page anchor navigation', timeout: 5000 }
+      )
+      .toBe('smooth');
   });
 });
 
