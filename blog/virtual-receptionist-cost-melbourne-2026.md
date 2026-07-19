@@ -184,7 +184,7 @@ The middle ground â€” a proper AI receptionist that books live and covers 2
 
 ---
 
-**Want me to run the numbers for your business?** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll work out your missed-call cost, recommend the right plan, and answer anything else you're weighing up. Or just email me at [anthony@amily.ai](mailto:anthony@amily.ai) â€” I read every one.
+**Want me to run the numbers for your business?** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll work out your missed-call cost, recommend the right plan, and answer anything else you're weighing up. Or just email me at [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai) â€” I read every one.
 
 If you're ready to see what our plans (from $149/month) buy you in real terms, [see live pricing and book a demo](https://amily.ai/#voice). You can also read how the [AI setup process works](https://amily.ai/#setup) and what [review management](https://amily.ai/#reviews) adds on top.
 

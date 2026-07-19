@@ -95,7 +95,7 @@ The whole thing is no-lock-in. If the tradie wants to take the script and run it
 
 ---
 
-**Curious how this would work for your specific trade?** Anthony runs a free 15-minute chat, no pitch, just a walk-through of your current call flow and where the gaps are. [Book a free chat](https://amily.ai/#discovery) or email [anthony@amily.ai](mailto:anthony@amily.ai).
+**Curious how this would work for your specific trade?** Anthony runs a free 15-minute chat, no pitch, just a walk-through of your current call flow and where the gaps are. [Book a free chat](https://amily.ai/#discovery) or email [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai).
 
 Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone +61 3 4714 0264.
 

@@ -93,7 +93,7 @@ A typical onboarding with Amily takes about an afternoon:
 
 ---
 
-**Want a friendly walk-through of how this would look for your business?** Anthony runs a free 15-minute chat, no pitch, just a straight look at your current call flow and where the gaps are. [Book a free chat](https://amily.ai/#discovery) or email [anthony@amily.ai](mailto:anthony@amily.ai).
+**Want a friendly walk-through of how this would look for your business?** Anthony runs a free 15-minute chat, no pitch, just a straight look at your current call flow and where the gaps are. [Book a free chat](https://amily.ai/#discovery) or email [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai).
 
 Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone +61 3 4714 0264.
 

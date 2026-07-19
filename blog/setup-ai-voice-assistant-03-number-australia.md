@@ -145,7 +145,7 @@ The honest answer is that the build is well within reach for a competent technic
 
 ---
 
-**Want me to do this for you?** Amily's AI Setup Consulting is a one-off AUD $2,500 for trades and hospitality, AUD $3,500 for professional services — you get a working AI receptionist with a Melbourne 03 number, Cal.com booking, SMS confirmations, and emergency escalation, in about a week. See [amily.ai/#setup](https://amily.ai/#setup) or email [anthony@amily.ai](mailto:anthony@amily.ai) to scope your build.
+**Want me to do this for you?** Amily's AI Setup Consulting is a one-off AUD $2,500 for trades and hospitality, AUD $3,500 for professional services — you get a working AI receptionist with a Melbourne 03 number, Cal.com booking, SMS confirmations, and emergency escalation, in about a week. See [amily.ai/#setup](https://amily.ai/#setup) or email [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai) to scope your build.
 
 **Not sure yet?** Book a free 15-min chat and we'll talk through your call volume, your current setup, and whether DIY or done-for-you makes more sense for your business. [amily.ai/#discovery](https://amily.ai/#discovery).
 

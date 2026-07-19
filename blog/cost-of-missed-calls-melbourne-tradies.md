@@ -88,7 +88,7 @@ If the question is now "how do I actually turn this on?", the full build sequenc
 
 ---
 
-**Want the calculator with your own numbers plugged in?** Book a free 15-min chat and we'll run your call volume, miss rate, and average job value through the same table — and tell you what an AI receptionist would save your business in year one. [amily.ai/#discovery](https://amily.ai/#discovery) or email [anthony@amily.ai](mailto:anthony@amily.ai).
+**Want the calculator with your own numbers plugged in?** Book a free 15-min chat and we'll run your call volume, miss rate, and average job value through the same table — and tell you what an AI receptionist would save your business in year one. [amily.ai/#discovery](https://amily.ai/#discovery) or email [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai).
 
 ## Which sources back up this tradie missed-call analysis?
 

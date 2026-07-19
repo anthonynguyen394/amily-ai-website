@@ -147,7 +147,7 @@ For a multi-practitioner clinic doing 200+ calls/week, the ROI case is even stro
 
 ---
 
-**Run a clinic? Let's talk about your specific setup.** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll walk you through what an AI receptionist looks like for an allied health practice that runs on Cliniko, ClinicM8, Halaxy, or another platform — including the red-flag escalation and the privacy collection notice. Or email me at [anthony@amily.ai](mailto:anthony@amily.ai).
+**Run a clinic? Let's talk about your specific setup.** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll walk you through what an AI receptionist looks like for an allied health practice that runs on Cliniko, ClinicM8, Halaxy, or another platform — including the red-flag escalation and the privacy collection notice. Or email me at [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai).
 
 If you'd rather read first, see the [Amily AI voice plans](https://amily.ai/#voice), the [setup process for professional services](https://amily.ai/#setup), and how [review management](https://amily.ai/#reviews) works alongside it. All plans include a local 03 number, 24/7 answering, Cal.com booking, no lock-in, and a 30-day money-back guarantee.
 
