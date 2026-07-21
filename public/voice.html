@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/favicon-256.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Studio -- Amily AI</title>
+    <meta name="description" content="Listen to the voices available for your Amily AI receptionist and pick the one that fits your business." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Google Fonts: Nunito, Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,700..800,0..100,0..1;1,9..144,700..800,0..100,0..1&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      :root {
+        --navy: #1e3a5f;
+        --navy-light: #2a4d7a;
+        --navy-dark: #152b47;
+        --terracotta: #c97b5d;
+        --terracotta-light: #d99575;
+        --cream: #faf5eb;
+        --cream-dark: #f0e8d8;
+        --charcoal: #0c1b30;
+        --mustard: #e8b04e;
+      }
+
+      body {
+        font-family: 'Nunito', sans-serif;
+        background: var(--cream);
+        color: var(--charcoal);
+        overflow-x: hidden;
+      }
+
+      /* Noise overlay, same as the main site */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+      }
+
+      .font-drama {
+        font-family: 'Fraunces', serif;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* ── Header ── */
+      .site-header {
+        border-bottom: 1px solid var(--cream-dark);
+        background: rgba(250, 245, 235, 0.9);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.1rem 0;
+      }
+
+      .logo-text {
+        font-family: 'Fraunces', serif;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+        font-weight: 800;
+        font-size: 1.35rem;
+        color: var(--navy);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: var(--navy-light);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+      }
+
+      .back-link:hover { color: var(--terracotta); }
+      .back-link svg { width: 1rem; height: 1rem; }
+
+      /* ── Hero ── */
+      .hero {
+        padding: 4.5rem 0 2.5rem;
+        text-align: center;
+      }
+
+      .hero-eyebrow {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--terracotta);
+        background: rgba(201, 123, 93, 0.1);
+        border: 1px solid rgba(201, 123, 93, 0.25);
+        border-radius: 999px;
+        padding: 0.4rem 1rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        color: var(--navy);
+        font-weight: 800;
+        margin-bottom: 1.1rem;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--terracotta);
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        line-height: 1.65;
+        color: var(--navy-light);
+        max-width: 34rem;
+        margin: 0 auto;
+      }
+
+      /* ── Voice cards ── */
+      .voices {
+        padding: 1.5rem 0 4rem;
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .voice-card {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(160deg, #fff6ec 0%, #faf5eb 55%, #f6e8d4 100%);
+        border: 1px solid rgba(201, 123, 93, 0.18);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(12, 27, 48, 0.07), 0 4px 6px -4px rgba(12, 27, 48, 0.07);
+        padding: 1.6rem 1.75rem;
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+      }
+
+      .voice-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 24px -6px rgba(12, 27, 48, 0.1), 0 6px 10px -4px rgba(12, 27, 48, 0.08);
+      }
+
+      .voice-card.featured {
+        border-color: rgba(201, 123, 93, 0.4);
+      }
+
+      .voice-card.featured::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--terracotta) 0%, var(--mustard) 100%);
+      }
+
+      .featured-badge {
+        position: absolute;
+        top: 1.1rem;
+        right: 1.25rem;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--terracotta);
+        background: rgba(201, 123, 93, 0.12);
+        border-radius: 999px;
+        padding: 0.28rem 0.7rem;
+      }
+
+      .play-btn {
+        flex: 0 0 auto;
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background: var(--navy);
+        color: var(--cream);
+        display: grid;
+        place-items: center;
+        transition: background 0.25s ease, transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .play-btn:hover {
+        background: var(--terracotta);
+        transform: scale(1.06);
+      }
+
+      .play-btn svg {
+        width: 1.3rem;
+        height: 1.3rem;
+        fill: currentColor;
+      }
+
+      .voice-card.playing .play-btn { background: var(--terracotta); }
+      .icon-pause { display: none; }
+      .voice-card.playing .icon-play { display: none; }
+      .voice-card.playing .icon-pause { display: block; }
+
+      .voice-info {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .voice-name-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.2rem;
+      }
+
+      .voice-name {
+        font-family: 'Fraunces', serif;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+        font-size: 1.45rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+      }
+
+      .voice-tagline {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--terracotta);
+      }
+
+      .voice-blurb {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        color: var(--navy-light);
+        margin-bottom: 0.75rem;
+        max-width: 36rem;
+      }
+
+      /* Progress bar */
+      .progress-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .progress-track {
+        position: relative;
+        flex: 1 1 auto;
+        height: 0.45rem;
+        border-radius: 999px;
+        background: var(--cream-dark);
+        cursor: pointer;
+      }
+
+      .progress-fill {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 0%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--terracotta) 0%, var(--mustard) 100%);
+        transition: width 0.1s linear;
+      }
+
+      .time-label {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--navy-light);
+        font-variant-numeric: tabular-nums;
+        flex: 0 0 auto;
+        min-width: 5.5ch;
+        text-align: right;
+      }
+
+      /* Waveform decoration while playing */
+      .wave {
+        display: none;
+        align-items: flex-end;
+        gap: 2px;
+        height: 1.1rem;
+        flex: 0 0 auto;
+      }
+
+      .voice-card.playing .wave { display: inline-flex; }
+
+      .wave span {
+        width: 3px;
+        border-radius: 2px;
+        background: var(--terracotta);
+        animation: wave 1s ease-in-out infinite;
+      }
+
+      .wave span:nth-child(1) { height: 40%; animation-delay: 0s; }
+      .wave span:nth-child(2) { height: 90%; animation-delay: 0.15s; }
+      .wave span:nth-child(3) { height: 60%; animation-delay: 0.3s; }
+      .wave span:nth-child(4) { height: 100%; animation-delay: 0.45s; }
+      .wave span:nth-child(5) { height: 50%; animation-delay: 0.6s; }
+
+      @keyframes wave {
+        0%, 100% { transform: scaleY(0.5); }
+        50% { transform: scaleY(1); }
+      }
+
+      /* ── Footer note ── */
+      .note-card {
+        background: var(--navy);
+        color: var(--cream);
+        border-radius: 1.5rem;
+        padding: 2rem 2.2rem;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .note-card h2 {
+        font-family: 'Fraunces', serif;
+        font-variation-settings: 'SOFT' 30, 'WONK' 1;
+        font-size: 1.5rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.6rem;
+      }
+
+      .note-card p {
+        color: rgba(250, 245, 235, 0.85);
+        line-height: 1.6;
+        max-width: 34rem;
+        margin: 0 auto;
+      }
+
+      .note-card a {
+        color: var(--mustard);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .note-card a:hover { text-decoration: underline; }
+
+      .site-footer {
+        border-top: 1px solid var(--cream-dark);
+        padding: 1.6rem 0 2rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--navy-light);
+      }
+
+      @media (max-width: 560px) {
+        .voice-card {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 1rem;
+        }
+
+        .play-btn {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+
+        .featured-badge { top: 0.9rem; right: 1rem; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="/" class="logo-text">amily.ai</a>
+          <a href="/" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            Back to home
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero -->
+      <section class="hero">
+        <span class="hero-eyebrow">Voice Studio</span>
+        <h1 class="font-drama">Pick the <em>voice</em> that answers your phone</h1>
+        <p>Your receptionist can speak in any of the voices below. Press play, have a listen, and tell us which one feels right for your business.</p>
+      </section>
+
+      <!-- Voice cards -->
+      <section class="voices" id="voices"></section>
+
+      <!-- Custom sample note -->
+      <section class="note-card">
+        <h2>Want to hear it with your own greeting?</h2>
+        <p>We can record a custom sample using your business name and greeting, in any of these voices, usually within a day. Just ask -- <a href="mailto:hello@amily.ai">hello@amily.ai</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">&copy; 2026 Amily AI &middot; ABN 86 758 863 858 &middot; Melbourne, Australia</div>
+    </footer>
+
+    <script>
+      const VOICES = [
+        {
+          slug: 'amily',
+          name: 'Amily',
+          tagline: 'The signature Amily voice',
+          blurb: 'Warm and naturally conversational, with an easy Australian accent. The voice our live receptionists use today.',
+          featured: true,
+        },
+        {
+          slug: 'charlotte',
+          name: 'Charlotte',
+          tagline: 'Warm and relatable',
+          blurb: 'An intimate, friendly Australian voice that puts callers at ease straight away.',
+          featured: false,
+        },
+        {
+          slug: 'harper',
+          name: 'Harper',
+          tagline: 'Crisp and professional',
+          blurb: 'A clear, welcoming Australian voice with a polished, front-desk feel.',
+          featured: false,
+        },
+        {
+          slug: 'rachel',
+          name: 'Rachel',
+          tagline: 'Fun and down-to-earth',
+          blurb: 'A warm, authentic Australian voice in her 30s. Friendly without being formal.',
+          featured: false,
+        },
+        {
+          slug: 'arabella',
+          name: 'Arabella',
+          tagline: 'Bright and engaging',
+          blurb: "A younger, energetic Australian voice that keeps every caller's attention.",
+          featured: false,
+        },
+        {
+          slug: 'addison',
+          name: 'Addison',
+          tagline: 'Calm and relaxed',
+          blurb: 'A relaxed, studio-quality Australian voice with a soothing, unhurried pace.',
+          featured: false,
+        },
+        {
+          slug: 'charlie',
+          name: 'Charlie',
+          tagline: 'Confident and energetic',
+          blurb: "A young Australian male voice with plenty of energy. A great fit if you'd prefer a male receptionist.",
+          featured: false,
+        },
+      ];
+
+      const fmt = (s) => {
+        if (!isFinite(s)) return '0:00';
+        const m = Math.floor(s / 60);
+        const r = Math.floor(s % 60);
+        return m + ':' + String(r).padStart(2, '0');
+      };
+
+      const root = document.getElementById('voices');
+
+      for (const v of VOICES) {
+        const card = document.createElement('article');
+        card.className = 'voice-card' + (v.featured ? ' featured' : '');
+        card.innerHTML = `
+          ${v.featured ? '<span class="featured-badge">Most popular</span>' : ''}
+          <button class="play-btn" aria-label="Play ${v.name} sample">
+            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5.14v13.72c0 .8.87 1.3 1.56.9l11.02-6.86a1.05 1.05 0 0 0 0-1.8L9.56 4.24A1.05 1.05 0 0 0 8 5.14Z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1.2"/><rect x="14" y="5" width="4" height="14" rx="1.2"/></svg>
+          </button>
+          <div class="voice-info">
+            <div class="voice-name-row">
+              <span class="voice-name font-drama">${v.name}</span>
+              <span class="voice-tagline">${v.tagline}</span>
+              <span class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+            </div>
+            <p class="voice-blurb">${v.blurb}</p>
+            <div class="progress-row">
+              <div class="progress-track" role="slider" aria-label="Seek ${v.name} sample">
+                <div class="progress-fill"></div>
+              </div>
+              <span class="time-label">0:00</span>
+            </div>
+          </div>
+        `;
+        root.appendChild(card);
+
+        const audio = new Audio('/assets/voice/' + v.slug + '.mp3');
+        audio.preload = 'metadata';
+        const btn = card.querySelector('.play-btn');
+        const fill = card.querySelector('.progress-fill');
+        const track = card.querySelector('.progress-track');
+        const label = card.querySelector('.time-label');
+
+        audio.addEventListener('loadedmetadata', () => { label.textContent = fmt(audio.duration); });
+
+        btn.addEventListener('click', () => {
+          if (audio.paused) {
+            // pause everything else first
+            document.querySelectorAll('.voice-card.playing').forEach((c) => c.dispatchEvent(new Event('amily:stop')));
+            audio.play();
+            card.classList.add('playing');
+          } else {
+            audio.pause();
+            card.classList.remove('playing');
+          }
+        });
+
+        card.addEventListener('amily:stop', () => {
+          audio.pause();
+          card.classList.remove('playing');
+        });
+
+        audio.addEventListener('timeupdate', () => {
+          fill.style.width = (audio.currentTime / audio.duration) * 100 + '%';
+          label.textContent = fmt(audio.currentTime);
+        });
+
+        audio.addEventListener('ended', () => {
+          card.classList.remove('playing');
+          fill.style.width = '0%';
+          label.textContent = fmt(audio.duration);
+        });
+
+        track.addEventListener('click', (e) => {
+          const rect = track.getBoundingClientRect();
+          audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+        });
+      }
+    </script>
+  </body>
+</html>
