@@ -86,14 +86,24 @@
       }
 
       .logo-text {
-        font-family: 'Fraunces', serif;
-        font-variation-settings: 'SOFT' 30, 'WONK' 1;
-        font-weight: 800;
-        font-size: 1.35rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
         color: var(--navy);
         text-decoration: none;
         letter-spacing: -0.02em;
       }
+
+      .logo-text img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.5rem;
+      }
+
+      .logo-text .logo-ai { color: var(--terracotta); }
 
       .back-link {
         display: inline-flex;
@@ -431,7 +441,13 @@
     <header class="site-header">
       <div class="container">
         <div class="header-inner">
-          <a href="/" class="logo-text">amily.ai</a>
+          <a href="/" class="logo-text">
+            <picture>
+              <source srcset="/assets/logo-full-transparent.webp" type="image/webp" />
+              <img src="/assets/logo-full-transparent.png" alt="Amily AI" width="32" height="32" decoding="async" />
+            </picture>
+            <span>amily<span class="logo-ai">.ai</span></span>
+          </a>
           <a href="/" class="back-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
             Back to home
