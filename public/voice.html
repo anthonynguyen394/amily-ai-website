@@ -151,6 +151,41 @@
         margin: 0 auto;
       }
 
+      /* ── Gender filter ── */
+      .filter-row {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-top: 1.8rem;
+      }
+
+      .filter-btn {
+        font-family: 'Nunito', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: var(--navy);
+        background: transparent;
+        border: 1.5px solid var(--cream-dark);
+        border-radius: 999px;
+        padding: 0.55rem 1.3rem;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .filter-btn:hover {
+        border-color: var(--terracotta);
+        color: var(--terracotta);
+      }
+
+      .filter-btn.active {
+        background: var(--navy);
+        border-color: var(--navy);
+        color: var(--cream);
+      }
+
+      .voice-card.filtered-out { display: none; }
+
       /* ── Voice cards ── */
       .voices {
         padding: 1.5rem 0 4rem;
@@ -411,6 +446,11 @@
         <span class="hero-eyebrow">Voice Studio</span>
         <h1 class="font-drama">Pick the <em>voice</em> that answers your phone</h1>
         <p>Your receptionist can speak in any of the voices below. Press play, have a listen, and tell us which one feels right for your business.</p>
+        <div class="filter-row" role="group" aria-label="Filter voices">
+          <button class="filter-btn active" data-filter="all">All voices</button>
+          <button class="filter-btn" data-filter="female">Female</button>
+          <button class="filter-btn" data-filter="male">Male</button>
+        </div>
       </section>
 
       <!-- Voice cards -->
@@ -432,6 +472,7 @@
         {
           slug: 'amily',
           name: 'Amily',
+          gender: 'female',
           tagline: 'The signature Amily voice',
           blurb: 'Warm and naturally conversational, with an easy Australian accent. The voice our live receptionists use today.',
           featured: true,
@@ -439,6 +480,7 @@
         {
           slug: 'charlotte',
           name: 'Charlotte',
+          gender: 'female',
           tagline: 'Warm and relatable',
           blurb: 'An intimate, friendly Australian voice that puts callers at ease straight away.',
           featured: false,
@@ -446,6 +488,7 @@
         {
           slug: 'harper',
           name: 'Harper',
+          gender: 'female',
           tagline: 'Crisp and professional',
           blurb: 'A clear, welcoming Australian voice with a polished, front-desk feel.',
           featured: false,
@@ -453,6 +496,7 @@
         {
           slug: 'rachel',
           name: 'Rachel',
+          gender: 'female',
           tagline: 'Fun and down-to-earth',
           blurb: 'A warm, authentic Australian voice in her 30s. Friendly without being formal.',
           featured: false,
@@ -460,6 +504,7 @@
         {
           slug: 'arabella',
           name: 'Arabella',
+          gender: 'female',
           tagline: 'Bright and engaging',
           blurb: "A younger, energetic Australian voice that keeps every caller's attention.",
           featured: false,
@@ -467,6 +512,7 @@
         {
           slug: 'addison',
           name: 'Addison',
+          gender: 'female',
           tagline: 'Calm and relaxed',
           blurb: 'A relaxed, studio-quality Australian voice with a soothing, unhurried pace.',
           featured: false,
@@ -474,8 +520,33 @@
         {
           slug: 'charlie',
           name: 'Charlie',
+          gender: 'male',
           tagline: 'Confident and energetic',
-          blurb: "A young Australian male voice with plenty of energy. A great fit if you'd prefer a male receptionist.",
+          blurb: 'A young Australian male voice with plenty of energy and a bright, upbeat delivery.',
+          featured: false,
+        },
+        {
+          slug: 'alex',
+          name: 'Alex',
+          gender: 'male',
+          tagline: 'Natural and professional',
+          blurb: 'An Australian voice in his mid 30s. Relaxed and professional, easy to listen to.',
+          featured: false,
+        },
+        {
+          slug: 'tom',
+          name: 'Tom',
+          gender: 'male',
+          tagline: 'Easygoing and clear',
+          blurb: 'A natural, conversational Australian voice with an easygoing tone that stays clear and friendly.',
+          featured: false,
+        },
+        {
+          slug: 'josh',
+          name: 'Josh',
+          gender: 'male',
+          tagline: 'Friendly and capable',
+          blurb: 'A warm, steady Australian voice made for assistant work. Reassuring without being stiff.',
           featured: false,
         },
       ];
@@ -492,6 +563,7 @@
       for (const v of VOICES) {
         const card = document.createElement('article');
         card.className = 'voice-card' + (v.featured ? ' featured' : '');
+        card.dataset.gender = v.gender;
         card.innerHTML = `
           ${v.featured ? '<span class="featured-badge">Most popular</span>' : ''}
           <button class="play-btn" aria-label="Play ${v.name} sample">
@@ -557,6 +629,22 @@
           audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
         });
       }
+
+      // Gender filter
+      document.querySelectorAll('.filter-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          const f = btn.dataset.filter;
+          document.querySelectorAll('.voice-card').forEach((card) => {
+            const hide = f !== 'all' && card.dataset.gender !== f;
+            card.classList.toggle('filtered-out', hide);
+            if (hide && card.classList.contains('playing')) {
+              card.dispatchEvent(new Event('amily:stop'));
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
