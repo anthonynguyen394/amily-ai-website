@@ -1,10 +1,10 @@
 # Amily AI
 
-> Australian-built AI voice receptionist for Melbourne small businesses. Answers calls 24/7, books jobs, and routes emergencies, with full Privacy Act 1988 and Victoria Surveillance Devices Act 1999 compliance. Built for tradies, cafes, allied health clinics, and professional services that lose 22-62% of inbound calls.
+> Australian-built AI voice receptionist for Melbourne small businesses. Answers calls, books jobs, and routes emergencies, with full Privacy Act 1988 and Victoria Surveillance Devices Act 1999 compliance. Built for tradies, cafes, allied health clinics, and professional services that lose 22-62% of inbound calls.
 
-Amily AI is operated by Anthony Nguyen (ABN 86 758 863 858) and based in Melbourne, Victoria, Australia. The service combines AI voice agents (ElevenLabs) with workflow automation (n8n) and integrates directly with the tools Australian small businesses already run: Google Calendar, Cal.com, ServiceM8, Simpro, Tradify, Cliniko, and Halaxy.
+Amily AI is operated by Anthony Nguyen (ABN 86 758 863 858) and based in Melbourne, Victoria, Australia. The service combines AI voice agents (ElevenLabs) with workflow automation (n8n).
 
-Pricing (AUD): voice receptionist plans A$149/month (Starter), A$199/month (Core), A$249/month (Pro); review management from A$99/month standalone or A$149/month bundled; one-off setup A$2,500 (trades, hospitality) or A$3,500 (professional services); ongoing support add-on A$299/month. Typically less than the revenue from a single missed job. We offer a 30-day ROI guarantee: measurable bookings, reviews, or time saved within 30 days, or we refund the setup fee.
+Pricing (AUD): Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you. Typically less than the revenue from a single missed job. We offer a 30-day ROI guarantee: measurable bookings, reviews, or time saved within 30 days, or we refund the setup fee.
 
 Compliance posture:
 - Privacy Act 1988 (Australian Privacy Principles APP 1-13) — opt-in disclosure, encrypted Australian-hosted storage, per-tenant data isolation, no general-model training on customer calls.
@@ -15,18 +15,18 @@ Compliance posture:
 ## Pages
 
 - [Home](https://amily.ai/): Your local AI guide for Melbourne small business — overview, services, and 30-day ROI guarantee.
-- [AI voice receptionist for Melbourne small business](https://amily.ai/ai-voice-receptionist-melbourne-small-business): Detailed product page, pricing, integrations, and Australian compliance breakdown.
+- [AI voice receptionist for Melbourne small business](https://amily.ai/ai-voice-receptionist-melbourne-small-business): Detailed product page, pricing, and Australian compliance breakdown. Amily Voice is $249 a month plus GST, with a one-off $500 setup.
 - [Blog](https://amily.ai/blog): Writing on AI voice receptionists, Australian privacy law, and Melbourne small business growth.
 - [Why Melbourne tradies miss 22% of calls](https://amily.ai/blog/melbourne-tradies-missed-calls-cost): The maths, the reasons, and what tradies are doing about the A$35,000/year missed-call problem.
 - [How to set up an AI voice assistant for an Australian 03 number](https://amily.ai/blog/setup-ai-voice-assistant-03-number-australia): Step-by-step Twilio to ElevenLabs to n8n to Cal.com, with cost breakdown and the gotchas.
 - [The true cost of missed calls for Melbourne plumbers and electricians](https://amily.ai/blog/cost-of-missed-calls-melbourne-tradies): The real maths — call volume × miss rate × job value — plus a calculator and the AI receptionist break-even.
-- [Best AI phone assistant for tradies using ServiceM8 or Tradify (2026)](https://amily.ai/blog/best-ai-phone-assistant-servicem8-tradify-australia): How Amily AI handles the call, captures the job, and connects to your existing job management software via API.
+- [AI Phone Assistant for Melbourne Tradies: $249/mo + GST](https://amily.ai/blog/best-ai-phone-assistant-servicem8-tradify-australia): How Amily AI handles the call and captures the job. Amily Voice is $249 a month plus GST, with a one-off $500 setup.
 - [Amily AI vs US virtual receptionists: 2026 Australian Privacy Act compliance](https://amily.ai/blog/amily-ai-vs-us-virtual-receptionists-privacy-act-compliance): Why US-based virtual receptionists can leave Aussie small businesses exposed under Privacy Act 2024, and what APP-native looks like.
-- [How much does a virtual receptionist cost in Melbourne? (2026 pricing guide)](https://amily.ai/blog/virtual-receptionist-cost-melbourne-2026): Real AUD pricing compared — human ($90k+), offshore call centre, and AI ($149-249/mo).
-- [Why Victorian allied health clinics are switching to AI phone booking](https://amily.ai/blog/victorian-allied-health-clinics-ai-phone-booking): APP 11 + My Health Records + PMS-compatible workflows (Cliniko, ClinicM8, Halaxy), plus the triage line AI must not cross.
-- [What is an AI receptionist?](https://amily.ai/blog/what-is-an-ai-receptionist): 2026 definition — a 24/7 voice agent that answers business calls, books appointments, and sends SMS confirmations using natural speech; how it works, what it costs, when to use one.
-- [AI vs human receptionist (2026)](https://amily.ai/blog/ai-receptionist-vs-human-receptionist): Side-by-side capability matrix — cost, 24/7 coverage, Privacy Act 1988 and APP 5 disclosure, and when each makes sense for a Melbourne small business.
-- [AI receptionist for Melbourne CBD](https://amily.ai/blog/service-area-melbourne-cbd): 24/7 phone answering for CBD tradies and allied health — plumbers, electricians, physios, dentists; books into ServiceM8, Cliniko, Halaxy.
+- [How much does a virtual receptionist cost in Melbourne? (2026 pricing guide)](https://amily.ai/blog/virtual-receptionist-cost-melbourne-2026): Real AUD pricing compared — human ($90k+), offshore call centre, and Amily Voice at $249 a month plus GST with a one-off $500 setup.
+- [Why Victorian allied health clinics are switching to AI phone booking](https://amily.ai/blog/victorian-allied-health-clinics-ai-phone-booking): APP 11, My Health Records, and the triage line AI must not cross. Amily Voice is $249 a month plus GST, with a one-off $500 setup.
+- [What is an AI receptionist?](https://amily.ai/blog/what-is-an-ai-receptionist): 2026 definition — a voice agent that answers business calls, books appointments, and sends SMS confirmations using natural speech; how it works, what it costs, when to use one.
+- [AI vs human receptionist (2026)](https://amily.ai/blog/ai-receptionist-vs-human-receptionist): Side-by-side capability matrix — cost, Privacy Act 1988 and APP 5 disclosure, and when each makes sense for a Melbourne small business.
+- [AI receptionist for Melbourne CBD](https://amily.ai/blog/service-area-melbourne-cbd): Phone answering for CBD tradies and allied health — plumbers, electricians, physios, dentists. Amily Voice is $249 a month plus GST, with a one-off $500 setup.
 - [AI receptionist for St Kilda, Prahran and South-East Melbourne](https://amily.ai/blog/service-area-st-kilda-south-east): Local coverage for St Kilda, Prahran, Caulfield, and Elsternwick trades and clinics.
 - [AI receptionist for Box Hill, Ringwood and the Eastern Suburbs](https://amily.ai/blog/service-area-box-hill-eastern-suburbs): Local coverage for Box Hill, Ringwood, Camberwell, and Doncaster trades and clinics.
 - [AI receptionist for Brunswick, Preston and the Northern Suburbs](https://amily.ai/blog/service-area-brunswick-northern-suburbs): Local coverage for Brunswick, Preston, Northcote, and Thornbury trades and clinics.
@@ -35,7 +35,7 @@ Compliance posture:
 
 ## Services
 
-- AI Voice Receptionist — 24/7 call answering, job booking, emergency routing, SMS summary to owner.
+- AI Voice Receptionist — call answering, job booking, emergency routing, SMS summary to owner. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 - Smart Review Management — automated Google Business Profile review requests.
 - AI Setup Consulting — hands-on implementation for small businesses without the tech headache.
 
@@ -53,5 +53,4 @@ Compliance posture:
 - Australian voice and accent, not American.
 - AU data residency by default, not opt-in.
 - AU compliance — Privacy Act 1988, Privacy and Other Legislation Amendment Act 2024, Victoria SDA 1999, OAIC 2024 AI guidance — built in, not retrofitted.
-- Local AU integrations: ServiceM8, Tradify, Simpro, Cliniko, Halaxy.
-- Solo-founder, hands-on setup. Not a self-serve SaaS dashboard.
+- Solo-founder, hands-on setup. Not a self-serve SaaS dashboard. We set it up and tune it for you.

@@ -9,7 +9,7 @@ faq:
   - q: "What is the average job value for a Melbourne plumber?"
     a: "The average job value for a solo Melbourne plumber sits in the AUD $400-$700 range once you mix maintenance calls, repairs, and small installations. Emergency callouts (after-hours, weekends) push $500-$1,200. Renovation work and hot water unit replacements can run $1,500-$3,500. The wider the spread, the more sensitive your business is to missed calls — losing one hot water replacement is a $2,000 hit. The $500 figure used in the calculator above is a defensible middle."
   - q: "How much does an after-hours answering service cost in Australia?"
-    a: "A traditional after-hours answering service in Australia runs $2-$4/minute of call time, with a typical setup fee of $200-$500. At 10 calls a week averaging 3 minutes each, that is $240-$480/month — and you still get a human reading from a script, not a local 03 number or a calendar booking. An AI receptionist at a flat $149-$249/month is cheaper, takes bookings directly, and never sends a busy tradie a 'customer waiting on hold' message at 6am."
+    a: "A traditional after-hours answering service in Australia runs $2-$4/minute of call time, with a typical setup fee of $200-$500. At 10 calls a week averaging 3 minutes each, that is $240-$480/month — and you still get a human reading from a script, not a local 03 number or a calendar booking. An AI receptionist at a flat $249 a month plus GST is cheaper, takes bookings directly, and never sends a busy tradie a 'customer waiting on hold' message at 6am."
   - q: "Do customers care if the receptionist is an AI?"
     a: "Most customers do not care, provided the AI is warm, fast, and gets them what they need. A well-tuned voice agent asks the same questions a real receptionist would (job type, address, urgency, preferred time) and books the appointment before the caller has time to feel impatient. The 14.2% conversion rate of AI-referred visitors versus 2.8% for traditional organic traffic suggests that customers who arrive through AI-assisted search are already primed to engage with AI-assisted services [Source: 79dev, State of AI Search 2026]. The same pattern holds on the phone: callers who get a fast, clear answer book."
   - q: "Can an AI receptionist handle tradie emergencies?"
@@ -24,12 +24,12 @@ faq:
 > - A single missed call to a Melbourne tradie is worth $200-$800 in lost job value — usually because the caller books the next name on Google.
 > - Industry research puts the average annual cost of missed calls at about **AUD $52,000** for a solo plumber or electrician.
 > - Most tradies miss 6-10 calls a week (20-30% during work, 100% after hours).
-> - A human receptionist costs $3,500-$5,000/month in Melbourne. An AI receptionist with a local 03 number starts at **AUD $149/month** and pays for itself if it saves just two $250 jobs a month.
+> - A human receptionist costs $3,500-$5,000/month in Melbourne. An AI receptionist with a local 03 number is **$249 a month plus GST, with a one-off $500 setup** and pays for itself if it saves just two $250 jobs a month.
 > - 93% of Google AI Mode queries end without a click to a website, which means showing up in AI answers matters as much as ranking on page one [Source: 79dev, State of AI Search 2026].
 
-A missed call to a solo Melbourne plumber or electrician costs between $200 and $800 in lost revenue, depending on the job. Industry research puts the average tradie's annual loss from missed calls at roughly $52,000 — about 25% of a typical small trade business's revenue. The math is brutal and simple: most tradies field 15-30 calls a week, miss 20-30% of them during work hours, and miss 100% of after-hours calls when an emergency is brewing. Each missed call is a customer who has already decided to book, then called the next name on Google. The full cost stack — against a $7,000/month fully-loaded human, an offshore call centre, and a DIY voicemail — is laid out in [AI Receptionist Cost in Melbourne: From $149/mo](/blog/virtual-receptionist-cost-melbourne-2026).
+A missed call to a solo Melbourne plumber or electrician costs between $200 and $800 in lost revenue, depending on the job. Industry research puts the average tradie's annual loss from missed calls at roughly $52,000 — about 25% of a typical small trade business's revenue. The math is brutal and simple: most tradies field 15-30 calls a week, miss 20-30% of them during work hours, and miss 100% of after-hours calls when an emergency is brewing. Each missed call is a customer who has already decided to book, then called the next name on Google. The full cost stack — against a $7,000/month fully-loaded human, an offshore call centre, and a DIY voicemail — is laid out in [AI Receptionist Cost in Melbourne: $249/mo + GST](/blog/virtual-receptionist-cost-melbourne-2026).
 
-This post breaks down the real numbers — call volume, miss rate, average job value, conversion rate — into a calculator you can use for your own business. It also walks through what it costs to stop missing those calls: a human receptionist ($3,500-$5,000/month in Melbourne), a call centre ($2/minute plus setup), or an AI receptionist with a local 03 number (Amily's plans start at $149/month). The headline: an AI receptionist pays for itself the moment it saves two $250 jobs a month that would otherwise have rung out.
+This post breaks down the real numbers — call volume, miss rate, average job value, conversion rate — into a calculator you can use for your own business. It also walks through what it costs to stop missing those calls: a human receptionist ($3,500-$5,000/month in Melbourne), a call centre ($2/minute plus setup), or an AI receptionist with a local 03 number (Amily's plans start at $249 a month plus GST, with a one-off $500 setup). The headline: an AI receptionist pays for itself the moment it saves two $250 jobs a month that would otherwise have rung out.
 
 ## How much does a missed call really cost a Melbourne plumber or electrician?
 
@@ -64,13 +64,11 @@ Two levers matter most: **miss rate** and **conversion percentage**. Cutting mis
 
 ## How does an AI receptionist pay for itself in the first month?
 
-An AI receptionist pays for itself the moment it captures one or two jobs a month that would otherwise have gone to voicemail. Amily's plans start at **AUD $149/month** for 50 calls, AUD $199/month for 150 calls, and AUD $249/month for unlimited — every plan includes a local Melbourne 03 number, 24/7 answering, Cal.com booking, and SMS summaries. See the full plan comparison at [amily.ai/#voice](https://amily.ai/#voice).
+An AI receptionist pays for itself the moment it captures one or two jobs a month that would otherwise have gone to voicemail. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you. See the full plan comparison at [amily.ai/#voice](https://amily.ai/#voice).
 
 Do the simple math:
 
-- **Starter plan ($149/month):** save two $250 jobs = $500 - $149 = **$351 in front**.
-- **Core plan ($199/month):** save two $400 jobs = $800 - $199 = **$601 in front**.
-- **Pro plan ($249/month):** save three $500 jobs = $1,500 - $249 = **$1,251 in front**.
+- Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 
 The break-even point is one or two saved jobs a month. Most tradies save 8-15 in the first 30 days. The plan is structured to make the decision a no-brainer: you spend less than the cost of one callout to capture a month of bookings you would otherwise have lost.
 
@@ -80,7 +78,7 @@ Compare that to the alternatives. A part-time human receptionist in Melbourne ru
 
 Most tradies know the cost and keep answering the phone themselves because the alternatives feel like a bigger commitment than the problem. A human receptionist is expensive and high-friction. A call centre is impersonal and charges by the minute. An overseas live answering service is cheap but does not sound like a local tradie's office.
 
-An AI receptionist with a local 03 number is the middle path — always on, never sick, never on holiday, never training the next new hire. It sounds warm and conversational (try [Amily's demo](https://amily.ai/#voice) to hear for yourself), it knows your business hours and your services, and it hands a real job to your calendar or your phone when the call is one you need to take personally. There is no lock-in, no setup fee, and no long contract.
+An AI receptionist with a local 03 number is the middle path — always on, never sick, never on holiday, never training the next new hire. It sounds warm and conversational (try [Amily's demo](https://amily.ai/#voice) to hear for yourself), it knows your business hours and your services, and it hands a real job to your calendar or your phone when the call is one you need to take personally. There is no lock-in and no long contract. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 
 The other reason tradies delay is that the cost of the problem is invisible. There is no line item on the P&L for "calls we missed". The $52,000 shows up as a quiet year — slightly fewer jobs, slightly tighter cashflow, slightly more "we're not as busy as we used to be". Once you see the number in the table above, the decision is no longer about cost. It is about how much longer you want to keep paying it.
 

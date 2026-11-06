@@ -1,6 +1,6 @@
 ---
-title: "Victorian Allied Health: Why AI Phone Booking Wins in 2026 (APP 11, from $149/mo)"
-description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 + My Health Records + Cliniko + Halaxy workflows. The 3 calls AI must never triage. From $149/mo."
+title: "Victorian Allied Health: Why AI Phone Booking Wins in 2026 (APP 11, $249/mo + GST)"
+description: "Victorian allied health clinics are switching to AI phone booking in 2026. APP 11 and My Health Records. The 3 calls AI must never triage. $249/mo + GST."
 date: 2026-06-04
 updated: 2026-07-03
 image: /assets/post-04-hero.png
@@ -8,8 +8,8 @@ tags: [allied-health, physio, ai-receptionist, melbourne, app-11, cliniko]
 faq:
   - q: "Is AI phone booking legal for allied health clinics in Victoria?"
     a: "Yes, with the right configuration. AI phone booking is legal provided the system gives proper disclosure (APP 5), protects health information (APP 11), discloses overseas data handling (APP 8), and never makes clinical decisions or provides clinical advice. The booking function itself is administrative, not clinical, so it sits outside AHPRA and practice registration requirements."
-  - q: "Can AI receptionists access Cliniko, ClinicM8, or Halaxy?"
-    a: "Yes — all three PMS platforms have documented APIs, and an AI receptionist's workflow layer (such as n8n) can be configured to check real-time availability and book appointments into the practitioner's calendar. The integration is set up per clinic and typically takes 1-2 weeks to configure and test properly."
+  - q: "What does Amily Voice cost?"
+    a: "Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you."
   - q: "What happens if a patient calls with a medical emergency?"
     a: "A properly-configured AI receptionist for allied health will recognise red-flag presentations (chest pain, stroke symptoms, suicidal ideation, anaphylaxis, severe bleeding) and escalate immediately to a human — either the practitioner on call or, if unavailable, instruct the caller to dial 000. The AI never improvises clinical advice and never attempts to triage the call."
   - q: "Do AI receptionists store patient health information?"
@@ -22,7 +22,7 @@ faq:
 
 > **TL;DR**
 > - Small Victorian allied health clinics miss roughly a third of inbound calls during peak hours, and the calls they miss are most often patients in acute pain seeking first-contact care [Source: Slowiak, *Journal of Organizational Behavior Management*, 2014 — the only peer-reviewed clinic study; US, single clinic, no equivalent Australian allied-health study was located].
-> - An AI phone-booking system that is compatible with **Cliniko, ClinicM8, or Halaxy** (the three dominant AU allied-health practice management platforms) can answer every call in under two rings, collect the right intake info, and book into the practitioner's calendar via API.
+> - An AI phone-booking system can answer every call in under two rings and collect the right intake info. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 > - The hard line: **AI must never make a clinical triage call** — chest pain, suicidal ideation, anaphylaxis, post-op complications, suspected stroke. Those calls escalate to a human immediately, every time. This is a legal and ethical floor, not a feature.
 > - Health information is regulated by **Australian Privacy Principle (APP) 11** and, where it intersects with the My Health Records system, the **My Health Records Act 2012** [Source: OAIC, 2024]. Any AI receptionist handling patient intake must be configured to capture, store, and disclose data accordingly.
 > - Amily AI is one of the few Australian AI receptionists built with APP 11 in mind from day one: configurable disclosure wording, encrypted call recordings, no training of third-party LLMs on your data, and a privacy collection notice ready to drop into your patient onboarding.
@@ -97,21 +97,11 @@ This is not a feature list. It is the floor. If a vendor's demo doesn't walk you
 
 Amily AI's allied-health configuration bakes these in as defaults. The voice agent's system prompt, opening line, and escalation tree are designed around the principle: **collect what we need to book, hand off what we can't safely handle, never improvise clinical advice.**
 
-## How do AI receptionists work with ClinicM8, Cliniko, and Halaxy?
+## What should a clinic ask before it buys an AI phone system?
 
-The three practice management systems (PMS) most Victorian allied health clinics use each have a documented API or webhook layer that an AI receptionist can talk to. Here's the practical picture:
+Ask what the system will and will not do with patient information, and how an urgent call reaches a person.
 
-| PMS | Best for | API access | What the AI workflow can do |
-|---|---|---|---|
-| **Cliniko** | Physio, chiro, osteo, myo, psychology | REST API with API key | Check real-time availability, book into practitioner calendar, create patient record |
-| **ClinicM8** | Chiro, osteo, multi-modality allied health | REST API, ChiroAustralia-aligned | Book, capture intake, link to rebook reminders |
-| **Halaxy** | Multi-discipline practices, NDIS-heavy | REST API, broader healthcare | Book, update patient demographics, trigger Halaxy reminders |
-
-The right AI integration reads availability live (so you don't double-book), writes the appointment back to the PMS (so your practitioner's diary is the source of truth), and updates the patient record with the intake info the AI captured. Done well, the practitioner walks into the consult with the patient already in the system and the reason-for-visit populated.
-
-Done poorly, you get double-bookings, missed reminders, and a practitioner who has to re-enter everything the AI already collected. The difference is in the integration depth — a Cal.com-only setup won't cut it for a busy clinic. You need a PMS-aware workflow.
-
-Amily AI's allied health setup can be configured to connect with Cliniko, ClinicM8, or Halaxy via n8n workflows. The integration is set up per clinic as part of the [Professional Services consulting package](https://amily.ai/#setup) at $3,500 one-off (which includes dental, physio, and chiro verticals), with an optional $299/month retainer for ongoing tuning. The setup includes API credentials, scoped permissions, test bookings, and a privacy collection notice.
+Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 
 ## What does a Victorian privacy collection notice need to say?
 
@@ -135,21 +125,17 @@ For a single-practitioner allied health clinic in Melbourne, the realistic cost 
 
 | Item | Cost (AUD) | Notes |
 |---|---|---|
-| Amily AI Core | $199/month | Includes 03 number, 24/7 answering, Cal.com booking, SMS summaries |
-| PMS connection (Cliniko / ClinicM8 / Halaxy) | Included in setup consulting | Configured per clinic; $3,500 one-off for full professional services package |
-| AI setup consulting (one-off) | $3,500 | Workflow design, voice agent tuning, PMS configuration, APP 11 documentation |
-| Optional retainer | $299/month | Ongoing tuning, new patient scripts, after-hours change management |
-| **Realistic all-in for year 1** | **~$5,900-9,500** | **Depending on retainer and integration depth** |
+| **Amily Voice** | **$249 + GST** | **One-off $500 setup. We set it up and tune it for you.** |
 
-Compare to a part-time human receptionist at 2-3 days/week, which runs $2,800-3,500/month ($33,600-42,000/year) and only covers business hours. AI at $5,900-9,500 all-in for year one is roughly **one quarter of the cost** of part-time human cover, and it includes 24/7 answering, never takes a sick day, and doesn't need management.
+Compare to a part-time human receptionist at 2-3 days/week, which runs $2,800-3,500/month ($33,600-42,000/year) and only covers business hours. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 
 For a multi-practitioner clinic doing 200+ calls/week, the ROI case is even stronger — most practices we work with see payback inside 6-8 weeks from captured after-hours bookings alone.
 
 ---
 
-**Run a clinic? Let's talk about your specific setup.** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll walk you through what an AI receptionist looks like for an allied health practice that runs on Cliniko, ClinicM8, Halaxy, or another platform — including the red-flag escalation and the privacy collection notice. Or email me at [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai).
+**Run a clinic? Let's talk about your specific setup.** [Book a free 15-min chat](https://amily.ai/#discovery) and I'll walk you through what an AI receptionist looks like for an allied health practice, including the red-flag escalation and the privacy collection notice. Or email me at [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai).
 
-If you'd rather read first, see the [Amily AI voice plans](https://amily.ai/#voice), the [setup process for professional services](https://amily.ai/#setup), and how [review management](https://amily.ai/#reviews) works alongside it. All plans include a local 03 number, 24/7 answering, Cal.com booking, no lock-in, and a 30-day money-back guarantee.
+If you'd rather read first, see the [Amily AI voice plans](https://amily.ai/#voice), the [setup process for professional services](https://amily.ai/#setup), and how [review management](https://amily.ai/#reviews) works alongside it. All plans include a local 03 number, call answering, Cal.com booking, no lock-in, and a 30-day money-back guarantee.
 
 ## Which sources back up this allied health privacy guide?
 
@@ -162,6 +148,6 @@ If you'd rather read first, see the [Amily AI voice plans](https://amily.ai/#voi
 - [ClinicM8 API documentation, 2026](https://www.clinicm8.com.au/) — Chiro and allied health PMS API
 - [Halaxy API documentation, 2026](https://www.halaxy.com/) — Multi-discipline practice management integration
 - [Amily AI — Professional Services setup package, 2026](https://amily.ai/#setup) — Allied health integration scope and pricing
-- [Amily AI — Voice receptionist pricing, 2026](https://amily.ai/#voice) — Core plan $199/month AUD with 03 number and 24/7 answering
+- [Amily AI — Voice receptionist pricing, 2026](https://amily.ai/#voice) — $249 a month plus GST, with a one-off $500 setup
 - [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search) — AI Mode no-click behaviour and conversion benchmarks
 - [Slowiak, J. (2014), "How may I help you? Improving telephone customer service in a medical clinic setting", *Journal of Organizational Behavior Management*](https://www.tandfonline.com/doi/abs/10.1080/01608061.2013.873382) — the only peer-reviewed study on clinic missed-call rates; US, single clinic, paywalled, used here as a directional anchor in the absence of any equivalent Australian allied-health data.

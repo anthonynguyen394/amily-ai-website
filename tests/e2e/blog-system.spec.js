@@ -146,11 +146,11 @@ test.describe('landing page (layout=landing)', () => {
     const tables = page.locator('.post-body table');
     await expect(tables).toHaveCount(2);
     // pricing table first
-    await expect(tables.first()).toContainText('$149');
     await expect(tables.first()).toContainText('$249');
-    await expect(tables.first()).toContainText('$399');
+    await expect(tables.first()).toContainText('$500');
+    await expect(tables.first()).not.toContainText('$149');
     // comparison table second
-    await expect(tables.nth(1)).toContainText('24/7');
+    await expect(tables.nth(1)).not.toContainText('24/7');
     await expect(tables.nth(1)).toContainText('Unlimited');
   });
 
