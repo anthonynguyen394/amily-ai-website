@@ -89,7 +89,7 @@ A typical onboarding with Amily takes about an afternoon:
 1. **Discovery chat** — Anthony spends 15 minutes understanding your call flow, after-hours expectations and emergency escalation rules. [Book a free chat](https://amily.ai/#discovery).
 2. **Setup** — your existing 03 number is ported or a new one is provisioned through Twilio, the AI script is written in plain English with your services, pricing bands and service area, and the privacy policy template is filled in.
 3. **Test** — a handful of practice calls with your team, including a tricky complaint and an after-hours emergency.
-4. **Go live** — usually within five business days. Monthly plans start at AUD $149 for the [Voice Receptionist Starter](https://amily.ai/#voice) and scale up to AUD $249 for unlimited calls. Review management is AUD $99 standalone or $149 bundled.
+4. **Go live** — usually within five business days. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 
 ---
 
@@ -108,4 +108,4 @@ Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone 
 - [Semrush — AI Overviews and B2B citation patterns, 2025](https://www.semrush.com/blog/semrush-ai-overviews-study/) — supports the 82.9% third-party citation and 46.7% Reddit pull figures used across the amily.ai SEO corpus
 - [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search-2026) — supports the 93% zero-click and 14.2% AI conversion figures used across the amily.ai SEO corpus
 - [DiscoveredLabs — FCP and AI citation correlation study](https://www.discoveredlabs.com/blog/fcp-ai-citations) — supports the 6.7 vs 2.1 citation figure tied to fast first-contentful-paint
-- [Amily AI — Voice Receptionist pricing](https://amily.ai/#voice) — backs the AUD $149 / $199 / $249 plan tiers quoted in this post
+- [Amily AI — Voice Receptionist pricing](https://amily.ai/#voice) — backs the $249 a month plus GST, with a one-off $500 setup quoted in this post

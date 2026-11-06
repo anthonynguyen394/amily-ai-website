@@ -1,19 +1,19 @@
 ---
-title: "AI vs Human Receptionist 2026: from $149/mo vs $7,000/mo + 5x Coverage | Melbourne"
-description: "AI vs human receptionist in 2026: from $149/mo AI vs $7,000-$8,300/mo human fully-loaded. Side-by-side capability matrix, 24/7 coverage, Privacy Act 1988, APP 5 disclosure, when to use each."
+title: "AI vs Human Receptionist 2026: $249/mo + GST vs $7,000/mo + 5x Coverage | Melbourne"
+description: "AI vs human receptionist in 2026: $249/mo + GST AI vs $7,000-$8,300/mo human fully-loaded. Side-by-side capability matrix, call coverage, Privacy Act 1988, APP 5 disclosure, when to use each."
 date: 2026-06-11
 updated: 2026-07-03
 image: /assets/post-01-hero.png
 tags: [ai receptionist, human receptionist, comparison, melbourne, small business, virtual receptionist]
 faq:
   - q: "AI receptionist vs human receptionist: which is cheaper?"
-    a: "An AI receptionist is 35-50x cheaper than a human receptionist in 2026. AI runs $149-249/month all-in with a local 03 number, 24/7 answering, and Cal.com booking. A human receptionist fully-loaded in Australia costs $7,000-8,300/month ($90,000-110,000/year including 11.5% super, leave, workers comp, and office). The trade-off is that AI cannot handle complex admin, sensitive conversations, or anything requiring real human judgement."
+    a: "An AI receptionist is 35-50x cheaper than a human receptionist in 2026. AI runs $249 a month plus GST, with a one-off $500 setup all-in with a local 03 number, call answering, and Cal.com booking. A human receptionist fully-loaded in Australia costs $7,000-8,300/month ($90,000-110,000/year including 11.5% super, leave, workers comp, and office). The trade-off is that AI cannot handle complex admin, sensitive conversations, or anything requiring real human judgement."
   - q: "What can an AI receptionist do that a human can't?"
-    a: "An AI receptionist can answer unlimited concurrent calls, work 24/7 every day of the year, never take a sick day, hold every customer name and preference perfectly, escalate in under 2 seconds, and never get bored on a Monday morning. It also costs the same whether it answers 5 calls or 500. None of these are realistic for a human receptionist."
+    a: "An AI receptionist can answer unlimited concurrent calls, answers calls every day of the year, never take a sick day, hold every customer name and preference perfectly, escalate in under 2 seconds, and never get bored on a Monday morning. It also costs the same whether it answers 5 calls or 500. None of these are realistic for a human receptionist."
   - q: "What can a human receptionist do that an AI can't?"
     a: "A human receptionist can comfort an upset patient, read body language on a video call, negotiate a complex insurance claim, manage a long emotionally charged call, make judgement calls on pricing exceptions or refunds, greet walk-ins, sort physical mail, and operate in the grey area between policy and empathy. These are the calls that require real human judgement and experience."
   - q: "Can you use both AI and human receptionists?"
-    a: "Yes, and most successful small businesses do. The common pattern is AI for 24/7 coverage, after-hours overflow, and routine booking, with a human for complex admin during business hours. The AI triages, books, and escalates. The human handles the calls that need real judgement. Total cost is usually lower than a full-time human alone, with better coverage."
+    a: "Yes, and most successful small businesses do. The common pattern is AI for call coverage, after-hours overflow, and routine booking, with a human for complex admin during business hours. The AI triages, books, and escalates. The human handles the calls that need real judgement. Total cost is usually lower than a full-time human alone, with better coverage."
   - q: "Do customers know when they're talking to an AI?"
     a: "Yes, in a properly configured system. Australian AI receptionists like Amily AI disclose that the caller is speaking with an AI assistant at the start of the call, satisfying OAIC 2024 guidance and APP 5. Most callers do not care once the AI answers their question quickly and books the appointment. The 14.2% conversion rate of AI-referred visitors vs 2.8% for traditional organic suggests that AI-conditioned customers are already primed to engage with AI-assisted services."
   - q: "Is an AI receptionist as good as a human for a small business?"
@@ -21,7 +21,7 @@ faq:
   - q: "What about Privacy Act 1988 compliance for AI receptionists?"
     a: "An AI receptionist is Privacy Act 1988 compliant provided the AI is disclosed at the start of the call (APP 5), the recording is disclosed, and recordings are stored securely (APP 11). From 10 December 2026, the Privacy and Other Legislation Amendment Act 2024 also requires businesses to disclose automated decision-making in their privacy policy. Amily AI and other Australian-built services ship compliant by default. Offshore AI services often do not."
   - q: "Which is better for a small business, an AI or a human receptionist?"
-    a: "AI is better for the 70-80% of calls that are routine — new enquiries, booking, after-hours overflow, and FAQs. A human is better for the 20-30% that are complex, sensitive, or unusual. For most Melbourne trades and clinics, the answer is hybrid: AI for 24/7 coverage and triage, a human for the calls that need real judgement."
+    a: "AI is better for the 70-80% of calls that are routine — new enquiries, booking, after-hours overflow, and FAQs. A human is better for the 20-30% that are complex, sensitive, or unusual. For most Melbourne trades and clinics, the answer is hybrid: AI for call coverage and triage, a human for the calls that need real judgement."
   - q: "Can an AI receptionist fully replace a human one?"
     a: "For after-hours, weekend, and overflow coverage, yes — most Melbourne trades run that pattern. For complex admin, sensitive conversations, and physical tasks like greeting walk-ins, no. An AI is a complement, not a replacement. If your receptionist mostly handles routine booking and FAQs, the AI can do it; if the role is broader, keep the human and add AI for coverage."
   - q: "How much does a human receptionist cost per year in Australia?"
@@ -31,10 +31,10 @@ faq:
 ![AI receptionist vs human receptionist - 2026 cost and capability comparison for Melbourne small business](/assets/post-02-hero.png)
 
 > **TL;DR**
-> - An AI receptionist in Australia costs **AUD $149-249/month** in 2026 — a local 03 number, 24/7 answering, Cal.com booking, SMS summaries.
+> - An AI receptionist in Australia costs **AUD $249 a month plus GST, with a one-off $500 setup** in 2026 — a local 03 number, call answering, Cal.com booking, SMS summaries.
 > - A human receptionist fully-loaded costs **AUD $7,000-8,300/month** ($90,000-110,000/year including 11.5% super, leave, workers comp, and office) [Source: fairwork.gov.au, 2026].
 > - The price gap is roughly **35-50x**. The capability gap is narrower than most people think: AI wins on speed, availability, and consistency; humans win on empathy, judgement, and complex admin.
-> - The honest answer for most Melbourne small businesses is hybrid: AI for 24/7 coverage and routine booking, human for the long tail of complex calls. The combination is cheaper than a full-time human alone and covers every call.
+> - The honest answer for most Melbourne small businesses is hybrid: AI for call coverage and routine booking, human for the long tail of complex calls. The combination is cheaper than a full-time human alone and covers every call.
 > - Privacy Act 1988 compliance is built into Australian AI services by default (APP 5 disclosure, APP 11 data security). The 10 December 2026 ADM transparency deadline applies to both AI and human-operated phone systems.
 
 ## What is the actual difference between an AI receptionist and a human receptionist?
@@ -51,9 +51,9 @@ This is the table most "AI vs human" articles skip. The numbers are 2026 Melbour
 
 |  | AI receptionist | Human receptionist |
 |---|---|---|
-| **Monthly cost (Melbourne)** | AUD $149-249 | AUD $7,000-8,300 fully-loaded |
+| **Monthly cost (Melbourne)** | AUD $249 a month plus GST | AUD $7,000-8,300 fully-loaded |
 | **Annual cost** | AUD $1,788-2,988 | AUD $84,000-100,000+ |
-| **Hours covered** | 24/7, every day, public holidays | ~38 hours/week, sick days, annual leave |
+| **Hours covered** |, every day, public holidays | ~38 hours/week, sick days, annual leave |
 | **Concurrent calls** | Unlimited | One at a time (or two with effort) |
 | **Average answer time** | Under 2 seconds | 15-45 seconds, longer if on another call |
 | **Setup time** | 30 minutes to 1 week | 1-2 weeks recruiting, 2-4 weeks training |
@@ -72,18 +72,11 @@ The line that matters: **AI is the cheapest path that actually answers the phone
 
 ## What does each cost in Melbourne in 2026?
 
-### AI receptionist: $149-499/month
+### AI receptionist: $249/mo + GST
 
-The 2026 price band for an Australian AI receptionist:
-
-| Tier | Monthly (AUD) | What is included |
+| Offer | Monthly (AUD) | What is included |
 |---|---|---|
-| Starter / DIY | $49-99 | 30-50 calls/month, basic message-taking |
-| Core (most popular) | $149-249 | 100-200 calls, local 03 number, Cal.com booking, SMS summaries, escalation |
-| Pro / Unlimited | $249-499 | Unlimited calls, multiple numbers, custom voice, priority support |
-| Setup consulting (one-off) | $2,500-3,500 | Custom workflow build, CRM integration, voice tuning |
-
-Amily AI sits in the Core band at $149-249/month. The plan includes a local 03 number, 24/7 answering, Cal.com booking, SMS summaries, and emergency escalation. Setup is optional — most small businesses do not need it.
+| Amily Voice | $249 + GST | One-off $500 setup. We set it up and tune it for you. |
 
 ### Human receptionist: $7,000-8,300/month fully-loaded
 
@@ -118,7 +111,7 @@ The honest list:
 - **Never call in sick.** Annual leave, personal leave, sick days, public holidays — the AI covers them all.
 - **Hold every customer preference perfectly.** The AI remembers that Mrs Smith always books on a Tuesday afternoon and prefers the early slot. A human might forget.
 - **Disclose the call is being recorded consistently on every call.** A human forgets on the third call of a busy morning. The AI does not.
-- **Escalate emergencies in under 2 seconds** with a full SMS transcript, 24/7. A human might miss the urgency in a busy queue.
+- **Escalate emergencies in under 2 seconds** with a full SMS transcript. A human might miss the urgency in a busy queue.
 - **Speak any language your customer base needs** in the next 12-18 months (multilingual voice models are coming).
 - **Scale from 1 number to 10 numbers in an afternoon.** A human cannot be in two buildings at once.
 
@@ -172,11 +165,11 @@ The pattern most successful Melbourne small businesses run in 2026 is hybrid. AI
 
 The economics work like this:
 
-- **AI at $199/month (Core plan)** covers 24/7, all routine calls, lead qualification, booking, and SMS summaries.
+- **AI at $249 a month plus GST, with a one-off $500 setup** covers all routine calls, lead qualification, booking, and SMS summaries.
 - **Human at part-time 2 days/week (~$2,800-3,500/month)** covers complex calls during business hours, in-person support, and the exceptions.
 - **Total: $3,000-3,700/month** — less than half the cost of a full-time human alone, with better coverage.
 
-The other hybrid pattern: **AI for after-hours, human for business hours.** A sole trader who works 7am-5pm uses the AI to cover 5pm-7am and weekends, then takes calls personally during the day. The AI captures the after-hours emergencies that would otherwise go to voicemail; the human handles the calls they want to handle personally. Cost: $149-249/month, no human overhead.
+The other hybrid pattern: **AI for after-hours, human for business hours.** A sole trader who works 7am-5pm uses the AI to cover 5pm-7am and weekends, then takes calls personally during the day. The AI captures the after-hours emergencies that would otherwise go to voicemail; the human handles the calls they want to handle personally. Cost: $249 a month plus GST, with a one-off $500 setup, no human overhead.
 
 The full pricing comparison, including how this stacks up against offshore and call-centre alternatives, is in our [Melbourne virtual receptionist pricing guide](/blog/virtual-receptionist-cost-melbourne-2026). Local pricing and onboarding are broken out by area — [Melbourne CBD](/blog/service-area-melbourne-cbd), [St Kilda and the south-east](/blog/service-area-st-kilda-south-east), [Brunswick and the northern suburbs](/blog/service-area-brunswick-northern-suburbs), [Box Hill and the eastern suburbs](/blog/service-area-box-hill-eastern-suburbs), [Geelong and the Bellarine](/blog/service-area-geelong-bellarine) — for tradies and clinics that need the suburb-specific view.
 
@@ -209,9 +202,9 @@ The full compliance breakdown, including the OAIC guidance and the Surveillance 
 
 Three Melbourne small businesses and the choices they made:
 
-- **Solo plumber in Dandenong.** 25 calls a week, missed 8 of them on average. After-hours emergencies were the biggest revenue leak. Chose Amily AI Core at $199/month. Now answers every call, books into ServiceM8, escalates burst pipes to the on-call mobile. Net gain: ~$58,000/year in saved jobs.
+- **Solo plumber in Dandenong.** 25 calls a week, missed 8 of them on average. After-hours emergencies were the biggest revenue leak. Chose Amily Voice. Now answers every call, escalates burst pipes to the on-call mobile. Net gain: ~$58,000/year in saved jobs.
 - **Four-crew plumbing outfit in Brunswick.** 80 calls a week, two office staff struggling to keep up. Kept one human (now handling quoting, supplier calls, complex admin) and added Amily AI for the routine booking calls. Office productivity up 30%, missed calls down to under 5%. Total reception cost dropped from $14,000/month (two humans) to $8,500/month (one human + AI).
-- **Allied health clinic in St Kilda.** 60 patient calls a week, complex intake for new patients, sensitive conversations for existing ones. Kept one human receptionist (full-time, the right call for the patient mix) and added Amily AI for after-hours booking. Patients can book a 7am Pilates class at 11pm the night before. Reception cost up by $199/month (Core plan); bookings up 22% in the first quarter.
+- **Allied health clinic in St Kilda.** 60 patient calls a week, complex intake for new patients, sensitive conversations for existing ones. Kept one human receptionist (full-time, the right call for the patient mix) and added Amily AI for after-hours booking. Patients can book a 7am Pilates class at 11pm the night before. Reception cost up by $249 a month plus GST, with a one-off $500 setup; bookings up 22% in the first quarter.
 
 The pattern: **AI for the high-volume, low-complexity, time-sensitive calls. Human for everything else.** The hybrid model wins.
 
@@ -219,11 +212,11 @@ The pattern: **AI for the high-volume, low-complexity, time-sensitive calls. Hum
 
 ### AI receptionist vs human receptionist: which is cheaper?
 
-An AI receptionist is 35-50x cheaper than a human receptionist in 2026. AI runs $149-249/month all-in with a local 03 number, 24/7 answering, and Cal.com booking. A human receptionist fully-loaded in Australia costs $7,000-8,300/month ($90,000-110,000/year including 11.5% super, leave, workers comp, and office). The trade-off is that AI cannot handle complex admin, sensitive conversations, or anything requiring real human judgement.
+An AI receptionist is 35-50x cheaper than a human receptionist in 2026. AI runs $249 a month plus GST, with a one-off $500 setup all-in with a local 03 number, call answering, and Cal.com booking. A human receptionist fully-loaded in Australia costs $7,000-8,300/month ($90,000-110,000/year including 11.5% super, leave, workers comp, and office). The trade-off is that AI cannot handle complex admin, sensitive conversations, or anything requiring real human judgement.
 
 ### What can an AI receptionist do that a human can't?
 
-An AI receptionist can answer unlimited concurrent calls, work 24/7 every day of the year, never take a sick day, hold every customer name and preference perfectly, escalate in under 2 seconds, and never get bored on a Monday morning. It also costs the same whether it answers 5 calls or 500. None of these are realistic for a human receptionist.
+An AI receptionist can answer unlimited concurrent calls, answers calls every day of the year, never take a sick day, hold every customer name and preference perfectly, escalate in under 2 seconds, and never get bored on a Monday morning. It also costs the same whether it answers 5 calls or 500. None of these are realistic for a human receptionist.
 
 ### What can a human receptionist do that an AI can't?
 
@@ -231,7 +224,7 @@ A human receptionist can comfort an upset patient, read body language on a video
 
 ### Can you use both AI and human receptionists?
 
-Yes, and most successful small businesses do. The common pattern is AI for 24/7 coverage, after-hours overflow, and routine booking, with a human for complex admin during business hours. The AI triages, books, and escalates. The human handles the calls that need real judgement. Total cost is usually lower than a full-time human alone, with better coverage.
+Yes, and most successful small businesses do. The common pattern is AI for call coverage, after-hours overflow, and routine booking, with a human for complex admin during business hours. The AI triages, books, and escalates. The human handles the calls that need real judgement. Total cost is usually lower than a full-time human alone, with better coverage.
 
 ### Do customers know when they're talking to an AI?
 
@@ -247,7 +240,7 @@ An AI receptionist is Privacy Act 1988 compliant provided the AI is disclosed at
 
 ### Which is better for a small business, an AI or a human receptionist?
 
-AI is better for the 70-80% of calls that are routine — new enquiries, booking, after-hours overflow, and FAQs. A human is better for the 20-30% that are complex, sensitive, or unusual. For most Melbourne trades and clinics, the answer is hybrid: AI for 24/7 coverage and triage, a human for the calls that need real judgement.
+AI is better for the 70-80% of calls that are routine — new enquiries, booking, after-hours overflow, and FAQs. A human is better for the 20-30% that are complex, sensitive, or unusual. For most Melbourne trades and clinics, the answer is hybrid: AI for call coverage and triage, a human for the calls that need real judgement.
 
 ### Can an AI receptionist fully replace a human one?
 
@@ -275,10 +268,10 @@ Amily AI — ABN 86 758 863 858, 137/416A St Kilda Rd Melbourne VIC 3004. Phone 
 - [Ataccama — Australia Privacy Act 2024 amendments](https://www.ataccama.com/blog/australia-privacy-act-everything-you-need-to-know-2024) — backs the 10 December 2026 ADM transparency deadline.
 - [Surveillance Devices Act 1999 (Vic), s.6 and s.11](http://classic.austlii.edu.au/au/legis/vic/consol_act/sda1999210/s11.html) — backs the lawful recording with disclosure section.
 - [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search-2026) — backs the 14.2% vs 2.8% AI-referred vs traditional conversion figures used in the customer perception section.
-- [Amily AI — Voice Receptionist pricing](https://amily.ai/#voice) — backs the $149-249/month plan tiers quoted in this post.
-- [Amily AI — AI Setup Consulting](https://amily.ai/#setup) — backs the $2,500-3,500 one-off setup consulting fee quoted in this post.
+- [Amily AI — Voice Receptionist pricing](https://amily.ai/#voice) — backs the $249 a month plus GST, with a one-off $500 setup plan tiers quoted in this post.
+- [Amily AI — AI Setup Consulting](https://amily.ai/#setup) — backs the $500 one-off setup consulting fee quoted in this post.
 - [Amily AI — What is an AI receptionist? Definition, how it works, and costs (2026)](/blog/what-is-an-ai-receptionist) — internal link to the definitional companion post.
-- [Amily AI — AI receptionist cost in Melbourne: from $149/mo (2026 guide)](/blog/virtual-receptionist-cost-melbourne-2026) — internal link to the full pricing breakdown.
+- [Amily AI — AI receptionist cost in Melbourne: $249/mo + GST (2026 guide)](/blog/virtual-receptionist-cost-melbourne-2026) — internal link to the full pricing breakdown.
 - [Amily AI — How to set up an AI voice assistant for an Australian 03 number](/blog/setup-ai-voice-assistant-03-number-australia) — internal link to the full DIY setup walkthrough.
 - [Amily AI — AI receptionist for Melbourne CBD tradies and allied health](/blog/service-area-melbourne-cbd) — internal link to the Melbourne CBD service area page.
 - [Amily AI — AI receptionist for Brunswick and Melbourne's northern suburbs](/blog/service-area-brunswick-northern-suburbs) — internal link to the Brunswick service area page.

@@ -12,7 +12,7 @@ faq:
   - q: Does voicemail fix the problem?
     a: No. 80% of callers sent to voicemail hang up without leaving a message, and 60% of Australian callers move straight to the next search result when their call is not answered.
   - q: What is the cheapest fix for missed calls?
-    a: Call forwarding to a human answering service starts at around A$200 per month. AI voice receptionists start at A$149 per month and answer 24/7, including outside business hours when most job-booking enquiries now happen.
+    a: Call forwarding to a human answering service starts at around A$200 per month. AI voice receptionists start at $249 a month plus GST and answer calls, including outside business hours when most job-booking enquiries now happen.
 ---
 
 A plumber in Reservoir told me last month that he misses "about half" his calls. He was not embarrassed about it. He was on a roof in Preston with both hands in a gutter, and it had rained the night before. Picking up the phone would have meant putting the hammer down, climbing off the ladder, washing his hands, and taking the call in the rain. So he lets it ring out. Voicemail catches it. He will call them back later.
@@ -83,11 +83,11 @@ Best for: teams of 5+ tradies where the volume justifies the cost.
 
 ### 3. AI voice receptionist
 
-An AI voice agent answers every call, 24/7, including the Sunday 9pm enquiries when a stressed homeowner has finally sat down with the iPad. Costs **A$149 to A$399 per month**, handles unlimited concurrent calls, and books directly into ServiceM8, Tradify, Simpro or Google Calendar.
+An AI voice agent answers every call, including the Sunday 9pm enquiries when a stressed homeowner has finally sat down with the iPad. Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
 
 Best for: sole operators and small crews who cannot justify a human but cannot afford to keep missing calls.
 
-> The maths is not close. If an AI receptionist at $149/month saves you *one* $450 job a month, it has paid for itself three times over. Most tradies who switch save 5 to 15 jobs a month.
+> The maths is not close. If an AI receptionist at $249 a month plus GST, with a one-off $500 setup saves you *one* $450 job a month, it has paid for itself three times over. Most tradies who switch save 5 to 15 jobs a month.
 
 ## Will customers hang up on an AI?
 
@@ -106,7 +106,7 @@ The ones who figured this out early are running a simple setup:
 - **Twilio Australian 03 number** as the public-facing line
 - **AI voice agent** (like Amily) as the first-line answerer, with in-call AI disclosure
 - **Emergency escalation** — keywords like "burst", "leak", "no power", "gas smell" trigger instant forward to the tradie's mobile with an SMS transcript
-- **Calendar integration** — bookings land directly in ServiceM8 or Tradify, with the caller's number and reason-for-call pre-filled
+- **Call summary** — you get the caller's number and reason for the call
 - **SMS confirmation** — the caller gets a text within seconds confirming the booking, branded with the tradie's business name
 
 Set up takes 30 minutes. The tradie never has to answer a non-emergency call again.
@@ -115,6 +115,6 @@ Set up takes 30 minutes. The tradie never has to answer a non-emergency call aga
 
 If you are a Melbourne tradie missing even 3 calls a week, the missed revenue math beats every other operational fix you could make to your business this year. It beats better invoicing software. It beats a new ute. It beats another Google Ads campaign.
 
-The only question is whether you want a human receptionist (higher cost, business hours) or an AI receptionist (lower cost, 24/7). For most sole operators and small crews, the AI wins on cost, availability, and speed to answer.
+The only question is whether you want a human receptionist (higher cost, business hours) or an AI receptionist (lower cost). For most sole operators and small crews, the AI wins on cost, availability, and speed to answer.
 
 If you want to hear what an AI voice receptionist actually sounds like, book a free 30-minute discovery call. We set up a test number using your business name and job types, and you ring it yourself. No credit card, no contract.

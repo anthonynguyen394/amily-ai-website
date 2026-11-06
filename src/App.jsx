@@ -354,7 +354,7 @@ function Hero() {
 
             {/* BLUF: definitional opener for AIO/Perplexity citation (40-60 words) */}
             <p className="hero-bluf mt-6 max-w-2xl mx-auto lg:mx-0 text-base md:text-lg text-charcoal/80 leading-relaxed">
-              An AI voice receptionist is a 24/7 phone-answering agent that picks up calls, books jobs, and sends SMS confirmations for Australian service businesses. Amily AI is a Melbourne-built AI receptionist for tradies, allied health clinics, and professional services firms. Calls route to a local 03 number, integrate with ServiceM8, Cliniko, and Halaxy, and comply with the Privacy Act 1988.
+              An AI voice receptionist is a phone-answering agent that picks up calls, books jobs, and sends SMS confirmations for Australian service businesses. Amily AI is a Melbourne-built AI receptionist for tradies, allied health clinics, and professional services firms. Calls route to a local 03 number and comply with the Privacy Act 1988.
             </p>
 
             <p className="hero-desc mt-6 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-charcoal/75 leading-relaxed">
@@ -611,7 +611,7 @@ function ShufflerCard() {
         <div>
           <h3 className="font-heading font-bold text-charcoal text-xl leading-tight">AI Voice Receptionist</h3>
           <p className="text-charcoal/60 text-sm mt-1 leading-relaxed">
-            Never miss a call again. Amily answers 24/7, books jobs, and sends you a summary.
+            Never miss a call again. Amily answers calls, books jobs, and sends you a summary.
           </p>
         </div>
       </div>
@@ -1239,7 +1239,7 @@ function HowItWorks() {
 
         {/* Closer */}
         <p className="text-center text-charcoal/50 text-xs sm:text-sm font-data uppercase tracking-widest mt-12">
-          No setup fees. No surprises.{' '}
+          One-off $500 setup. No surprises.{' '}
           <span className="text-terracotta font-semibold">Live in 7 days.</span>
         </p>
       </div>
@@ -1263,10 +1263,10 @@ function Proof() {
       caption: 'Faster than any human receptionist',
     },
     {
-      value: 24,
-      suffix: '/7',
-      label: 'Always on',
-      caption: 'After-hours, weekends, public holidays',
+      value: 500,
+      suffix: '',
+      label: 'Setup',
+      caption: 'One-off $500. We set it up and tune it for you.',
     },
     {
       value: 30,
@@ -1413,8 +1413,8 @@ function Proof() {
             </div>
             <ul className="space-y-3 flex-1">
               {[
-                'Founding rate: first 3 months of your plan at half price',
-                'Locked-in founding-customer pricing from month four',
+                'Amily Voice is $249 a month plus GST, with a one-off $500 setup.',
+                'We set it up and tune it for you.',
                 'Direct line to the founder (me -- Anthony) for the first 90 days',
                 'Bring-your-own scope: voice receptionist, review automation, or both',
               ].map((item) => (
@@ -1647,121 +1647,29 @@ function AnimatedPrice({ value, className }) {
   return <span ref={ref} className={className}>0</span>;
 }
 
-/* Monthly/Yearly segmented toggle */
-function BillingToggle({ value, onChange }) {
-  return (
-    <div className="relative inline-block">
-      <div className="toggle-wiggle inline-flex items-center bg-charcoal/[0.06] border border-charcoal/10 rounded-full p-1 relative">
-        <div
-          className="toggle-thumb-jelly absolute top-1 bottom-1 rounded-full bg-navy shadow-md"
-          style={{
-            width: 'calc(50% - 4px)',
-            left: '4px',
-            transform: value === 'yearly' ? 'translateX(100%)' : 'translateX(0%)',
-          }}
-        />
-        <button
-          type="button"
-          onClick={() => onChange('monthly')}
-          className={`relative z-10 px-6 sm:px-7 py-2 font-data text-[11px] uppercase tracking-widest transition-colors duration-300 ${
-            value === 'monthly' ? 'text-white' : 'text-charcoal/60 hover:text-charcoal/80'
-          }`}
-        >
-          Monthly
-        </button>
-        <button
-          type="button"
-          onClick={() => onChange('yearly')}
-          className={`relative z-10 px-6 sm:px-7 py-2 font-data text-[11px] uppercase tracking-widest transition-colors duration-300 ${
-            value === 'yearly' ? 'text-white' : 'text-charcoal/60 hover:text-charcoal/80'
-          }`}
-        >
-          Yearly
-        </button>
-      </div>
-      <span
-        className="badge-bob absolute -top-3 -right-5 text-charcoal text-[9px] font-bold px-2 py-0.5 rounded-full font-data uppercase tracking-wider shadow-sm"
-        style={{
-          background: 'linear-gradient(90deg, #c97b5d, #e8b04e)',
-        }}
-      >
-        Save 20%
-      </span>
-    </div>
-  );
-}
-
 function Pricing() {
   const sectionRef = useRef(null);
-  const [billing, setBilling] = useState('monthly');
 
   const plans = [
     {
-      name: 'Essential',
-      badge: 'Best for review-focused SMBs',
-      priceMonthly: 99,
-      priceYearly: 79,
-      oneOff: false,
-      description: 'AI Review Management for local businesses ready to dominate Google.',
-      icon: <Star size={20} strokeWidth={2} />,
-      coverage: 40,
-      coverageLabel: 'Essential coverage',
-      features: [
-        { text: '24/7 review monitoring across Google + socials', highlight: false },
-        { text: 'AI-drafted responses in your brand tone', highlight: true },
-        { text: 'Google Business Profile sync', highlight: false },
-        { text: 'Monthly performance report', highlight: false },
-        { text: 'Email support (1 business day)', highlight: false },
-      ],
-      cta: 'Book a Free Discovery Call',
-      href: calUrl(),
-      linkTarget: '_blank',
-      popular: false,
-    },
-    {
-      name: 'Performance',
-      badge: 'Best for growing trades + services',
+      name: 'Amily Voice',
+      badge: 'One-off $500 setup',
       priceMonthly: 249,
-      priceYearly: 199,
       oneOff: false,
-      description: 'AI voice receptionist + reviews -- for businesses losing jobs after-hours.',
+      description: 'Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.',
       icon: <Phone size={20} strokeWidth={2} />,
       coverage: 80,
-      coverageLabel: 'High coverage',
+      coverageLabel: 'Voice receptionist',
       features: [
-        { text: 'Everything in Essential', highlight: false },
-        { text: '24/7 AI voice receptionist', highlight: true },
-        { text: 'Automatic job booking + calendar sync', highlight: true },
+        { text: 'AI voice receptionist', highlight: true },
+        { text: 'One-off $500 setup', highlight: true },
+        { text: 'We set it up and tune it for you', highlight: true },
         { text: 'Real-time call summaries to your phone', highlight: false },
         { text: 'SMS follow-ups to customers', highlight: false },
-        { text: 'Priority support (same-day)', highlight: false },
       ],
       cta: 'Book a Free Discovery Call',
       href: calUrl(),
       linkTarget: '_blank',
-      popular: true,
-    },
-    {
-      name: 'Enterprise',
-      badge: 'Best for full transformation',
-      priceMonthly: 3500,
-      priceYearly: 3500,
-      oneOff: true,
-      description: 'White-glove AI setup, team training, and 3 months hands-on support.',
-      icon: <Shield size={20} strokeWidth={2} />,
-      coverage: 100,
-      coverageLabel: 'Full coverage',
-      features: [
-        { text: 'Everything in Performance', highlight: false },
-        { text: 'Custom AI workflow design', highlight: true },
-        { text: 'Team training + onboarding (2 sessions)', highlight: false },
-        { text: 'Dedicated Slack / email channel', highlight: false },
-        { text: '3 months hands-on support', highlight: true },
-        { text: '30-day ROI guarantee or refund', highlight: true },
-      ],
-      cta: 'Discuss Enterprise Setup',
-      href: LINKS.mailEnterprise,
-      linkTarget: '_self',
       popular: false,
     },
   ];
@@ -1895,7 +1803,7 @@ function Pricing() {
           </h2>
           {/* BLUF: definitional opener for AIO/Perplexity citation (40-60 words) */}
           <p className="pricing-bluf text-charcoal/80 mt-5 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            AI receptionist pricing in Australia typically ranges from AUD $99 to $499 per month, depending on call volume, integrations, and after-hours coverage. Amily AI voice plans run $149 to $249 per month (Starter, Core, Pro), review management starts at $99 per month, and one-off setup starts at $2,500 — no lock-in, with a 30-day ROI guarantee.
+            Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
           </p>
           <p className="text-charcoal/60 mt-4 max-w-lg mx-auto">
             No lock-in contracts. No hidden fees. Cancel anytime.
@@ -1909,22 +1817,13 @@ function Pricing() {
             </span>
           </div>
 
-          {/* Billing toggle */}
-          <div className="mt-8 flex justify-center">
-            <BillingToggle value={billing} onChange={setBilling} />
-          </div>
         </div>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch pt-6">
+        <div className="grid grid-cols-1 gap-6 lg:gap-8 max-w-lg mx-auto items-stretch pt-6">
           {plans.map((plan, tierIdx) => {
-            const currentPrice =
-              billing === 'yearly' ? plan.priceYearly : plan.priceMonthly;
-            const periodLabel = plan.oneOff
-              ? 'one-off'
-              : billing === 'yearly'
-              ? '/mo billed yearly'
-              : '/mo';
+            const currentPrice = plan.priceMonthly;
+            const periodLabel = '/mo + GST';
             const ringColor = plan.popular ? '#e8b04e' : '#c97b5d';
             const ringTrack = plan.popular
               ? 'rgba(255,255,255,0.15)'

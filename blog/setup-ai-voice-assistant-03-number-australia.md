@@ -25,9 +25,9 @@ faq:
 > - A working DIY build takes **4-8 hours of focused time** plus **1-3 business days** for Twilio identity verification. Cost is **AUD $50-$80/month** in raw infrastructure.
 > - The four components are: **Twilio AU** (the number), **ElevenLabs Conversational AI** (the voice agent), **n8n** (the workflow glue, free if self-hosted), and **Cal.com** (the booking calendar, free tier).
 > - The fiddly bits are the Twilio regulatory setup, the ElevenLabs system prompt, the n8n webhook wiring for Cal.com, and the SMS confirmation flow.
-> - If you would rather not spend a weekend on it, Amily's **AI Setup Consulting** is a one-off AUD $2,500 for trades (AUD $3,500 for professional services) and we hand you a working system. See [amily.ai/#setup](https://amily.ai/#setup).
+> - If you would rather not spend a weekend on it, Amily's **AI Setup Consulting** is a one-off $500 and we hand you a working system. See [amily.ai/#setup](https://amily.ai/#setup).
 
-Setting up an AI voice assistant with an Australian 03 number requires four pieces: a Twilio AU account (mandatory, because ElevenLabs and Vapi do not provision AU numbers), an ElevenLabs Conversational AI agent, an n8n workflow for the backend, and a Cal.com booking calendar. Total build time is 4-8 hours for a competent developer, 1-2 days for a non-technical founder. Total monthly cost is roughly $50-$80 in raw infrastructure: $3 for the 03 number, $0.10/min for voice, $0 for self-hosted n8n, $0 for Cal.com free tier — the full per-component pricing is benchmarked against a human receptionist and an offshore call centre in [AI Receptionist Cost in Melbourne: From $149/mo](/blog/virtual-receptionist-cost-melbourne-2026).
+Setting up an AI voice assistant with an Australian 03 number requires four pieces: a Twilio AU account (mandatory, because ElevenLabs and Vapi do not provision AU numbers), an ElevenLabs Conversational AI agent, an n8n workflow for the backend, and a Cal.com booking calendar. Total build time is 4-8 hours for a competent developer, 1-2 days for a non-technical founder. Total monthly cost is roughly $50-$80 in raw infrastructure: $3 for the 03 number, $0.10/min for voice, $0 for self-hosted n8n, $0 for Cal.com free tier — the full per-component pricing is benchmarked against a human receptionist and an offshore call centre in [AI Receptionist Cost in Melbourne: $249/mo + GST](/blog/virtual-receptionist-cost-melbourne-2026).
 
 The catch: you will spend the bulk of that time on Twilio identity verification (1-3 business days), number porting, system prompt engineering, and n8n webhook wiring. None of it is hard — it is all quite well-documented — but it is fiddly, and a single misconfiguration will leave the agent silent on a Saturday afternoon when a customer is trying to book. The cost of that Saturday afternoon, in lost job value, is the focus of [The True Cost of Missed Calls for Melbourne Tradies](/blog/cost-of-missed-calls-melbourne-tradies) — most solo tradies lose about **$52,000 a year** to the same problem this guide solves.
 
@@ -139,13 +139,13 @@ It depends on what your time is worth and how comfortable you are with webhooks,
 
 **DIY makes sense if:** you are technical, you have a quiet weekend, you want full control over the prompts and workflows, and you are happy to maintain the system yourself. The cost is ~$30-$80/month in cash plus 5-10 hours of setup and 1-2 hours a month of ongoing tuning.
 
-**Hiring Amily makes sense if:** you want a working system this week, you would rather be on the tools than debugging JSON, and you want someone to be accountable when the AI mishears a postcode at 2am. Our **AI Setup Consulting** is a one-off **AUD $2,500** for trades and hospitality, **AUD $3,500** for professional services, plus an optional **$299/month** retainer for ongoing tuning, prompt updates, and integration changes. See the full scope at [amily.ai/#setup](https://amily.ai/#setup).
+**Hiring Amily makes sense if:** you want a working system this week, you would rather be on the tools than debugging JSON, and you want someone to be accountable when the AI mishears a postcode at 2am. Our **AI Setup Consulting** is a one-off **$500**, plus an optional **$299/month** retainer for ongoing tuning, prompt updates, and integration changes. See the full scope at [amily.ai/#setup](https://amily.ai/#setup).
 
 The honest answer is that the build is well within reach for a competent technical founder, and out of reach for most busy operators. Knowing which one you are is the only question that matters.
 
 ---
 
-**Want me to do this for you?** Amily's AI Setup Consulting is a one-off AUD $2,500 for trades and hospitality, AUD $3,500 for professional services — you get a working AI receptionist with a Melbourne 03 number, Cal.com booking, SMS confirmations, and emergency escalation, in about a week. See [amily.ai/#setup](https://amily.ai/#setup) or email [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai) to scope your build.
+**Want me to do this for you?** Amily's AI Setup Consulting is a one-off $500 — you get a working AI receptionist with a Melbourne 03 number, Cal.com booking, SMS confirmations, and emergency escalation, in about a week. See [amily.ai/#setup](https://amily.ai/#setup) or email [anthony.nguyen@amily.ai](mailto:anthony.nguyen@amily.ai) to scope your build.
 
 **Not sure yet?** Book a free 15-min chat and we'll talk through your call volume, your current setup, and whether DIY or done-for-you makes more sense for your business. [amily.ai/#discovery](https://amily.ai/#discovery).
 
@@ -160,4 +160,3 @@ The honest answer is that the build is well within reach for a competent technic
 - [OAIC — Privacy and commercially available AI products](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-the-privacy-and-the-use-of-commercially-available-ai-products) — Australian privacy guidance for AI call recording.
 - [Ataccama — Australia Privacy Act 2024 amendments](https://www.ataccama.com/blog/australia-privacy-act-everything-you-need-to-know-2024) — 10 December 2026 ADM transparency deadline.
 - [79dev — State of AI Search 2026](https://www.79dev.com/state-of-ai-search-2026) — Context for why customers arriving via AI channels are primed to engage with AI-assisted services.
-- [ServiceM8, Tradify — tradie job management platforms](https://www.servicem8.com/) — Webhook integration points for the booking confirmation step.
