@@ -1413,7 +1413,7 @@ function Proof() {
             </div>
             <ul className="space-y-3 flex-1">
               {[
-                'Amily Voice is $249 a month plus GST, with a one-off $500 setup.',
+                'Amily Voice is $249/month plus $500 one-off setup.',
                 'We set it up and tune it for you.',
                 'Direct line to the founder (me -- Anthony) for the first 90 days',
                 'Bring-your-own scope: voice receptionist, review automation, or both',
@@ -1656,7 +1656,7 @@ function Pricing() {
       badge: 'One-off $500 setup',
       priceMonthly: 249,
       oneOff: false,
-      description: 'Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.',
+      description: 'Amily Voice is $249/month plus $500 one-off setup. We set it up and tune it for you.',
       icon: <Phone size={20} strokeWidth={2} />,
       coverage: 80,
       coverageLabel: 'Voice receptionist',
@@ -1803,7 +1803,7 @@ function Pricing() {
           </h2>
           {/* BLUF: definitional opener for AIO/Perplexity citation (40-60 words) */}
           <p className="pricing-bluf text-charcoal/80 mt-5 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Amily Voice is $249 a month plus GST, with a one-off $500 setup. We set it up and tune it for you.
+            Amily Voice is $249/month plus $500 one-off setup. We set it up and tune it for you.
           </p>
           <p className="text-charcoal/60 mt-4 max-w-lg mx-auto">
             No lock-in contracts. No hidden fees. Cancel anytime.
@@ -1823,7 +1823,7 @@ function Pricing() {
         <div className="grid grid-cols-1 gap-6 lg:gap-8 max-w-lg mx-auto items-stretch pt-6">
           {plans.map((plan, tierIdx) => {
             const currentPrice = plan.priceMonthly;
-            const periodLabel = '/mo + GST';
+            const periodLabel = '/month';
             const ringColor = plan.popular ? '#e8b04e' : '#c97b5d';
             const ringTrack = plan.popular
               ? 'rgba(255,255,255,0.15)'
